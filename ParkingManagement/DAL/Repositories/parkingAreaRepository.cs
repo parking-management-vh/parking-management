@@ -23,6 +23,7 @@ namespace ParkingManagement.DAL.Repositories
             {
                 areas.Add(new parkingAreaModel(
                     row["id"].ToString(),
+                    row["status"].ToString(),
                     row["area_name"].ToString(),
                     row["description"].ToString()
                 ));
