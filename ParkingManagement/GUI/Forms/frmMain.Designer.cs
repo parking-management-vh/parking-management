@@ -1,6 +1,6 @@
 ﻿namespace ParkingManagement
 {
-    partial class MainForm
+    partial class frmMain
     {
         /// <summary>
         /// Required designer variable.
@@ -28,20 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.kryptonRibbon1 = new Krypton.Ribbon.KryptonRibbon();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonRibbon1)).BeginInit();
             this.SuspendLayout();
             // 
-            // MainForm
+            // kryptonRibbon1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.kryptonRibbon1.Name = "kryptonRibbon1";
+            this.kryptonRibbon1.SelectedTab = null;
+            this.kryptonRibbon1.Size = new System.Drawing.Size(1067, 170);
+            this.kryptonRibbon1.TabIndex = 0;
+            // 
+            // frmMain
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "MainForm";
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.kryptonRibbon1);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "frmMain";
             this.Text = "MainForm";
+            this.Load += new System.EventHandler(this.frmMain_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonRibbon1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private Krypton.Ribbon.KryptonRibbon kryptonRibbon1;
     }
 }
 
