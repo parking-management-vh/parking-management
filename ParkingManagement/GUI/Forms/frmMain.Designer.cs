@@ -32,7 +32,6 @@
             this.kryptonNavigator1 = new Krypton.Navigator.KryptonNavigator();
             this.kryptonRibbonTab1 = new Krypton.Ribbon.KryptonRibbonTab();
             this.kryptonRibbonGroup1 = new Krypton.Ribbon.KryptonRibbonGroup();
-            this.kryptonRibbonGroupButton2 = new Krypton.Ribbon.KryptonRibbonGroupButton();
             this.kryptonRibbonGroupTriple1 = new Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.btnCustomer = new Krypton.Ribbon.KryptonRibbonGroupButton();
             this.kryptonRibbonGroupSeparator1 = new Krypton.Ribbon.KryptonRibbonGroupSeparator();
@@ -56,6 +55,7 @@
             this.kryptonRibbonGroupSeparator7 = new Krypton.Ribbon.KryptonRibbonGroupSeparator();
             this.kryptonRibbonGroupTriple8 = new Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.kryptonRibbonGroupButton9 = new Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.kryptonRibbonGroupButton2 = new Krypton.Ribbon.KryptonRibbonGroupButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonRibbon1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonNavigator1)).BeginInit();
             this.kryptonNavigator1.SuspendLayout();
@@ -115,7 +115,8 @@
             // 
             // btnCustomer
             // 
-            this.btnCustomer.TextLine1 = "Khách hàng";
+            this.btnCustomer.ImageLarge = global::ParkingManagement.Properties.Resources.customer;
+            this.btnCustomer.TextLine1 = " Khách hàng ";
             this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
             // 
             // kryptonRibbonGroupTriple2
