@@ -11,11 +11,16 @@ using System.Windows.Forms;
 
 namespace ParkingManagement
 {
-    public partial class MainForm: Form
+    public partial class frmMain: Form
     {
-        public MainForm()
+        public frmMain()
         {
             InitializeComponent();
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
         }
     }
 }
