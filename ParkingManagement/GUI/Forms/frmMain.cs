@@ -1,4 +1,5 @@
 ﻿using ParkingManagement.DAL.Database;
+using ParkingManagement.GUI.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Krypton.Navigator;
+using ComponentFactory.Krypton.Navigator;
 
 namespace ParkingManagement
 {
@@ -16,11 +19,53 @@ namespace ParkingManagement
         public frmMain()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void frmMain_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void OpenFormInTab<T>(string tabName) where T : Form, new()
+        {
+            foreach (Krypton.Navigator.KryptonPage page in kryptonNavigator1.Pages)
+            {
+                if (page.Text == tabName)
+                {
+                    kryptonNavigator1.SelectedPage = page;
+                    return;
+                }
+            }
+
+            Krypton.Navigator.KryptonPage newPage = new Krypton.Navigator.KryptonPage
+            {
+                Text = tabName,
+                Name = $"tab{typeof(T).Name}"
+            };
+
+            T formInstance = new T
+            {
+                TopLevel = false,
+                FormBorderStyle = FormBorderStyle.None,
+                Dock = DockStyle.Fill
+            };
+            newPage.Controls.Add(formInstance);
+            formInstance.Show();
+
+            kryptonNavigator1.Pages.Add(newPage);
+            kryptonNavigator1.SelectedPage = newPage;
+        }
+
+        /// mở form trong tab mới
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+            OpenFormInTab<frmCustomer>("Customer");
+        }
+       
+        private void btnEmployee_Click(object sender, EventArgs e)
+        {
+            OpenFormInTab<frmEmployee>("Employee");
         }
     }
 }
