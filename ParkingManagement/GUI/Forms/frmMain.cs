@@ -67,5 +67,11 @@ namespace ParkingManagement
         {
             OpenFormInTab<frmEmployee>("Employee");
         }
+
+        private void btnVehicleType_Click(object sender, EventArgs e)
+        {
+            OpenFormInTab<frmVehicleType>("Vehicle");
+
+        }
     }
 }
