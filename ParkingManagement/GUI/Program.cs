@@ -17,7 +17,7 @@ namespace ParkingManagement
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TestConnectDB());
+            Application.Run(new frmUsers());
         }
     }
 }

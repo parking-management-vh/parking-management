@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Data;
 using MySql.Data.MySqlClient;
-using System.Configuration;  // 📌 Dùng để đọc App.config
+using System.Configuration;
+using System.Windows.Forms;
+using System.Text.RegularExpressions;
+using System.Linq;
 
 namespace ParkingManagement.DAL.Database
 {
@@ -46,6 +49,7 @@ namespace ParkingManagement.DAL.Database
             return result;
         }
 
+
         // Lấy giá trị đơn
         public object ExecuteScalar(string query, object[] parameter = null)
         {
@@ -66,15 +70,36 @@ namespace ParkingManagement.DAL.Database
         // Thêm tham số vào câu lệnh
         private void AddParameters(MySqlCommand command, string query, object[] parameter)
         {
-            if (parameter != null)
+            if (parameter != null && parameter.Length > 0)
             {
-                string[] listParams = query.Split(' ');
-                int index = 0;
-                foreach (string item in listParams)
+                if (parameter.All(p => p is MySqlParameter))
                 {
-                    if (item.Contains("@"))
+                    foreach (MySqlParameter param in parameter)
                     {
-                        command.Parameters.AddWithValue(item, parameter[index]);
+                        command.Parameters.Add(param);
+                    }
+                }
+                else
+                {
+                    MatchCollection matches = Regex.Matches(query, @"@\w+");
+                    int index = 0;
+
+                    foreach (Match match in matches)
+                    {
+                        if (index >= parameter.Length) break;
+
+                        string paramName = match.Value;
+                        object paramValue = parameter[index] ?? DBNull.Value;
+
+                        if (paramValue is MySqlParameter mySqlParam)
+                        {
+                            command.Parameters.Add(mySqlParam);
+                        }
+                        else
+                        {
+                            command.Parameters.AddWithValue(paramName, paramValue);
+                        }
+
                         index++;
                     }
                 }

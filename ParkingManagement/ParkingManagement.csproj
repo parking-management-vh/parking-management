@@ -136,8 +136,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\parkingAreaBLL .cs" />
+    <Compile Include="BLL\roleBLL.cs" />
+    <Compile Include="BLL\userBLL.cs" />
     <Compile Include="DAL\Database\DatabaseProvider.cs" />
     <Compile Include="DAL\Repositories\parkingAreaRepository.cs" />
+    <Compile Include="DAL\Repositories\roleRepository.cs" />
+    <Compile Include="DAL\Repositories\usersRepository.cs" />
     <Compile Include="GUI\Forms\frmCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +166,12 @@
     <Compile Include="GUI\Forms\frmParkingCard.Designer.cs">
       <DependentUpon>frmParkingCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Forms\frmUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Forms\frmUsers.Designer.cs">
+      <DependentUpon>frmUsers.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Forms\TestConnectDB.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,15 +179,24 @@
       <DependentUpon>TestConnectDB.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Program.cs" />
+    <Compile Include="Models\allUserModel.cs" />
     <Compile Include="Models\parkingAreaModel .cs" />
+    <Compile Include="Models\roleModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\Logger.cs" />
     <Compile Include="Utils\Pagination.cs" />
+    <Compile Include="Utils\ValidationUtils.cs" />
+    <EmbeddedResource Include="GUI\Forms\frmEmployee.resx">
+      <DependentUpon>frmEmployee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Forms\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Forms\frmParkingCard.resx">
       <DependentUpon>frmParkingCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Forms\frmUsers.resx">
+      <DependentUpon>frmUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Forms\TestConnectDB.resx">
       <DependentUpon>TestConnectDB.cs</DependentUpon>
@@ -193,6 +212,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\ParkingManagement.Models.parkingAreaModel.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

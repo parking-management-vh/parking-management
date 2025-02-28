@@ -10,7 +10,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Krypton.Navigator;
-using ComponentFactory.Krypton.Navigator;
 
 namespace ParkingManagement
 {
@@ -66,6 +65,11 @@ namespace ParkingManagement
         private void btnEmployee_Click(object sender, EventArgs e)
         {
             OpenFormInTab<frmEmployee>("Employee");
+        }
+
+        private void kBtnUsers_Click(object sender, EventArgs e)
+        {
+            OpenFormInTab<frmUsers>("Users");
         }
     }
 }

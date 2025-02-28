@@ -8,9 +8,9 @@ namespace ParkingManagement.Utils
 {
     public static class Pagination
     {
-        public static int CalculateOffset(int pageNumber, int pageSize)
+        public static int CalculateOffset(int page, int pageSize)
         {
-            return (pageNumber - 1) * pageSize;
+            return (page - 1) * pageSize;
         }
     }
 }
