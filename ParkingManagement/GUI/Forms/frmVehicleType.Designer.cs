@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.kryptonGroupBox2 = new Krypton.Toolkit.KryptonGroupBox();
+            this.btnSaveToDatabase = new Krypton.Toolkit.KryptonButton();
+            this.btnImportExcel = new Krypton.Toolkit.KryptonButton();
+            this.btnExportExcel = new Krypton.Toolkit.KryptonButton();
             this.btnReset = new Krypton.Toolkit.KryptonButton();
             this.btnSave = new Krypton.Toolkit.KryptonButton();
             this.btnDelete = new Krypton.Toolkit.KryptonButton();
@@ -65,6 +68,9 @@
             // 
             // kryptonGroupBox2.Panel
             // 
+            this.kryptonGroupBox2.Panel.Controls.Add(this.btnSaveToDatabase);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.btnImportExcel);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.btnExportExcel);
             this.kryptonGroupBox2.Panel.Controls.Add(this.btnReset);
             this.kryptonGroupBox2.Panel.Controls.Add(this.btnSave);
             this.kryptonGroupBox2.Panel.Controls.Add(this.btnDelete);
@@ -73,6 +79,42 @@
             this.kryptonGroupBox2.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonGroupBox2.TabIndex = 2;
             this.kryptonGroupBox2.Values.Heading = "Tùy chọn";
+            // 
+            // btnSaveToDatabase
+            // 
+            this.btnSaveToDatabase.Location = new System.Drawing.Point(739, 9);
+            this.btnSaveToDatabase.Name = "btnSaveToDatabase";
+            this.btnSaveToDatabase.Size = new System.Drawing.Size(116, 48);
+            this.btnSaveToDatabase.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
+            this.btnSaveToDatabase.TabIndex = 10;
+            this.btnSaveToDatabase.Values.DropDownArrowColor = System.Drawing.Color.Empty;
+            this.btnSaveToDatabase.Values.Image = global::ParkingManagement.Properties.Resources.saveExcel;
+            this.btnSaveToDatabase.Values.Text = "SaveDB";
+            this.btnSaveToDatabase.Click += new System.EventHandler(this.btnSaveToDatabase_Click);
+            // 
+            // btnImportExcel
+            // 
+            this.btnImportExcel.Location = new System.Drawing.Point(618, 9);
+            this.btnImportExcel.Name = "btnImportExcel";
+            this.btnImportExcel.Size = new System.Drawing.Size(115, 48);
+            this.btnImportExcel.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
+            this.btnImportExcel.TabIndex = 9;
+            this.btnImportExcel.Values.DropDownArrowColor = System.Drawing.Color.Empty;
+            this.btnImportExcel.Values.Image = global::ParkingManagement.Properties.Resources.export_excel;
+            this.btnImportExcel.Values.Text = "Import";
+            this.btnImportExcel.Click += new System.EventHandler(this.btnImportExcel_Click);
+            // 
+            // btnExportExcel
+            // 
+            this.btnExportExcel.Location = new System.Drawing.Point(500, 9);
+            this.btnExportExcel.Name = "btnExportExcel";
+            this.btnExportExcel.Size = new System.Drawing.Size(112, 48);
+            this.btnExportExcel.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
+            this.btnExportExcel.TabIndex = 5;
+            this.btnExportExcel.Values.DropDownArrowColor = System.Drawing.Color.Empty;
+            this.btnExportExcel.Values.Image = global::ParkingManagement.Properties.Resources.export_excel;
+            this.btnExportExcel.Values.Text = "Export";
+            this.btnExportExcel.Click += new System.EventHandler(this.btnExportExcel_Click);
             // 
             // btnReset
             // 
@@ -94,7 +136,7 @@
             this.btnSave.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
             this.btnSave.TabIndex = 3;
             this.btnSave.Values.DropDownArrowColor = System.Drawing.Color.Empty;
-            this.btnSave.Values.Image = global::ParkingManagement.Properties.Resources.save24;
+            this.btnSave.Values.Image = global::ParkingManagement.Properties.Resources.edit;
             this.btnSave.Values.Text = "Edit";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -325,5 +367,8 @@
         private Krypton.Toolkit.KryptonLabel lblLoaiXe;
         private Krypton.Toolkit.KryptonButton btnReset;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private Krypton.Toolkit.KryptonButton btnExportExcel;
+        private Krypton.Toolkit.KryptonButton btnSaveToDatabase;
+        private Krypton.Toolkit.KryptonButton btnImportExcel;
     }
 }

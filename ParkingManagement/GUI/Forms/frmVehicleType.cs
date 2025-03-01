@@ -13,6 +13,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OfficeOpenXml;
+using System.IO;
+using ExcelLicenseContext = OfficeOpenXml.LicenseContext;
+using OfficeOpenXml.Style;
+using System.Globalization;
 
 namespace ParkingManagement.GUI.Forms
 {
@@ -251,8 +256,17 @@ namespace ParkingManagement.GUI.Forms
         {
             if (kryptonDgvVehicleType.SelectedRows.Count > 0)
             {
-                selectedId = kryptonDgvVehicleType.SelectedRows[0].Cells["id"].Value.ToString();
-                btnDelete.Enabled = true; // Hiện nút Delete khi có dòng được chọn
+                var selectedRow = kryptonDgvVehicleType.SelectedRows[0];
+                if (selectedRow.Cells["id"].Value != null)
+                {
+                    selectedId = selectedRow.Cells["id"].Value.ToString();
+                    btnDelete.Enabled = true; // Hiện nút Delete khi có dòng được chọn
+                }
+                else
+                {
+                    selectedId = null;
+                    btnDelete.Enabled = false; // Ẩn nút Delete khi không có dòng nào được chọn
+                }
             }
             else
             {
@@ -260,6 +274,7 @@ namespace ParkingManagement.GUI.Forms
                 btnDelete.Enabled = false; // Ẩn nút Delete khi không có dòng nào được chọn
             }
         }
+
         /// <summary>
         /// Xử lý sự kiện xóa dữ liệu khi bấm nút Delete.
         /// </summary>
@@ -418,5 +433,189 @@ namespace ParkingManagement.GUI.Forms
                 e.Handled = true; // Ngăn chặn âm thanh "beep"
             }
         }
+
+        private void btnExportExcel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Đặt chế độ giấy phép
+                ExcelPackage.LicenseContext = ExcelLicenseContext.NonCommercial;
+
+                using (ExcelPackage excel = new ExcelPackage())
+                {
+                    var worksheet = excel.Workbook.Worksheets.Add("Sheet1");
+
+                    // Ghi thông tin ngày xuất file
+                    worksheet.Cells["A1"].Value = "Báo cáo danh sách loại xe";
+                    worksheet.Cells["A2"].Value = "Ngày xuất: " + DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+
+                    // Định dạng tiêu đề báo cáo
+                    worksheet.Cells["A1:B1"].Merge = true; // Gộp ô tiêu đề
+                    worksheet.Cells["A1"].Style.Font.Bold = true;
+                    worksheet.Cells["A1"].Style.Font.Size = 14;
+                    worksheet.Cells["A1"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+
+                    // Xuất tiêu đề cột (bắt đầu từ hàng 4 để tránh trùng với tiêu đề)
+                    for (int i = 0; i < kryptonDgvVehicleType.Columns.Count; i++)
+                    {
+                        worksheet.Cells[4, i + 1].Value = kryptonDgvVehicleType.Columns[i].HeaderText;
+                        worksheet.Cells[4, i + 1].Style.Font.Bold = true;
+                        worksheet.Cells[4, i + 1].Style.Fill.PatternType = ExcelFillStyle.Solid;
+                        worksheet.Cells[4, i + 1].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.LightGray);
+                        worksheet.Cells[4, i + 1].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                    }
+
+                    // Xuất dữ liệu từ DataGridView (bắt đầu từ hàng 5)
+                    for (int i = 0; i < kryptonDgvVehicleType.Rows.Count; i++)
+                    {
+                        for (int j = 0; j < kryptonDgvVehicleType.Columns.Count; j++)
+                        {
+                            worksheet.Cells[i + 5, j + 1].Value = kryptonDgvVehicleType.Rows[i].Cells[j].Value?.ToString();
+                        }
+                    }
+
+                    // Căn chỉnh độ rộng cột tự động
+                    worksheet.Cells[worksheet.Dimension.Address].AutoFitColumns();
+
+                    // Hiển thị hộp thoại lưu file
+                    SaveFileDialog saveDialog = new SaveFileDialog
+                    {
+                        Filter = "Excel Files|*.xlsx",
+                        Title = "Lưu file Excel",
+                        FileName = "DanhSachLoaiXe.xlsx"
+                    };
+
+                    if (saveDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        File.WriteAllBytes(saveDialog.FileName, excel.GetAsByteArray());
+                        MessageBox.Show("Xuất file Excel thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi xuất file Excel: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnImportExcel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog openDialog = new OpenFileDialog
+                {
+                    Filter = "Excel Files|*.xlsx;*.xls",
+                    Title = "Chọn file Excel"
+                };
+
+                if (openDialog.ShowDialog() == DialogResult.OK)
+                {
+                    ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
+
+                    using (var package = new ExcelPackage(new FileInfo(openDialog.FileName)))
+                    {
+                        ExcelWorksheet worksheet = package.Workbook.Worksheets[0]; // Lấy sheet đầu tiên
+                        DataTable dt = new DataTable();
+
+                        // Đọc tiêu đề cột
+                        for (int col = 1; col <= worksheet.Dimension.End.Column; col++)
+                        {
+                            dt.Columns.Add(worksheet.Cells[1, col].Text);
+                        }
+
+                        // Đọc dữ liệu
+                        for (int row = 2; row <= worksheet.Dimension.End.Row; row++)
+                        {
+                            DataRow newRow = dt.NewRow();
+                            for (int col = 1; col <= worksheet.Dimension.End.Column; col++)
+                            {
+                                newRow[col - 1] = worksheet.Cells[row, col].Text;
+                            }
+                            dt.Rows.Add(newRow);
+                        }
+
+                        // Kiểm tra dữ liệu có được đọc hay không
+                        if (dt.Rows.Count > 0)
+                        {
+                            kryptonDgvVehicleType.DataSource = dt;
+                            MessageBox.Show("Nhập file Excel thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("File Excel không có dữ liệu!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi nhập file Excel: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void btnSaveToDatabase_Click(object sender, EventArgs e)
+        {
+            if (kryptonDgvVehicleType.Rows.Count == 0)
+            {
+                MessageBox.Show("Không có dữ liệu để lưu vào database!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                using (MySqlConnection conn = new MySqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    foreach (DataGridViewRow row in kryptonDgvVehicleType.Rows)
+                    {
+                        if (row.IsNewRow) continue; // Bỏ qua hàng trống cuối cùng của DataGridView
+
+                        object idObj = row.Cells["id"].Value;
+                        string id = idObj != null && !string.IsNullOrWhiteSpace(idObj.ToString())
+                            ? idObj.ToString().Trim()
+                            : Guid.NewGuid().ToString(); // Tạo ID mới nếu trống
+
+                        object nameObj = row.Cells["vehicle_type_name"].Value;
+                        object descriptionObj = row.Cells["description"].Value;
+
+                        // Kiểm tra dữ liệu hợp lệ
+                        if (nameObj == null || string.IsNullOrWhiteSpace(nameObj.ToString()))
+                        {
+                            MessageBox.Show("Tên loại xe không hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+
+                        string name = nameObj.ToString().Trim();
+                        string description = descriptionObj != null ? descriptionObj.ToString().Trim() : "";
+
+                        // SQL query: Chèn dữ liệu hoặc cập nhật nếu đã tồn tại
+                        string query = @"INSERT INTO vehicle_type (id, vehicle_type_name, description, created_at, updated_at)
+                                 VALUES (@id, @name, @description, NOW(), NOW())
+                                 ON DUPLICATE KEY UPDATE 
+                                 vehicle_type_name = @name, description = @description, updated_at = NOW()";
+
+                        using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                        {
+                            cmd.Parameters.AddWithValue("@id", id);
+                            cmd.Parameters.AddWithValue("@name", name);
+                            cmd.Parameters.AddWithValue("@description", description);
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+                }
+
+                MessageBox.Show("Lưu dữ liệu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadVehicleTypes(); // Refresh DataGridView
+            }
+            catch (MySqlException sqlEx)
+            {
+                MessageBox.Show("Lỗi SQL: " + sqlEx.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi lưu dữ liệu: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
+    
 }
