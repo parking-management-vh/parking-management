@@ -1,5 +1,6 @@
 ﻿using Krypton.Toolkit;
 using MySql.Data.MySqlClient;
+using Mysqlx.Session;
 using ParkingManagement.BLL;
 using ParkingManagement.Models;
 using System;
@@ -19,13 +20,19 @@ namespace ParkingManagement.GUI.Forms
     public partial class frmVehicleType: Form
     {
         private string connectionString = ConfigurationManager.ConnectionStrings["MySqlConnection"].ConnectionString;
+
         private string selectedId;
+
+        /// <summary>
+        /// Khởi tạo form VehicleType.
+        /// </summary>
         public frmVehicleType()
         {
             InitializeComponent();
             this.TopLevel = false;
-            this.FormBorderStyle = FormBorderStyle.None; // Bỏ viền cửa sổ
-            this.Dock = DockStyle.Fill; // Full trong container
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.Dock = DockStyle.Fill;
+
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             this.txtDescription.Enter += new System.EventHandler(this.txtDescription_Enter);
             this.txtDescription.Leave += new System.EventHandler(this.txtDescription_Leave);
@@ -33,18 +40,29 @@ namespace ParkingManagement.GUI.Forms
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
         }
 
-
+        /// <summary>
+        /// Load dữ liệu khi form được mở.
+        /// </summary>
         private void frmVehicleType_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
-            kryptonDgvVehicleType.ScrollBars = ScrollBars.Both;
-            kryptonDgvVehicleType.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            //kryptonDgvVehicleType.ScrollBars = ScrollBars.Both;
+
+            //kryptonDgvVehicleType.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
             txtSearch.KeyPress += txtSearch_KeyPress;
 
+            kryptonDgvVehicleType.ClearSelection();
+
             LoadVehicleTypes();
+
             SetPlaceholder();
         }
 
+        /// <summary>
+        /// Tải dữ liệu loại xe từ database và hiển thị lên DataGridView.
+        /// </summary>
         private void LoadVehicleTypes()
         {
             try
@@ -59,14 +77,19 @@ namespace ParkingManagement.GUI.Forms
                         using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
                         {
                             DataTable dt = new DataTable();
+
                             adapter.Fill(dt);
+
                             kryptonDgvVehicleType.DataSource = dt;
+
                             kryptonDgvVehicleType.ScrollBars = ScrollBars.Both;
+
                             kryptonDgvVehicleType.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
                             foreach (DataGridViewColumn column in kryptonDgvVehicleType.Columns)
-                    {
-                        column.SortMode = DataGridViewColumnSortMode.Automatic;
-                    }
+                            {
+                                column.SortMode = DataGridViewColumnSortMode.Automatic;
+                            }
                         }
                     
                     }
@@ -104,11 +127,13 @@ namespace ParkingManagement.GUI.Forms
 
                 MessageBox.Show("Thêm loại xe thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 
-                cmbVehicle.SelectedIndex = -1; // Bỏ chọn combo box
-                txtDescription.Text = ""; // Xóa nội dung mô tả
-                cmbVehicle.Focus(); // Đưa con trỏ vào combo box
+                cmbVehicle.SelectedIndex = -1;
 
-                LoadVehicleTypes(); // Cập nhật lại danh sách
+                txtDescription.Text = "";
+
+                cmbVehicle.Focus();
+
+                LoadVehicleTypes();
             }
             catch (Exception ex)
             {
@@ -135,11 +160,11 @@ namespace ParkingManagement.GUI.Forms
                 {
                     conn.Open();
                     string query = @"
-                UPDATE vehicle_type 
-                SET vehicle_type_name = @name, 
-                    description = @desc, 
-                    updated_at = NOW() 
-                WHERE id = @id";
+                                    UPDATE vehicle_type 
+                                    SET vehicle_type_name = @name, 
+                                        description = @desc, 
+                                        updated_at = NOW() 
+                                    WHERE id = @id";
 
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
@@ -152,13 +177,14 @@ namespace ParkingManagement.GUI.Forms
 
                 MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // 🔥 Reset dữ liệu sau khi lưu
+             /*   // 🔥 Reset dữ liệu sau khi lưu
                 cmbVehicle.SelectedIndex = -1;
                 txtDescription.Clear();
                 selectedId = null;
                 kryptonDgvVehicleType.ScrollBars = ScrollBars.Both;
-                kryptonDgvVehicleType.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                LoadVehicleTypes(); // Refresh lại bảng
+                kryptonDgvVehicleType.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;*/
+
+                LoadVehicleTypes();
             }
             catch (Exception ex)
             {
@@ -166,19 +192,36 @@ namespace ParkingManagement.GUI.Forms
             }
         }
 
+        /// <summary>
+        /// Sự kiện khi click vào một ô trong DataGridView.
+        /// </summary>
         private void kryptonDgvVehicleType_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && e.ColumnIndex >= 0) // Kiểm tra chỉ mục hợp lệ
+            // Kiểm tra nếu người dùng click vào khoảng trắng hoặc tiêu đề cột thì không làm gì
+            if (e.RowIndex < 0 || e.ColumnIndex < 0)
             {
-                DataGridViewRow row = kryptonDgvVehicleType.Rows[e.RowIndex];
-
-                // 🟢 Lấy dữ liệu từ bảng đưa lên combobox & textbox
-                cmbVehicle.Text = row.Cells["vehicle_type_name"].Value?.ToString();
-                txtDescription.Text = row.Cells["description"].Value?.ToString();
-
-                // 🔥 Lưu lại ID của dòng được chọn
-                selectedId = row.Cells["id"].Value?.ToString();
+                return;
             }
+
+            // Đặt lại màu nền của tất cả các dòng về màu mặc định
+            foreach (DataGridViewRow row in kryptonDgvVehicleType.Rows)
+            {
+                row.DefaultCellStyle.BackColor = kryptonDgvVehicleType.DefaultCellStyle.BackColor;
+            }
+
+            DataGridViewRow selectedRow = kryptonDgvVehicleType.Rows[e.RowIndex];
+
+            kryptonDgvVehicleType.ClearSelection();
+            selectedRow.Selected = true;
+            selectedRow.DefaultCellStyle.BackColor = Color.LightBlue; // Chỉ đổi màu dòng đang chọn
+
+            // ✅ Lấy dữ liệu từ bảng đưa lên combobox & textbox
+            cmbVehicle.Text = selectedRow.Cells["vehicle_type_name"].Value?.ToString() ?? "";
+            txtDescription.Text = selectedRow.Cells["description"].Value?.ToString() ?? "";
+
+            selectedId = selectedRow.Cells["id"].Value?.ToString() ?? "";
+
+            btnDelete.Enabled = true;
         }
 
         private void kryptonDgvVehicleType_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
@@ -198,8 +241,28 @@ namespace ParkingManagement.GUI.Forms
 
             // Không cho phép giãn hàng
             kryptonDgvVehicleType.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
-        }
 
+                      
+        }
+        /// <summary>
+        /// Sự kiện khi chọn một dòng trong DataGridView
+        /// </summary>
+        private void kryptonDgvVehicleType_SelectionChanged(object sender, EventArgs e)
+        {
+            if (kryptonDgvVehicleType.SelectedRows.Count > 0)
+            {
+                selectedId = kryptonDgvVehicleType.SelectedRows[0].Cells["id"].Value.ToString();
+                btnDelete.Enabled = true; // Hiện nút Delete khi có dòng được chọn
+            }
+            else
+            {
+                selectedId = null;
+                btnDelete.Enabled = false; // Ẩn nút Delete khi không có dòng nào được chọn
+            }
+        }
+        /// <summary>
+        /// Xử lý sự kiện xóa dữ liệu khi bấm nút Delete.
+        /// </summary>
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(selectedId))
@@ -229,11 +292,17 @@ namespace ParkingManagement.GUI.Forms
 
                     MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    // 🔥 Cập nhật lại bảng sau khi xóa
-                    selectedId = null;
-                    cmbVehicle.SelectedIndex = -1;
-                    txtDescription.Clear();
                     LoadVehicleTypes();
+                   
+                    selectedId = null;
+
+                    cmbVehicle.SelectedIndex = -1;
+
+                    txtDescription.Clear();
+
+           
+
+                    btnDelete.Enabled = false; // Ẩn nút Delete sau khi xóa
                 }
                 catch (Exception ex)
                 {
@@ -241,6 +310,10 @@ namespace ParkingManagement.GUI.Forms
                 }
             }
         }
+
+        /// <summary>
+        /// Đặt placeholder cho textbox mô tả.
+        /// </summary>
         private void SetPlaceholder()
         {
             if (string.IsNullOrWhiteSpace(txtDescription.Text))
@@ -249,6 +322,9 @@ namespace ParkingManagement.GUI.Forms
                 txtDescription.ForeColor = Color.Gray;
             }
         }
+        /// <summary>
+        /// Sự kiện khi textbox mô tả được focus.
+        /// </summary>
         private void txtDescription_Enter(object sender, EventArgs e)
         {
             if (txtDescription.Text == "Nhập mô tả loại xe...")
@@ -257,14 +333,24 @@ namespace ParkingManagement.GUI.Forms
                 txtDescription.ForeColor = Color.Black;
             }
         }
+
+        /// <summary>
+        /// Sự kiện khi textbox mô tả bị mất focus.
+        /// </summary>
         private void txtDescription_Leave(object sender, EventArgs e)
         {
             SetPlaceholder();
         }
-
+        /// <summary>
+        /// Reset form về trạng thái ban đầu.
+        /// </summary>
         private void btnReset_Click(object sender, EventArgs e)
         {
-
+            LoadVehicleTypes();
+            kryptonDgvVehicleType.ClearSelection();
+            cmbVehicle.SelectedIndex = -1;
+            txtDescription.Clear();
+            selectedId = null;
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -305,7 +391,6 @@ namespace ParkingManagement.GUI.Forms
                 }
             }
 
-            // 🔥 Chỉ hiện thông báo MỘT lần nếu không tìm thấy
             if (!found)
             {
                 MessageBox.Show("Không tìm thấy kết quả phù hợp.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

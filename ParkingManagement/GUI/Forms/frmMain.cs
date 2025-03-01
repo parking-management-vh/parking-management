@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Krypton.Navigator;
 using ComponentFactory.Krypton.Navigator;
+using Krypton.Toolkit;
 
 namespace ParkingManagement
 {
@@ -20,11 +21,30 @@ namespace ParkingManagement
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
+            kryptonNavigator1.Dock = DockStyle.Fill;
+
+            this.Resize += (s, e) =>
+            {
+                kryptonNavigator1.PageBackStyle = PaletteBackStyle.PanelClient;
+                kryptonNavigator1.PerformLayout();
+            };
+            this.Resize += FrmMain_Resize;
+
+
         }
 
+        private void FrmMain_Resize(object sender, EventArgs e)
+        {
+            kryptonNavigator1.Dock = DockStyle.Fill;
+            kryptonNavigator1.PageBackStyle = PaletteBackStyle.PanelClient;
+            kryptonNavigator1.PerformLayout();
+        }
         private void frmMain_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
+            kryptonNavigator1.Dock = DockStyle.Fill;
+
+
         }
 
         private void OpenFormInTab<T>(string tabName) where T : Form, new()
@@ -50,6 +70,8 @@ namespace ParkingManagement
                 FormBorderStyle = FormBorderStyle.None,
                 Dock = DockStyle.Fill
             };
+
+
             newPage.Controls.Add(formInstance);
             formInstance.Show();
 
@@ -72,6 +94,11 @@ namespace ParkingManagement
         {
             OpenFormInTab<frmVehicleType>("Vehicle");
 
+        }
+
+        private void btnTicketPrice_Click(object sender, EventArgs e)
+        {
+            OpenFormInTab<frmTicketPrice>("TicketPrice");
         }
     }
 }

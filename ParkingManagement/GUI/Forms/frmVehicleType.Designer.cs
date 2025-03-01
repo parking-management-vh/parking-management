@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             this.kryptonGroupBox2 = new Krypton.Toolkit.KryptonGroupBox();
-            this.btnCreate = new Krypton.Toolkit.KryptonButton();
-            this.btnDelete = new Krypton.Toolkit.KryptonButton();
+            this.btnReset = new Krypton.Toolkit.KryptonButton();
             this.btnSave = new Krypton.Toolkit.KryptonButton();
+            this.btnDelete = new Krypton.Toolkit.KryptonButton();
+            this.btnCreate = new Krypton.Toolkit.KryptonButton();
             this.kryptonPanel1 = new Krypton.Toolkit.KryptonPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.kryptonDgvVehicleType = new Krypton.Toolkit.KryptonDataGridView();
             this.txtDescription = new Krypton.Toolkit.KryptonTextBox();
             this.kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
@@ -44,8 +46,6 @@
             this.btnCancel = new Krypton.Toolkit.KryptonButton();
             this.btnSearch = new Krypton.Toolkit.KryptonButton();
             this.lblLoaiXe = new Krypton.Toolkit.KryptonLabel();
-            this.btnReset = new Krypton.Toolkit.KryptonButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2.Panel)).BeginInit();
             this.kryptonGroupBox2.Panel.SuspendLayout();
@@ -53,8 +53,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonDgvVehicleType)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonDgvVehicleType)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonGroupBox2
@@ -74,17 +74,29 @@
             this.kryptonGroupBox2.TabIndex = 2;
             this.kryptonGroupBox2.Values.Heading = "Tùy chọn";
             // 
-            // btnCreate
+            // btnReset
             // 
-            this.btnCreate.Location = new System.Drawing.Point(12, 9);
-            this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(116, 48);
-            this.btnCreate.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
-            this.btnCreate.TabIndex = 0;
-            this.btnCreate.Values.DropDownArrowColor = System.Drawing.Color.Empty;
-            this.btnCreate.Values.Image = global::ParkingManagement.Properties.Resources.newfile24;
-            this.btnCreate.Values.Text = "Create";
-            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
+            this.btnReset.Location = new System.Drawing.Point(256, 9);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(116, 48);
+            this.btnReset.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
+            this.btnReset.TabIndex = 4;
+            this.btnReset.Values.DropDownArrowColor = System.Drawing.Color.Empty;
+            this.btnReset.Values.Image = global::ParkingManagement.Properties.Resources.refersh242;
+            this.btnReset.Values.Text = "Refersh";
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(134, 9);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(116, 48);
+            this.btnSave.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
+            this.btnSave.TabIndex = 3;
+            this.btnSave.Values.DropDownArrowColor = System.Drawing.Color.Empty;
+            this.btnSave.Values.Image = global::ParkingManagement.Properties.Resources.save24;
+            this.btnSave.Values.Text = "Edit";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnDelete
             // 
@@ -98,17 +110,17 @@
             this.btnDelete.Values.Text = "Delete";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // btnSave
+            // btnCreate
             // 
-            this.btnSave.Location = new System.Drawing.Point(134, 9);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(116, 48);
-            this.btnSave.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
-            this.btnSave.TabIndex = 3;
-            this.btnSave.Values.DropDownArrowColor = System.Drawing.Color.Empty;
-            this.btnSave.Values.Image = global::ParkingManagement.Properties.Resources.save24;
-            this.btnSave.Values.Text = "Edit";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnCreate.Location = new System.Drawing.Point(12, 9);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(116, 48);
+            this.btnCreate.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
+            this.btnCreate.TabIndex = 0;
+            this.btnCreate.Values.DropDownArrowColor = System.Drawing.Color.Empty;
+            this.btnCreate.Values.Image = global::ParkingManagement.Properties.Resources.newfile24;
+            this.btnCreate.Values.Text = "Create";
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // kryptonPanel1
             // 
@@ -139,6 +151,17 @@
             this.panel1.Size = new System.Drawing.Size(954, 495);
             this.panel1.TabIndex = 3;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::ParkingManagement.Properties.Resources.sign;
+            this.pictureBox1.Location = new System.Drawing.Point(775, 449);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(167, 37);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 35;
+            this.pictureBox1.TabStop = false;
+            // 
             // kryptonDgvVehicleType
             // 
             this.kryptonDgvVehicleType.AllowUserToOrderColumns = true;
@@ -153,6 +176,8 @@
             this.kryptonDgvVehicleType.Size = new System.Drawing.Size(939, 228);
             this.kryptonDgvVehicleType.TabIndex = 24;
             this.kryptonDgvVehicleType.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.kryptonDgvVehicleType_CellClick);
+            this.kryptonDgvVehicleType.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.kryptonDgvVehicleType_DataBindingComplete);
+            this.kryptonDgvVehicleType.SelectionChanged += new System.EventHandler(this.kryptonDgvVehicleType_SelectionChanged);
             // 
             // txtDescription
             // 
@@ -256,29 +281,6 @@
             this.lblLoaiXe.TabIndex = 28;
             this.lblLoaiXe.Values.Text = "Tên loại xe";
             // 
-            // btnReset
-            // 
-            this.btnReset.Location = new System.Drawing.Point(256, 9);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(116, 48);
-            this.btnReset.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
-            this.btnReset.TabIndex = 4;
-            this.btnReset.Values.DropDownArrowColor = System.Drawing.Color.Empty;
-            this.btnReset.Values.Image = global::ParkingManagement.Properties.Resources.refersh242;
-            this.btnReset.Values.Text = "Refersh";
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::ParkingManagement.Properties.Resources.sign;
-            this.pictureBox1.Location = new System.Drawing.Point(775, 449);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(167, 37);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 35;
-            this.pictureBox1.TabStop = false;
-            // 
             // frmVehicleType
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -297,8 +299,8 @@
             this.kryptonPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonDgvVehicleType)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonDgvVehicleType)).EndInit();
             this.ResumeLayout(false);
 
         }

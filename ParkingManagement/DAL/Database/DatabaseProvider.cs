@@ -2,6 +2,7 @@
 using System.Data;
 using MySql.Data.MySqlClient;
 using System.Configuration;  // 📌 Dùng để đọc App.config
+using System.Text.RegularExpressions;
 
 namespace ParkingManagement.DAL.Database
 {
@@ -68,15 +69,16 @@ namespace ParkingManagement.DAL.Database
         {
             if (parameter != null)
             {
-                string[] listParams = query.Split(' ');
+                MatchCollection matches = Regex.Matches(query, @"@\w+");
                 int index = 0;
-                foreach (string item in listParams)
+
+                foreach (Match match in matches)
                 {
-                    if (item.Contains("@"))
-                    {
-                        command.Parameters.AddWithValue(item, parameter[index]);
-                        index++;
-                    }
+                    string paramName = match.Value;
+                    object paramValue = parameter[index] ?? DBNull.Value;
+
+                    command.Parameters.AddWithValue(paramName, paramValue);
+                    index++;
                 }
             }
         }
