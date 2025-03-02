@@ -56,6 +56,8 @@
             this.kryptonRibbonGroupButton9 = new Krypton.Ribbon.KryptonRibbonGroupButton();
             this.kryptonRibbonGroupTriple9 = new Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.kBtnUsers = new Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.kryptonRibbonGroupTriple10 = new Krypton.Ribbon.KryptonRibbonGroupTriple();
+            this.btnVehicleType = new Krypton.Ribbon.KryptonRibbonGroupButton();
             this.kryptonNavigator1 = new Krypton.Navigator.KryptonNavigator();
             this.kryptonRibbonGroupButton2 = new Krypton.Ribbon.KryptonRibbonGroupButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonRibbon1)).BeginInit();
@@ -69,7 +71,7 @@
             this.kryptonRibbon1.RibbonTabs.AddRange(new Krypton.Ribbon.KryptonRibbonTab[] {
             this.kryptonRibbonTab1});
             this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab1;
-            this.kryptonRibbon1.Size = new System.Drawing.Size(1067, 171);
+            this.kryptonRibbon1.Size = new System.Drawing.Size(1174, 171);
             this.kryptonRibbon1.TabIndex = 0;
             // 
             // kryptonRibbonTab1
@@ -96,7 +98,8 @@
             this.kryptonRibbonGroupTriple7,
             this.kryptonRibbonGroupSeparator7,
             this.kryptonRibbonGroupTriple8,
-            this.kryptonRibbonGroupTriple9});
+            this.kryptonRibbonGroupTriple9,
+            this.kryptonRibbonGroupTriple10});
             this.kryptonRibbonGroup1.TextLine1 = "Home";
             // 
             // kryptonRibbonGroupTriple1
@@ -185,6 +188,16 @@
             this.kBtnUsers.TextLine1 = "User";
             this.kBtnUsers.Click += new System.EventHandler(this.kBtnUsers_Click);
             // 
+            // kryptonRibbonGroupTriple10
+            // 
+            this.kryptonRibbonGroupTriple10.Items.AddRange(new Krypton.Ribbon.KryptonRibbonGroupItem[] {
+            this.btnVehicleType});
+            // 
+            // btnVehicleType
+            // 
+            this.btnVehicleType.TextLine1 = "Vehicle Type";
+            this.btnVehicleType.Click += new System.EventHandler(this.btnVehicleType_Click);
+            // 
             // kryptonNavigator1
             // 
             this.kryptonNavigator1.ControlKryptonFormFeatures = false;
@@ -194,7 +207,7 @@
             this.kryptonNavigator1.NavigatorMode = Krypton.Navigator.NavigatorMode.BarTabGroup;
             this.kryptonNavigator1.Owner = null;
             this.kryptonNavigator1.PageBackStyle = Krypton.Toolkit.PaletteBackStyle.PanelClient;
-            this.kryptonNavigator1.Size = new System.Drawing.Size(1067, 383);
+            this.kryptonNavigator1.Size = new System.Drawing.Size(1174, 383);
             this.kryptonNavigator1.TabIndex = 1;
             this.kryptonNavigator1.Text = "kryptonNavigator1";
             // 
@@ -202,11 +215,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(1174, 554);
             this.Controls.Add(this.kryptonNavigator1);
             this.Controls.Add(this.kryptonRibbon1);
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMain";
             this.Text = "MainForm";
             this.Load += new System.EventHandler(this.frmMain_Load);
@@ -250,6 +263,8 @@
         private Krypton.Ribbon.KryptonRibbonGroupButton kryptonRibbonGroupButton9;
         private Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple9;
         private Krypton.Ribbon.KryptonRibbonGroupButton kBtnUsers;
+        private Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple10;
+        private Krypton.Ribbon.KryptonRibbonGroupButton btnVehicleType;
     }
 }
 

@@ -38,7 +38,7 @@ namespace ParkingManagement.GUI.Forms
 
         private void TestConnectDB_Load(object sender, EventArgs e)
         {
-
+            LoadParkingAreaData();
         }
         private void LoadParkingAreaData()
         {
@@ -56,6 +56,11 @@ namespace ParkingManagement.GUI.Forms
         private void button2_Click(object sender, EventArgs e)
         {
             LoadParkingAreaData();
+        }
+
+        private void dgvParkingArea_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -22,7 +22,7 @@ using System.Globalization;
 namespace ParkingManagement.GUI.Forms
 {
 
-    public partial class frmVehicleType: Form
+    public partial class frmVehicleType : Form
     {
         private string connectionString = ConfigurationManager.ConnectionStrings["MySqlConnection"].ConnectionString;
 
@@ -96,7 +96,7 @@ namespace ParkingManagement.GUI.Forms
                                 column.SortMode = DataGridViewColumnSortMode.Automatic;
                             }
                         }
-                    
+
                     }
                 }
             }
@@ -131,7 +131,7 @@ namespace ParkingManagement.GUI.Forms
                 }
 
                 MessageBox.Show("Thêm loại xe thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
+
                 cmbVehicle.SelectedIndex = -1;
 
                 txtDescription.Text = "";
@@ -182,12 +182,12 @@ namespace ParkingManagement.GUI.Forms
 
                 MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-             /*   // 🔥 Reset dữ liệu sau khi lưu
-                cmbVehicle.SelectedIndex = -1;
-                txtDescription.Clear();
-                selectedId = null;
-                kryptonDgvVehicleType.ScrollBars = ScrollBars.Both;
-                kryptonDgvVehicleType.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;*/
+                /*   // 🔥 Reset dữ liệu sau khi lưu
+                   cmbVehicle.SelectedIndex = -1;
+                   txtDescription.Clear();
+                   selectedId = null;
+                   kryptonDgvVehicleType.ScrollBars = ScrollBars.Both;
+                   kryptonDgvVehicleType.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;*/
 
                 LoadVehicleTypes();
             }
@@ -247,7 +247,7 @@ namespace ParkingManagement.GUI.Forms
             // Không cho phép giãn hàng
             kryptonDgvVehicleType.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
 
-                      
+
         }
         /// <summary>
         /// Sự kiện khi chọn một dòng trong DataGridView
@@ -308,14 +308,14 @@ namespace ParkingManagement.GUI.Forms
                     MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     LoadVehicleTypes();
-                   
+
                     selectedId = null;
 
                     cmbVehicle.SelectedIndex = -1;
 
                     txtDescription.Clear();
 
-           
+
 
                     btnDelete.Enabled = false; // Ẩn nút Delete sau khi xóa
                 }
@@ -617,5 +617,5 @@ namespace ParkingManagement.GUI.Forms
             }
         }
     }
-    
+
 }
