@@ -17,9 +17,9 @@ ehthumbs.db
 
 # User-specific files
 *.user
-*.suo
+# *.suo
 *.userosscache
-*.sln.docstates
+# *.sln.docstates
 
 # Others
 *.log
