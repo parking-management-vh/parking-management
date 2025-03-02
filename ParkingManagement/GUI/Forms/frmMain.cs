@@ -71,5 +71,15 @@ namespace ParkingManagement
         {
             OpenFormInTab<frmUsers>("Users");
         }
+
+        private void btnTicketPrice_Click(object sender, EventArgs e)
+        {
+            OpenFormInTab<frmTicketPrice>("Ticket Price");
+        }
+
+        private void btnVehicleType_Click(object sender, EventArgs e)
+        {
+            OpenFormInTab<frmVehicleType>("Vehicle Type");
+        }
     }
 }
