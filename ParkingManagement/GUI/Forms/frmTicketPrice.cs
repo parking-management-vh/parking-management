@@ -29,9 +29,9 @@ namespace ParkingManagement.GUI.Forms
         public frmTicketPrice()
         {
             InitializeComponent();
-            this.TopLevel = false;
-            this.FormBorderStyle = FormBorderStyle.None;
-            this.Dock = DockStyle.Fill;
+           // this.TopLevel = false;
+            //this.FormBorderStyle = FormBorderStyle.None;
+            //this.Dock = DockStyle.Fill;
         }
 
         /// <summary>
@@ -39,7 +39,7 @@ namespace ParkingManagement.GUI.Forms
         /// </summary>
         private void frmTicketPrice_Load(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
+            //this.WindowState = FormWindowState.Maximized;
 
             dgvTicketPrice.ScrollBars = ScrollBars.Both;
 
@@ -121,6 +121,14 @@ namespace ParkingManagement.GUI.Forms
                             dgvTicketPrice.ScrollBars = ScrollBars.Both;
 
                             dgvTicketPrice.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+                            dgvTicketPrice.Columns["description"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+
+                            dgvTicketPrice.Columns["id"].FillWeight = 5;
+
+                            dgvTicketPrice.Columns["vehicle_type_name"].FillWeight = 20;
+
+                            dgvTicketPrice.Columns["price"].FillWeight = 15;
 
                             dgvTicketPrice.Columns["vehicle_type_id"].Visible = false;
 
