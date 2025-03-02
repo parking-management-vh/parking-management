@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.kPnUserInfo = new Krypton.Toolkit.KryptonPanel();
+            this.kCbbParkingArea = new Krypton.Toolkit.KryptonComboBox();
+            this.kCbbTypeAcount = new Krypton.Toolkit.KryptonComboBox();
+            this.kBtnReset = new Krypton.Toolkit.KryptonButton();
             this.kDtpBirthday = new Krypton.Toolkit.KryptonDateTimePicker();
             this.kBtnSave = new Krypton.Toolkit.KryptonButton();
             this.kBtnDelete = new Krypton.Toolkit.KryptonButton();
             this.kBtnCreateUser = new Krypton.Toolkit.KryptonButton();
-            this.kTbArea = new Krypton.Toolkit.KryptonTextBox();
             this.kLbArea = new Krypton.Toolkit.KryptonLabel();
-            this.kLbStatus = new Krypton.Toolkit.KryptonLabel();
-            this.kTbTypeAcount = new Krypton.Toolkit.KryptonTextBox();
             this.kLbTypeAccount = new Krypton.Toolkit.KryptonLabel();
             this.kTbAddress = new Krypton.Toolkit.KryptonTextBox();
             this.kLbAddress = new Krypton.Toolkit.KryptonLabel();
@@ -46,7 +46,6 @@
             this.kTbEmail = new Krypton.Toolkit.KryptonTextBox();
             this.kLbEmail = new Krypton.Toolkit.KryptonLabel();
             this.kLbBirthday = new Krypton.Toolkit.KryptonLabel();
-            this.kTbSex = new Krypton.Toolkit.KryptonTextBox();
             this.kLbSex = new Krypton.Toolkit.KryptonLabel();
             this.kTbCode = new Krypton.Toolkit.KryptonTextBox();
             this.kLbCode = new Krypton.Toolkit.KryptonLabel();
@@ -67,6 +66,7 @@
             this.kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
             this.kPnOption = new Krypton.Toolkit.KryptonPanel();
             this.kryptonGroupBox2 = new Krypton.Toolkit.KryptonGroupBox();
+            this.kRBtnAllAcc = new Krypton.Toolkit.KryptonRadioButton();
             this.kRBtnCustomer = new Krypton.Toolkit.KryptonRadioButton();
             this.kRBtnStaff = new Krypton.Toolkit.KryptonRadioButton();
             this.kRbtnManager = new Krypton.Toolkit.KryptonRadioButton();
@@ -77,10 +77,10 @@
             this.kTbContentSearch = new Krypton.Toolkit.KryptonTextBox();
             this.kLbSearch = new Krypton.Toolkit.KryptonLabel();
             this.kryptonGroupBox1 = new Krypton.Toolkit.KryptonGroupBox();
+            this.kRbtnAllUser = new Krypton.Toolkit.KryptonRadioButton();
             this.kRBtnInactive = new Krypton.Toolkit.KryptonRadioButton();
             this.kRBtnActive = new Krypton.Toolkit.KryptonRadioButton();
             this.kGrvUsers = new Krypton.Toolkit.KryptonDataGridView();
-            this.kLbTypeAcc = new Krypton.Toolkit.KryptonLabel();
             this.kPnInfoManager = new Krypton.Toolkit.KryptonPanel();
             this.kLbTitle = new Krypton.Toolkit.KryptonLabel();
             this.kTbPosition = new Krypton.Toolkit.KryptonTextBox();
@@ -99,10 +99,11 @@
             this.kLbRoleName = new Krypton.Toolkit.KryptonLabel();
             this.kTbNameRole = new Krypton.Toolkit.KryptonTextBox();
             this.kLbRoleDes = new Krypton.Toolkit.KryptonLabel();
-            this.kRbtnAllUser = new Krypton.Toolkit.KryptonRadioButton();
-            this.kRBtnAllAcc = new Krypton.Toolkit.KryptonRadioButton();
+            this.kCbbSex = new Krypton.Toolkit.KryptonComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.kPnUserInfo)).BeginInit();
             this.kPnUserInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kCbbParkingArea)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kCbbTypeAcount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPictureBox1)).BeginInit();
@@ -130,18 +131,20 @@
             this.kPnInfoManager.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel3)).BeginInit();
             this.kryptonPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kCbbSex)).BeginInit();
             this.SuspendLayout();
             // 
             // kPnUserInfo
             // 
+            this.kPnUserInfo.Controls.Add(this.kCbbSex);
+            this.kPnUserInfo.Controls.Add(this.kCbbParkingArea);
+            this.kPnUserInfo.Controls.Add(this.kCbbTypeAcount);
+            this.kPnUserInfo.Controls.Add(this.kBtnReset);
             this.kPnUserInfo.Controls.Add(this.kDtpBirthday);
             this.kPnUserInfo.Controls.Add(this.kBtnSave);
             this.kPnUserInfo.Controls.Add(this.kBtnDelete);
             this.kPnUserInfo.Controls.Add(this.kBtnCreateUser);
-            this.kPnUserInfo.Controls.Add(this.kTbArea);
             this.kPnUserInfo.Controls.Add(this.kLbArea);
-            this.kPnUserInfo.Controls.Add(this.kLbStatus);
-            this.kPnUserInfo.Controls.Add(this.kTbTypeAcount);
             this.kPnUserInfo.Controls.Add(this.kLbTypeAccount);
             this.kPnUserInfo.Controls.Add(this.kTbAddress);
             this.kPnUserInfo.Controls.Add(this.kLbAddress);
@@ -150,7 +153,6 @@
             this.kPnUserInfo.Controls.Add(this.kTbEmail);
             this.kPnUserInfo.Controls.Add(this.kLbEmail);
             this.kPnUserInfo.Controls.Add(this.kLbBirthday);
-            this.kPnUserInfo.Controls.Add(this.kTbSex);
             this.kPnUserInfo.Controls.Add(this.kLbSex);
             this.kPnUserInfo.Controls.Add(this.kTbCode);
             this.kPnUserInfo.Controls.Add(this.kLbCode);
@@ -163,8 +165,41 @@
             this.kPnUserInfo.TabIndex = 0;
             this.kPnUserInfo.Paint += new System.Windows.Forms.PaintEventHandler(this.kPnUserInfo_Paint);
             // 
+            // kCbbParkingArea
+            // 
+            this.kCbbParkingArea.DropDownWidth = 330;
+            this.kCbbParkingArea.Location = new System.Drawing.Point(270, 114);
+            this.kCbbParkingArea.Name = "kCbbParkingArea";
+            this.kCbbParkingArea.Size = new System.Drawing.Size(192, 21);
+            this.kCbbParkingArea.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kCbbParkingArea.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.kCbbParkingArea.TabIndex = 26;
+            // 
+            // kCbbTypeAcount
+            // 
+            this.kCbbTypeAcount.DropDownWidth = 330;
+            this.kCbbTypeAcount.Location = new System.Drawing.Point(132, 263);
+            this.kCbbTypeAcount.Name = "kCbbTypeAcount";
+            this.kCbbTypeAcount.Size = new System.Drawing.Size(330, 20);
+            this.kCbbTypeAcount.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kCbbTypeAcount.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.kCbbTypeAcount.TabIndex = 25;
+            // 
+            // kBtnReset
+            // 
+            this.kBtnReset.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.kBtnReset.Location = new System.Drawing.Point(145, 303);
+            this.kBtnReset.Name = "kBtnReset";
+            this.kBtnReset.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.kBtnReset.Size = new System.Drawing.Size(81, 25);
+            this.kBtnReset.TabIndex = 24;
+            this.kBtnReset.Values.DropDownArrowColor = System.Drawing.Color.Empty;
+            this.kBtnReset.Values.Text = "Reset";
+            this.kBtnReset.Click += new System.EventHandler(this.kBtnReset_Click);
+            // 
             // kDtpBirthday
             // 
+            this.kDtpBirthday.CalendarTodayDate = new System.DateTime(2025, 3, 1, 0, 0, 0, 0);
             this.kDtpBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.kDtpBirthday.Location = new System.Drawing.Point(381, 80);
             this.kDtpBirthday.Margin = new System.Windows.Forms.Padding(2);
@@ -182,6 +217,7 @@
             this.kBtnSave.TabIndex = 21;
             this.kBtnSave.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.kBtnSave.Values.Text = "Lưu";
+            this.kBtnSave.Click += new System.EventHandler(this.kBtnSave_Click);
             // 
             // kBtnDelete
             // 
@@ -193,6 +229,7 @@
             this.kBtnDelete.TabIndex = 20;
             this.kBtnDelete.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.kBtnDelete.Values.Text = "Xoá";
+            this.kBtnDelete.Click += new System.EventHandler(this.kBtnDelete_Click);
             // 
             // kBtnCreateUser
             // 
@@ -204,14 +241,7 @@
             this.kBtnCreateUser.TabIndex = 19;
             this.kBtnCreateUser.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.kBtnCreateUser.Values.Text = "Tạo mới";
-            // 
-            // kTbArea
-            // 
-            this.kTbArea.Location = new System.Drawing.Point(270, 111);
-            this.kTbArea.Name = "kTbArea";
-            this.kTbArea.Size = new System.Drawing.Size(192, 23);
-            this.kTbArea.TabIndex = 18;
-            this.kTbArea.TextChanged += new System.EventHandler(this.kTbArea_TextChanged);
+            this.kBtnCreateUser.Click += new System.EventHandler(this.kBtnCreateUser_Click);
             // 
             // kLbArea
             // 
@@ -221,21 +251,6 @@
             this.kLbArea.TabIndex = 17;
             this.kLbArea.Values.Text = "Khu bãi:";
             this.kLbArea.Click += new System.EventHandler(this.kLbArea_Click);
-            // 
-            // kLbStatus
-            // 
-            this.kLbStatus.Location = new System.Drawing.Point(60, 133);
-            this.kLbStatus.Name = "kLbStatus";
-            this.kLbStatus.Size = new System.Drawing.Size(69, 20);
-            this.kLbStatus.TabIndex = 23;
-            this.kLbStatus.Values.Text = "Tình trạng:";
-            // 
-            // kTbTypeAcount
-            // 
-            this.kTbTypeAcount.Location = new System.Drawing.Point(132, 262);
-            this.kTbTypeAcount.Name = "kTbTypeAcount";
-            this.kTbTypeAcount.Size = new System.Drawing.Size(330, 23);
-            this.kTbTypeAcount.TabIndex = 16;
             // 
             // kLbTypeAccount
             // 
@@ -299,13 +314,6 @@
             this.kLbBirthday.Size = new System.Drawing.Size(68, 20);
             this.kLbBirthday.TabIndex = 7;
             this.kLbBirthday.Values.Text = "Ngày sinh: ";
-            // 
-            // kTbSex
-            // 
-            this.kTbSex.Location = new System.Drawing.Point(270, 78);
-            this.kTbSex.Name = "kTbSex";
-            this.kTbSex.Size = new System.Drawing.Size(44, 23);
-            this.kTbSex.TabIndex = 6;
             // 
             // kLbSex
             // 
@@ -542,6 +550,14 @@
             this.kryptonGroupBox2.TabIndex = 33;
             this.kryptonGroupBox2.Values.Heading = "Loại tài khoản";
             // 
+            // kRBtnAllAcc
+            // 
+            this.kRBtnAllAcc.Location = new System.Drawing.Point(89, 27);
+            this.kRBtnAllAcc.Name = "kRBtnAllAcc";
+            this.kRBtnAllAcc.Size = new System.Drawing.Size(55, 20);
+            this.kRBtnAllAcc.TabIndex = 27;
+            this.kRBtnAllAcc.Values.Text = "Tất cả";
+            // 
             // kRBtnCustomer
             // 
             this.kRBtnCustomer.Location = new System.Drawing.Point(3, 27);
@@ -655,6 +671,15 @@
             this.kryptonGroupBox1.TabIndex = 32;
             this.kryptonGroupBox1.Values.Heading = "Tình trạng";
             // 
+            // kRbtnAllUser
+            // 
+            this.kRbtnAllUser.Location = new System.Drawing.Point(3, 1);
+            this.kRbtnAllUser.Name = "kRbtnAllUser";
+            this.kRbtnAllUser.Size = new System.Drawing.Size(55, 20);
+            this.kRbtnAllUser.TabIndex = 26;
+            this.kRbtnAllUser.Values.Text = "Tất cả";
+            this.kRbtnAllUser.CheckedChanged += new System.EventHandler(this.kRbtnAllUser_CheckedChanged);
+            // 
             // kRBtnInactive
             // 
             this.kRBtnInactive.Location = new System.Drawing.Point(3, 27);
@@ -675,8 +700,8 @@
             // 
             // kGrvUsers
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.kGrvUsers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.kGrvUsers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.kGrvUsers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -691,19 +716,10 @@
             this.kGrvUsers.TabIndex = 1;
             this.kGrvUsers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.kGrvUsers_CellClick);
             // 
-            // kLbTypeAcc
-            // 
-            this.kLbTypeAcc.Location = new System.Drawing.Point(73, 128);
-            this.kLbTypeAcc.Name = "kLbTypeAcc";
-            this.kLbTypeAcc.Size = new System.Drawing.Size(89, 20);
-            this.kLbTypeAcc.TabIndex = 32;
-            this.kLbTypeAcc.Values.Text = "Loại tài khoản:";
-            // 
             // kPnInfoManager
             // 
             this.kPnInfoManager.Controls.Add(this.kLbTitle);
             this.kPnInfoManager.Controls.Add(this.kTbPosition);
-            this.kPnInfoManager.Controls.Add(this.kLbTypeAcc);
             this.kPnInfoManager.Controls.Add(this.kLbManagerPosition);
             this.kPnInfoManager.Controls.Add(this.kTbManagerFullName);
             this.kPnInfoManager.Controls.Add(this.kLbManagerFullName);
@@ -779,7 +795,7 @@
             this.kTbRoleDes.Location = new System.Drawing.Point(58, 59);
             this.kTbRoleDes.Margin = new System.Windows.Forms.Padding(4);
             this.kTbRoleDes.Name = "kTbRoleDes";
-            this.kTbRoleDes.Size = new System.Drawing.Size(162, 23);
+            this.kTbRoleDes.Size = new System.Drawing.Size(162, 20);
             this.kTbRoleDes.TabIndex = 25;
             this.kTbRoleDes.Text = "Tất cả hành động";
             // 
@@ -788,7 +804,7 @@
             this.kTbRoleName.Location = new System.Drawing.Point(58, 28);
             this.kTbRoleName.Margin = new System.Windows.Forms.Padding(4);
             this.kTbRoleName.Name = "kTbRoleName";
-            this.kTbRoleName.Size = new System.Drawing.Size(162, 23);
+            this.kTbRoleName.Size = new System.Drawing.Size(162, 20);
             this.kTbRoleName.TabIndex = 23;
             this.kTbRoleName.Text = "Admin";
             // 
@@ -873,22 +889,18 @@
             this.kLbRoleDes.TabIndex = 25;
             this.kLbRoleDes.Values.Text = "Mô tả:";
             // 
-            // kRbtnAllUser
+            // kCbbSex
             // 
-            this.kRbtnAllUser.Location = new System.Drawing.Point(3, 1);
-            this.kRbtnAllUser.Name = "kRbtnAllUser";
-            this.kRbtnAllUser.Size = new System.Drawing.Size(55, 20);
-            this.kRbtnAllUser.TabIndex = 26;
-            this.kRbtnAllUser.Values.Text = "Tất cả";
-            this.kRbtnAllUser.CheckedChanged += new System.EventHandler(this.kRbtnAllUser_CheckedChanged);
-            // 
-            // kRBtnAllAcc
-            // 
-            this.kRBtnAllAcc.Location = new System.Drawing.Point(89, 27);
-            this.kRBtnAllAcc.Name = "kRBtnAllAcc";
-            this.kRBtnAllAcc.Size = new System.Drawing.Size(55, 20);
-            this.kRBtnAllAcc.TabIndex = 27;
-            this.kRBtnAllAcc.Values.Text = "Tất cả";
+            this.kCbbSex.DropDownWidth = 330;
+            this.kCbbSex.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+            this.kCbbSex.Location = new System.Drawing.Point(270, 81);
+            this.kCbbSex.Name = "kCbbSex";
+            this.kCbbSex.Size = new System.Drawing.Size(58, 21);
+            this.kCbbSex.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kCbbSex.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.kCbbSex.TabIndex = 27;
             // 
             // frmUsers
             // 
@@ -905,6 +917,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.kPnUserInfo)).EndInit();
             this.kPnUserInfo.ResumeLayout(false);
             this.kPnUserInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kCbbParkingArea)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kCbbTypeAcount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPictureBox1)).EndInit();
@@ -938,6 +952,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel3)).EndInit();
             this.kryptonPanel3.ResumeLayout(false);
             this.kryptonPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kCbbSex)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -956,15 +971,12 @@
         private Krypton.Toolkit.KryptonTextBox kTbEmail;
         private Krypton.Toolkit.KryptonLabel kLbEmail;
         private Krypton.Toolkit.KryptonLabel kLbBirthday;
-        private Krypton.Toolkit.KryptonTextBox kTbSex;
         private Krypton.Toolkit.KryptonLabel kLbSex;
-        private Krypton.Toolkit.KryptonTextBox kTbTypeAcount;
         private Krypton.Toolkit.KryptonLabel kLbTypeAccount;
         private Krypton.Toolkit.KryptonTextBox kTbAddress;
         private Krypton.Toolkit.KryptonLabel kLbAddress;
         private Krypton.Toolkit.KryptonTextBox kTbPhone;
         private Krypton.Toolkit.KryptonLabel kLbPhone;
-        private Krypton.Toolkit.KryptonTextBox kTbArea;
         private Krypton.Toolkit.KryptonLabel kLbArea;
         private Krypton.Toolkit.KryptonButton kBtnCreateUser;
         private Krypton.Toolkit.KryptonButton kBtnSave;
@@ -972,7 +984,6 @@
         private Krypton.Toolkit.KryptonPanel kPnOption;
         private Krypton.Toolkit.KryptonRadioButton kRBtnInactive;
         private Krypton.Toolkit.KryptonRadioButton kRBtnActive;
-        private Krypton.Toolkit.KryptonLabel kLbStatus;
         private Krypton.Toolkit.KryptonTextBox kTbContentSearch;
         private Krypton.Toolkit.KryptonLabel kLbSearch;
         private Krypton.Toolkit.KryptonComboBox kCbbOptionSearch;
@@ -982,7 +993,6 @@
         private Krypton.Toolkit.KryptonRadioButton kRBtnCustomer;
         private Krypton.Toolkit.KryptonRadioButton kRBtnStaff;
         private Krypton.Toolkit.KryptonRadioButton kRbtnManager;
-        private Krypton.Toolkit.KryptonLabel kLbTypeAcc;
         private Krypton.Toolkit.KryptonButton kBtnPrevious;
         private Krypton.Toolkit.KryptonButton kBtnLastPage;
         private Krypton.Toolkit.KryptonButton kBtnNexPage;
@@ -1016,5 +1026,9 @@
         private Krypton.Toolkit.KryptonGroupBox kryptonGroupBox2;
         private Krypton.Toolkit.KryptonRadioButton kRbtnAllUser;
         private Krypton.Toolkit.KryptonRadioButton kRBtnAllAcc;
+        private Krypton.Toolkit.KryptonButton kBtnReset;
+        private Krypton.Toolkit.KryptonComboBox kCbbTypeAcount;
+        private Krypton.Toolkit.KryptonComboBox kCbbParkingArea;
+        private Krypton.Toolkit.KryptonComboBox kCbbSex;
     }
 }

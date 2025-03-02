@@ -115,6 +115,10 @@ namespace ParkingManagement.GUI.Forms
             {
                 List<roleModel> roles = roleBLL.GetAllRoleAreas();
                 kDgvRoleTable.DataSource = roles;
+                kCbbTypeAcount.DataSource = roles;
+                kCbbTypeAcount.DisplayMember = "RoleName";
+                kCbbTypeAcount.ValueMember = "Id";
+                kCbbTypeAcount.SelectedIndex = -1;
             }
             catch (Exception ex)
             {
@@ -128,6 +132,11 @@ namespace ParkingManagement.GUI.Forms
             {
                 parkingAreaBLL parkingAreaBLL = new parkingAreaBLL();
                 List<parkingAreaModel> areas = parkingAreaBLL.GetAllParkingAreas();
+
+                kCbbParkingArea.DataSource = areas;
+                kCbbParkingArea.DisplayMember = "AreaName";
+                kCbbParkingArea.ValueMember = "Id";
+                kCbbParkingArea.SelectedIndex = -1;
 
                 kCbbArea.Items.Clear();
                 kCbbArea.Items.Add("Tất cả"); 
@@ -175,24 +184,56 @@ namespace ParkingManagement.GUI.Forms
 
         }
 
+        private Guid selectedUserId;
+
         private void kGrvUsers_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0) 
             {
                 DataGridViewRow row = kGrvUsers.Rows[e.RowIndex];
 
+                var idValue = row.Cells["Id"].Value;
+                if (idValue != null && Guid.TryParse(idValue.ToString(), out Guid parsedId))
+                {
+                    selectedUserId = parsedId;
+                }
+                else
+                {
+                    MessageBox.Show("Không lấy được Id của user!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 kTbCode.Text = row.Cells["Code"].Value.ToString();
                 kTbFullName.Text = row.Cells["FullName"].Value.ToString();
-                kTbSex.Text = row.Cells["Gender"].Value.ToString();
+                kCbbSex.Text = row.Cells["Gender"].Value.ToString();
                 kDtpBirthday.Value = row.Cells["DateOfBirth"].Value != DBNull.Value
                                         ? Convert.ToDateTime(row.Cells["DateOfBirth"].Value)
                                         : DateTime.Now;
-                kTbArea.Text = row.Cells["AreaName"].Value.ToString();
+                string areaName = row.Cells["AreaName"].Value.ToString();
+                kCbbParkingArea.SelectedIndex = kCbbParkingArea.FindStringExact(areaName);
                 kTbEmail.Text = row.Cells["Email"].Value.ToString();
                 kTbPhone.Text = row.Cells["PhoneNumber"].Value.ToString();
                 kTbAddress.Text = row.Cells["Address"].Value.ToString();
-                kTbTypeAcount.Text = row.Cells["RoleName"].Value.ToString();
+                string roleName = row.Cells["RoleName"].Value.ToString();
+                kCbbTypeAcount.SelectedIndex = kCbbTypeAcount.FindStringExact(roleName);
             }
+        }
+
+        private void ClearDatForm()
+        {
+            kTbCode.Text = "";
+            kTbFullName.Text = "";
+            kCbbSex.Text = "";
+            kDtpBirthday.Value = DateTime.Now;
+            kTbEmail.Text = "";
+            kTbPhone.Text = "";
+            kTbAddress.Text = "";
+            kCbbParkingArea.SelectedIndex = -1;
+            kCbbTypeAcount.SelectedIndex = -1;
+        }
+        private void kBtnReset_Click(object sender, EventArgs e)
+        {
+            ClearDatForm();
         }
 
         private Guid selectedRoleId; 
@@ -379,6 +420,125 @@ namespace ParkingManagement.GUI.Forms
         private void kRbtnAllUser_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void kBtnCreateUser_Click(object sender, EventArgs e)
+        {
+            frmCreateUser createUserForm = new frmCreateUser();
+            createUserForm.ShowDialog();
+        }
+
+        private void kBtnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(kTbCode.Text))
+                {
+                    MessageBox.Show("Vui lòng chọn người dùng cần xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                DialogResult confirm = MessageBox.Show("Bạn có chắc chắn muốn xóa người dùng này?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (confirm == DialogResult.No) return;
+
+                string userCode = kTbCode.Text.Trim();
+
+                bool isDeleted = userBLL.DeleteUserByCode(userCode);
+                if (isDeleted)
+                {
+                    MessageBox.Show("Xóa người dùng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ClearDatForm();
+                    LoadAllUsersData();
+                }
+                else
+                {
+                    MessageBox.Show("Xóa thất bại! Người dùng không tồn tại hoặc có lỗi xảy ra.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi xóa người dùng: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void kBtnSave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(kTbCode.Text))
+                {
+                    MessageBox.Show("Vui lòng chọn người dùng cần cập nhật!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (selectedUserId == Guid.Empty)
+                {
+                    MessageBox.Show("Vui lòng chọn người dùng cần cập nhật!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                string codePrefix = "USER";
+                string selectedRole = kCbbTypeAcount.Text.Trim().ToLower(); 
+
+                if (selectedRole.Contains("admin")) codePrefix = "AD";
+                else if (selectedRole.Contains("customer")) codePrefix = "KH";
+                else if (selectedRole.Contains("staff")) codePrefix = "NV";
+
+                string timeStamp = DateTime.Now.ToString("yyMMddHHmm");
+                string newCode = codePrefix + timeStamp;
+
+                string fullName = kTbFullName.Text.Trim();
+                string phoneNumber = kTbPhone.Text.Trim();
+                string email = kTbEmail.Text.Trim();
+                string address = kTbAddress.Text.Trim();
+                string password = "123456";
+                string gender = kCbbSex.SelectedItem?.ToString();
+                DateTime? dateOfBirth = kDtpBirthday.Value;
+                Guid? roleId = (kCbbTypeAcount.SelectedValue is Guid guidRole) ? guidRole : (Guid?)null;
+                Guid? areaId = kCbbParkingArea.SelectedValue != null ? Guid.Parse(kCbbParkingArea.SelectedValue.ToString()) : (Guid?)null;
+                bool status = true;
+
+                createUser updatedUser = new createUser
+                {
+                    Id = selectedUserId,
+                    Code = newCode,
+                    FullName = fullName,
+                    DateOfBirth = dateOfBirth,
+                    Gender = gender,
+                    PhoneNumber = phoneNumber,
+                    Email = email,
+                    Address = address,
+                    Password = password,
+                    RoleId = roleId,
+                    AreaId = areaId,
+                    Status = status,
+                    UpdatedAt = DateTime.Now
+                };
+                MessageBox.Show($"Giá trị gửi vào UpdateUser: \n" +
+                $"ID: {updatedUser.Id}\n" +
+                $"Code: {updatedUser.Code}\n" +
+                $"FullName: {updatedUser.FullName}\n" +
+                $"Phone: {updatedUser.PhoneNumber}\n" +
+                $"Email: {updatedUser.Email}\n" +
+                $"RoleId: {updatedUser.RoleId}\n" +
+                $"AreaId: {updatedUser.AreaId}");
+
+                bool isUpdated = userBLL.UpdateUser(updatedUser);
+                if (isUpdated)
+                {
+                    MessageBox.Show("Cập nhật người dùng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadAllUsersData();
+                    ClearDatForm();
+                }
+                else
+                {
+                    MessageBox.Show("Không có sự thay đổi hoặc lỗi xảy ra!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi cập nhật user: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

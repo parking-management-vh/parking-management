@@ -1,5 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
+using Mysqlx.Crud;
 using ParkingManagement.DAL.Database;
+using ParkingManagement.GUI.Forms;
 using ParkingManagement.Models;
 using ParkingManagement.Utils;
 using System;
@@ -107,6 +109,95 @@ namespace ParkingManagement.DAL.Repositories
         }
 
 
+        public void AddUser(createUser user)
+        {
+            string query = @"
+            INSERT INTO user (id, code, full_name, gender, date_of_birth, area_id, email, phone_number, address, role_id, status) 
+            VALUES (@id, @code, @full_name, @gender, @date_of_birth, @area_id, @email, @phone_number, @address, @role_id, @status)";
+
+            user.Id = Guid.NewGuid();
+
+            object[] parameters =
+            {
+                user.Id.ToString(),
+                user.Code ?? (object)DBNull.Value,
+                user.FullName ?? (object)DBNull.Value,
+                user.Gender ?? (object)DBNull.Value,
+                user.DateOfBirth?.ToString("yyyy-MM-dd") ?? (object)DBNull.Value,
+                user.AreaId?.ToString() ?? (object)DBNull.Value,
+                user.Email ?? (object)DBNull.Value,
+                user.PhoneNumber ?? (object)DBNull.Value,
+                user.Address ?? (object)DBNull.Value,
+                user.RoleId?.ToString() ?? (object)DBNull.Value,
+                user.Status ? 1 : 0
+            };
+
+            try
+            {
+                dbProvider.ExecuteNonQuery(query, parameters);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi thực hiện Insert: " + ex.Message);
+                throw;
+            }
+        }
+
+        public bool UpdateUser(createUser user)
+        {
+            string query = @"
+                UPDATE user
+                SET code = @Code,  
+                    full_name = @FullName, 
+                    date_of_birth = @DateOfBirth,
+                    gender = @Gender,
+                    phone_number = @PhoneNumber, 
+                    email = @Email, 
+                    address = @Address, 
+                    password = @Password,
+                    role_id = @RoleId, 
+                    area_id = @AreaId, 
+                    status = @Status,
+                    updated_at = @UpdatedAt
+                WHERE id = @Id";
+
+            object[] parameters = {
+                user.Code, user.FullName, user.DateOfBirth, user.Gender,
+                user.PhoneNumber, user.Email, user.Address,
+                user.Password, user.RoleId?.ToString(),
+                user.AreaId?.ToString(), user.Status,
+                user.UpdatedAt, user.Id 
+            };
+
+            try
+            {
+                int rowsAffected = dbProvider.ExecuteNonQuery(query, parameters);
+                return rowsAffected > 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi cập nhật user: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+
+        public bool DeleteUserByCode(string userCode)
+        {
+            string query = "DELETE FROM user WHERE code = @code";
+
+            object[] parameters = { userCode };
+
+            try
+            {
+                int rowsAffected = dbProvider.ExecuteNonQuery(query, parameters);
+                return rowsAffected > 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi xóa user: " + ex.Message);
+                return false;
+            }
+        }
     }
 
 }

@@ -25,5 +25,20 @@ namespace ParkingManagement.BLL
         {
             return repository.GetUsersByPage(page, pageSize, status, roleName, areaName, searchColumn, searchValue);
         }
+
+        public void AddUser(createUser user)
+        {
+            repository.AddUser(user);
+        }
+
+        public bool DeleteUserByCode(string userCode)
+        {
+            return repository.DeleteUserByCode(userCode);
+        }
+
+        public bool UpdateUser(createUser user)
+        {
+            return repository.UpdateUser(user);
+        }
     }
 }
