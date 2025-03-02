@@ -34,9 +34,9 @@ namespace ParkingManagement.GUI.Forms
         public frmVehicleType()
         {
             InitializeComponent();
-            this.TopLevel = false;
-            this.FormBorderStyle = FormBorderStyle.None;
-            this.Dock = DockStyle.Fill;
+            //this.TopLevel = false;
+            //this.FormBorderStyle = FormBorderStyle.None;
+           // this.Dock = DockStyle.Fill;
 
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             this.txtDescription.Enter += new System.EventHandler(this.txtDescription_Enter);
@@ -50,11 +50,11 @@ namespace ParkingManagement.GUI.Forms
         /// </summary>
         private void frmVehicleType_Load(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
+           ///this.WindowState = FormWindowState.Maximized;
 
-            //kryptonDgvVehicleType.ScrollBars = ScrollBars.Both;
+            kryptonDgvVehicleType.ScrollBars = ScrollBars.Both;
 
-            //kryptonDgvVehicleType.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            kryptonDgvVehicleType.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             txtSearch.KeyPress += txtSearch_KeyPress;
 

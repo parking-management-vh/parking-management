@@ -216,6 +216,9 @@
     <EmbeddedResource Include="GUI\Forms\frmTicketPrice.resx">
       <DependentUpon>frmTicketPrice.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Forms\frmVehicleType.aa.resx">
+      <DependentUpon>frmVehicleType.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Forms\frmVehicleType.resx">
       <DependentUpon>frmVehicleType.cs</DependentUpon>
     </EmbeddedResource>

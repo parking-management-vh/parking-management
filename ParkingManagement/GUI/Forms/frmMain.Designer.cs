@@ -180,7 +180,7 @@
             this.kryptonNavigator1.Location = new System.Drawing.Point(0, 171);
             this.kryptonNavigator1.NavigatorMode = Krypton.Navigator.NavigatorMode.BarTabGroup;
             this.kryptonNavigator1.Owner = null;
-            this.kryptonNavigator1.PageBackStyle = Krypton.Toolkit.PaletteBackStyle.Control;
+            this.kryptonNavigator1.PageBackStyle = Krypton.Toolkit.PaletteBackStyle.PanelClient;
             this.kryptonNavigator1.Size = new System.Drawing.Size(1067, 383);
             this.kryptonNavigator1.TabIndex = 1;
             this.kryptonNavigator1.Text = "kryptonNavigator1";
