@@ -61,6 +61,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.kryptonLabel4 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel5 = new Krypton.Toolkit.KryptonLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.kryptonGroupBox2 = new Krypton.Toolkit.KryptonGroupBox();
             this.btnSaveToDatabase = new Krypton.Toolkit.KryptonButton();
             this.btnImportExcel = new Krypton.Toolkit.KryptonButton();
@@ -69,20 +70,17 @@
             this.btnSave = new Krypton.Toolkit.KryptonButton();
             this.btnDelete = new Krypton.Toolkit.KryptonButton();
             this.btnCreate = new Krypton.Toolkit.KryptonButton();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDgvVehicleType)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTicketPrice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2.Panel)).BeginInit();
             this.kryptonGroupBox2.Panel.SuspendLayout();
             this.kryptonGroupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonDgvVehicleType
@@ -204,7 +202,7 @@
             this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(957, 583);
+            this.kryptonPanel1.Size = new System.Drawing.Size(991, 603);
             this.kryptonPanel1.TabIndex = 1;
             // 
             // panel1
@@ -227,7 +225,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 93);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(957, 490);
+            this.panel1.Size = new System.Drawing.Size(991, 510);
             this.panel1.TabIndex = 3;
             // 
             // panel2
@@ -239,7 +237,6 @@
             this.panel2.Controls.Add(this.txtPrice);
             this.panel2.Controls.Add(this.kryptonLabel12);
             this.panel2.Controls.Add(this.lblPrice);
-            this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.dgvTicketPrice);
             this.panel2.Controls.Add(this.txtDescriptionn);
             this.panel2.Controls.Add(this.kryptonLabel8);
@@ -253,7 +250,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(957, 490);
+            this.panel2.Size = new System.Drawing.Size(991, 510);
             this.panel2.TabIndex = 39;
             // 
             // rdHourlyPass
@@ -322,21 +319,26 @@
             // dgvTicketPrice
             // 
             this.dgvTicketPrice.AllowUserToOrderColumns = true;
+            this.dgvTicketPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvTicketPrice.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvTicketPrice.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvTicketPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvTicketPrice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTicketPrice.Location = new System.Drawing.Point(8, 215);
+            this.dgvTicketPrice.Location = new System.Drawing.Point(0, 215);
             this.dgvTicketPrice.Name = "dgvTicketPrice";
             this.dgvTicketPrice.RowHeadersWidth = 51;
             this.dgvTicketPrice.RowTemplate.Height = 24;
-            this.dgvTicketPrice.Size = new System.Drawing.Size(969, 228);
+            this.dgvTicketPrice.Size = new System.Drawing.Size(991, 295);
             this.dgvTicketPrice.TabIndex = 24;
             this.dgvTicketPrice.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTicketPrice_CellClick);
             this.dgvTicketPrice.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvTicketPrice_DataBindingComplete);
             // 
             // txtDescriptionn
             // 
+            this.txtDescriptionn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDescriptionn.Location = new System.Drawing.Point(191, 102);
             this.txtDescriptionn.Margin = new System.Windows.Forms.Padding(5);
             this.txtDescriptionn.Multiline = true;
@@ -366,6 +368,8 @@
             // 
             // cmbVehicleType
             // 
+            this.cmbVehicleType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbVehicleType.Font = new System.Drawing.Font("Arial", 12F);
             this.cmbVehicleType.FormattingEnabled = true;
             this.cmbVehicleType.Items.AddRange(new object[] {
@@ -395,7 +399,7 @@
             // 
             // txtSearchh
             // 
-            this.txtSearchh.Location = new System.Drawing.Point(8, 178);
+            this.txtSearchh.Location = new System.Drawing.Point(14, 178);
             this.txtSearchh.Margin = new System.Windows.Forms.Padding(5);
             this.txtSearchh.Name = "txtSearchh";
             this.txtSearchh.Size = new System.Drawing.Size(412, 29);
@@ -405,7 +409,7 @@
             // 
             // btnCancell
             // 
-            this.btnCancell.Location = new System.Drawing.Point(465, 177);
+            this.btnCancell.Location = new System.Drawing.Point(471, 177);
             this.btnCancell.Name = "btnCancell";
             this.btnCancell.Size = new System.Drawing.Size(31, 32);
             this.btnCancell.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
@@ -417,7 +421,7 @@
             // 
             // btnSearchh
             // 
-            this.btnSearchh.Location = new System.Drawing.Point(428, 178);
+            this.btnSearchh.Location = new System.Drawing.Point(434, 178);
             this.btnSearchh.Name = "btnSearchh";
             this.btnSearchh.Size = new System.Drawing.Size(31, 29);
             this.btnSearchh.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
@@ -474,6 +478,17 @@
             this.kryptonLabel5.TabIndex = 37;
             this.kryptonLabel5.Values.Text = "Tên loại xe";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::ParkingManagement.Properties.Resources.sign;
+            this.pictureBox1.Location = new System.Drawing.Point(775, 449);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(167, 37);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 35;
+            this.pictureBox1.TabStop = false;
+            // 
             // kryptonGroupBox2
             // 
             this.kryptonGroupBox2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -489,7 +504,7 @@
             this.kryptonGroupBox2.Panel.Controls.Add(this.btnSave);
             this.kryptonGroupBox2.Panel.Controls.Add(this.btnDelete);
             this.kryptonGroupBox2.Panel.Controls.Add(this.btnCreate);
-            this.kryptonGroupBox2.Size = new System.Drawing.Size(957, 93);
+            this.kryptonGroupBox2.Size = new System.Drawing.Size(991, 93);
             this.kryptonGroupBox2.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonGroupBox2.TabIndex = 2;
             this.kryptonGroupBox2.Values.Heading = "Tùy chọn";
@@ -498,7 +513,7 @@
             // 
             this.btnSaveToDatabase.Location = new System.Drawing.Point(748, 9);
             this.btnSaveToDatabase.Name = "btnSaveToDatabase";
-            this.btnSaveToDatabase.Size = new System.Drawing.Size(116, 48);
+            this.btnSaveToDatabase.Size = new System.Drawing.Size(141, 48);
             this.btnSaveToDatabase.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
             this.btnSaveToDatabase.TabIndex = 8;
             this.btnSaveToDatabase.Values.DropDownArrowColor = System.Drawing.Color.Empty;
@@ -578,33 +593,12 @@
             this.btnCreate.Values.Text = "Create";
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::ParkingManagement.Properties.Resources.sign;
-            this.pictureBox2.Location = new System.Drawing.Point(780, 449);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(167, 37);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 35;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::ParkingManagement.Properties.Resources.sign;
-            this.pictureBox1.Location = new System.Drawing.Point(775, 449);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(167, 37);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 35;
-            this.pictureBox1.TabStop = false;
-            // 
             // frmTicketPrice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(957, 583);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(991, 603);
             this.Controls.Add(this.kryptonPanel1);
             this.Name = "frmTicketPrice";
             this.Text = "frmTicketPrice";
@@ -617,12 +611,11 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTicketPrice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2.Panel)).EndInit();
             this.kryptonGroupBox2.Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2)).EndInit();
             this.kryptonGroupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -654,7 +647,6 @@
         private System.Windows.Forms.TextBox txtPrice;
         private Krypton.Toolkit.KryptonLabel kryptonLabel12;
         private Krypton.Toolkit.KryptonLabel lblPrice;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private Krypton.Toolkit.KryptonDataGridView dgvTicketPrice;
         private Krypton.Toolkit.KryptonTextBox txtDescriptionn;
         private Krypton.Toolkit.KryptonLabel kryptonLabel8;

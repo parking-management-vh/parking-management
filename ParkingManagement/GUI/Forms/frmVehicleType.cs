@@ -50,7 +50,7 @@ namespace ParkingManagement.GUI.Forms
         /// </summary>
         private void frmVehicleType_Load(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
+            //this.WindowState = FormWindowState.Maximized;
 
             //kryptonDgvVehicleType.ScrollBars = ScrollBars.Both;
 
