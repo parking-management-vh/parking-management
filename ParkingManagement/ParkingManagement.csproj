@@ -164,6 +164,30 @@
     <Compile Include="DAL\Repositories\roleRepository.cs" />
     <Compile Include="DAL\Repositories\TicketPriceRepository.cs" />
     <Compile Include="DAL\Repositories\usersRepository.cs" />
+    <Compile Include="GUI\Forms\frmSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Forms\frmSplash.Designer.cs">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Forms\statistics\frmRevenueStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Forms\statistics\frmRevenueStatistics.Designer.cs">
+      <DependentUpon>frmRevenueStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Forms\statistics\frmTicketStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Forms\statistics\frmTicketStatistics.Designer.cs">
+      <DependentUpon>frmTicketStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Forms\statistics\frmParkingAreaStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Forms\statistics\frmParkingAreaStatistics.Designer.cs">
+      <DependentUpon>frmParkingAreaStatistics.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Forms\frmCreateUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -241,6 +265,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Forms\frmParkingCard.resx">
       <DependentUpon>frmParkingCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Forms\frmSplash.resx">
+      <DependentUpon>frmSplash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Forms\frmTicketPrice.resx">
       <DependentUpon>frmTicketPrice.cs</DependentUpon>
