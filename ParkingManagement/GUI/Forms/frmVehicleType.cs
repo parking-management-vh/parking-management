@@ -91,6 +91,14 @@ namespace ParkingManagement.GUI.Forms
 
                             kryptonDgvVehicleType.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
+                            kryptonDgvVehicleType.Columns["vehicle_type_name"].HeaderText = "Vehicle Type";
+
+                            kryptonDgvVehicleType.Columns["description"].HeaderText = "Description";
+
+                            kryptonDgvVehicleType.Columns["created_at"].HeaderText = "Created At";
+
+                            kryptonDgvVehicleType.Columns["updated_at"].HeaderText = "Updated At";
+
                             foreach (DataGridViewColumn column in kryptonDgvVehicleType.Columns)
                             {
                                 column.SortMode = DataGridViewColumnSortMode.Automatic;
