@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Krypton.Navigator;
+using System.Threading;
 
 namespace ParkingManagement
 {
@@ -19,8 +20,16 @@ namespace ParkingManagement
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
-        }
 
+            Thread t = new Thread(new ThreadStart(StartForm));
+            t.Start();
+            Thread.Sleep(5000);
+            t.Abort();
+        }
+        public void StartForm()
+        {
+            Application.Run(new frmSplash());
+        }
         private void frmMain_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
