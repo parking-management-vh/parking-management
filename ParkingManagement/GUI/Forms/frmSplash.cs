@@ -17,6 +17,7 @@ namespace ParkingManagement.GUI.Forms
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None; // Ẩn viền cửa sổ
             this.StartPosition = FormStartPosition.CenterScreen; // Căn giữa màn hình
+
         }
         private void frmSplash_Load(object sender, EventArgs e)
         {

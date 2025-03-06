@@ -36,7 +36,7 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(152, 291);
+            this.progressBar1.Location = new System.Drawing.Point(118, 304);
             this.progressBar1.Margin = new System.Windows.Forms.Padding(4);
             this.progressBar1.MarqueeAnimationSpeed = 50;
             this.progressBar1.Name = "progressBar1";
@@ -51,7 +51,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(787, 460);
+            this.pictureBox1.Size = new System.Drawing.Size(712, 460);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -60,7 +60,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(787, 460);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(712, 460);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmSplash";
