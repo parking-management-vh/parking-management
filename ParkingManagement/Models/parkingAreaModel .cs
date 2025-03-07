@@ -12,8 +12,8 @@ namespace ParkingManagement.Models
         public string AreaName { get; set; }
         public string Status { get; set; }
         public string Description { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
+        //public DateTime CreatedAt { get; set; }
+        //public DateTime UpdatedAt { get; set; }
 
         public parkingAreaModel() { }
 
@@ -23,8 +23,8 @@ namespace ParkingManagement.Models
             Status = status;
             AreaName = areaName;
             Description = description;
-            CreatedAt = createdAt;
-            UpdatedAt = updatedAt;
+            //CreatedAt = createdAt;
+            //UpdatedAt = updatedAt;
         }
     }
 }
