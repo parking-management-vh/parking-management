@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Krypton.Navigator;
 using System.Threading;
+using ParkingManagement.GUI.Forms.statistics;
 
 namespace ParkingManagement
 {
@@ -89,15 +90,6 @@ namespace ParkingManagement
         private void btnVehicleType_Click(object sender, EventArgs e)
         {
             OpenFormInTab<frmVehicleType>("Vehicle Type");
-        }
-        private void btnParkingSpot_Click(object sender, EventArgs e)
-        {
-            OpenFormInTab<frmParkingSlot>("Parking Slot");
-        }
-
-        private void btnParkingArea_Click(object sender, EventArgs e)
-        {
-            OpenFormInTab<frmParkingArea>("Parking Area");
         }
     }
 } 
