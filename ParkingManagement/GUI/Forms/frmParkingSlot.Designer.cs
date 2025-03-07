@@ -275,6 +275,7 @@
             // 
             this.kTbSlotnumber.ImeMode = System.Windows.Forms.ImeMode.On;
             this.kTbSlotnumber.Location = new System.Drawing.Point(131, 18);
+            this.kTbSlotnumber.Margin = new System.Windows.Forms.Padding(10);
             this.kTbSlotnumber.Name = "kTbSlotnumber";
             this.kTbSlotnumber.Size = new System.Drawing.Size(172, 23);
             this.kTbSlotnumber.TabIndex = 9;
