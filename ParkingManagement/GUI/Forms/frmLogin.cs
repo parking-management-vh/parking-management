@@ -60,5 +60,10 @@ namespace ParkingManagement.GUI.Forms
                 MessageBox.Show("Invalid Code or Password!", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -166,6 +166,12 @@
     <Compile Include="DAL\Repositories\roleRepository.cs" />
     <Compile Include="DAL\Repositories\TicketPriceRepository.cs" />
     <Compile Include="DAL\Repositories\usersRepository.cs" />
+    <Compile Include="GUI\Forms\frmParkingSlot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Forms\frmParkingSlot.Designer.cs">
+      <DependentUpon>frmParkingSlot.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Forms\frmSplash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -287,6 +293,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Forms\frmParkingSlot.resx">
       <DependentUpon>frmParkingSlot.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Forms\frmSplash.resx">
       <DependentUpon>frmSplash.cs</DependentUpon>
     </EmbeddedResource>
