@@ -38,16 +38,6 @@ namespace ParkingManagement.GUI.Forms
                 kCbbParkingarea.DisplayMember = "AreaName";
                 kCbbParkingarea.ValueMember = "Id";
                 kCbbParkingarea.SelectedIndex = -1;
-
-                kCbbParkingarea.Items.Clear();
-                kCbbParkingarea.Items.Add("Tất cả");
-
-                foreach (var area in areas)
-                {
-                    kCbbParkingarea.Items.Add(area.AreaName);
-                }
-
-                kCbbParkingarea.SelectedIndex = 0;
             }
             catch (Exception ex)
             {
