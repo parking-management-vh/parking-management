@@ -19,6 +19,46 @@ namespace ParkingManagement.DAL.Repositories
     {
         private readonly DatabaseProvider dbProvider = new DatabaseProvider();
 
+        public createUser LoginUser(string code, string password)
+        {
+            string query = @"
+            SELECT  code, password, status
+            FROM user
+            WHERE code = @code AND password = @password AND status = 1";
+
+            try
+            {
+                object[] parameters = {
+                new MySqlParameter("@code", code),
+                new MySqlParameter("@password", password)
+            };
+
+                DataTable data = dbProvider.ExecuteQuery(query, parameters);
+
+                if (data.Rows.Count > 0)
+                {
+                    DataRow row = data.Rows[0];
+                    return new createUser
+                    {
+                        Code = row["code"].ToString(),
+                        Password = row["password"].ToString(),
+                        Status = Convert.ToBoolean(row["status"])
+                    };
+                }
+                else
+                {
+                    MessageBox.Show("⚠️ No User Found!", "Debug User");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"❌ Error: {ex.Message}", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return null;
+        }
+
+
         public (List<allUserModel>, int) GetUsersByPage(
             int page, 
             int pageSize, 
