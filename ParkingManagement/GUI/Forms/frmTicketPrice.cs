@@ -654,5 +654,10 @@ namespace ParkingManagement.GUI.Forms
                 MessageBox.Show("Lỗi khi lưu dữ liệu: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void kryptonGroupBox2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

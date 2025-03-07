@@ -90,5 +90,14 @@ namespace ParkingManagement
         {
             OpenFormInTab<frmVehicleType>("Vehicle Type");
         }
+        private void btnParkingSpot_Click(object sender, EventArgs e)
+        {
+            OpenFormInTab<frmParkingSlot>("Parking Slot");
+        }
+
+        private void btnParkingArea_Click(object sender, EventArgs e)
+        {
+            OpenFormInTab<frmParkingArea>("Parking Area");
+        }
     }
-}
+} 
