@@ -12,12 +12,26 @@ namespace ParkingManagement.BLL
 {
     public class parkingAreaBLL
     {
-        private readonly parkingAreaRepository repository = new parkingAreaRepository();
+        private readonly ParkingAreaRepository repository = new ParkingAreaRepository();
 
-        public List<parkingAreaModel> GetAllParkingAreas()
+        public List<parkingAreaModel> GetAllParkingAreas(string status = null)
         {
-            return repository.GetAllParkingAreas();
+            return repository.GetAllParkingAreas(status);
         }
 
+        public void CreateParkingArea(parkingAreaModel area)
+        {
+            repository.CreateParkingArea(area);
+        }
+
+        public void UpdateParkingArea(parkingAreaModel parkingArea) 
+        { 
+            repository.UpdateParkingArea(parkingArea);
+        }
+
+        public void DeleteParkingArea(string id)
+        {
+            repository.DeleteParkingArea(id);        
+        }
     }
 }

@@ -217,6 +217,12 @@
     <Compile Include="GUI\Forms\frmVehicleType.Designer.cs">
       <DependentUpon>frmVehicleType.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Forms\ParkingArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Forms\ParkingArea.Designer.cs">
+      <DependentUpon>ParkingArea.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Forms\TestConnectDB.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -224,6 +230,7 @@
       <DependentUpon>TestConnectDB.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Program.cs" />
+    <Compile Include="Models\allParkingSlot.cs" />
     <Compile Include="Models\allUserModel.cs" />
     <Compile Include="Models\createUser.cs" />
     <Compile Include="Models\parkingAreaModel .cs" />
@@ -245,6 +252,9 @@
     <EmbeddedResource Include="GUI\Forms\frmParkingCard.resx">
       <DependentUpon>frmParkingCard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Forms\frmParkingSlot.resx">
+      <DependentUpon>frmParkingSlot.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Forms\frmTicketPrice.resx">
       <DependentUpon>frmTicketPrice.cs</DependentUpon>
     </EmbeddedResource>
@@ -256,6 +266,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Forms\frmVehicleType.resx">
       <DependentUpon>frmVehicleType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Forms\ParkingArea.resx">
+      <DependentUpon>ParkingArea.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Forms\TestConnectDB.resx">
       <DependentUpon>TestConnectDB.cs</DependentUpon>
