@@ -140,6 +140,7 @@
       <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -157,12 +158,38 @@
     <Compile Include="BLL\parkingAreaBLL .cs" />
     <Compile Include="BLL\parkingSlotBLL.cs" />
     <Compile Include="BLL\roleBLL.cs" />
+    <Compile Include="BLL\TicketPriceBLL.cs" />
     <Compile Include="BLL\userBLL.cs" />
     <Compile Include="DAL\Database\DatabaseProvider.cs" />
     <Compile Include="DAL\Repositories\parkingAreaRepository.cs" />
     <Compile Include="DAL\Repositories\parkingSlotRepository.cs" />
     <Compile Include="DAL\Repositories\roleRepository.cs" />
+    <Compile Include="DAL\Repositories\TicketPriceRepository.cs" />
     <Compile Include="DAL\Repositories\usersRepository.cs" />
+    <Compile Include="GUI\Forms\frmSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Forms\frmSplash.Designer.cs">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Forms\statistics\frmRevenueStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Forms\statistics\frmRevenueStatistics.Designer.cs">
+      <DependentUpon>frmRevenueStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Forms\statistics\frmTicketStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Forms\statistics\frmTicketStatistics.Designer.cs">
+      <DependentUpon>frmTicketStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Forms\statistics\frmParkingAreaStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Forms\statistics\frmParkingAreaStatistics.Designer.cs">
+      <DependentUpon>frmParkingAreaStatistics.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Forms\frmCreateUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -231,11 +258,14 @@
     </Compile>
     <Compile Include="GUI\Program.cs" />
     <Compile Include="Models\allParkingSlot.cs" />
+    <Compile Include="Helpers\TicketPriceFormHelper.cs" />
     <Compile Include="Models\allUserModel.cs" />
     <Compile Include="Models\createUser.cs" />
     <Compile Include="Models\parkingAreaModel .cs" />
     <Compile Include="Models\parkingSlotModel.cs" />
     <Compile Include="Models\roleModel.cs" />
+    <Compile Include="Models\TicketPrice.cs" />
+    <Compile Include="Models\VehicleType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\Logger.cs" />
     <Compile Include="Utils\Pagination.cs" />
@@ -254,6 +284,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Forms\frmParkingSlot.resx">
       <DependentUpon>frmParkingSlot.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Forms\frmSplash.resx">
+      <DependentUpon>frmSplash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Forms\frmTicketPrice.resx">
       <DependentUpon>frmTicketPrice.cs</DependentUpon>
