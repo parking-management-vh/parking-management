@@ -237,6 +237,8 @@ namespace ParkingManagement.GUI.Forms
 
             selectedId = null;
             btnDelete.Enabled = false;
+            LoadVehicleTypes();
+            LoadTicketPrice();
         }
         private void btnSave_Click(object sender, EventArgs e)
         {

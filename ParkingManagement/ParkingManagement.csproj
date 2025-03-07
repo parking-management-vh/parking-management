@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -179,6 +179,12 @@
     <Compile Include="GUI\Forms\frmEmployee.Designer.cs">
       <DependentUpon>frmEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Forms\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Forms\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Forms\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +197,7 @@
     <Compile Include="GUI\Forms\frmParkingCard.Designer.cs">
       <DependentUpon>frmParkingCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Forms\frmRole.cs" />
     <Compile Include="GUI\Forms\frmTicketPrice.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Forms\frmEmployee.resx">
       <DependentUpon>frmEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Forms\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Forms\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
@@ -339,6 +349,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\img\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img\car.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

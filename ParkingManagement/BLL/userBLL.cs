@@ -40,5 +40,10 @@ namespace ParkingManagement.BLL
         {
             return repository.UpdateUser(user);
         }
+
+        public createUser Login(string code, string password)
+        {
+            return repository.LoginUser(code, password);
+        }
     }
 }
