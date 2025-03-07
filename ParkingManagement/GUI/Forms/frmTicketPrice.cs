@@ -18,10 +18,10 @@ using System.Data.SqlClient;
 
 namespace ParkingManagement.GUI.Forms
 {
-    public partial class frmTicketPrice: Form
+    public partial class frmTicketPrice : Form
     {
         private string connectionString = ConfigurationManager.ConnectionStrings["MySqlConnection"].ConnectionString;
-       
+
         private string currentSearchKeyword = "";
 
         private string selectedId = null;
@@ -29,9 +29,9 @@ namespace ParkingManagement.GUI.Forms
         public frmTicketPrice()
         {
             InitializeComponent();
-            this.TopLevel = false;
-            this.FormBorderStyle = FormBorderStyle.None;
-            this.Dock = DockStyle.Fill;
+            // this.TopLevel = false;
+            //this.FormBorderStyle = FormBorderStyle.None;
+            //this.Dock = DockStyle.Fill;
         }
 
         /// <summary>
@@ -39,7 +39,7 @@ namespace ParkingManagement.GUI.Forms
         /// </summary>
         private void frmTicketPrice_Load(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
+            //this.WindowState = FormWindowState.Maximized;
 
             dgvTicketPrice.ScrollBars = ScrollBars.Both;
 
@@ -97,10 +97,10 @@ namespace ParkingManagement.GUI.Forms
                 using (MySqlConnection conn = new MySqlConnection(connectionString))
                 {
                     conn.Open();
-/*                    string query = @"
-                        SELECT tp.id, vt.vehicle_type_name, tp.price, tp.is_month, tp.description, tp.created_at, tp.updated_at 
-                        FROM ticket_price tp
-                        JOIN vehicle_type vt ON tp.vehicle_type_id = vt.id";*/
+                    /*                    string query = @"
+                                            SELECT tp.id, vt.vehicle_type_name, tp.price, tp.is_month, tp.description, tp.created_at, tp.updated_at 
+                                            FROM ticket_price tp
+                                            JOIN vehicle_type vt ON tp.vehicle_type_id = vt.id";*/
 
                     string query = @"
                         SELECT tp.id, vt.id AS vehicle_type_id, vt.vehicle_type_name, 
@@ -122,7 +122,31 @@ namespace ParkingManagement.GUI.Forms
 
                             dgvTicketPrice.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
+                            dgvTicketPrice.Columns["description"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+
+                            dgvTicketPrice.Columns["id"].FillWeight = 5;
+
+                            dgvTicketPrice.Columns["vehicle_type_name"].FillWeight = 20;
+
+                            dgvTicketPrice.Columns["price"].FillWeight = 15;
+
                             dgvTicketPrice.Columns["vehicle_type_id"].Visible = false;
+
+                            dgvTicketPrice.Columns["vehicle_type_name"].HeaderText = "Vehicle Type";
+
+                            //heading
+                            dgvTicketPrice.Columns["id"].HeaderText = "ID";
+
+                            dgvTicketPrice.Columns["price"].HeaderText = "Ticket Price";
+
+                            dgvTicketPrice.Columns["is_month"].HeaderText = "Monthly Ticket";
+
+                            dgvTicketPrice.Columns["description"].HeaderText = "Description";
+
+                            dgvTicketPrice.Columns["created_at"].HeaderText = "Created At";
+
+                            dgvTicketPrice.Columns["updated_at"].HeaderText = "Updated At";
+
 
                             foreach (DataGridViewColumn column in dgvTicketPrice.Columns)
                             {
@@ -330,7 +354,7 @@ namespace ParkingManagement.GUI.Forms
 
             btnDelete.Enabled = true;
         }
-        
+
 
         private void dgvTicketPrice_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
@@ -371,7 +395,7 @@ namespace ParkingManagement.GUI.Forms
 
             foreach (DataGridViewRow row in dgvTicketPrice.Rows) // Kiểm tra trong bảng ticket_price
             {
-                if (row.Cells["id"].Value != null && 
+                if (row.Cells["id"].Value != null &&
                     row.Cells["vehicle_type_name"].Value != null &&
                     row.Cells["price"].Value != null &&
                     row.Cells["description"].Value != null)
@@ -631,6 +655,11 @@ namespace ParkingManagement.GUI.Forms
             {
                 MessageBox.Show("Lỗi khi lưu dữ liệu: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void kryptonGroupBox2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

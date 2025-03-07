@@ -61,6 +61,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.kryptonLabel4 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel5 = new Krypton.Toolkit.KryptonLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.kryptonGroupBox2 = new Krypton.Toolkit.KryptonGroupBox();
             this.btnSaveToDatabase = new Krypton.Toolkit.KryptonButton();
             this.btnImportExcel = new Krypton.Toolkit.KryptonButton();
@@ -69,20 +70,17 @@
             this.btnSave = new Krypton.Toolkit.KryptonButton();
             this.btnDelete = new Krypton.Toolkit.KryptonButton();
             this.btnCreate = new Krypton.Toolkit.KryptonButton();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDgvVehicleType)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTicketPrice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2.Panel)).BeginInit();
             this.kryptonGroupBox2.Panel.SuspendLayout();
             this.kryptonGroupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonDgvVehicleType
@@ -92,37 +90,40 @@
             this.kryptonDgvVehicleType.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.kryptonDgvVehicleType.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.kryptonDgvVehicleType.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.kryptonDgvVehicleType.Location = new System.Drawing.Point(8, 215);
+            this.kryptonDgvVehicleType.Location = new System.Drawing.Point(6, 175);
+            this.kryptonDgvVehicleType.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonDgvVehicleType.Name = "kryptonDgvVehicleType";
             this.kryptonDgvVehicleType.RowHeadersWidth = 51;
             this.kryptonDgvVehicleType.RowTemplate.Height = 24;
-            this.kryptonDgvVehicleType.Size = new System.Drawing.Size(939, 228);
+            this.kryptonDgvVehicleType.Size = new System.Drawing.Size(704, 185);
             this.kryptonDgvVehicleType.TabIndex = 24;
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(190, 137);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(5);
+            this.txtDescription.Location = new System.Drawing.Point(142, 111);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(269, 30);
+            this.txtDescription.Size = new System.Drawing.Size(202, 26);
             this.txtDescription.StateCommon.Content.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescription.TabIndex = 33;
             this.txtDescription.Tag = "";
             // 
             // kryptonLabel2
             // 
-            this.kryptonLabel2.Location = new System.Drawing.Point(166, 139);
+            this.kryptonLabel2.Location = new System.Drawing.Point(124, 113);
+            this.kryptonLabel2.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(18, 25);
+            this.kryptonLabel2.Size = new System.Drawing.Size(15, 20);
             this.kryptonLabel2.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel2.TabIndex = 32;
             this.kryptonLabel2.Values.Text = ":";
             // 
             // kryptonLabel3
             // 
-            this.kryptonLabel3.Location = new System.Drawing.Point(21, 137);
+            this.kryptonLabel3.Location = new System.Drawing.Point(16, 111);
+            this.kryptonLabel3.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonLabel3.Name = "kryptonLabel3";
-            this.kryptonLabel3.Size = new System.Drawing.Size(130, 27);
+            this.kryptonLabel3.Size = new System.Drawing.Size(105, 22);
             this.kryptonLabel3.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 12F);
             this.kryptonLabel3.TabIndex = 31;
             this.kryptonLabel3.Values.Text = "Mô tả chi tiết";
@@ -142,35 +143,38 @@
             "Ô tô bán tải",
             "Xe khách",
             "Xe tải"});
-            this.cmbVehicle.Location = new System.Drawing.Point(190, 20);
+            this.cmbVehicle.Location = new System.Drawing.Point(142, 16);
+            this.cmbVehicle.Margin = new System.Windows.Forms.Padding(2);
             this.cmbVehicle.Name = "cmbVehicle";
-            this.cmbVehicle.Size = new System.Drawing.Size(269, 31);
+            this.cmbVehicle.Size = new System.Drawing.Size(203, 26);
             this.cmbVehicle.TabIndex = 27;
             // 
             // kryptonLabel1
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(166, 24);
+            this.kryptonLabel1.Location = new System.Drawing.Point(124, 20);
+            this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(18, 25);
+            this.kryptonLabel1.Size = new System.Drawing.Size(15, 20);
             this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel1.TabIndex = 30;
             this.kryptonLabel1.Values.Text = ":";
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(8, 178);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(5);
+            this.txtSearch.Location = new System.Drawing.Point(6, 145);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(412, 29);
+            this.txtSearch.Size = new System.Drawing.Size(309, 24);
             this.txtSearch.StateCommon.Content.Font = new System.Drawing.Font("Arial", 11F);
             this.txtSearch.TabIndex = 26;
             this.txtSearch.Text = " Nhập loại xe....";
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(465, 177);
+            this.btnCancel.Location = new System.Drawing.Point(349, 144);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(31, 32);
+            this.btnCancel.Size = new System.Drawing.Size(23, 26);
             this.btnCancel.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
             this.btnCancel.TabIndex = 29;
             this.btnCancel.Values.DropDownArrowColor = System.Drawing.Color.Empty;
@@ -179,9 +183,10 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(428, 178);
+            this.btnSearch.Location = new System.Drawing.Point(321, 145);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(31, 29);
+            this.btnSearch.Size = new System.Drawing.Size(23, 24);
             this.btnSearch.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
             this.btnSearch.TabIndex = 25;
             this.btnSearch.Values.DropDownArrowColor = System.Drawing.Color.Empty;
@@ -190,9 +195,10 @@
             // 
             // lblLoaiXe
             // 
-            this.lblLoaiXe.Location = new System.Drawing.Point(21, 24);
+            this.lblLoaiXe.Location = new System.Drawing.Point(16, 20);
+            this.lblLoaiXe.Margin = new System.Windows.Forms.Padding(2);
             this.lblLoaiXe.Name = "lblLoaiXe";
-            this.lblLoaiXe.Size = new System.Drawing.Size(114, 27);
+            this.lblLoaiXe.Size = new System.Drawing.Size(92, 22);
             this.lblLoaiXe.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 12F);
             this.lblLoaiXe.TabIndex = 28;
             this.lblLoaiXe.Values.Text = "Tên loại xe";
@@ -203,8 +209,9 @@
             this.kryptonPanel1.Controls.Add(this.kryptonGroupBox2);
             this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
+            this.kryptonPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(957, 583);
+            this.kryptonPanel1.Size = new System.Drawing.Size(743, 490);
             this.kryptonPanel1.TabIndex = 1;
             // 
             // panel1
@@ -225,13 +232,16 @@
             this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Controls.Add(this.lblLoaiXe);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 93);
+            this.panel1.Location = new System.Drawing.Point(0, 76);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(957, 490);
+            this.panel1.Size = new System.Drawing.Size(743, 414);
             this.panel1.TabIndex = 3;
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel2.Controls.Add(this.rdHourlyPass);
             this.panel2.Controls.Add(this.rdMonthlyPass);
             this.panel2.Controls.Add(this.kryptonLabel6);
@@ -239,7 +249,6 @@
             this.panel2.Controls.Add(this.txtPrice);
             this.panel2.Controls.Add(this.kryptonLabel12);
             this.panel2.Controls.Add(this.lblPrice);
-            this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.dgvTicketPrice);
             this.panel2.Controls.Add(this.txtDescriptionn);
             this.panel2.Controls.Add(this.kryptonLabel8);
@@ -252,42 +261,47 @@
             this.panel2.Controls.Add(this.lblVehicle_type_id);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(957, 490);
+            this.panel2.Size = new System.Drawing.Size(743, 414);
             this.panel2.TabIndex = 39;
             // 
             // rdHourlyPass
             // 
-            this.rdHourlyPass.Location = new System.Drawing.Point(775, 66);
+            this.rdHourlyPass.Location = new System.Drawing.Point(581, 54);
+            this.rdHourlyPass.Margin = new System.Windows.Forms.Padding(2);
             this.rdHourlyPass.Name = "rdHourlyPass";
-            this.rdHourlyPass.Size = new System.Drawing.Size(104, 27);
+            this.rdHourlyPass.Size = new System.Drawing.Size(84, 22);
             this.rdHourlyPass.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 12F);
             this.rdHourlyPass.TabIndex = 46;
             this.rdHourlyPass.Values.Text = "Vé ngày";
             // 
             // rdMonthlyPass
             // 
-            this.rdMonthlyPass.Location = new System.Drawing.Point(641, 66);
+            this.rdMonthlyPass.Location = new System.Drawing.Point(481, 54);
+            this.rdMonthlyPass.Margin = new System.Windows.Forms.Padding(2);
             this.rdMonthlyPass.Name = "rdMonthlyPass";
-            this.rdMonthlyPass.Size = new System.Drawing.Size(111, 27);
+            this.rdMonthlyPass.Size = new System.Drawing.Size(90, 22);
             this.rdMonthlyPass.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 12F);
             this.rdMonthlyPass.TabIndex = 45;
             this.rdMonthlyPass.Values.Text = "Vé tháng";
             // 
             // kryptonLabel6
             // 
-            this.kryptonLabel6.Location = new System.Drawing.Point(607, 69);
+            this.kryptonLabel6.Location = new System.Drawing.Point(455, 56);
+            this.kryptonLabel6.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonLabel6.Name = "kryptonLabel6";
-            this.kryptonLabel6.Size = new System.Drawing.Size(18, 25);
+            this.kryptonLabel6.Size = new System.Drawing.Size(15, 20);
             this.kryptonLabel6.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel6.TabIndex = 44;
             this.kryptonLabel6.Values.Text = ":";
             // 
             // lblTicketPrice
             // 
-            this.lblTicketPrice.Location = new System.Drawing.Point(521, 66);
+            this.lblTicketPrice.Location = new System.Drawing.Point(391, 54);
+            this.lblTicketPrice.Margin = new System.Windows.Forms.Padding(2);
             this.lblTicketPrice.Name = "lblTicketPrice";
-            this.lblTicketPrice.Size = new System.Drawing.Size(80, 27);
+            this.lblTicketPrice.Size = new System.Drawing.Size(65, 22);
             this.lblTicketPrice.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 12F);
             this.lblTicketPrice.TabIndex = 43;
             this.lblTicketPrice.Values.Text = "Loại vé";
@@ -295,26 +309,29 @@
             // txtPrice
             // 
             this.txtPrice.Font = new System.Drawing.Font("Arial", 12F);
-            this.txtPrice.Location = new System.Drawing.Point(191, 61);
+            this.txtPrice.Location = new System.Drawing.Point(143, 50);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(2);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(300, 30);
+            this.txtPrice.Size = new System.Drawing.Size(226, 26);
             this.txtPrice.TabIndex = 42;
             this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
             // 
             // kryptonLabel12
             // 
-            this.kryptonLabel12.Location = new System.Drawing.Point(166, 66);
+            this.kryptonLabel12.Location = new System.Drawing.Point(124, 54);
+            this.kryptonLabel12.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonLabel12.Name = "kryptonLabel12";
-            this.kryptonLabel12.Size = new System.Drawing.Size(18, 25);
+            this.kryptonLabel12.Size = new System.Drawing.Size(15, 20);
             this.kryptonLabel12.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel12.TabIndex = 41;
             this.kryptonLabel12.Values.Text = ":";
             // 
             // lblPrice
             // 
-            this.lblPrice.Location = new System.Drawing.Point(21, 61);
+            this.lblPrice.Location = new System.Drawing.Point(16, 50);
+            this.lblPrice.Margin = new System.Windows.Forms.Padding(2);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(73, 27);
+            this.lblPrice.Size = new System.Drawing.Size(59, 22);
             this.lblPrice.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 12F);
             this.lblPrice.TabIndex = 40;
             this.lblPrice.Values.Text = "Giá vé";
@@ -322,50 +339,60 @@
             // dgvTicketPrice
             // 
             this.dgvTicketPrice.AllowUserToOrderColumns = true;
+            this.dgvTicketPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvTicketPrice.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvTicketPrice.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvTicketPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvTicketPrice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTicketPrice.Location = new System.Drawing.Point(8, 215);
+            this.dgvTicketPrice.Location = new System.Drawing.Point(0, 175);
+            this.dgvTicketPrice.Margin = new System.Windows.Forms.Padding(2);
             this.dgvTicketPrice.Name = "dgvTicketPrice";
             this.dgvTicketPrice.RowHeadersWidth = 51;
             this.dgvTicketPrice.RowTemplate.Height = 24;
-            this.dgvTicketPrice.Size = new System.Drawing.Size(969, 228);
+            this.dgvTicketPrice.Size = new System.Drawing.Size(743, 240);
             this.dgvTicketPrice.TabIndex = 24;
             this.dgvTicketPrice.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTicketPrice_CellClick);
             this.dgvTicketPrice.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvTicketPrice_DataBindingComplete);
             // 
             // txtDescriptionn
             // 
-            this.txtDescriptionn.Location = new System.Drawing.Point(191, 102);
-            this.txtDescriptionn.Margin = new System.Windows.Forms.Padding(5);
+            this.txtDescriptionn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDescriptionn.Location = new System.Drawing.Point(143, 83);
+            this.txtDescriptionn.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescriptionn.Multiline = true;
             this.txtDescriptionn.Name = "txtDescriptionn";
-            this.txtDescriptionn.Size = new System.Drawing.Size(732, 66);
+            this.txtDescriptionn.Size = new System.Drawing.Size(549, 54);
             this.txtDescriptionn.StateCommon.Content.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescriptionn.TabIndex = 33;
             this.txtDescriptionn.Tag = "";
             // 
             // kryptonLabel8
             // 
-            this.kryptonLabel8.Location = new System.Drawing.Point(167, 104);
+            this.kryptonLabel8.Location = new System.Drawing.Point(125, 84);
+            this.kryptonLabel8.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonLabel8.Name = "kryptonLabel8";
-            this.kryptonLabel8.Size = new System.Drawing.Size(18, 25);
+            this.kryptonLabel8.Size = new System.Drawing.Size(15, 20);
             this.kryptonLabel8.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel8.TabIndex = 32;
             this.kryptonLabel8.Values.Text = ":";
             // 
             // lblDetails
             // 
-            this.lblDetails.Location = new System.Drawing.Point(22, 102);
+            this.lblDetails.Location = new System.Drawing.Point(16, 83);
+            this.lblDetails.Margin = new System.Windows.Forms.Padding(2);
             this.lblDetails.Name = "lblDetails";
-            this.lblDetails.Size = new System.Drawing.Size(130, 27);
+            this.lblDetails.Size = new System.Drawing.Size(105, 22);
             this.lblDetails.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 12F);
             this.lblDetails.TabIndex = 31;
             this.lblDetails.Values.Text = "Mô tả chi tiết";
             // 
             // cmbVehicleType
             // 
+            this.cmbVehicleType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbVehicleType.Font = new System.Drawing.Font("Arial", 12F);
             this.cmbVehicleType.FormattingEnabled = true;
             this.cmbVehicleType.Items.AddRange(new object[] {
@@ -379,35 +406,38 @@
             "Ô tô bán tải",
             "Xe khách",
             "Xe tải"});
-            this.cmbVehicleType.Location = new System.Drawing.Point(190, 20);
+            this.cmbVehicleType.Location = new System.Drawing.Point(142, 16);
+            this.cmbVehicleType.Margin = new System.Windows.Forms.Padding(2);
             this.cmbVehicleType.Name = "cmbVehicleType";
-            this.cmbVehicleType.Size = new System.Drawing.Size(732, 31);
+            this.cmbVehicleType.Size = new System.Drawing.Size(550, 26);
             this.cmbVehicleType.TabIndex = 27;
             // 
             // kryptonLabel10
             // 
-            this.kryptonLabel10.Location = new System.Drawing.Point(166, 24);
+            this.kryptonLabel10.Location = new System.Drawing.Point(124, 20);
+            this.kryptonLabel10.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonLabel10.Name = "kryptonLabel10";
-            this.kryptonLabel10.Size = new System.Drawing.Size(18, 25);
+            this.kryptonLabel10.Size = new System.Drawing.Size(15, 20);
             this.kryptonLabel10.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel10.TabIndex = 30;
             this.kryptonLabel10.Values.Text = ":";
             // 
             // txtSearchh
             // 
-            this.txtSearchh.Location = new System.Drawing.Point(8, 178);
-            this.txtSearchh.Margin = new System.Windows.Forms.Padding(5);
+            this.txtSearchh.Location = new System.Drawing.Point(10, 145);
+            this.txtSearchh.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearchh.Name = "txtSearchh";
-            this.txtSearchh.Size = new System.Drawing.Size(412, 29);
+            this.txtSearchh.Size = new System.Drawing.Size(309, 24);
             this.txtSearchh.StateCommon.Content.Font = new System.Drawing.Font("Arial", 11F);
             this.txtSearchh.TabIndex = 26;
             this.txtSearchh.Text = " Nhập loại xe....";
             // 
             // btnCancell
             // 
-            this.btnCancell.Location = new System.Drawing.Point(465, 177);
+            this.btnCancell.Location = new System.Drawing.Point(353, 144);
+            this.btnCancell.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancell.Name = "btnCancell";
-            this.btnCancell.Size = new System.Drawing.Size(31, 32);
+            this.btnCancell.Size = new System.Drawing.Size(23, 26);
             this.btnCancell.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
             this.btnCancell.TabIndex = 29;
             this.btnCancell.Values.DropDownArrowColor = System.Drawing.Color.Empty;
@@ -417,9 +447,10 @@
             // 
             // btnSearchh
             // 
-            this.btnSearchh.Location = new System.Drawing.Point(428, 178);
+            this.btnSearchh.Location = new System.Drawing.Point(326, 145);
+            this.btnSearchh.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearchh.Name = "btnSearchh";
-            this.btnSearchh.Size = new System.Drawing.Size(31, 29);
+            this.btnSearchh.Size = new System.Drawing.Size(23, 24);
             this.btnSearchh.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
             this.btnSearchh.TabIndex = 25;
             this.btnSearchh.Values.DropDownArrowColor = System.Drawing.Color.Empty;
@@ -429,9 +460,10 @@
             // 
             // lblVehicle_type_id
             // 
-            this.lblVehicle_type_id.Location = new System.Drawing.Point(21, 24);
+            this.lblVehicle_type_id.Location = new System.Drawing.Point(16, 20);
+            this.lblVehicle_type_id.Margin = new System.Windows.Forms.Padding(2);
             this.lblVehicle_type_id.Name = "lblVehicle_type_id";
-            this.lblVehicle_type_id.Size = new System.Drawing.Size(114, 27);
+            this.lblVehicle_type_id.Size = new System.Drawing.Size(92, 22);
             this.lblVehicle_type_id.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 12F);
             this.lblVehicle_type_id.TabIndex = 28;
             this.lblVehicle_type_id.Values.Text = "Tên loại xe";
@@ -451,34 +483,51 @@
             "Ô tô bán tải",
             "Xe khách",
             "Xe tải"});
-            this.comboBox1.Location = new System.Drawing.Point(641, 18);
+            this.comboBox1.Location = new System.Drawing.Point(481, 15);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(269, 31);
+            this.comboBox1.Size = new System.Drawing.Size(203, 26);
             this.comboBox1.TabIndex = 36;
             // 
             // kryptonLabel4
             // 
-            this.kryptonLabel4.Location = new System.Drawing.Point(617, 24);
+            this.kryptonLabel4.Location = new System.Drawing.Point(463, 20);
+            this.kryptonLabel4.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonLabel4.Name = "kryptonLabel4";
-            this.kryptonLabel4.Size = new System.Drawing.Size(18, 25);
+            this.kryptonLabel4.Size = new System.Drawing.Size(15, 20);
             this.kryptonLabel4.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel4.TabIndex = 38;
             this.kryptonLabel4.Values.Text = ":";
             // 
             // kryptonLabel5
             // 
-            this.kryptonLabel5.Location = new System.Drawing.Point(497, 22);
+            this.kryptonLabel5.Location = new System.Drawing.Point(373, 18);
+            this.kryptonLabel5.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonLabel5.Name = "kryptonLabel5";
-            this.kryptonLabel5.Size = new System.Drawing.Size(114, 27);
+            this.kryptonLabel5.Size = new System.Drawing.Size(92, 22);
             this.kryptonLabel5.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 12F);
             this.kryptonLabel5.TabIndex = 37;
             this.kryptonLabel5.Values.Text = "Tên loại xe";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::ParkingManagement.Properties.Resources.sign;
+            this.pictureBox1.Location = new System.Drawing.Point(581, 365);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(125, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 35;
+            this.pictureBox1.TabStop = false;
+            // 
             // kryptonGroupBox2
             // 
+            this.kryptonGroupBox2.CaptionStyle = Krypton.Toolkit.LabelStyle.ToolTip;
             this.kryptonGroupBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.kryptonGroupBox2.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ButtonForm;
             this.kryptonGroupBox2.Location = new System.Drawing.Point(0, 0);
+            this.kryptonGroupBox2.Margin = new System.Windows.Forms.Padding(2);
             // 
             // kryptonGroupBox2.Panel
             // 
@@ -489,16 +538,18 @@
             this.kryptonGroupBox2.Panel.Controls.Add(this.btnSave);
             this.kryptonGroupBox2.Panel.Controls.Add(this.btnDelete);
             this.kryptonGroupBox2.Panel.Controls.Add(this.btnCreate);
-            this.kryptonGroupBox2.Size = new System.Drawing.Size(957, 93);
+            this.kryptonGroupBox2.Size = new System.Drawing.Size(743, 76);
             this.kryptonGroupBox2.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonGroupBox2.TabIndex = 2;
             this.kryptonGroupBox2.Values.Heading = "Tùy chọn";
+            this.kryptonGroupBox2.Paint += new System.Windows.Forms.PaintEventHandler(this.kryptonGroupBox2_Paint);
             // 
             // btnSaveToDatabase
             // 
-            this.btnSaveToDatabase.Location = new System.Drawing.Point(748, 9);
+            this.btnSaveToDatabase.Location = new System.Drawing.Point(561, 7);
+            this.btnSaveToDatabase.Margin = new System.Windows.Forms.Padding(2);
             this.btnSaveToDatabase.Name = "btnSaveToDatabase";
-            this.btnSaveToDatabase.Size = new System.Drawing.Size(116, 48);
+            this.btnSaveToDatabase.Size = new System.Drawing.Size(106, 39);
             this.btnSaveToDatabase.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
             this.btnSaveToDatabase.TabIndex = 8;
             this.btnSaveToDatabase.Values.DropDownArrowColor = System.Drawing.Color.Empty;
@@ -508,9 +559,10 @@
             // 
             // btnImportExcel
             // 
-            this.btnImportExcel.Location = new System.Drawing.Point(627, 9);
+            this.btnImportExcel.Location = new System.Drawing.Point(470, 7);
+            this.btnImportExcel.Margin = new System.Windows.Forms.Padding(2);
             this.btnImportExcel.Name = "btnImportExcel";
-            this.btnImportExcel.Size = new System.Drawing.Size(115, 48);
+            this.btnImportExcel.Size = new System.Drawing.Size(86, 39);
             this.btnImportExcel.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
             this.btnImportExcel.TabIndex = 7;
             this.btnImportExcel.Values.DropDownArrowColor = System.Drawing.Color.Empty;
@@ -520,9 +572,10 @@
             // 
             // btnExportExcel
             // 
-            this.btnExportExcel.Location = new System.Drawing.Point(512, 9);
+            this.btnExportExcel.Location = new System.Drawing.Point(384, 7);
+            this.btnExportExcel.Margin = new System.Windows.Forms.Padding(2);
             this.btnExportExcel.Name = "btnExportExcel";
-            this.btnExportExcel.Size = new System.Drawing.Size(109, 48);
+            this.btnExportExcel.Size = new System.Drawing.Size(82, 39);
             this.btnExportExcel.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
             this.btnExportExcel.TabIndex = 6;
             this.btnExportExcel.Values.DropDownArrowColor = System.Drawing.Color.Empty;
@@ -532,9 +585,10 @@
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(256, 9);
+            this.btnRefresh.Location = new System.Drawing.Point(192, 7);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(128, 48);
+            this.btnRefresh.Size = new System.Drawing.Size(96, 39);
             this.btnRefresh.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
             this.btnRefresh.TabIndex = 4;
             this.btnRefresh.Values.DropDownArrowColor = System.Drawing.Color.Empty;
@@ -544,9 +598,10 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(134, 9);
+            this.btnSave.Location = new System.Drawing.Point(100, 7);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(116, 48);
+            this.btnSave.Size = new System.Drawing.Size(87, 39);
             this.btnSave.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
             this.btnSave.TabIndex = 3;
             this.btnSave.Values.DropDownArrowColor = System.Drawing.Color.Empty;
@@ -556,9 +611,10 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(390, 9);
+            this.btnDelete.Location = new System.Drawing.Point(292, 7);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(116, 48);
+            this.btnDelete.Size = new System.Drawing.Size(87, 39);
             this.btnDelete.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Values.DropDownArrowColor = System.Drawing.Color.Empty;
@@ -568,9 +624,10 @@
             // 
             // btnCreate
             // 
-            this.btnCreate.Location = new System.Drawing.Point(12, 9);
+            this.btnCreate.Location = new System.Drawing.Point(9, 7);
+            this.btnCreate.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(116, 48);
+            this.btnCreate.Size = new System.Drawing.Size(87, 39);
             this.btnCreate.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
             this.btnCreate.TabIndex = 0;
             this.btnCreate.Values.DropDownArrowColor = System.Drawing.Color.Empty;
@@ -578,34 +635,14 @@
             this.btnCreate.Values.Text = "Create";
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::ParkingManagement.Properties.Resources.sign;
-            this.pictureBox2.Location = new System.Drawing.Point(780, 449);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(167, 37);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 35;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::ParkingManagement.Properties.Resources.sign;
-            this.pictureBox1.Location = new System.Drawing.Point(775, 449);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(167, 37);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 35;
-            this.pictureBox1.TabStop = false;
-            // 
             // frmTicketPrice
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(957, 583);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(743, 490);
             this.Controls.Add(this.kryptonPanel1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmTicketPrice";
             this.Text = "frmTicketPrice";
             this.Load += new System.EventHandler(this.frmTicketPrice_Load);
@@ -617,12 +654,11 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTicketPrice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2.Panel)).EndInit();
             this.kryptonGroupBox2.Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2)).EndInit();
             this.kryptonGroupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -654,7 +690,6 @@
         private System.Windows.Forms.TextBox txtPrice;
         private Krypton.Toolkit.KryptonLabel kryptonLabel12;
         private Krypton.Toolkit.KryptonLabel lblPrice;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private Krypton.Toolkit.KryptonDataGridView dgvTicketPrice;
         private Krypton.Toolkit.KryptonTextBox txtDescriptionn;
         private Krypton.Toolkit.KryptonLabel kryptonLabel8;

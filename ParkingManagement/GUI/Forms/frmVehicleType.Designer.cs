@@ -38,7 +38,6 @@
             this.btnCreate = new Krypton.Toolkit.KryptonButton();
             this.kryptonPanel1 = new Krypton.Toolkit.KryptonPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.kryptonDgvVehicleType = new Krypton.Toolkit.KryptonDataGridView();
             this.txtDescription = new Krypton.Toolkit.KryptonTextBox();
             this.kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
@@ -56,7 +55,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDgvVehicleType)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,7 +82,7 @@
             // 
             this.btnSaveToDatabase.Location = new System.Drawing.Point(739, 9);
             this.btnSaveToDatabase.Name = "btnSaveToDatabase";
-            this.btnSaveToDatabase.Size = new System.Drawing.Size(116, 48);
+            this.btnSaveToDatabase.Size = new System.Drawing.Size(142, 48);
             this.btnSaveToDatabase.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
             this.btnSaveToDatabase.TabIndex = 10;
             this.btnSaveToDatabase.Values.DropDownArrowColor = System.Drawing.Color.Empty;
@@ -176,7 +174,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.kryptonDgvVehicleType);
             this.panel1.Controls.Add(this.txtDescription);
             this.panel1.Controls.Add(this.kryptonLabel2);
@@ -193,29 +190,21 @@
             this.panel1.Size = new System.Drawing.Size(954, 495);
             this.panel1.TabIndex = 3;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::ParkingManagement.Properties.Resources.sign;
-            this.pictureBox1.Location = new System.Drawing.Point(775, 449);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(167, 37);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 35;
-            this.pictureBox1.TabStop = false;
-            // 
             // kryptonDgvVehicleType
             // 
             this.kryptonDgvVehicleType.AllowUserToOrderColumns = true;
+            this.kryptonDgvVehicleType.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.kryptonDgvVehicleType.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.kryptonDgvVehicleType.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.kryptonDgvVehicleType.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.kryptonDgvVehicleType.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.kryptonDgvVehicleType.Location = new System.Drawing.Point(8, 215);
+            this.kryptonDgvVehicleType.Location = new System.Drawing.Point(0, 215);
             this.kryptonDgvVehicleType.Name = "kryptonDgvVehicleType";
             this.kryptonDgvVehicleType.RowHeadersWidth = 51;
             this.kryptonDgvVehicleType.RowTemplate.Height = 24;
-            this.kryptonDgvVehicleType.Size = new System.Drawing.Size(939, 228);
+            this.kryptonDgvVehicleType.Size = new System.Drawing.Size(954, 280);
             this.kryptonDgvVehicleType.TabIndex = 24;
             this.kryptonDgvVehicleType.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.kryptonDgvVehicleType_CellClick);
             this.kryptonDgvVehicleType.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.kryptonDgvVehicleType_DataBindingComplete);
@@ -223,11 +212,13 @@
             // 
             // txtDescription
             // 
+            this.txtDescription.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDescription.Location = new System.Drawing.Point(190, 62);
             this.txtDescription.Margin = new System.Windows.Forms.Padding(5);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(734, 106);
+            this.txtDescription.Size = new System.Drawing.Size(734, 108);
             this.txtDescription.StateCommon.Content.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescription.TabIndex = 33;
             this.txtDescription.Tag = "";
@@ -252,6 +243,9 @@
             // 
             // cmbVehicle
             // 
+            this.cmbVehicle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbVehicle.Font = new System.Drawing.Font("Arial", 12F);
             this.cmbVehicle.FormattingEnabled = true;
             this.cmbVehicle.Items.AddRange(new object[] {
@@ -264,7 +258,9 @@
             "Ô tô 7 chỗ",
             "Ô tô bán tải",
             "Xe khách",
-            "Xe tải"});
+            "Xe tải",
+            "Ô tô điện",
+            "Ô tô 4 chỗ"});
             this.cmbVehicle.Location = new System.Drawing.Point(190, 20);
             this.cmbVehicle.Name = "cmbVehicle";
             this.cmbVehicle.Size = new System.Drawing.Size(734, 31);
@@ -341,7 +337,6 @@
             this.kryptonPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDgvVehicleType)).EndInit();
             this.ResumeLayout(false);
 
@@ -366,7 +361,6 @@
         private Krypton.Toolkit.KryptonButton btnSearch;
         private Krypton.Toolkit.KryptonLabel lblLoaiXe;
         private Krypton.Toolkit.KryptonButton btnReset;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private Krypton.Toolkit.KryptonButton btnExportExcel;
         private Krypton.Toolkit.KryptonButton btnSaveToDatabase;
         private Krypton.Toolkit.KryptonButton btnImportExcel;

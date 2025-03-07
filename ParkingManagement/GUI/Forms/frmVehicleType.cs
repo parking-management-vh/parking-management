@@ -50,7 +50,7 @@ namespace ParkingManagement.GUI.Forms
         /// </summary>
         private void frmVehicleType_Load(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
+            //this.WindowState = FormWindowState.Maximized;
 
             //kryptonDgvVehicleType.ScrollBars = ScrollBars.Both;
 
@@ -90,6 +90,14 @@ namespace ParkingManagement.GUI.Forms
                             kryptonDgvVehicleType.ScrollBars = ScrollBars.Both;
 
                             kryptonDgvVehicleType.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+                            kryptonDgvVehicleType.Columns["vehicle_type_name"].HeaderText = "Vehicle Type";
+
+                            kryptonDgvVehicleType.Columns["description"].HeaderText = "Description";
+
+                            kryptonDgvVehicleType.Columns["created_at"].HeaderText = "Created At";
+
+                            kryptonDgvVehicleType.Columns["updated_at"].HeaderText = "Updated At";
 
                             foreach (DataGridViewColumn column in kryptonDgvVehicleType.Columns)
                             {
