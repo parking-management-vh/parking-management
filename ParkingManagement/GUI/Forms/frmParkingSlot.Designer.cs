@@ -341,6 +341,7 @@
             this.kDgvParkingSlot.Size = new System.Drawing.Size(635, 207);
             this.kDgvParkingSlot.TabIndex = 2;
             this.kDgvParkingSlot.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.kDgvParkingSlot_CellClick);
+            this.kDgvParkingSlot.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.kDgvParkingSlot_CellContentClick);
             // 
             // kryptonLabel8
             // 
