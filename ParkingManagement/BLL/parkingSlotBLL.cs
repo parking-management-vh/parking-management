@@ -28,5 +28,10 @@ namespace ParkingManagement.BLL
         {
             repository.UpdateParkingSlot(slot);
         }
+
+        public List<ParkingSlotModel> GetSlotByArea(Guid areaId)
+        {
+            return repository.GetSlotByArea(areaId);
+        }
     }
 }

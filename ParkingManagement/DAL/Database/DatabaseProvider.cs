@@ -17,20 +17,34 @@ namespace ParkingManagement.DAL.Database
         {
             DataTable data = new DataTable();
 
-            using (MySqlConnection connection = new MySqlConnection(connectDB))
+            try
             {
-                connection.Open();
-                using (MySqlCommand command = new MySqlCommand(query, connection))
+                using (MySqlConnection connection = new MySqlConnection(connectDB))
                 {
-                    AddParameters(command, query, parameter);
-                    MySqlDataAdapter adapter = new MySqlDataAdapter(command);
-                    adapter.Fill(data);
+                    connection.Open();
+                    MessageBox.Show("Database connection opened successfully!", "Debug");
+
+                    using (MySqlCommand command = new MySqlCommand(query, connection))
+                    {
+                        MessageBox.Show($"Executing SQL: {query}", "Debug");
+                        AddParameters(command, query, parameter);
+
+                        MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+                        adapter.Fill(data);
+                    }
+
+                    connection.Close();
+                    MessageBox.Show("Database connection closed!", "Debug");
                 }
-                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"SQL execution error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             return data;
         }
+
 
         // INSERT, UPDATE, DELETE - Trả về số dòng bị ảnh hưởng
         public int ExecuteNonQuery(string query, object[] parameter = null)
@@ -76,6 +90,7 @@ namespace ParkingManagement.DAL.Database
                 {
                     foreach (MySqlParameter param in parameter)
                     {
+                        MessageBox.Show($"Adding parameter: {param.ParameterName} = {param.Value}", "Debug");
                         command.Parameters.Add(param);
                     }
                 }
@@ -90,6 +105,8 @@ namespace ParkingManagement.DAL.Database
 
                         string paramName = match.Value;
                         object paramValue = parameter[index] ?? DBNull.Value;
+
+                        MessageBox.Show($"Adding parameter: {paramName} = {paramValue}", "Debug");
 
                         if (paramValue is MySqlParameter mySqlParam)
                         {
