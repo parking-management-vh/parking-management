@@ -1,0 +1,212 @@
+﻿using MySql.Data.MySqlClient;
+using ParkingManagement.DAL.Database;
+using ParkingManagement.Models;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ParkingManagement.DAL.Repositories
+{
+    public class vehicleRepository
+    {
+        private readonly DatabaseProvider dbProvider = new DatabaseProvider();
+
+        public List<VehicleType> GetAllVehicleType()
+        {
+            List<VehicleType> areas = new List<VehicleType>();
+            string query = "SELECT * FROM vehicle_type";
+
+            List<MySqlParameter> parameters = new List<MySqlParameter>();
+
+            System.Data.DataTable data = dbProvider.ExecuteQuery(query, parameters.ToArray());
+
+            foreach (DataRow row in data.Rows)
+            {
+                areas.Add(new VehicleType(
+                    row["id"].ToString(),
+                    row["vehicle_type_name"].ToString(),
+                    row["description"].ToString()
+                ));
+            }
+            return areas;
+        }
+
+        public List<allVehicle> GetAllVehicle(string areaName = null, string slotNumber = null, string vehicleType = null, string licensePlate = null)
+        {
+            List<allVehicle> vehicles = new List<allVehicle>();
+
+            string query = @"
+                SELECT v.id, v.license_plate, vt.vehicle_type_name, 
+                       ps.slot_number AS slot_number, pa.area_name AS area_name, 
+                       v.entry_time, v.exit_time
+                FROM vehicle v
+                JOIN vehicle_type vt ON v.vehicle_type_id = vt.id
+                JOIN parking_slot ps ON v.parking_slot_id = ps.id
+                JOIN parking_area pa ON v.parking_area_id = pa.id
+                WHERE 1 = 1";
+
+            List<MySqlParameter> parameters = new List<MySqlParameter>();
+
+            if (!string.IsNullOrEmpty(areaName) && areaName != "Tất cả")
+            {
+                query += " AND pa.id = @areaId";
+                parameters.Add(new MySqlParameter("@areaId", Guid.Parse(areaName)));
+            }
+
+            if (!string.IsNullOrEmpty(vehicleType) && vehicleType != "Tất cả")
+            {
+                query += " AND vt.id = @vehicleTypeId";
+                parameters.Add(new MySqlParameter("@vehicleTypeId", Guid.Parse(vehicleType)));
+            }
+
+            if (!string.IsNullOrEmpty(slotNumber) && slotNumber != "Tất cả")
+            {
+                query += " AND ps.slot_number = @parkingSlot";
+                parameters.Add(new MySqlParameter("@parkingSlot", slotNumber));
+            }
+
+            if (!string.IsNullOrEmpty(licensePlate))
+            {
+                query += " AND v.license_plate LIKE @licensePlate";
+                parameters.Add(new MySqlParameter("@licensePlate", $"%{licensePlate}%"));
+            }
+
+
+            try
+            {
+                DataTable data = dbProvider.ExecuteQuery(query, parameters.ToArray());
+                MessageBox.Show("Rows returned: " + data.Rows.Count, "Debug");
+
+                foreach (DataRow row in data.Rows)
+                {
+                    try
+                    {
+                        if (!Guid.TryParse(row["id"].ToString(), out Guid parsedId))
+                        {
+                            MessageBox.Show($"Lỗi: ID không hợp lệ -> {row["id"]}", "Error");
+                            continue;
+                        }
+
+                        vehicles.Add(new allVehicle(
+                            parsedId,
+                            row["license_plate"].ToString(),
+                            row["vehicle_type_name"].ToString(),  
+                            row["slot_number"].ToString(),   
+                            row["area_name"].ToString(),   
+                            Convert.ToDateTime(row["entry_time"]),
+                            row["exit_time"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(row["exit_time"])
+                        ));
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Lỗi khi mapping dữ liệu: {ex.Message}", "Error");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi tải danh sách xe: {ex.Message}", "Error");
+            }
+
+            return vehicles;
+        }
+
+        public void CreateVehicle(VehicleModel vehicle)
+        {
+            string query = @"
+                INSERT INTO vehicle (id, license_plate, vehicle_type_id, parking_slot_id, parking_area_id, entry_time, exit_time, save_time, created_at, updated_at) 
+                VALUES (@id, @license_plate, @vehicle_type_id, @parking_slot_id, @parking_area_id, @entry_time, @exit_time, @save_time, @created_at, @updated_at)";
+
+            vehicle.Id = Guid.NewGuid();
+            vehicle.CreatedAt = DateTime.Now;
+            vehicle.UpdatedAt = DateTime.Now;
+
+            object[] parameters =
+            {
+                vehicle.Id.ToString(),
+                vehicle.LicensePlate ?? (object)DBNull.Value,
+                vehicle.VehicleTypeId.ToString(),
+                vehicle.ParkingSlotId.ToString(),
+                vehicle.ParkingAreaId.ToString(),
+                vehicle.EntryTime.ToString("yyyy-MM-dd HH:mm:ss"),
+                vehicle.ExitTime?.ToString("yyyy-MM-dd HH:mm:ss") ?? (object)DBNull.Value,
+                vehicle.SaveTime == default ? (object)DBNull.Value : vehicle.SaveTime.ToString("yyyy-MM-dd HH:mm:ss"),
+                vehicle.CreatedAt.ToString("yyyy-MM-dd HH:mm:ss"),
+                vehicle.UpdatedAt.ToString("yyyy-MM-dd HH:mm:ss")
+            };
+
+            try
+            {
+                dbProvider.ExecuteNonQuery(query, parameters);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi thêm xe mới: " + ex.Message);
+                throw;
+            }
+        }
+
+        public void UpdateVehicle(VehicleModel vehicle)
+        {
+            string query = @"
+                UPDATE vehicle 
+                SET license_plate = @license_plate, 
+                    vehicle_type_id = @vehicle_type_id, 
+                    parking_slot_id = @parking_slot_id, 
+                    parking_area_id = @parking_area_id, 
+                    entry_time = @entry_time, 
+                    exit_time = @exit_time, 
+                    save_time = @save_time, 
+                    updated_at = @updated_at
+                WHERE id = @id";
+
+            vehicle.UpdatedAt = DateTime.Now;
+
+            object[] parameters =
+            {
+                vehicle.Id.ToString(),
+                vehicle.LicensePlate ?? (object)DBNull.Value,
+                vehicle.VehicleTypeId.ToString(),
+                vehicle.ParkingSlotId.ToString(),
+                vehicle.ParkingAreaId.ToString(),
+                vehicle.EntryTime.ToString("yyyy-MM-dd HH:mm:ss"),
+                vehicle.ExitTime?.ToString("yyyy-MM-dd HH:mm:ss") ?? (object)DBNull.Value,
+                vehicle.SaveTime == default ? (object)DBNull.Value : vehicle.SaveTime.ToString("yyyy-MM-dd HH:mm:ss"),
+                vehicle.UpdatedAt.ToString("yyyy-MM-dd HH:mm:ss")
+            };
+
+            try
+            {
+                dbProvider.ExecuteNonQuery(query, parameters);
+                MessageBox.Show("Cập nhật phương tiện thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi cập nhật phương tiện: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw;
+            }
+        }
+
+        public void DeleteVehicle(string id)
+        {
+            string query = "DELETE FROM vehicle WHERE id = @id";
+
+            object[] parameters = { id };
+
+            try
+            {
+                dbProvider.ExecuteNonQuery(query, parameters);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi xoá chỗ đỗ: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw;
+            }
+        }
+
+    }
+}

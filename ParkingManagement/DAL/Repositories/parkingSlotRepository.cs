@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Microsoft.Office.Interop.Excel;
+using MySql.Data.MySqlClient;
 using ParkingManagement.DAL.Database;
 using ParkingManagement.Models;
 using System;
@@ -27,7 +28,7 @@ namespace ParkingManagement.DAL.Repositories
                 pa.area_name AS area_name
             FROM parking_slot u 
             LEFT JOIN parking_area pa ON u.parking_area_id = pa.id
-            WHERE 1=1"; // Đảm bảo câu lệnh WHERE hợp lệ
+            WHERE 1=1";
 
             List<MySqlParameter> parameters = new List<MySqlParameter>();
 
@@ -47,7 +48,7 @@ namespace ParkingManagement.DAL.Repositories
                 parameters.Add(new MySqlParameter("@slotType", slotType));
             }
 
-            DataTable data = dbProvider.ExecuteQuery(query, parameters.ToArray());
+            System.Data.DataTable data = dbProvider.ExecuteQuery(query, parameters.ToArray());
 
             foreach (DataRow row in data.Rows)
             {
@@ -133,6 +134,37 @@ namespace ParkingManagement.DAL.Repositories
                 MessageBox.Show("Lỗi khi cập nhật chỗ đỗ: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 throw;
             }
-        }       
+        }
+
+        public List<ParkingSlotModel> GetSlotByArea(Guid areaId)
+        {
+            List<ParkingSlotModel> slots = new List<ParkingSlotModel>();
+            string query = "SELECT * FROM parking_slot WHERE parking_area_id = @areaId AND status = 'Sẵn sàng'";
+
+            object[] parameters = { areaId.ToString() };
+
+            try
+            {
+                System.Data.DataTable data = dbProvider.ExecuteQuery(query, parameters);
+
+                foreach (DataRow row in data.Rows)
+                {
+                    slots.Add(new ParkingSlotModel(
+                        Guid.Parse(row["id"].ToString()),
+                        Convert.ToInt32(row["slot_number"]),
+                        row["slot_type"].ToString(),
+                        row["status"].ToString(),
+                        Guid.Parse(row["parking_area_id"].ToString())
+                    ));
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi lấy danh sách vị trí đỗ: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw;
+            }
+
+            return slots;
+        }
     }
 }
