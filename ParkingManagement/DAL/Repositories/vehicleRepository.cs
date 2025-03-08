@@ -35,7 +35,7 @@ namespace ParkingManagement.DAL.Repositories
             return areas;
         }
 
-        public List<allVehicle> GetAllVehicle()
+        public List<allVehicle> GetAllVehicle(string areaName = null, string slotNumber = null, string vehicleType = null, string licensePlate = null)
         {
             List<allVehicle> vehicles = new List<allVehicle>();
 
@@ -46,11 +46,39 @@ namespace ParkingManagement.DAL.Repositories
                 FROM vehicle v
                 JOIN vehicle_type vt ON v.vehicle_type_id = vt.id
                 JOIN parking_slot ps ON v.parking_slot_id = ps.id
-                JOIN parking_area pa ON v.parking_area_id = pa.id";
+                JOIN parking_area pa ON v.parking_area_id = pa.id
+                WHERE 1 = 1";
+
+            List<MySqlParameter> parameters = new List<MySqlParameter>();
+
+            if (!string.IsNullOrEmpty(areaName) && areaName != "Tất cả")
+            {
+                query += " AND pa.id = @areaId";
+                parameters.Add(new MySqlParameter("@areaId", Guid.Parse(areaName)));
+            }
+
+            if (!string.IsNullOrEmpty(vehicleType) && vehicleType != "Tất cả")
+            {
+                query += " AND vt.id = @vehicleTypeId";
+                parameters.Add(new MySqlParameter("@vehicleTypeId", Guid.Parse(vehicleType)));
+            }
+
+            if (!string.IsNullOrEmpty(slotNumber) && slotNumber != "Tất cả")
+            {
+                query += " AND ps.slot_number = @parkingSlot";
+                parameters.Add(new MySqlParameter("@parkingSlot", slotNumber));
+            }
+
+            if (!string.IsNullOrEmpty(licensePlate))
+            {
+                query += " AND v.license_plate LIKE @licensePlate";
+                parameters.Add(new MySqlParameter("@licensePlate", $"%{licensePlate}%"));
+            }
+
 
             try
             {
-                DataTable data = dbProvider.ExecuteQuery(query);
+                DataTable data = dbProvider.ExecuteQuery(query, parameters.ToArray());
                 MessageBox.Show("Rows returned: " + data.Rows.Count, "Debug");
 
                 foreach (DataRow row in data.Rows)

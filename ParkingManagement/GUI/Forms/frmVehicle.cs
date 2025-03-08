@@ -23,6 +23,9 @@ namespace ParkingManagement.GUI.Forms
             LoadSlotNumber();
             LoadAllVehicle();
             LoadAllVehicleType();
+            LoadAllAreasSearch();
+            LoadSlotNumberSearch();
+            LoadAllVehicleTypeSearch();
             kDTPIn.Format = DateTimePickerFormat.Custom;
             kDTPIn.CustomFormat = "yyyy-MM-dd HH:mm:ss";
 
@@ -52,6 +55,22 @@ namespace ParkingManagement.GUI.Forms
             }
         }
 
+        private void LoadAllAreasSearch()
+        {
+            try
+            {
+                List<parkingAreaModel> areas = parkingAreaBLL.GetAllParkingAreas();
+                kCbbSArea.DataSource = areas;
+                kCbbSArea.DisplayMember = "AreaName";
+                kCbbSArea.ValueMember = "Id";
+                kCbbSArea.SelectedIndex = -1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi tải danh sách khu vực: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void LoadAllVehicleType()
         {
             try
@@ -62,6 +81,23 @@ namespace ParkingManagement.GUI.Forms
                 kCbbTypeVehicle.DisplayMember = "VehicleTypeName";
                 kCbbTypeVehicle.ValueMember = "Id";
                 kCbbTypeVehicle.SelectedIndex = -1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi tải danh sách loại xe: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void LoadAllVehicleTypeSearch()
+        {
+            try
+            {
+                List<VehicleType> vehicleTypes = vehicleBLL.GetAllVehicleType();
+
+                kCbbSTypeV.DataSource = vehicleTypes;
+                kCbbSTypeV.DisplayMember = "VehicleTypeName";
+                kCbbSTypeV.ValueMember = "Id";
+                kCbbSTypeV.SelectedIndex = -1;
             }
             catch (Exception ex)
             {
@@ -84,6 +120,22 @@ namespace ParkingManagement.GUI.Forms
             kCbbSlot.Items.Add("9");
             kCbbSlot.Items.Add("10");
             kCbbSlot.SelectedIndex = 0;
+        }
+
+        private void LoadSlotNumberSearch()
+        {
+            kCbbSSlot.Items.Clear();
+            kCbbSSlot.Items.Add("1");
+            kCbbSSlot.Items.Add("2");
+            kCbbSSlot.Items.Add("3");
+            kCbbSSlot.Items.Add("4");
+            kCbbSSlot.Items.Add("5");
+            kCbbSSlot.Items.Add("6");
+            kCbbSSlot.Items.Add("7");
+            kCbbSSlot.Items.Add("8");
+            kCbbSSlot.Items.Add("9");
+            kCbbSSlot.Items.Add("10");
+            kCbbSSlot.SelectedIndex = -1;
         }
 
         private void LoadAvailableSlots(Guid areaId)
@@ -388,6 +440,21 @@ namespace ParkingManagement.GUI.Forms
                         MessageBox.Show($"Lỗi khi xoá chỗ đỗ: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
+        }
+
+        private void kBtnSearch_Click(object sender, EventArgs e)
+        {
+            string selectedArea = kCbbSArea.SelectedValue?.ToString();
+            string selectedSlot = kCbbSSlot.SelectedItem?.ToString();
+            string selectedVehicleType = kCbbSTypeV.SelectedValue?.ToString();
+            string licensePlate = kTbSBks.Text.Trim(); 
+
+            vehicleBLL vehicleBLL = new vehicleBLL();
+            List<allVehicle> vehicle = vehicleBLL.GetAllVehicle(selectedArea, selectedSlot, selectedVehicleType, licensePlate);
+
+            kDgvVehicle.DataSource = null;
+            kDgvVehicle.DataSource = vehicle;
+
         }
     }
 }

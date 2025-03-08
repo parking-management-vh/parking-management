@@ -57,6 +57,7 @@
             this.kryptonLabel8 = new Krypton.Toolkit.KryptonLabel();
             this.kCbbSArea = new Krypton.Toolkit.KryptonComboBox();
             this.kryptonLabel7 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel10 = new Krypton.Toolkit.KryptonLabel();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kDgvVehicle)).BeginInit();
@@ -289,6 +290,7 @@
             // 
             // kryptonPanel3
             // 
+            this.kryptonPanel3.Controls.Add(this.kryptonLabel10);
             this.kryptonPanel3.Controls.Add(this.kBtnSearch);
             this.kryptonPanel3.Controls.Add(this.kTbSBks);
             this.kryptonPanel3.Controls.Add(this.kCbbSTypeV);
@@ -312,13 +314,14 @@
             this.kBtnSearch.TabIndex = 16;
             this.kBtnSearch.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.kBtnSearch.Values.Text = "Tìm kiếm";
+            this.kBtnSearch.Click += new System.EventHandler(this.kBtnSearch_Click);
             // 
             // kTbSBks
             // 
-            this.kTbSBks.Location = new System.Drawing.Point(22, 125);
+            this.kTbSBks.Location = new System.Drawing.Point(122, 125);
             this.kTbSBks.Margin = new System.Windows.Forms.Padding(2);
             this.kTbSBks.Name = "kTbSBks";
-            this.kTbSBks.Size = new System.Drawing.Size(250, 20);
+            this.kTbSBks.Size = new System.Drawing.Size(150, 20);
             this.kTbSBks.TabIndex = 16;
             // 
             // kCbbSTypeV
@@ -333,7 +336,7 @@
             // 
             // kryptonLabel9
             // 
-            this.kryptonLabel9.Location = new System.Drawing.Point(20, 13);
+            this.kryptonLabel9.Location = new System.Drawing.Point(17, 11);
             this.kryptonLabel9.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonLabel9.Name = "kryptonLabel9";
             this.kryptonLabel9.Size = new System.Drawing.Size(54, 20);
@@ -352,7 +355,7 @@
             // 
             // kryptonLabel8
             // 
-            this.kryptonLabel8.Location = new System.Drawing.Point(22, 87);
+            this.kryptonLabel8.Location = new System.Drawing.Point(17, 87);
             this.kryptonLabel8.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonLabel8.Name = "kryptonLabel8";
             this.kryptonLabel8.Size = new System.Drawing.Size(103, 20);
@@ -371,12 +374,21 @@
             // 
             // kryptonLabel7
             // 
-            this.kryptonLabel7.Location = new System.Drawing.Point(22, 50);
+            this.kryptonLabel7.Location = new System.Drawing.Point(17, 49);
             this.kryptonLabel7.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonLabel7.Name = "kryptonLabel7";
             this.kryptonLabel7.Size = new System.Drawing.Size(36, 20);
             this.kryptonLabel7.TabIndex = 18;
             this.kryptonLabel7.Values.Text = "Vị trí";
+            // 
+            // kryptonLabel10
+            // 
+            this.kryptonLabel10.Location = new System.Drawing.Point(17, 125);
+            this.kryptonLabel10.Margin = new System.Windows.Forms.Padding(2);
+            this.kryptonLabel10.Name = "kryptonLabel10";
+            this.kryptonLabel10.Size = new System.Drawing.Size(90, 20);
+            this.kryptonLabel10.TabIndex = 22;
+            this.kryptonLabel10.Values.Text = "Biển kiểm soát";
             // 
             // frmVehicle
             // 
@@ -440,5 +452,6 @@
         private Krypton.Toolkit.KryptonLabel kryptonLabel8;
         private Krypton.Toolkit.KryptonComboBox kCbbSArea;
         private Krypton.Toolkit.KryptonLabel kryptonLabel7;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel10;
     }
 }

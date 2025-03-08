@@ -16,9 +16,9 @@ namespace ParkingManagement.BLL
         {
             return repository.GetAllVehicleType();
         }
-        public List<allVehicle> GetAllVehicle()
+        public List<allVehicle> GetAllVehicle(string areaName = null, string slotNumber = null, string vehicleType = null, string licensePlate = null)
         {
-            return repository.GetAllVehicle();
+            return repository.GetAllVehicle(areaName, slotNumber, vehicleType, licensePlate);
         }
         public void CreateVehicle(VehicleModel vehicle)
         {
