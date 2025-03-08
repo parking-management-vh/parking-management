@@ -156,6 +156,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\parkingAreaBLL .cs" />
+    <Compile Include="BLL\parkingCardBLL.cs" />
     <Compile Include="BLL\parkingSlotBLL.cs" />
     <Compile Include="BLL\roleBLL.cs" />
     <Compile Include="BLL\TicketPriceBLL.cs" />
@@ -163,6 +164,7 @@
     <Compile Include="BLL\vehicleBLL.cs" />
     <Compile Include="DAL\Database\DatabaseProvider.cs" />
     <Compile Include="DAL\Repositories\parkingAreaRepository.cs" />
+    <Compile Include="DAL\Repositories\parkingCardRepository.cs" />
     <Compile Include="DAL\Repositories\parkingSlotRepository.cs" />
     <Compile Include="DAL\Repositories\roleRepository.cs" />
     <Compile Include="DAL\Repositories\TicketPriceRepository.cs" />
@@ -271,11 +273,13 @@
       <DependentUpon>TestConnectDB.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Program.cs" />
+    <Compile Include="Models\allParkingCard.cs" />
     <Compile Include="Models\allParkingSlot.cs" />
     <Compile Include="Helpers\TicketPriceFormHelper.cs" />
     <Compile Include="Models\allUserModel.cs" />
     <Compile Include="Models\allVehicle.cs" />
     <Compile Include="Models\createUser.cs" />
+    <Compile Include="Models\PakingCard.cs" />
     <Compile Include="Models\parkingAreaModel .cs" />
     <Compile Include="Models\parkingSlotModel.cs" />
     <Compile Include="Models\roleModel.cs" />
