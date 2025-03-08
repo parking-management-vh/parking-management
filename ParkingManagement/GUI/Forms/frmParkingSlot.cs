@@ -282,5 +282,10 @@ namespace ParkingManagement.GUI.Forms
         {
 
         }
+
+        private void kDgvParkingSlot_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
