@@ -224,7 +224,10 @@ namespace ParkingManagement.GUI.Forms
 
         private void kBtnCreat_Click(object sender, EventArgs e)
         {
-
+            string userCode = kTbUserCode.Text.Trim();
+            string vehicleLicensePlate = kTbBs.Text.Trim();
+            bool isMonth = kRbtnMonth.Checked;
+            parkingCardBLL.CreateParkingCard(vehicleLicensePlate, userCode, isMonth);
         }
     }
 }

@@ -9,22 +9,21 @@ namespace ParkingManagement.Models
         public DateTime? EndDate { get; set; }
         public string Status { get; set; } 
         public bool IsMonth { get; set; } 
-        public decimal Price { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
-        public string VehicleId { get; set; } 
-        public string UserId { get; set; } 
-
+        public Guid VehicleId { get; set; } 
+        public Guid TickerPriceId { get; set; }
+        public Guid UserId { get; set; }
         public ParkingCard() { }
 
-        public ParkingCard(Guid id, DateTime startDate, DateTime? endDate, string status, bool isMonth, decimal price, string vehicleId, string userId, DateTime createdAt = default, DateTime updatedAt = default)
+        public ParkingCard(Guid id, DateTime startDate, DateTime? endDate, string status, bool isMonth, Guid vehicleId, Guid userId, Guid tickerPriceId, DateTime createdAt = default, DateTime updatedAt = default)
         {
             Id = id;
             StartDate = startDate;
             EndDate = endDate;
             Status = status;
             IsMonth = isMonth;
-            Price = price;
+            TickerPriceId = tickerPriceId;
             VehicleId = vehicleId;
             UserId = userId;
             CreatedAt = createdAt == default ? DateTime.Now : createdAt;

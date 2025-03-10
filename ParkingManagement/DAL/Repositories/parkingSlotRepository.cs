@@ -136,6 +136,30 @@ namespace ParkingManagement.DAL.Repositories
             }
         }
 
+        public void UpdateParkingSlotStatus(Guid slotId, string status)
+        {
+            string query = @"
+                UPDATE parking_slot 
+                SET status = @status, updated_at = NOW() 
+                WHERE id = @id";
+
+                    object[] parameters =
+                    {
+                new MySqlParameter("@status", status),
+                new MySqlParameter("@id", slotId.ToString())
+            };
+
+            try
+            {
+                dbProvider.ExecuteNonQuery(query, parameters);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi cập nhật trạng thái chỗ đỗ: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw;
+            }
+        }
+
         public List<ParkingSlotModel> GetSlotByArea(Guid areaId)
         {
             List<ParkingSlotModel> slots = new List<ParkingSlotModel>();

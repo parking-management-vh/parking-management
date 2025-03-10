@@ -127,6 +127,7 @@
     <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
     </Reference>
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Numerics" />
     <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
@@ -159,6 +160,9 @@
     <Compile Include="BLL\parkingCardBLL.cs" />
     <Compile Include="BLL\parkingSlotBLL.cs" />
     <Compile Include="BLL\roleBLL.cs" />
+    <Compile Include="DAL\Repositories\inOutVehicleRepository.cs" />
+    <Compile Include="Models\parkingCardDetail.cs" />
+    <Compile Include="Utils\SessionManager.cs" />
     <Compile Include="BLL\TicketPriceBLL.cs" />
     <Compile Include="BLL\userBLL.cs" />
     <Compile Include="BLL\vehicleBLL.cs" />
@@ -170,6 +174,12 @@
     <Compile Include="DAL\Repositories\TicketPriceRepository.cs" />
     <Compile Include="DAL\Repositories\usersRepository.cs" />
     <Compile Include="DAL\Repositories\vehicleRepository.cs" />
+    <Compile Include="GUI\Forms\frmAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Forms\frmAccount.Designer.cs">
+      <DependentUpon>frmAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Forms\frmParkingSlot.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +197,30 @@
     </Compile>
     <Compile Include="GUI\Forms\frmVehicle.Designer.cs">
       <DependentUpon>frmVehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Forms\staff\frmInOutVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Forms\staff\frmInOutVehicle.Designer.cs">
+      <DependentUpon>frmInOutVehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Forms\staff\frmManagePay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Forms\staff\frmManagePay.Designer.cs">
+      <DependentUpon>frmManagePay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Forms\staff\frmManageVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Forms\staff\frmManageVehicle.Designer.cs">
+      <DependentUpon>frmManageVehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Forms\staff\frmStaffDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Forms\staff\frmStaffDashboard.Designer.cs">
+      <DependentUpon>frmStaffDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Forms\statistics\frmRevenueStatistics.cs">
       <SubType>Form</SubType>
@@ -290,6 +324,9 @@
     <Compile Include="Utils\Logger.cs" />
     <Compile Include="Utils\Pagination.cs" />
     <Compile Include="Utils\ValidationUtils.cs" />
+    <EmbeddedResource Include="GUI\Forms\frmAccount.resx">
+      <DependentUpon>frmAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Forms\frmCreateUser.resx">
       <DependentUpon>frmCreateUser.cs</DependentUpon>
     </EmbeddedResource>
@@ -328,6 +365,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Forms\ParkingArea.resx">
       <DependentUpon>ParkingArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Forms\staff\frmInOutVehicle.resx">
+      <DependentUpon>frmInOutVehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Forms\staff\frmManagePay.resx">
+      <DependentUpon>frmManagePay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Forms\staff\frmManageVehicle.resx">
+      <DependentUpon>frmManageVehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Forms\staff\frmStaffDashboard.resx">
+      <DependentUpon>frmStaffDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Forms\TestConnectDB.resx">
       <DependentUpon>TestConnectDB.cs</DependentUpon>

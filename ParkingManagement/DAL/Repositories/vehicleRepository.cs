@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using ParkingManagement.BLL;
 using ParkingManagement.DAL.Database;
 using ParkingManagement.Models;
 using System;
@@ -14,6 +15,7 @@ namespace ParkingManagement.DAL.Repositories
     public class vehicleRepository
     {
         private readonly DatabaseProvider dbProvider = new DatabaseProvider();
+        private parkingSlotBLL parkingSlotBLL = new parkingSlotBLL();
 
         public List<VehicleType> GetAllVehicleType()
         {
@@ -142,6 +144,8 @@ namespace ParkingManagement.DAL.Repositories
             try
             {
                 dbProvider.ExecuteNonQuery(query, parameters);
+
+                parkingSlotBLL.UpdateParkingSlotStatus(vehicle.ParkingSlotId, "Đã có xe"); ;
             }
             catch (Exception ex)
             {
@@ -191,6 +195,31 @@ namespace ParkingManagement.DAL.Repositories
             }
         }
 
+        public void UpdateExitTime(Guid vehicleId)
+        {
+            string query = @"
+            UPDATE vehicle 
+            SET exit_time = NOW(), 
+                updated_at = NOW()
+            WHERE id = @id";
+
+                object[] parameters =
+                {
+            vehicleId.ToString()
+        };
+
+            try
+            {
+                dbProvider.ExecuteNonQuery(query, parameters);
+                MessageBox.Show("Cập nhật thời gian ra thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi cập nhật thời gian ra: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw;
+            }
+        }
+
         public void DeleteVehicle(string id)
         {
             string query = "DELETE FROM vehicle WHERE id = @id";
@@ -208,5 +237,55 @@ namespace ParkingManagement.DAL.Repositories
             }
         }
 
+        public Guid? GetVehicleIdByLicensePlate(string licensePlate)
+        {
+            string query = "SELECT id FROM vehicle WHERE license_plate = @licensePlate";
+            object[] parameters = { licensePlate };
+
+            DataTable data = dbProvider.ExecuteQuery(query, parameters);
+
+            if (data.Rows.Count > 0 && Guid.TryParse(data.Rows[0]["id"].ToString(), out Guid vehicleId))
+            {
+                return vehicleId;
+            }
+
+            return null;
+        }
+
+        public Guid? GetTicketPriceIdByVehicleType(Guid vehicleTypeId, bool? isMonth)
+        {
+            string query = @"
+            SELECT id 
+            FROM ticket_price 
+            WHERE vehicle_type_id = @vehicleTypeId AND is_month = @isMonth
+            ORDER BY created_at DESC 
+            LIMIT 1";
+
+            object[] parameters = { vehicleTypeId.ToString(), isMonth };
+
+            DataTable data = dbProvider.ExecuteQuery(query, parameters);
+
+            if (data.Rows.Count > 0 && Guid.TryParse(data.Rows[0]["id"].ToString(), out Guid ticketPriceId))
+            {
+                return ticketPriceId;
+            }
+
+            return null;
+        }
+
+        public Guid? GetVehicleTypeIdByVehicleId(Guid vehicleId)
+        {
+            string query = "SELECT vehicle_type_id FROM vehicle WHERE id = @vehicleId";
+            object[] parameters = { vehicleId.ToString() };
+
+            DataTable data = dbProvider.ExecuteQuery(query, parameters);
+
+            if (data.Rows.Count > 0 && Guid.TryParse(data.Rows[0]["vehicle_type_id"].ToString(), out Guid vehicleTypeId))
+            {
+                return vehicleTypeId;
+            }
+
+            return null;
+        }
     }
 }

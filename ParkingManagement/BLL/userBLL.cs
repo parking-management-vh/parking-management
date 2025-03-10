@@ -45,5 +45,10 @@ namespace ParkingManagement.BLL
         {
             return repository.LoginUser(code, password);
         }
+
+        public Guid? GetUserIdByCode(string userCode)
+        {
+            return repository.GetUserIdByCode(userCode);
+        }
     }
 }

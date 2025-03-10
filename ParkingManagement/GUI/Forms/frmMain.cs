@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Krypton.Navigator;
 using System.Threading;
+using ParkingManagement.GUI.Forms.staff;
 
 namespace ParkingManagement
 {
@@ -98,6 +99,11 @@ namespace ParkingManagement
         private void btnParkingArea_Click(object sender, EventArgs e)
         {
             OpenFormInTab<frmParkingArea>("Parking Area");
+        }
+
+        private void kryptonRibbonGroupButton1_Click(object sender, EventArgs e)
+        {
+            OpenFormInTab<frmInOutVehicle>("Vehicle In Out");
         }
     }
 } 
