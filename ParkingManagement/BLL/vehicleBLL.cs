@@ -11,6 +11,7 @@ namespace ParkingManagement.BLL
     public class vehicleBLL
     {
         private readonly vehicleRepository repository = new vehicleRepository();
+        private readonly inOutVehicleRepository inOutVehicleRepository = new inOutVehicleRepository();
 
         public List<VehicleType> GetAllVehicleType()
         {
@@ -24,7 +25,6 @@ namespace ParkingManagement.BLL
         {
             repository.CreateVehicle(vehicle);
         }
-
         public void UpdateVehicle(VehicleModel vehicle)
         {
             repository.UpdateVehicle(vehicle);
@@ -33,6 +33,26 @@ namespace ParkingManagement.BLL
         public void DeleteVehicle(string id)
         {
             repository.DeleteVehicle(id);
+        }
+
+        public Guid? GetVehicleIdByLicensePlate(string licensePlate)
+        {
+            return repository.GetVehicleIdByLicensePlate(licensePlate);
+        }
+
+        public Guid? GetTicketPriceIdByVehicleType(Guid vehicleTypeId, bool? isMonth)
+        {
+            return repository.GetTicketPriceIdByVehicleType(vehicleTypeId, isMonth);
+        }
+
+        public Guid? GetVehicleTypeIdByVehicleId(Guid vehicleId)
+        {
+            return repository.GetVehicleTypeIdByVehicleId(vehicleId);
+        }
+
+        public void UpdateExitTime(Guid vehicleId)
+        {
+            repository.UpdateExitTime(vehicleId);
         }
 
     }

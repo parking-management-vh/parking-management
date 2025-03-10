@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ParkingManagement.Models
 {
-    class createUser
+    public class createUser
     {
         public Guid Id { get; set; }
         public string Code { get; set; }
@@ -19,6 +19,8 @@ namespace ParkingManagement.Models
         public string Password { get; set; }
         public Guid? RoleId { get; set; }
         public Guid? AreaId { get; set; }
+        public string AreaName { get; set; }
+        public string Role { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
         public bool Status { get; set; }
