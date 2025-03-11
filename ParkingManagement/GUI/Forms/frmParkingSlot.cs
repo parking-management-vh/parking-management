@@ -148,8 +148,6 @@ namespace ParkingManagement.GUI.Forms
 
         private void kbtnDelete_Click(object sender, EventArgs e)
         {
-
-            {
                 if (string.IsNullOrEmpty(selectedPLId))
                 {
                     MessageBox.Show("Vui lòng chọn chỗ đỗ để xoá!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -175,8 +173,6 @@ namespace ParkingManagement.GUI.Forms
                         MessageBox.Show($"Lỗi khi xoá chỗ đỗ: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-            }
-
         }
 
         private void kbtnEdit_Click(object sender, EventArgs e)
@@ -279,6 +275,11 @@ namespace ParkingManagement.GUI.Forms
         }
 
         private void kCbbSArea_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kDgvParkingSlot_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
