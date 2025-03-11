@@ -12,7 +12,7 @@ namespace ParkingManagement.DAL.Repositories
 {
     public class UserStatisticsDAL
     {
-        public DataTable GetUserRoleStatistics()
+       /* public DataTable GetUserRoleStatistics()
         {
             using (MySqlConnection conn = DatabaseProvider.GetMySqlConnection())
             {
@@ -62,7 +62,6 @@ namespace ParkingManagement.DAL.Repositories
                 da.Fill(dt);
                 return dt;
             }
-        }
+        }*/
     }
-    }
-
+}
