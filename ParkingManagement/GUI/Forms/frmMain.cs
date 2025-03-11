@@ -105,5 +105,10 @@ namespace ParkingManagement
         {
             OpenFormInTab<frmInOutVehicle>("Vehicle In Out");
         }
+
+        private void btnParkingCard_Click(object sender, EventArgs e)
+        {
+            OpenFormInTab<frmParkingCard>("Parking Card");
+        }
     }
 } 
