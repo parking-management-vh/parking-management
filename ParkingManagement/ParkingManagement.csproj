@@ -93,15 +93,6 @@
     <Reference Include="Krypton.Workspace, Version=90.25.2.55, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <HintPath>..\packages\Krypton.Workspace.90.25.2.55\lib\net472\Krypton.Workspace.dll</HintPath>
     </Reference>
-    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
-      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
-    </Reference>
-    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
-      <HintPath>..\packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
-    </Reference>
-    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
-      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
@@ -116,7 +107,6 @@
       <HintPath>..\packages\MySql.Data.9.2.0\lib\net462\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
-    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
@@ -151,9 +141,7 @@
       <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Transactions" />
-    <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
-    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -163,8 +151,6 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="WindowsBase" />
-    <Reference Include="WindowsFormsIntegration" />
     <Reference Include="ZstdSharp, Version=0.8.0.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
       <HintPath>..\packages\ZstdSharp.Port.0.8.0\lib\net462\ZstdSharp.dll</HintPath>
     </Reference>
@@ -173,26 +159,23 @@
     <Compile Include="BLL\parkingAreaBLL .cs" />
     <Compile Include="BLL\parkingCardBLL.cs" />
     <Compile Include="BLL\parkingSlotBLL.cs" />
-    <Compile Include="BLL\PaymentReceiptBLL.cs" />
     <Compile Include="BLL\roleBLL.cs" />
-<<<<<<< HEAD
-    <Compile Include="BLL\StatisticsBLL.cs" />
-    <Compile Include="BLL\userBLL.cs" />
-    <Compile Include="DAL\Database\DatabaseHelper.cs" />
-=======
     <Compile Include="DAL\Repositories\inOutVehicleRepository.cs" />
+    <Compile Include="GUI\Forms\frmPaymentReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Forms\frmPaymentReceipt.Designer.cs">
+      <DependentUpon>frmPaymentReceipt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\parkingCardDetail.cs" />
     <Compile Include="Utils\SessionManager.cs" />
     <Compile Include="BLL\TicketPriceBLL.cs" />
     <Compile Include="BLL\userBLL.cs" />
     <Compile Include="BLL\vehicleBLL.cs" />
->>>>>>> d3d28c0564d096fe8f8942352601f5d04c108c92
     <Compile Include="DAL\Database\DatabaseProvider.cs" />
-    <Compile Include="DAL\Repositories\GetUserRoleStatistics.cs" />
     <Compile Include="DAL\Repositories\parkingAreaRepository.cs" />
     <Compile Include="DAL\Repositories\parkingCardRepository.cs" />
     <Compile Include="DAL\Repositories\parkingSlotRepository.cs" />
-    <Compile Include="DAL\Repositories\PaymentReceiptDAL.cs" />
     <Compile Include="DAL\Repositories\roleRepository.cs" />
     <Compile Include="DAL\Repositories\TicketPriceRepository.cs" />
     <Compile Include="DAL\Repositories\usersRepository.cs" />
@@ -209,20 +192,12 @@
     <Compile Include="GUI\Forms\frmParkingSlot.Designer.cs">
       <DependentUpon>frmParkingSlot.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Forms\frmPaymentReceipt.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Forms\frmPaymentReceipt.Designer.cs">
-      <DependentUpon>frmPaymentReceipt.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\Forms\frmSplash.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\Forms\frmSplash.Designer.cs">
       <DependentUpon>frmSplash.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-=======
     <Compile Include="GUI\Forms\frmVehicle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -271,7 +246,6 @@
     <Compile Include="GUI\Forms\statistics\frmParkingAreaStatistics.Designer.cs">
       <DependentUpon>frmParkingAreaStatistics.cs</DependentUpon>
     </Compile>
->>>>>>> d3d28c0564d096fe8f8942352601f5d04c108c92
     <Compile Include="GUI\Forms\frmCreateUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -326,11 +300,11 @@
     <Compile Include="GUI\Forms\frmVehicleType.Designer.cs">
       <DependentUpon>frmVehicleType.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Forms\statistics\StatisticsForm.cs">
+    <Compile Include="GUI\Forms\ParkingArea.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Forms\statistics\StatisticsForm.Designer.cs">
-      <DependentUpon>StatisticsForm.cs</DependentUpon>
+    <Compile Include="GUI\Forms\ParkingArea.Designer.cs">
+      <DependentUpon>ParkingArea.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Forms\TestConnectDB.cs">
       <SubType>Form</SubType>
@@ -348,9 +322,7 @@
     <Compile Include="Models\PakingCard.cs" />
     <Compile Include="Models\parkingAreaModel .cs" />
     <Compile Include="Models\parkingSlotModel.cs" />
-    <Compile Include="Models\PaymentReceipt.cs" />
     <Compile Include="Models\roleModel.cs" />
-    <Compile Include="Models\TableAttribute.cs" />
     <Compile Include="Models\TicketPrice.cs" />
     <Compile Include="Models\vehicleModel.cs" />
     <Compile Include="Models\VehicleType.cs" />
@@ -400,8 +372,8 @@
     <EmbeddedResource Include="GUI\Forms\frmVehicleType.resx">
       <DependentUpon>frmVehicleType.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Forms\statistics\StatisticsForm.resx">
-      <DependentUpon>StatisticsForm.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Forms\ParkingArea.resx">
+      <DependentUpon>ParkingArea.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Forms\staff\frmInOutVehicle.resx">
       <DependentUpon>frmInOutVehicle.cs</DependentUpon>
