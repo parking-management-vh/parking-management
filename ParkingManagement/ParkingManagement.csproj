@@ -93,6 +93,15 @@
     <Reference Include="Krypton.Workspace, Version=90.25.2.55, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <HintPath>..\packages\Krypton.Workspace.90.25.2.55\lib\net472\Krypton.Workspace.dll</HintPath>
     </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
@@ -107,6 +116,7 @@
       <HintPath>..\packages\MySql.Data.9.2.0\lib\net462\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
@@ -142,6 +152,7 @@
     </Reference>
     <Reference Include="System.Transactions" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -151,6 +162,8 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
     <Reference Include="ZstdSharp, Version=0.8.0.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
       <HintPath>..\packages\ZstdSharp.Port.0.8.0\lib\net462\ZstdSharp.dll</HintPath>
     </Reference>
@@ -159,9 +172,29 @@
     <Compile Include="BLL\parkingAreaBLL .cs" />
     <Compile Include="BLL\parkingCardBLL.cs" />
     <Compile Include="BLL\parkingSlotBLL.cs" />
+    <Compile Include="BLL\PaymentReceiptBLL.cs" />
     <Compile Include="BLL\roleBLL.cs" />
+    <Compile Include="BLL\StatisticsBLL.cs" />
+    <Compile Include="DAL\Database\DatabaseHelper.cs" />
+    <Compile Include="DAL\Repositories\GetUserRoleStatistics.cs" />
     <Compile Include="DAL\Repositories\inOutVehicleRepository.cs" />
+    <Compile Include="DAL\Repositories\PaymentReceiptDAL.cs" />
+    <Compile Include="GUI\Forms\frmPaymentReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Forms\frmPaymentReceipt.Designer.cs">
+      <DependentUpon>frmPaymentReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Forms\frmRole.cs" />
+    <Compile Include="GUI\Forms\statistics\StatisticsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Forms\statistics\StatisticsForm.Designer.cs">
+      <DependentUpon>StatisticsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\parkingCardDetail.cs" />
+    <Compile Include="Models\PaymentReceipt.cs" />
+    <Compile Include="Models\TableAttribute.cs" />
     <Compile Include="Utils\SessionManager.cs" />
     <Compile Include="BLL\TicketPriceBLL.cs" />
     <Compile Include="BLL\userBLL.cs" />
@@ -345,6 +378,9 @@
     <EmbeddedResource Include="GUI\Forms\frmParkingSlot.resx">
       <DependentUpon>frmParkingSlot.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Forms\frmPaymentReceipt.resx">
+      <DependentUpon>frmPaymentReceipt.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Forms\frmSplash.resx">
       <DependentUpon>frmSplash.cs</DependentUpon>
     </EmbeddedResource>
@@ -378,6 +414,9 @@
     <EmbeddedResource Include="GUI\Forms\staff\frmStaffDashboard.resx">
       <DependentUpon>frmStaffDashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Forms\statistics\StatisticsForm.resx">
+      <DependentUpon>StatisticsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Forms\TestConnectDB.resx">
       <DependentUpon>TestConnectDB.cs</DependentUpon>
     </EmbeddedResource>
@@ -407,7 +446,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="GUI\Controls\" />
-    <Folder Include="Resources\images\" />
     <Folder Include="Resources\video\" />
   </ItemGroup>
   <ItemGroup>
@@ -426,12 +464,14 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\images\XeMayInOut.webp" />
     <None Include="Resources\img\customer.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\142_1340441927_bSook.jpg.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\img\debug.log" />
     <None Include="Resources\img\newfile.png" />
   </ItemGroup>
   <ItemGroup>
@@ -472,6 +512,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\img\car.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\img\btn_text.png" />
+    <Content Include="Resources\img\car_1.png" />
+    <Content Include="Resources\img\car_2.png" />
+    <Content Include="Resources\img\DALL·E-2025-03-09-11.20.jpg" />
+    <Content Include="Resources\img\edited_image.png" />
+    <Content Include="Resources\img\large-orange-circle.png" />
+    <Content Include="Resources\img\location.png" />
+    <Content Include="Resources\img\rating.png" />
+    <Content Include="Resources\img\ratingg.png" />
+    <Content Include="Resources\img\ratting.png" />
+    <Content Include="Resources\img\red-circle-emoji-clipart-lg.png" />
+    <Content Include="Resources\img\XeMayInOut.jpg" />
+    <Content Include="Resources\square.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
