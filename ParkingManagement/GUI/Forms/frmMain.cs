@@ -91,5 +91,16 @@ namespace ParkingManagement
         {
             OpenFormInTab<frmVehicleType>("Vehicle Type");
         }
+
+        private void btnStatic_Click(object sender, EventArgs e)
+        {
+            OpenFormInTab<StatisticsForm>("Static");
+
+        }
+
+        private void btnPaymentReceipt_Click(object sender, EventArgs e)
+        {
+            OpenFormInTab<frmPaymentReceipt>("Payment Receipt");
+        }
     }
 } 

@@ -16,54 +16,63 @@ namespace ParkingManagement.GUI.Forms
     public partial class frmLogin: Form
     {
         private userBLL userBLL = new userBLL();
+
+
         public frmLogin()
         {
             InitializeComponent();
-        }
-
-        private void kryptonPictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void kryptonPictureBox2_Click(object sender, EventArgs e)
-        {
+            this.TransparencyKey = Color.Magenta;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.TransparencyKey = this.BackColor;
 
         }
-
-        private void frmLogin_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-        }
-
         private void kBtbLogin_Click(object sender, EventArgs e)
         {
             string inputCode = kTbCodeUser.Text.Trim();
             string inputPassword = kTbPwUser.Text.Trim();
 
-            createUser user = userBLL.Login(inputCode, inputPassword);
-
-            if (user != null)
+            // Check if username or password is empty
+            if (string.IsNullOrEmpty(inputCode) || string.IsNullOrEmpty(inputPassword))
             {
-                MessageBox.Show($"Welcome !!!", "Login Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Hide();
-                frmMain mainForm = new frmMain();
-                mainForm.ShowDialog();
-                this.Close();
+                MessageBox.Show("Please enter both User ID and Password!", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
-            else
+
+            try
             {
-                MessageBox.Show("Invalid Code or Password!", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                createUser user = userBLL.Login(inputCode, inputPassword);
+
+                if (user != null)
+                {
+                    MessageBox.Show($"Login successful!\nWelcome, {user.FullName}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Hide();
+                    frmMain mainForm = new frmMain();
+                    mainForm.ShowDialog();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid User ID or Password!\nPlease check again.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred during login!\nError details: {ex.Message}", "System Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void pictureBox1_Click_1(object sender, EventArgs e)
+
+        private void button1_Click(object sender, EventArgs e)
         {
+            this.TransparencyKey = Color.Magenta;
 
         }
+
+        private void btnPower_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+
     }
 }
