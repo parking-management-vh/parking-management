@@ -48,6 +48,7 @@ namespace ParkingManagement.GUI.Forms.staff
             selectedAreaId = SessionManager.CurrentUser.AreaId ?? Guid.Empty;
 
             LoadAvailableSlots(selectedAreaId.Value);
+            LoadParkingSlots(selectedAreaId.Value);
         }
 
         private void RefreshForm()
@@ -258,6 +259,135 @@ namespace ParkingManagement.GUI.Forms.staff
         private void kTbOutBks_TextChanged(object sender, EventArgs e)
         {
             kLbOutTextBs.Text = kTbOutBks.Text;
+        }
+
+        private void LoadParkingSlots(Guid areaId)
+        {
+            List<ParkingSlotModel> slots = parkingSlotBLL.GetSlotArea(areaId);
+            List<ParkingSlotModel> allSlots = new List<ParkingSlotModel>();
+            int totalSlots = 15;
+            int availableSlots = 0;
+            for (int i = 1; i <= 15; i++)
+            {
+                var existingSlot = slots.FirstOrDefault(s => s.SlotNumber == i);
+                if (existingSlot != null)
+                {
+                    allSlots.Add(existingSlot);
+                }
+                else
+                {
+                    allSlots.Add(new ParkingSlotModel(
+                        Guid.NewGuid(),
+                        i,
+                        "Unknown",
+                        "Sửa chữa",
+                        areaId
+                    ));
+                }
+            }
+
+            availableSlots = allSlots.Count(s => s.SlotStatus.Trim().ToLower() == "sẵn sàng");
+
+            kLbCountSlot.Text = $"Chỗ trống: {availableSlots} / {totalSlots}";
+
+            kTLPslotArea.Controls.Clear();
+            kTLPslotArea.ColumnStyles.Clear();
+            kTLPslotArea.RowStyles.Clear();
+
+            kTLPslotArea.ColumnCount = 5;  
+            kTLPslotArea.RowCount = 3;    
+            kTLPslotArea.Dock = DockStyle.Fill;  
+
+            for (int i = 0; i < kTLPslotArea.ColumnCount; i++)
+            {
+                kTLPslotArea.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100f / kTLPslotArea.ColumnCount));
+            }
+            for (int i = 0; i < kTLPslotArea.RowCount; i++)
+            {
+                kTLPslotArea.RowStyles.Add(new RowStyle(SizeType.Percent, 100f / kTLPslotArea.RowCount));
+            }
+
+            int count = 0;
+            foreach (var slot in allSlots)
+            {
+                Button btn = new Button();
+                btn.Text = $"Slot {slot.SlotNumber}";
+                btn.Tag = slot.Id;
+                btn.Dock = DockStyle.Fill;  
+                btn.Margin = new Padding(5);  
+                btn.Font = new Font("Arial", 10, FontStyle.Bold); 
+                btn.Click += Btn_Click;
+
+                string status = slot.SlotStatus.Trim().ToLower();
+                switch (status)
+                {
+                    case "đã có xe":
+                        btn.BackColor = Color.Red;
+                        break;
+                    case "sẵn sàng":
+                        btn.BackColor = Color.Green;
+                        break;
+                    case "sửa chữa":
+                    default:
+                        btn.BackColor = Color.Yellow;
+                        break;
+                }
+
+                kTLPslotArea.Controls.Add(btn, count % 5, count / 5);
+                count++;
+            }
+            LoadSlotDescription();
+        }
+
+
+        private void Btn_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            if (btn != null)
+            {
+                Guid slotId = (Guid)btn.Tag;
+                MessageBox.Show($"Slot ID: {slotId}", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void LoadSlotDescription()
+        {
+            kTLPdescription.Controls.Clear();
+            kTLPdescription.ColumnCount = 1; 
+            kTLPdescription.RowCount = 3;    
+            kTLPdescription.Dock = DockStyle.Fill;
+
+            var statuses = new (string Text, Color Color)[]
+            {
+                ("Đã có xe", Color.Red),
+                ("Sẵn sàng", Color.Green),
+                ("Sửa chữa", Color.Yellow)
+            };
+
+            kTLPdescription.ColumnStyles.Clear();
+            kTLPdescription.RowStyles.Clear();
+
+            for (int i = 0; i < statuses.Length; i++)
+            {
+                kTLPdescription.RowStyles.Add(new RowStyle(SizeType.Percent, 100f / statuses.Length));
+            }
+
+            for (int i = 0; i < statuses.Length; i++)
+            {
+                Button btn = new Button();
+                btn.Text = statuses[i].Text;
+                btn.BackColor = statuses[i].Color;
+                btn.Dock = DockStyle.Fill; 
+                btn.Margin = new Padding(5); 
+                btn.Enabled = false; 
+
+                kTLPdescription.Controls.Add(btn, 0, i); 
+            }
+        }
+
+        private void kBtnRefreshmap_Click(object sender, EventArgs e)
+        {
+            LoadParkingSlots(selectedAreaId.Value);
         }
     }
 }

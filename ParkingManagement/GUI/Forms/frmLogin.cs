@@ -52,7 +52,7 @@ namespace ParkingManagement.GUI.Forms
             {
                 MessageBox.Show($"Welcome !!!", "Login Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
-                frmMain mainForm = new frmMain();
+                frmInOutVehicle mainForm = new frmInOutVehicle();
                 mainForm.ShowDialog();
                 this.Close();
             }
