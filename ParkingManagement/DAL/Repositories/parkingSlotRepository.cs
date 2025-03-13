@@ -190,5 +190,36 @@ namespace ParkingManagement.DAL.Repositories
 
             return slots;
         }
+
+        public List<ParkingSlotModel> GetSlotArea(Guid areaId)
+        {
+            List<ParkingSlotModel> slots = new List<ParkingSlotModel>();
+            string query = "SELECT * FROM parking_slot WHERE parking_area_id = @areaId";
+
+            object[] parameters = { areaId.ToString() };
+
+            try
+            {
+                System.Data.DataTable data = dbProvider.ExecuteQuery(query, parameters);
+
+                foreach (DataRow row in data.Rows)
+                {
+                    slots.Add(new ParkingSlotModel(
+                        Guid.Parse(row["id"].ToString()),
+                        Convert.ToInt32(row["slot_number"]),
+                        row["slot_type"].ToString(),
+                        row["status"].ToString().Trim(),
+                        Guid.Parse(row["parking_area_id"].ToString())
+                    ));
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi lấy danh sách vị trí đỗ: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw;
+            }
+
+            return slots;
+        }
     }
 }

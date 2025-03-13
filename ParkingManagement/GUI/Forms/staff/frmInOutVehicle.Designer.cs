@@ -60,12 +60,16 @@
             this.kryptonGroupBox4 = new Krypton.Toolkit.KryptonGroupBox();
             this.kLbIbBs = new Krypton.Toolkit.KryptonLabel();
             this.kryptonGroupBox5 = new Krypton.Toolkit.KryptonGroupBox();
+            this.kLbOutTextBs = new Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel8 = new Krypton.Toolkit.KryptonLabel();
             this.kLbCountSlot = new Krypton.Toolkit.KryptonLabel();
             this.kLbAreaName = new Krypton.Toolkit.KryptonLabel();
             this.kryptonGroupBox6 = new Krypton.Toolkit.KryptonGroupBox();
-            this.kryptonTableLayoutPanel1 = new Krypton.Toolkit.KryptonTableLayoutPanel();
-            this.kLbOutTextBs = new Krypton.Toolkit.KryptonLabel();
+            this.kTLPslotArea = new Krypton.Toolkit.KryptonTableLayoutPanel();
+            this.kBtnRefreshmap = new Krypton.Toolkit.KryptonButton();
+            this.kryptonPanel2 = new Krypton.Toolkit.KryptonPanel();
+            this.kTLPdescription = new Krypton.Toolkit.KryptonTableLayoutPanel();
+            this.kryptonGroupBox7 = new Krypton.Toolkit.KryptonGroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kCbbSlotNum)).BeginInit();
@@ -94,6 +98,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox6.Panel)).BeginInit();
             this.kryptonGroupBox6.Panel.SuspendLayout();
             this.kryptonGroupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
+            this.kryptonPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox7.Panel)).BeginInit();
+            this.kryptonGroupBox7.Panel.SuspendLayout();
+            this.kryptonGroupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblClock
@@ -242,6 +252,7 @@
             // 
             // kDTPInfoOut
             // 
+            this.kDTPInfoOut.CalendarTodayDate = new System.DateTime(2025, 3, 11, 0, 0, 0, 0);
             this.kDTPInfoOut.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.kDTPInfoOut.Location = new System.Drawing.Point(98, 191);
             this.kDTPInfoOut.Name = "kDTPInfoOut";
@@ -258,6 +269,7 @@
             // 
             // kDTPInfoIn
             // 
+            this.kDTPInfoIn.CalendarTodayDate = new System.DateTime(2025, 3, 11, 0, 0, 0, 0);
             this.kDTPInfoIn.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.kDTPInfoIn.Location = new System.Drawing.Point(98, 158);
             this.kDTPInfoIn.Name = "kDTPInfoIn";
@@ -358,12 +370,12 @@
             // 
             // kryptonGroupBox4
             // 
-            this.kryptonGroupBox4.Location = new System.Drawing.Point(311, 31);
+            this.kryptonGroupBox4.Location = new System.Drawing.Point(311, 32);
             // 
             // kryptonGroupBox4.Panel
             // 
             this.kryptonGroupBox4.Panel.Controls.Add(this.kLbIbBs);
-            this.kryptonGroupBox4.Size = new System.Drawing.Size(261, 225);
+            this.kryptonGroupBox4.Size = new System.Drawing.Size(303, 225);
             this.kryptonGroupBox4.StateNormal.Back.Image = ((System.Drawing.Image)(resources.GetObject("kryptonGroupBox4.StateNormal.Back.Image")));
             this.kryptonGroupBox4.StateNormal.Back.ImageAlign = Krypton.Toolkit.PaletteRectangleAlign.Control;
             this.kryptonGroupBox4.StateNormal.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Stretch;
@@ -383,18 +395,29 @@
             // 
             // kryptonGroupBox5
             // 
-            this.kryptonGroupBox5.Location = new System.Drawing.Point(596, 31);
+            this.kryptonGroupBox5.Location = new System.Drawing.Point(695, 32);
             // 
             // kryptonGroupBox5.Panel
             // 
             this.kryptonGroupBox5.Panel.Controls.Add(this.kLbOutTextBs);
             this.kryptonGroupBox5.Panel.Controls.Add(this.kryptonLabel8);
-            this.kryptonGroupBox5.Size = new System.Drawing.Size(262, 225);
+            this.kryptonGroupBox5.Size = new System.Drawing.Size(303, 225);
             this.kryptonGroupBox5.StateNormal.Back.Image = ((System.Drawing.Image)(resources.GetObject("kryptonGroupBox5.StateNormal.Back.Image")));
             this.kryptonGroupBox5.StateNormal.Back.ImageAlign = Krypton.Toolkit.PaletteRectangleAlign.Control;
             this.kryptonGroupBox5.StateNormal.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Stretch;
             this.kryptonGroupBox5.TabIndex = 4;
             this.kryptonGroupBox5.Values.Heading = "HÌNH ẢNH XE RA";
+            // 
+            // kLbOutTextBs
+            // 
+            this.kLbOutTextBs.AutoSize = false;
+            this.kLbOutTextBs.Location = new System.Drawing.Point(85, 82);
+            this.kLbOutTextBs.Name = "kLbOutTextBs";
+            this.kLbOutTextBs.Size = new System.Drawing.Size(90, 25);
+            this.kLbOutTextBs.StateCommon.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.kLbOutTextBs.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kLbOutTextBs.TabIndex = 1;
+            this.kLbOutTextBs.Values.Text = "";
             // 
             // kryptonLabel8
             // 
@@ -408,15 +431,16 @@
             // 
             // kLbCountSlot
             // 
-            this.kLbCountSlot.Location = new System.Drawing.Point(757, 299);
+            this.kLbCountSlot.Location = new System.Drawing.Point(13, 14);
             this.kLbCountSlot.Name = "kLbCountSlot";
-            this.kLbCountSlot.Size = new System.Drawing.Size(101, 20);
+            this.kLbCountSlot.Size = new System.Drawing.Size(126, 21);
+            this.kLbCountSlot.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kLbCountSlot.TabIndex = 6;
             this.kLbCountSlot.Values.Text = "Chỗ trống 10/10";
             // 
             // kLbAreaName
             // 
-            this.kLbAreaName.Location = new System.Drawing.Point(683, 12);
+            this.kLbAreaName.Location = new System.Drawing.Point(823, 13);
             this.kLbAreaName.Name = "kLbAreaName";
             this.kLbAreaName.Size = new System.Drawing.Size(175, 19);
             this.kLbAreaName.StateCommon.LongText.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -426,52 +450,85 @@
             // 
             // kryptonGroupBox6
             // 
-            this.kryptonGroupBox6.Location = new System.Drawing.Point(311, 314);
+            this.kryptonGroupBox6.Location = new System.Drawing.Point(152, 3);
             // 
             // kryptonGroupBox6.Panel
             // 
-            this.kryptonGroupBox6.Panel.Controls.Add(this.kryptonTableLayoutPanel1);
-            this.kryptonGroupBox6.Size = new System.Drawing.Size(547, 251);
+            this.kryptonGroupBox6.Panel.Controls.Add(this.kTLPslotArea);
+            this.kryptonGroupBox6.Size = new System.Drawing.Size(532, 242);
             this.kryptonGroupBox6.TabIndex = 10;
             this.kryptonGroupBox6.Values.Heading = "Min Map";
             // 
-            // kryptonTableLayoutPanel1
+            // kTLPslotArea
             // 
-            this.kryptonTableLayoutPanel1.ColumnCount = 2;
-            this.kryptonTableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.kryptonTableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.kryptonTableLayoutPanel1.Location = new System.Drawing.Point(97, 3);
-            this.kryptonTableLayoutPanel1.Name = "kryptonTableLayoutPanel1";
-            this.kryptonTableLayoutPanel1.RowCount = 2;
-            this.kryptonTableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.kryptonTableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.kryptonTableLayoutPanel1.Size = new System.Drawing.Size(443, 221);
-            this.kryptonTableLayoutPanel1.TabIndex = 0;
+            this.kTLPslotArea.ColumnCount = 2;
+            this.kTLPslotArea.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.kTLPslotArea.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.kTLPslotArea.Location = new System.Drawing.Point(3, 3);
+            this.kTLPslotArea.Name = "kTLPslotArea";
+            this.kTLPslotArea.RowCount = 2;
+            this.kTLPslotArea.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.kTLPslotArea.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.kTLPslotArea.Size = new System.Drawing.Size(531, 221);
+            this.kTLPslotArea.TabIndex = 0;
             // 
-            // kLbOutTextBs
+            // kBtnRefreshmap
             // 
-            this.kLbOutTextBs.AutoSize = false;
-            this.kLbOutTextBs.Location = new System.Drawing.Point(85, 82);
-            this.kLbOutTextBs.Name = "kLbOutTextBs";
-            this.kLbOutTextBs.Size = new System.Drawing.Size(90, 25);
-            this.kLbOutTextBs.StateCommon.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.kLbOutTextBs.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kLbOutTextBs.TabIndex = 1;
-            this.kLbOutTextBs.Values.Text = "";
+            this.kBtnRefreshmap.Location = new System.Drawing.Point(30, 49);
+            this.kBtnRefreshmap.Name = "kBtnRefreshmap";
+            this.kBtnRefreshmap.Size = new System.Drawing.Size(90, 25);
+            this.kBtnRefreshmap.TabIndex = 16;
+            this.kBtnRefreshmap.Values.DropDownArrowColor = System.Drawing.Color.Empty;
+            this.kBtnRefreshmap.Values.Text = "MinMap";
+            this.kBtnRefreshmap.Click += new System.EventHandler(this.kBtnRefreshmap_Click);
+            // 
+            // kryptonPanel2
+            // 
+            this.kryptonPanel2.Controls.Add(this.kBtnRefreshmap);
+            this.kryptonPanel2.Controls.Add(this.kryptonGroupBox7);
+            this.kryptonPanel2.Controls.Add(this.kLbCountSlot);
+            this.kryptonPanel2.Controls.Add(this.kryptonGroupBox6);
+            this.kryptonPanel2.Location = new System.Drawing.Point(311, 317);
+            this.kryptonPanel2.Name = "kryptonPanel2";
+            this.kryptonPanel2.Size = new System.Drawing.Size(687, 248);
+            this.kryptonPanel2.TabIndex = 17;
+            // 
+            // kTLPdescription
+            // 
+            this.kTLPdescription.ColumnCount = 2;
+            this.kTLPdescription.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.kTLPdescription.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.kTLPdescription.Location = new System.Drawing.Point(3, 3);
+            this.kTLPdescription.Name = "kTLPdescription";
+            this.kTLPdescription.RowCount = 2;
+            this.kTLPdescription.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.kTLPdescription.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.kTLPdescription.Size = new System.Drawing.Size(143, 207);
+            this.kTLPdescription.TabIndex = 11;
+            // 
+            // kryptonGroupBox7
+            // 
+            this.kryptonGroupBox7.Location = new System.Drawing.Point(3, 86);
+            // 
+            // kryptonGroupBox7.Panel
+            // 
+            this.kryptonGroupBox7.Panel.Controls.Add(this.kTLPdescription);
+            this.kryptonGroupBox7.Size = new System.Drawing.Size(150, 159);
+            this.kryptonGroupBox7.TabIndex = 13;
+            this.kryptonGroupBox7.Values.Heading = "Chú thích";
             // 
             // frmInOutVehicle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(882, 576);
-            this.Controls.Add(this.kryptonGroupBox6);
+            this.ClientSize = new System.Drawing.Size(1010, 576);
             this.Controls.Add(this.kLbAreaName);
-            this.Controls.Add(this.kLbCountSlot);
             this.Controls.Add(this.kryptonGroupBox5);
             this.Controls.Add(this.kryptonGroupBox4);
             this.Controls.Add(this.kryptonGroupBox3);
             this.Controls.Add(this.kryptonPanel1);
             this.Controls.Add(this.lblClock);
+            this.Controls.Add(this.kryptonPanel2);
             this.Name = "frmInOutVehicle";
             this.Load += new System.EventHandler(this.frmInOutVehicle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
@@ -507,6 +564,13 @@
             this.kryptonGroupBox6.Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox6)).EndInit();
             this.kryptonGroupBox6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).EndInit();
+            this.kryptonPanel2.ResumeLayout(false);
+            this.kryptonPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox7.Panel)).EndInit();
+            this.kryptonGroupBox7.Panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox7)).EndInit();
+            this.kryptonGroupBox7.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -543,12 +607,16 @@
         private Krypton.Toolkit.KryptonLabel kLbAreaName;
         private Krypton.Toolkit.KryptonComboBox kCbbSlotNum;
         private Krypton.Toolkit.KryptonGroupBox kryptonGroupBox6;
-        private Krypton.Toolkit.KryptonTableLayoutPanel kryptonTableLayoutPanel1;
+        private Krypton.Toolkit.KryptonTableLayoutPanel kTLPslotArea;
         private Krypton.Toolkit.KryptonLabel kLbIbBs;
         private Krypton.Toolkit.KryptonLabel kryptonLabel8;
         private Krypton.Toolkit.KryptonLabel kryptonLabel10;
         private Krypton.Toolkit.KryptonLabel kryptonLabel9;
         private Krypton.Toolkit.KryptonButton kBtnOutBks;
         private Krypton.Toolkit.KryptonLabel kLbOutTextBs;
+        private Krypton.Toolkit.KryptonButton kBtnRefreshmap;
+        private Krypton.Toolkit.KryptonPanel kryptonPanel2;
+        private Krypton.Toolkit.KryptonTableLayoutPanel kTLPdescription;
+        private Krypton.Toolkit.KryptonGroupBox kryptonGroupBox7;
     }
 }
