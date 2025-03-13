@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using Krypton.Navigator;
 using System.Threading;
 using ParkingManagement.GUI.Forms.staff;
+using ParkingManagement.GUI.Forms.statistics;
 
 namespace ParkingManagement
 {
@@ -106,6 +107,10 @@ namespace ParkingManagement
             OpenFormInTab<frmInOutVehicle>("Vehicle In Out");
         }
 
+        private void kryptonRibbonGroupButton3_Click(object sender, EventArgs e)
+        {
+            OpenFormInTab<frmStatistics>("frmStatistics");
+        }
         private void btnParkingCard_Click(object sender, EventArgs e)
         {
             OpenFormInTab<frmParkingCard>("Parking Card");
