@@ -150,9 +150,9 @@ namespace ParkingManagement.DAL.Repositories
 
                 object[] parameters =
                 {
-            DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"),
-            vehicleId.ToString()
-        };
+                    DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"),
+                    vehicleId.ToString()
+                };
 
             try
             {
@@ -208,7 +208,7 @@ namespace ParkingManagement.DAL.Repositories
 
             bool isMonth = row["is_month"] != DBNull.Value && Convert.ToBoolean(row["is_month"]);
 
-            if (isMonth)
+            if (!isMonth)
             {
                 vehicleBLL.UpdateExitTime(vehicleId.Value);
                 UpdateParkingCardEndDate(vehicleId.Value);

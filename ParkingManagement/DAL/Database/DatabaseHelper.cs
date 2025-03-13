@@ -3,15 +3,12 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ParkingManagement.DAL.Database
 {
     public class DatabaseHelper
     {
-        private string connectionString = ConfigurationManager.ConnectionStrings["MySqlConnection"].ConnectionString;
+        private readonly string connectionString = ConfigurationManager.ConnectionStrings["MySqlConnection"].ConnectionString;
 
         public DataTable ExecuteQuery(string query)
         {
@@ -30,13 +27,16 @@ namespace ParkingManagement.DAL.Database
             }
         }
 
-        public int ExecuteNonQuery(string query)
+        public int ExecuteNonQuery(string query, MySqlParameter[] parameters = null)
         {
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
+                    if (parameters != null)
+                        cmd.Parameters.AddRange(parameters);
+
                     return cmd.ExecuteNonQuery();
                 }
             }

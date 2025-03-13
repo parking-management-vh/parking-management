@@ -110,5 +110,10 @@ namespace ParkingManagement
         {
             OpenFormInTab<frmParkingCard>("Parking Card");
         }
+
+        private void kryptonRibbon1_SelectedTabChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 } 

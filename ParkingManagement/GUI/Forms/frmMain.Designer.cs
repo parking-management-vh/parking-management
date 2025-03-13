@@ -85,6 +85,7 @@
             this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab1;
             this.kryptonRibbon1.Size = new System.Drawing.Size(880, 143);
             this.kryptonRibbon1.TabIndex = 0;
+            this.kryptonRibbon1.SelectedTabChanged += new System.EventHandler(this.kryptonRibbon1_SelectedTabChanged);
             // 
             // kryptonRibbonTab1
             // 
@@ -278,7 +279,7 @@
             this.kryptonNavigator1.ControlKryptonFormFeatures = false;
             this.kryptonNavigator1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonNavigator1.Location = new System.Drawing.Point(0, 143);
-            this.kryptonNavigator1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kryptonNavigator1.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonNavigator1.NavigatorMode = Krypton.Navigator.NavigatorMode.BarTabGroup;
             this.kryptonNavigator1.Owner = null;
             this.kryptonNavigator1.PageBackStyle = Krypton.Toolkit.PaletteBackStyle.PanelClient;
