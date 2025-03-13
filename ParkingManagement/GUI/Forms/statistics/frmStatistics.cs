@@ -92,7 +92,7 @@ namespace ParkingManagement.GUI.Forms.statistics
         {
             LoadRevenueStatistics(System.DateTime.MinValue, System.DateTime.MaxValue);
         }
-        private void LoadRevenueStatistics(System.DateTime fromDate, System.DateTime toDate)
+        private void LoadRevenueStatistics(DateTime fromDate, DateTime toDate)
         {
             if (chart2 == null)
             {
@@ -105,31 +105,35 @@ namespace ParkingManagement.GUI.Forms.statistics
             chart2.ChartAreas.Clear();
             chart2.Legends.Clear();
 
-            // Thiết lập ChartArea (Vùng vẽ)
-            ChartArea chartArea = new ChartArea("RevenueChartArea");
-            chartArea.AxisX.Title = "Ngày";
-            chartArea.AxisY.Title = "Doanh thu";
-            chartArea.AxisX.MajorGrid.Enabled = false; // Tắt lưới trục X
-            chartArea.AxisY.MajorGrid.LineColor = Color.LightGray; // Lưới trục Y màu nhạt
-            chartArea.BackColor = Color.WhiteSmoke; // Màu nền sáng hiện đại
+            // Thiết lập ChartArea
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea =
+                new System.Windows.Forms.DataVisualization.Charting.ChartArea("RevenueChartArea")
+                {
+                    AxisX = { Title = "Ngày", MajorGrid = { Enabled = false } },
+                    AxisY = { Title = "Doanh thu", MajorGrid = { LineColor = Color.LightGray } },
+                    BackColor = Color.WhiteSmoke
+                };
             chart2.ChartAreas.Add(chartArea);
 
-            // Thêm chú thích (Legend)
-            Legend legend = new Legend("Legend");
-            legend.Docking = Docking.Bottom;
-            legend.Alignment = StringAlignment.Center;
-            legend.Font = new Font("Arial", 10, FontStyle.Bold);
+            // Thiết lập Legend
+            System.Windows.Forms.DataVisualization.Charting.Legend legend =
+                new System.Windows.Forms.DataVisualization.Charting.Legend("Legend")
+                {
+                    Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom,
+                    Alignment = StringAlignment.Center,
+                    Font = new Font("Arial", 10, FontStyle.Bold)
+                };
             chart2.Legends.Add(legend);
 
             // Lấy dữ liệu từ database
-            DataTable dt = statisticsBLL.GetRevenueStatistics();
+            DataTable dt = statisticsBLL.GetRevenueStatisticsByVehicleType(fromDate, toDate);
 
             if (dt == null || dt.Rows.Count == 0)
             {
                 System.Windows.Forms.DataVisualization.Charting.Series emptySeries =
                     new System.Windows.Forms.DataVisualization.Charting.Series("Doanh thu")
                     {
-                        ChartType = SeriesChartType.Column,
+                        ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column,
                         Color = Color.LightGray,
                         IsValueShownAsLabel = true
                     };
@@ -138,27 +142,54 @@ namespace ParkingManagement.GUI.Forms.statistics
                 return;
             }
 
-            // Tạo Series biểu đồ cột
-            System.Windows.Forms.DataVisualization.Charting.Series revenueSeries =
-                new System.Windows.Forms.DataVisualization.Charting.Series("Doanh thu")
-                {
-                    ChartType = SeriesChartType.Column,
-                    Color = Color.FromArgb(60, 120, 216), // Màu xanh hiện đại
-                    IsValueShownAsLabel = true,
-                    Font = new Font("Arial", 10, FontStyle.Bold),
-                    BorderWidth = 2
-                };
-
-            // Thêm dữ liệu vào biểu đồ
-            foreach (DataRow row in dt.Rows)
+            // Tạo danh sách màu cho các loại phương tiện
+            Color[] colors = new Color[]
             {
-                string date = row["date"].ToString();
-                double revenue = Convert.ToDouble(row["revenue"]);
-                revenueSeries.Points.AddXY(date, revenue);
+                Color.FromArgb(60, 120, 216),  // Blue
+                Color.FromArgb(255, 87, 87),   // Red
+                Color.FromArgb(87, 255, 87),   // Green
+                Color.FromArgb(255, 215, 0),   // Gold
+                Color.FromArgb(147, 112, 219)  // Purple
+            };
+
+            // Lấy danh sách loại phương tiện duy nhất
+            var vehicleTypes = dt.AsEnumerable()
+                .Select(row => row.Field<string>("vehicle_type"))
+                .Distinct()
+                .ToList();
+
+            // Tạo Series cho từng loại phương tiện
+            for (int i = 0; i < vehicleTypes.Count; i++)
+            {
+                string vehicleType = vehicleTypes[i];
+                System.Windows.Forms.DataVisualization.Charting.Series series =
+                    new System.Windows.Forms.DataVisualization.Charting.Series(vehicleType)
+                    {
+                        ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column,
+                        Color = colors[i % colors.Length],
+                        IsValueShownAsLabel = true,
+                        Font = new Font("Arial", 10, FontStyle.Bold),
+                        BorderWidth = 2,
+                        Legend = "Legend"
+                    };
+
+                // Lọc dữ liệu cho loại phương tiện này
+                var typeData = dt.AsEnumerable()
+                    .Where(row => row.Field<string>("vehicle_type") == vehicleType);
+
+                foreach (DataRow row in typeData)
+                {
+                    string date = row["date"].ToString();
+                    double revenue = Convert.ToDouble(row["revenue"]);
+                    series.Points.AddXY(date, revenue);
+                }
+
+                chart2.Series.Add(series);
             }
 
-            // Thêm Series vào Chart
-            chart2.Series.Add(revenueSeries);
+            // Điều chỉnh khoảng cách giữa các cột
+            chart2.Series[0]["PointWidth"] = "0.8";
+            chart2.Series[0]["BarLabelAlignment"] = "Center";
         }
 
         /// <summary>
