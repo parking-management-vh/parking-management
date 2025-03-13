@@ -253,7 +253,15 @@ namespace ParkingManagement.GUI.Forms.staff
                 return;
             }
             parkingCardBLL.GetParkingCardByLicensePlate(licensePlate);
+            if (parkingSlotBLL == null)
+            {
+                MessageBox.Show("Lỗi: parkingSlotBLL chưa được khởi tạo!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            parkingSlotBLL.updateSlotStatusByVehicle(licensePlate);
             LoadParkingCardInfo(licensePlate);
+            LoadParkingSlots(selectedAreaId.Value);
         }
 
         private void kTbOutBks_TextChanged(object sender, EventArgs e)
@@ -388,6 +396,15 @@ namespace ParkingManagement.GUI.Forms.staff
         private void kBtnRefreshmap_Click(object sender, EventArgs e)
         {
             LoadParkingSlots(selectedAreaId.Value);
+        }
+
+        private void kTbBillPay_Click(object sender, EventArgs e)
+        {
+            string licensePlate = kTbInfoBs.Text.Trim(); 
+
+            frmCreatePayment createPaymentForm = new frmCreatePayment(licensePlate);
+            createPaymentForm.StartPosition = FormStartPosition.CenterParent;
+            createPaymentForm.ShowDialog();
         }
     }
 }

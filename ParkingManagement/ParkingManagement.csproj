@@ -172,20 +172,25 @@
     <Compile Include="BLL\parkingAreaBLL .cs" />
     <Compile Include="BLL\parkingCardBLL.cs" />
     <Compile Include="BLL\parkingSlotBLL.cs" />
-    <Compile Include="BLL\PaymentReceiptBLL.cs" />
+    <Compile Include="BLL\paymentBLL.cs" />
     <Compile Include="BLL\roleBLL.cs" />
     <Compile Include="BLL\StatisticsBLL.cs" />
     <Compile Include="DAL\Database\DatabaseHelper.cs" />
     <Compile Include="DAL\Repositories\GetUserRoleStatistics.cs" />
     <Compile Include="DAL\Repositories\inOutVehicleRepository.cs" />
-    <Compile Include="DAL\Repositories\PaymentReceiptDAL.cs" />
+    <Compile Include="DAL\Repositories\paymentRepository.cs" />
+    <Compile Include="GUI\Forms\frmCreatePayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Forms\frmCreatePayment.Designer.cs">
+      <DependentUpon>frmCreatePayment.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Forms\frmPaymentReceipt.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\Forms\frmPaymentReceipt.Designer.cs">
       <DependentUpon>frmPaymentReceipt.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Forms\frmRole.cs" />
     <Compile Include="GUI\Forms\statistics\StatisticsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,7 +198,7 @@
       <DependentUpon>StatisticsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\parkingCardDetail.cs" />
-    <Compile Include="Models\PaymentReceipt.cs" />
+    <Compile Include="Models\paymentModel.cs" />
     <Compile Include="Models\TableAttribute.cs" />
     <Compile Include="Utils\SessionManager.cs" />
     <Compile Include="BLL\TicketPriceBLL.cs" />
@@ -359,6 +364,9 @@
     <Compile Include="Utils\ValidationUtils.cs" />
     <EmbeddedResource Include="GUI\Forms\frmAccount.resx">
       <DependentUpon>frmAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Forms\frmCreatePayment.resx">
+      <DependentUpon>frmCreatePayment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Forms\frmCreateUser.resx">
       <DependentUpon>frmCreateUser.cs</DependentUpon>

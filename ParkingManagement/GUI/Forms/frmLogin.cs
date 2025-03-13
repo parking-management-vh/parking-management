@@ -32,7 +32,7 @@ namespace ParkingManagement.GUI.Forms
             string inputCode = kTbCodeUser.Text.Trim();
             string inputPassword = kTbPwUser.Text.Trim();
 
-            // Check if username or password is empty
+            // Kiểm tra dữ liệu nhập vào
             if (string.IsNullOrEmpty(inputCode) || string.IsNullOrEmpty(inputPassword))
             {
                 MessageBox.Show("Please enter both User ID and Password!", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -45,22 +45,40 @@ namespace ParkingManagement.GUI.Forms
 
                 if (user != null)
                 {
-                    MessageBox.Show($"Login successful!\nWelcome, {user.FullName}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    SessionManager.SetUser(user);
+
+                    MessageBox.Show($"Welcome {user.Code}!", "Login Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
-                    frmMain mainForm = new frmMain();
-                    mainForm.ShowDialog();
+
+                    if (user.Role == "Admin")
+                    {
+                        frmMain mainForm = new frmMain();
+                        mainForm.ShowDialog();
+                    }
+                    else if (user.Role == "Staff")
+                    {
+                        frmStaffDashboard staffForm = new frmStaffDashboard();
+                        staffForm.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Unknown role. Please contact the administrator.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+
                     this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Invalid User ID or Password!\nPlease check again.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Invalid Code or Password!", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"An error occurred during login!\nError details: {ex.Message}", "System Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"❌ Error: {ex.Message}", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
 
 
         private void button1_Click(object sender, EventArgs e)
