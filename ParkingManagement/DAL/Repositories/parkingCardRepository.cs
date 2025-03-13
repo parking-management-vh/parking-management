@@ -42,12 +42,12 @@ namespace ParkingManagement.DAL.Repositories
 
             if (!string.IsNullOrEmpty(status) && status != "Tất cả")
             {
-                query += " AND status = @status";
+                query += " AND pc.status = @status";
                 parameters.Add(new MySqlParameter("@status", status));
             }
             if (isMonth.HasValue)
             {
-                query += " AND is_month = @isMonth";
+                query += " AND pc.is_month = @isMonth";
                 parameters.Add(new MySqlParameter("@isMonth", isMonth.Value ? 1 : 0));
             }
 
@@ -150,9 +150,9 @@ namespace ParkingManagement.DAL.Repositories
 
                 object[] parameters =
                 {
-            DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"),
-            vehicleId.ToString()
-        };
+                    DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"),
+                    vehicleId.ToString()
+                };
 
             try
             {
@@ -208,7 +208,7 @@ namespace ParkingManagement.DAL.Repositories
 
             bool isMonth = row["is_month"] != DBNull.Value && Convert.ToBoolean(row["is_month"]);
 
-            if (isMonth)
+            if (!isMonth)
             {
                 vehicleBLL.UpdateExitTime(vehicleId.Value);
                 UpdateParkingCardEndDate(vehicleId.Value);

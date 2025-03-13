@@ -1,4 +1,5 @@
-﻿using ParkingManagement.BLL;
+﻿using Org.BouncyCastle.Asn1.Cmp;
+using ParkingManagement.BLL;
 using ParkingManagement.Models;
 using System;
 using System.Collections.Generic;
@@ -21,6 +22,7 @@ namespace ParkingManagement.GUI.Forms
             InitializeComponent();
             LoadAllParkingCards();
             LoadStatusFilter();
+            LoadStatusSearch();
 
             kDtpStartdate.Format = DateTimePickerFormat.Custom;
             kDtpStartdate.CustomFormat = "yyyy-MM-dd HH:mm:ss";
@@ -92,6 +94,24 @@ namespace ParkingManagement.GUI.Forms
                 kCbbStatus.Items.Add("Không hoạt động");
 
                 kCbbStatus.SelectedIndex = 0; // Mặc định chọn "Tất cả"
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi tải danh sách trạng thái: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void LoadStatusSearch()
+        {
+            try
+            {
+                kCbbSStatus.Items.Clear();
+                kCbbSStatus.Items.Add("Tất cả");
+                kCbbSStatus.Items.Add("Hoạt động");
+                kCbbSStatus.Items.Add("Hết hạn");
+                kCbbSStatus.Items.Add("Không hoạt động");
+
+                kCbbSStatus.SelectedIndex = 0; // Mặc định chọn "Tất cả"
             }
             catch (Exception ex)
             {
@@ -228,6 +248,61 @@ namespace ParkingManagement.GUI.Forms
             string vehicleLicensePlate = kTbBs.Text.Trim();
             bool isMonth = kRbtnMonth.Checked;
             parkingCardBLL.CreateParkingCard(vehicleLicensePlate, userCode, isMonth);
+        }
+
+        private void kDgvParkingCard_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void kBtnSearch_Click(object sender, EventArgs e)
+        {
+            string status = kCbbSStatus.SelectedItem.ToString(); 
+            bool? isMonth = null;
+            if (kRBtnSAll.Checked)
+            {
+                status = null;
+            }
+
+            if (kBbnCardMonth.Checked)
+            {
+                isMonth = true;
+            }
+            else if (kBbnCardDay.Checked)
+            {
+                isMonth = false;
+            }
+
+            List<allParkingCard> parkingCards = parkingCardBLL.GetAllParkingCards(status, isMonth);
+
+            kDgvParkingCard.DataSource = null;
+            kDgvParkingCard.DataSource = parkingCards;
+        }
+
+        private void kBtnResetFrm_Click(object sender, EventArgs e)
+        {
+            kDtpStartdate.Value = DateTime.Now;
+            kDtpEnddate.Value = DateTime.Now;
+            kTbUserCode.Text = "";
+            kTbBs.Text = "";
+            kTbPrice.Text = "";
+            LoadIsMonthFilter();
+            kCbbStatus.SelectedIndex = 0;
+        }
+
+        private void kryptonGroupBox3_Panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void frmParkingCard_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonGroupBox1_Panel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

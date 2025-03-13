@@ -27,11 +27,11 @@ namespace ParkingManagement.DAL.Database
                 using (MySqlConnection connection = new MySqlConnection(connectDB))
                 {
                     connection.Open();
-                    MessageBox.Show("Database connection opened successfully!", "Debug");
+                    //MessageBox.Show("Database connection opened successfully!", "Debug");
 
                     using (MySqlCommand command = new MySqlCommand(query, connection))
                     {
-                        MessageBox.Show($"Executing SQL: {query}", "Debug");
+                        //MessageBox.Show($"Executing SQL: {query}", "Debug");
                         AddParameters(command, query, parameter);
 
                         MySqlDataAdapter adapter = new MySqlDataAdapter(command);
@@ -39,7 +39,7 @@ namespace ParkingManagement.DAL.Database
                     }
 
                     connection.Close();
-                    MessageBox.Show("Database connection closed!", "Debug");
+                    //MessageBox.Show("Database connection closed!", "Debug");
                 }
             }
             catch (Exception ex)
@@ -95,7 +95,7 @@ namespace ParkingManagement.DAL.Database
                 {
                     foreach (MySqlParameter param in parameter)
                     {
-                        MessageBox.Show($"Adding parameter: {param.ParameterName} = {param.Value}", "Debug");
+                        //MessageBox.Show($"Adding parameter: {param.ParameterName} = {param.Value}", "Debug");
                         command.Parameters.Add(param);
                     }
                 }
@@ -111,7 +111,7 @@ namespace ParkingManagement.DAL.Database
                         string paramName = match.Value;
                         object paramValue = parameter[index] ?? DBNull.Value;
 
-                        MessageBox.Show($"Adding parameter: {paramName} = {paramValue}", "Debug");
+                        //MessageBox.Show($"Adding parameter: {paramName} = {paramValue}", "Debug");
 
                         if (paramValue is MySqlParameter mySqlParam)
                         {
