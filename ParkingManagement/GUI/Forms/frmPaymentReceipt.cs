@@ -2,198 +2,197 @@
 using ParkingManagement.Models;
 using System;
 using System.Windows.Forms;
-using ParkingManagement.DAL;
+using System.Collections.Generic;
 
 namespace ParkingManagement.GUI.Forms
 {
     public partial class frmPaymentReceipt : Form
     {
-        private readonly PaymentReceiptBLL paymentBLL = new PaymentReceiptBLL();
-
+        private readonly paymentBLL paymentBLL = new paymentBLL();
+        private string selectedPaymentId;
         public frmPaymentReceipt()
         {
             InitializeComponent();
             LoadData();
-            txtReceiptID.ReadOnly = true; // Đặt txtReceiptID thành readonly
         }
 
         private void LoadData()
         {
-            dgvReceipts.DataSource = paymentBLL.GetAllReceipts();
-            LoadComboBoxData();
-            ClearInputs();
+            LoadAllPayment();
+            LoadPaymentmethod();
+            LoadFilter();
+            LoadPayMethodSearch();
         }
 
-        private void LoadComboBoxData()
+        private void LoadAllPayment()
         {
-/*            // Sử dụng ComboBox thay vì TextBox
-            cbVehicle.DataSource = VehicleDAL.GetAllVehicles();
-            cbVehicle.DisplayMember = "license_plate";
-            cbVehicle.ValueMember = "id";
+            try
+            {
+                string filterType = null;
+                string filterValue = null;
+                string paymentMethodFilter = null;
+                DateTime? paymentDate = null;
+                List<paymentModel> payment = paymentBLL.GetAllPayments(filterType, filterValue, paymentMethodFilter, paymentDate);
 
-            cbParkingCard.DataSource = ParkingCardDAL.GetAllActiveCards();
-            cbParkingCard.DisplayMember = "id";
-            cbParkingCard.ValueMember = "id";
+                if (payment == null || payment.Count == 0)
+                {
+                    MessageBox.Show("Không có xe nào trong cơ sở dữ liệu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
 
-            cbStaff.DataSource = UserDAL.GetStaffUsers();
-            cbStaff.DisplayMember = "full_name";
-            cbStaff.ValueMember = "id";
+                kDgvReceipts.DataSource = payment;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi tải danh sách xe: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
-            cbPaymentMethod.Items.AddRange(new string[] { "Tiền mặt", "Thẻ", "Chuyển khoản" });
-            cbPaymentMethod.SelectedIndex = -1; // Không chọn mặc định*/
+        private void kDgvReceipts_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = kDgvReceipts.Rows[e.RowIndex];
+
+                selectedPaymentId = row.Cells["id"].Value?.ToString();
+
+                if (row.Cells[1].Value != null && DateTime.TryParse(row.Cells[1].Value.ToString(), out DateTime paymentDate))
+                {
+                    kDtpPaymentDate.Value = paymentDate;
+                }
+                else
+                {
+                    kDtpPaymentDate.Value = DateTime.Now; 
+                }
+
+                kTbTotalPrice.Text = row.Cells[2].Value?.ToString();
+
+                kCbPaymentMethod.SelectedItem = row.Cells[3].Value?.ToString();
+
+                kTbTotalTime.Text = row.Cells[4].Value?.ToString() ?? "";
+                kTbStaffPay.Text = row.Cells[5].Value?.ToString() ?? "";
+                kTbCodeInvoice.Text = row.Cells[6].Value?.ToString() ?? "";
+                kTbBks.Text = row.Cells[7].Value?.ToString() ?? "";
+            }
+        }
+
+        private void LoadPaymentmethod()
+        {
+            kCbPaymentMethod.Items.Clear();
+            kCbPaymentMethod.Items.Add("Tất cả");
+            kCbPaymentMethod.Items.Add("Tiền mặt");
+            kCbPaymentMethod.Items.Add("Thẻ");
+            kCbPaymentMethod.Items.Add("Chuyển khoản");
+            kCbPaymentMethod.SelectedIndex = 0;
+        }
+
+        private void LoadPayMethodSearch()
+        {
+            kCbbPayMethod.Items.Clear();
+            kCbbPayMethod.Items.Add("Tất cả");
+            kCbbPayMethod.Items.Add("Tiền mặt");
+            kCbbPayMethod.Items.Add("Thẻ");
+            kCbbPayMethod.Items.Add("Chuyển khoản");
+            kCbbPayMethod.SelectedIndex = 0;
+        }
+
+        private void LoadFilter()
+        {
+            kCbbSFilter.Items.Clear();
+            kCbbSFilter.Items.Add("Tất cả");
+            kCbbSFilter.Items.Add("Biển số");
+            kCbbSFilter.Items.Add("Mã nhân viên");
+            kCbbSFilter.Items.Add("Mã hoá đơn");
+            kCbbSFilter.SelectedIndex = 0;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-/*            try
-            {
-                if (!ValidateInputs()) return;
-
-                PaymentReceipt receipt = new PaymentReceipt
-                {
-                    ParkingCardId = cbParkingCard.SelectedValue?.ToString(),
-                    VehicleId = cbVehicle.SelectedValue?.ToString(),
-                    StaffCode = cbStaff.SelectedValue?.ToString(),
-                    TotalPrice = decimal.Parse(txtTotalPrice.Text),
-                    PaymentMethod = cbPaymentMethod.SelectedItem?.ToString(),
-                    PaymentDate = dtpPaymentDate.Value
-                };
-
-                if (paymentBLL.AddReceipt(receipt))
-                {
-                    MessageBox.Show("Thêm hóa đơn thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LoadData();
-                }
-                else
-                {
-                    MessageBox.Show("Thêm hóa đơn thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }*/
+            string licensePlate = null;
+            frmCreatePayment createPaymentForm = new frmCreatePayment(licensePlate);
+            createPaymentForm.StartPosition = FormStartPosition.CenterParent; 
+            createPaymentForm.ShowDialog(); 
         }
+
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-  /*          if (dgvReceipts.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("Vui lòng chọn một hóa đơn để cập nhật!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            try
-            {
-                if (!ValidateInputs()) return;
-
-                int id = Convert.ToInt32(dgvReceipts.SelectedRows[0].Cells["id"].Value);
-                PaymentReceipt receipt = new PaymentReceipt
-                {
-                    Id = id.ToString(),
-                    ParkingCardId = cbParkingCard.SelectedValue?.ToString(),
-                    VehicleId = cbVehicle.SelectedValue?.ToString(),
-                    StaffCode = cbStaff.SelectedValue?.ToString(),
-                    TotalPrice = decimal.Parse(txtTotalPrice.Text),
-                    PaymentMethod = cbPaymentMethod.SelectedItem?.ToString(),
-                    PaymentDate = dtpPaymentDate.Value
-                };
-
-                if (paymentBLL.UpdateReceipt(receipt))
-                {
-                    MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LoadData();
-                }
-                else
-                {
-                    MessageBox.Show("Cập nhật thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }*/
+  
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (dgvReceipts.SelectedRows.Count == 0)
+            if (string.IsNullOrEmpty(selectedPaymentId))
             {
-                MessageBox.Show("Vui lòng chọn một hóa đơn để xóa!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng chọn chỗ đỗ để xoá!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            try
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xoá chỗ đỗ này?", "Xác nhận xoá",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (result == DialogResult.Yes)
             {
-                int id = Convert.ToInt32(dgvReceipts.SelectedRows[0].Cells["id"].Value);
-                if (MessageBox.Show("Bạn có chắc muốn xóa hóa đơn này?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                try
                 {
-                    if (paymentBLL.DeleteReceipt(id))
+                    int paymentId = Convert.ToInt32(selectedPaymentId);
+
+                    bool isDeleted = paymentBLL.DeletePayment(paymentId);
+
+                    if (isDeleted)
                     {
-                        MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        LoadData();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Xóa thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Xoá thanh toán thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LoadAllPayment();
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Lỗi khi xoá chỗ đỗ: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
-        private void dgvReceipts_SelectionChanged(object sender, EventArgs e)
+        private void kryptonGroupBox1_Paint(object sender, PaintEventArgs e)
         {
-/*            if (dgvReceipts.SelectedRows.Count > 0)
-            {
-                var row = dgvReceipts.SelectedRows[0];
-                txtReceiptID.Text = row.Cells["id"].Value?.ToString();
-                cbVehicle.SelectedValue = row.Cells["vehicle_id"].Value;
-                cbParkingCard.SelectedValue = row.Cells["parking_card_id"].Value;
-                cbStaff.SelectedValue = row.Cells["staff_code"].Value;
-                txtTotalPrice.Text = row.Cells["total_price"].Value?.ToString();
-                cbPaymentMethod.SelectedItem = row.Cells["payment_method"].Value?.ToString();
-                dtpPaymentDate.Value = Convert.ToDateTime(row.Cells["payment_date"].Value);
-            }*/
+
         }
 
-        //private bool ValidateInputs()
-        //{
-/*            if (cbVehicle.SelectedValue == null)
-            {
-                MessageBox.Show("Vui lòng chọn xe!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-            if (cbStaff.SelectedValue == null)
-            {
-                MessageBox.Show("Vui lòng chọn nhân viên!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-            if (string.IsNullOrWhiteSpace(txtTotalPrice.Text) || !decimal.TryParse(txtTotalPrice.Text, out decimal totalPrice) || totalPrice <= 0)
-            {
-                MessageBox.Show("Tổng tiền không hợp lệ!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-            if (cbPaymentMethod.SelectedItem == null)
-            {
-                MessageBox.Show("Vui lòng chọn phương thức thanh toán!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-            return true;*/
-        //}//
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            LoadAllPayment();
+        }
 
-        private void ClearInputs()
-        {/*
-            txtReceiptID.Text = string.Empty;
-            cbVehicle.SelectedIndex = -1;
-            cbParkingCard.SelectedIndex = -1;
-            cbStaff.SelectedIndex = -1;
-            txtTotalPrice.Text = string.Empty;
-            cbPaymentMethod.SelectedIndex = -1;
-            dtpPaymentDate.Value = DateTime.Now;*/
+        private void kBtnSearch_Click(object sender, EventArgs e)
+        {
+            string filterType = kCbbSFilter.SelectedItem.ToString();
+            string filterValue = kTbSearch.Text.Trim();
+            string paymentMethodFilter = kCbbPayMethod.SelectedItem.ToString();
+            DateTime? paymentDate = kDtpSDate.Value.Date; 
+
+            if (filterType == "Tất cả")
+            {
+                filterValue = null;
+            }
+
+            List<paymentModel> filteredPayments = paymentBLL.GetAllPayments(filterType, filterValue, paymentMethodFilter, paymentDate);
+
+            kDgvReceipts.DataSource = filteredPayments;
+        }
+
+        private void kBtnReset_Click(object sender, EventArgs e)
+        {
+            kDtpPaymentDate.Value = DateTime.Now;
+            kTbTotalPrice.Text = "";
+            kCbPaymentMethod.SelectedItem = -1;
+            kTbTotalTime.Text = "";
+            kTbStaffPay.Text = "";
+            kTbCodeInvoice.Text = "";
+            kTbBks.Text = "";
+        }
+
+        private void kryptonPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

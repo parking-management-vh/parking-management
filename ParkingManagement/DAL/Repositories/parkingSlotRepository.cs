@@ -1,5 +1,6 @@
 ﻿using Microsoft.Office.Interop.Excel;
 using MySql.Data.MySqlClient;
+using ParkingManagement.BLL;
 using ParkingManagement.DAL.Database;
 using ParkingManagement.Models;
 using System;
@@ -16,6 +17,7 @@ namespace ParkingManagement.DAL.Repositories
     internal class parkingSlotRepository
     {
         private readonly DatabaseProvider dbProvider = new DatabaseProvider();
+
         public List<allParkingSlot> GetAllParkingSlots(string areaName = null, string status = null, string slotType = null)
         {
             List<allParkingSlot> slots = new List<allParkingSlot>();
@@ -105,6 +107,42 @@ namespace ParkingManagement.DAL.Repositories
                 throw;
             }
         }
+
+        public Guid? GetParkingSlotIdByLicensePlate(string licensePlate)
+        {
+            string query = "SELECT parking_slot_id FROM vehicle WHERE license_plate = @licensePlate";
+            object[] parameters = { licensePlate };
+
+            System.Data.DataTable data = dbProvider.ExecuteQuery(query, parameters);
+
+            if (data.Rows.Count > 0 && Guid.TryParse(data.Rows[0]["parking_slot_id"].ToString(), out Guid parkingSlotId))
+            {
+                return parkingSlotId;
+            }
+
+            return null;
+        }
+
+        public void updateSlotStatusByVehicle(string licensePlate)
+        {
+            Guid? parkingSlotId = GetParkingSlotIdByLicensePlate(licensePlate);
+            if (!parkingSlotId.HasValue)
+            {
+                MessageBox.Show($"Không tìm thấy phương tiện với biển số: {licensePlate}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            try
+            {
+                UpdateParkingSlotStatus(parkingSlotId.Value, "Sẵn sàng");
+                MessageBox.Show($"Xe có biển số {licensePlate} đã rời đi. Cập nhật chỗ đỗ thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Cập nhật trạng thái vị trí đỗ xe thất bại! Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         public void UpdateParkingSlot(ParkingSlotModel slot)
         {
             string query = @"
