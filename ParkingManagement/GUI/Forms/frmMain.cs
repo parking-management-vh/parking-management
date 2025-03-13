@@ -107,11 +107,10 @@ namespace ParkingManagement
             OpenFormInTab<frmInOutVehicle>("Vehicle In Out");
         }
 
-<<<<<<< HEAD
         private void kryptonRibbonGroupButton3_Click(object sender, EventArgs e)
         {
             OpenFormInTab<frmStatistics>("frmStatistics");
-=======
+        }
         private void btnParkingCard_Click(object sender, EventArgs e)
         {
             OpenFormInTab<frmParkingCard>("Parking Card");
@@ -119,7 +118,6 @@ namespace ParkingManagement
 
         private void kryptonRibbon1_SelectedTabChanged(object sender, EventArgs e)
         {
->>>>>>> develop
 
         }
     }

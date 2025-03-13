@@ -393,8 +393,8 @@ namespace ParkingManagement.GUI.Forms.statistics
                 lblTotalEntries.Text = $"{totalEntries}";
                 lblTotalExits.Text = $"{totalExits}";
                 lblInitialStock.Text = $"{initialStock}";
-                lblParkedVehicles.Text = $"Số xe đang đỗ: {totalParkedVehicles}";
-                lblEmptySlots.Text = $"Số chỗ trống: {totalEmptySlots}";
+                lblParkedVehicles.Text = $"{totalParkedVehicles}";
+                lblEmptySlots.Text = $"{totalEmptySlots}";
 
             }
             catch (Exception ex)

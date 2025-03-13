@@ -224,9 +224,7 @@
     <Compile Include="GUI\Forms\frmPaymentReceipt.Designer.cs">
       <DependentUpon>frmPaymentReceipt.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Forms\frmRole.cs" />
     <Compile Include="GUI\Forms\statistics\frmStatistics.cs">
-    <Compile Include="GUI\Forms\statistics\StatisticsForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\Forms\statistics\frmStatistics.Designer.cs">
