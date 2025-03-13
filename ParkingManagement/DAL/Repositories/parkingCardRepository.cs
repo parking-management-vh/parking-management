@@ -42,12 +42,12 @@ namespace ParkingManagement.DAL.Repositories
 
             if (!string.IsNullOrEmpty(status) && status != "Tất cả")
             {
-                query += " AND status = @status";
+                query += " AND pc.status = @status";
                 parameters.Add(new MySqlParameter("@status", status));
             }
             if (isMonth.HasValue)
             {
-                query += " AND is_month = @isMonth";
+                query += " AND pc.is_month = @isMonth";
                 parameters.Add(new MySqlParameter("@isMonth", isMonth.Value ? 1 : 0));
             }
 
