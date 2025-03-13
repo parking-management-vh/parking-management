@@ -340,6 +340,25 @@ namespace ParkingManagement.BLL
             DataTable dt = dbHelper.ExecuteQuery(query, parameters);
             return dt.Rows.Count > 0 ? Convert.ToInt32(dt.Rows[0][0]) : 0;
         }
+        public DataTable GetRevenueStatisticsByVehicleType(DateTime fromDate, DateTime toDate)
+        {
+            string query = @"SELECT 
+                            vt.vehicle_type_name AS vehicle_type,
+                            DATE(pr.payment_date) AS date,
+                            SUM(pr.total_price) AS revenue
+                         FROM payment_receipt pr
+                         LEFT JOIN vehicle v ON pr.vehicle_id = v.id
+                         LEFT JOIN vehicle_type vt ON v.vehicle_type_id = vt.id
+                         WHERE DATE(pr.payment_date) BETWEEN @fromDate AND @toDate
+                         GROUP BY vt.vehicle_type_name, DATE(pr.payment_date)
+                         ORDER BY DATE(pr.payment_date), vt.vehicle_type_name;";
 
+            MySqlParameter[] parameters = {
+            new MySqlParameter("@fromDate", MySqlDbType.Date) { Value = fromDate },
+            new MySqlParameter("@toDate", MySqlDbType.Date) { Value = toDate }
+        };
+
+            return dbHelper.ExecuteQuery(query, parameters);
+        }
     }
 }
