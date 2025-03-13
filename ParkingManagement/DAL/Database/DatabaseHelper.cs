@@ -14,7 +14,6 @@ namespace ParkingManagement.DAL.Database
         {
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
-                conn.Open();
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
                     using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
@@ -26,7 +25,22 @@ namespace ParkingManagement.DAL.Database
                 }
             }
         }
-
+        public DataTable ExecuteQuery(string query, MySqlParameter[] parameters)
+        {
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddRange(parameters);
+                    using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        adapter.Fill(dt);
+                        return dt;
+                    }
+                }
+            }
+        }
         public int ExecuteNonQuery(string query, MySqlParameter[] parameters = null)
         {
             using (MySqlConnection conn = new MySqlConnection(connectionString))

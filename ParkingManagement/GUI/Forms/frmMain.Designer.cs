@@ -71,6 +71,8 @@
             this.kryptonRibbonTab2 = new Krypton.Ribbon.KryptonRibbonTab();
             this.kryptonNavigator1 = new Krypton.Navigator.KryptonNavigator();
             this.kryptonRibbonGroupButton2 = new Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.kryptonRibbonGroupTriple15 = new Krypton.Ribbon.KryptonRibbonGroupTriple();
+            this.kryptonRibbonGroupButton3 = new Krypton.Ribbon.KryptonRibbonGroupButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonRibbon1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonNavigator1)).BeginInit();
             this.kryptonNavigator1.SuspendLayout();
@@ -82,7 +84,7 @@
             this.kryptonRibbon1.RibbonTabs.AddRange(new Krypton.Ribbon.KryptonRibbonTab[] {
             this.kryptonRibbonTab1,
             this.kryptonRibbonTab2});
-            this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab1;
+            this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab2;
             this.kryptonRibbon1.Size = new System.Drawing.Size(1173, 171);
             this.kryptonRibbon1.TabIndex = 0;
             // 
@@ -235,7 +237,8 @@
             this.kryptonRibbonGroupTriple11,
             this.kryptonRibbonGroupTriple12,
             this.kryptonRibbonGroupTriple13,
-            this.kryptonRibbonGroupTriple14});
+            this.kryptonRibbonGroupTriple14,
+            this.kryptonRibbonGroupTriple15});
             this.kryptonRibbonGroup2.TextLine1 = "Dashboard";
             // 
             // kryptonRibbonGroupTriple12
@@ -284,6 +287,15 @@
             this.kryptonNavigator1.Size = new System.Drawing.Size(1173, 383);
             this.kryptonNavigator1.TabIndex = 1;
             this.kryptonNavigator1.Text = "kryptonNavigator1";
+            // 
+            // kryptonRibbonGroupTriple15
+            // 
+            this.kryptonRibbonGroupTriple15.Items.AddRange(new Krypton.Ribbon.KryptonRibbonGroupItem[] {
+            this.kryptonRibbonGroupButton3});
+            // 
+            // kryptonRibbonGroupButton3
+            // 
+            this.kryptonRibbonGroupButton3.Click += new System.EventHandler(this.kryptonRibbonGroupButton3_Click);
             // 
             // frmMain
             // 
@@ -350,6 +362,8 @@
         private Krypton.Ribbon.KryptonRibbonGroupButton btnTicketCcustomer;
         private Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple14;
         private Krypton.Ribbon.KryptonRibbonGroupButton kryptonRibbonGroupButton1;
+        private Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple15;
+        private Krypton.Ribbon.KryptonRibbonGroupButton kryptonRibbonGroupButton3;
     }
 }
 
