@@ -68,6 +68,9 @@
     <Reference Include="EPPlus.System.Drawing, Version=6.0.0.0, Culture=neutral, PublicKeyToken=2308d35469c9bac0, processorArchitecture=MSIL">
       <HintPath>..\packages\EPPlus.System.Drawing.6.0.0\lib\net452\EPPlus.System.Drawing.dll</HintPath>
     </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=6.6.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.6.6.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
     <Reference Include="Google.Protobuf, Version=3.26.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Protobuf.3.26.1\lib\net45\Google.Protobuf.dll</HintPath>
     </Reference>
@@ -571,13 +574,16 @@
     <None Include="Resources\img\PaymentReceipt3.png" />
     <None Include="Resources\img\ManagePay.png" />
     <None Include="Resources\img\panel.png" />
+    <None Include="Resources\img\Notification.png" />
     <Content Include="Resources\img\rating.png" />
     <Content Include="Resources\img\ratingg.png" />
     <Content Include="Resources\img\ratting.png" />
+    <None Include="Resources\img\RecentFiles24.png" />
     <Content Include="Resources\img\red-circle-emoji-clipart-lg.png" />
     <None Include="Resources\img\VehicleType.png" />
     <None Include="Resources\img\TicketPrice.png" />
     <None Include="Resources\img\stande.png" />
+    <None Include="Resources\img\Statistics24.png" />
     <Content Include="Resources\img\XeMayInOut.jpg" />
     <Content Include="Resources\square.png" />
   </ItemGroup>
