@@ -121,7 +121,7 @@ namespace ParkingManagement
         }
         private void btnManagePay_Click(object sender, EventArgs e)
         {
-            OpenFormInTab<frmStatistics>("Statistics");
+            OpenFormInTab<frmManagePay>("Manage Pay");
         }
 
         private void btnCreatePayment_Click(object sender, EventArgs e)
@@ -157,11 +157,6 @@ namespace ParkingManagement
         private void btnStatistics_Click(object sender, EventArgs e)
         {
             OpenFormInTab<frmStatistics>("Statistics");
-        }
-
-        private void btnStart_Load(object sender, EventArgs e)
-        {
-            LoadStartPage loadStartPage = new LoadStartPage();
         }
     }
 } 

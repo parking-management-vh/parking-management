@@ -34,8 +34,6 @@ namespace ParkingManagement.BLL
         {
             return recentActivityDAL.GetOverdueVehicles();
         }
-
-
         
     }
 }

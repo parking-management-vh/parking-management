@@ -24,12 +24,18 @@ namespace ParkingManagement.GUI.Forms
       
         private void InitializeListView()
         {
-            // Cấu hình ListView để hiển thị dữ liệu theo cột
             listViewAllData.View = View.Details;
+            listViewAllData.Dock = DockStyle.Fill; // ListView full màn hình
+            listViewAllData.FullRowSelect = true;
+            listViewAllData.GridLines = true;
+
             listViewAllData.Columns.Clear();
-            listViewAllData.Columns.Add("Loại dữ liệu", 150); // Type
-            listViewAllData.Columns.Add("Biển số / Mã giao dịch", 200); // License Plate / ID
-            listViewAllData.Columns.Add("Chi tiết", 250); // Details
+            listViewAllData.Columns.Add("Loại dữ liệu", 150);
+            listViewAllData.Columns.Add("Biển số / Mã giao dịch", 200);
+            listViewAllData.Columns.Add("Chi tiết", 400); // Cột này chiếm nhiều hơn
+
+            // Đặt chế độ tự điều chỉnh kích thước khi dữ liệu thay đổi
+            listViewAllData.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
         }
 
         private void LoadData()
@@ -138,6 +144,18 @@ namespace ParkingManagement.GUI.Forms
                 chartStatistics.Series["Doanh thu"].Points.AddXY("Hôm nay", revenueToday);
                 chartStatistics.Series["Doanh thu"].Points.AddXY("Tổng", totalRevenue);
             }
+        }
+
+        private void LoadStartPage_Resize(object sender, EventArgs e)
+        {
+            if (listViewAllData.Columns.Count == 0)
+                return; // Đảm bảo có cột trước khi thay đổi kích thước
+
+            int totalWidth = listViewAllData.ClientSize.Width;
+
+            listViewAllData.Columns[0].Width = (int)(totalWidth * 0.2); // 20%
+            listViewAllData.Columns[1].Width = (int)(totalWidth * 0.3); // 30%
+            listViewAllData.Columns[2].Width = (int)(totalWidth * 0.5); // 50%
         }
     }
 }
