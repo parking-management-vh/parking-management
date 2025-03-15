@@ -16,14 +16,14 @@ namespace ParkingManagement.GUI.Forms.staff
         public frmStaffDashboard()
         {
             InitializeComponent();
-        }
-        private void frmStaffDashboard_Load(object sender, EventArgs e)
-        { }
+            LoadStartPage();
 
-        private void kryptonRibbonGroup2_DialogBoxLauncherClick(object sender, EventArgs e)
+        }
+        private void LoadStartPage()
         {
-
+            OpenFormInTab<LoadStartPage>("Start Page");
         }
+
 
         private void OpenFormInTab<T>(string tabName) where T : Form, new()
         {
