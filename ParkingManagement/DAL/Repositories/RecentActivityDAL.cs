@@ -83,6 +83,47 @@ namespace ParkingManagement.DAL.Repositories
             }
             return overdueVehicles;
         }
+        // Lấy tổng số chỗ trong bãi
+        public int GetTotalSlots()
+        {
+            string query = "SELECT COUNT(*) FROM parking_slot;";
+            return Convert.ToInt32(dbProvider.ExecuteScalar(query));
+        }
+
+        // Lấy số chỗ trống
+        public int GetAvailableSlots()
+        {
+            string query = "SELECT COUNT(*) FROM parking_slot WHERE status = 'Sẵn sàng';";
+            return Convert.ToInt32(dbProvider.ExecuteScalar(query));
+        }
+
+        // Lấy số xe hiện đang trong bãi
+        public int GetVehiclesInParking()
+        {
+            string query = "SELECT COUNT(*) FROM vehicle WHERE exit_time IS NULL;";
+            return Convert.ToInt32(dbProvider.ExecuteScalar(query));
+        }
+
+        // Lấy số lượt vào hôm nay
+        public int GetEntriesToday()
+        {
+            string query = "SELECT COUNT(*) FROM vehicle WHERE DATE(entry_time) = CURDATE();";
+            return Convert.ToInt32(dbProvider.ExecuteScalar(query));
+        }
+
+        // Lấy số lượt ra hôm nay
+        public int GetExitsToday()
+        {
+            string query = "SELECT COUNT(*) FROM vehicle WHERE DATE(exit_time) = CURDATE();";
+            return Convert.ToInt32(dbProvider.ExecuteScalar(query));
+        }
+
+        // Lấy tổng doanh thu hôm nay
+        public decimal GetTodayRevenue()
+        {
+            string query = "SELECT IFNULL(SUM(total_price), 0) FROM payment_receipt WHERE DATE(payment_date) = CURDATE();";
+            return Convert.ToDecimal(dbProvider.ExecuteScalar(query));
+        }
 
 
     }

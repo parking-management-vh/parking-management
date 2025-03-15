@@ -11,13 +11,13 @@ namespace ParkingManagement.BLL
         // Constructor with dependency injection
         public RecentActivityBLL(RecentActivityDAL dal)
         {
-            this.recentActivityDAL = dal;
+            recentActivityDAL = dal;
         }
 
         // Default constructor (fixing your error)
         public RecentActivityBLL()
         {
-            this.recentActivityDAL = new RecentActivityDAL();
+            recentActivityDAL = new RecentActivityDAL();
         }
 
         public List<VehicleModel> GetRecentVehicles()
@@ -34,6 +34,35 @@ namespace ParkingManagement.BLL
         {
             return recentActivityDAL.GetOverdueVehicles();
         }
-        
+
+        public int GetTotalSlots()
+        {
+            return recentActivityDAL.GetTotalSlots();
+        }
+
+        public int GetAvailableSlots()
+        {
+            return recentActivityDAL.GetAvailableSlots();
+        }
+
+        public int GetVehiclesInParking()
+        {
+            return recentActivityDAL.GetVehiclesInParking();
+        }
+
+        public int GetEntriesToday()
+        {
+            return recentActivityDAL.GetEntriesToday();
+        }
+
+        public int GetExitsToday()
+        {
+            return recentActivityDAL.GetExitsToday();
+        }
+
+        public decimal GetTodayRevenue()
+        {
+            return recentActivityDAL.GetTodayRevenue();
+        }
     }
 }

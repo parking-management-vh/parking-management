@@ -71,12 +71,52 @@ namespace ParkingManagement.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] alert {
+            get {
+                object obj = ResourceManager.GetObject("alert", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] available {
+            get {
+                object obj = ResourceManager.GetObject("available", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] capacity {
+            get {
+                object obj = ResourceManager.GetObject("capacity", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap car {
             get {
                 object obj = ResourceManager.GetObject("car", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] car_in {
+            get {
+                object obj = ResourceManager.GetObject("car_in", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
@@ -117,6 +157,16 @@ namespace ParkingManagement.Properties {
             get {
                 object obj = ResourceManager.GetObject("Customerr", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] default_icon {
+            get {
+                object obj = ResourceManager.GetObject("default_icon", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
@@ -191,6 +241,36 @@ namespace ParkingManagement.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] entry {
+            get {
+                object obj = ResourceManager.GetObject("entry", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] exit {
+            get {
+                object obj = ResourceManager.GetObject("exit", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] exit_car {
+            get {
+                object obj = ResourceManager.GetObject("exit_car", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap export_excel {
@@ -246,6 +326,16 @@ namespace ParkingManagement.Properties {
         internal static System.Drawing.Bitmap newfile24 {
             get {
                 object obj = ResourceManager.GetObject("newfile24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Notification {
+            get {
+                object obj = ResourceManager.GetObject("Notification", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -326,6 +416,16 @@ namespace ParkingManagement.Properties {
         internal static System.Drawing.Bitmap PaymentReceipt3 {
             get {
                 object obj = ResourceManager.GetObject("PaymentReceipt3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RecentFiles24 {
+            get {
+                object obj = ResourceManager.GetObject("RecentFiles24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -446,6 +546,16 @@ namespace ParkingManagement.Properties {
         internal static System.Drawing.Bitmap stande1 {
             get {
                 object obj = ResourceManager.GetObject("stande1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Statistics24 {
+            get {
+                object obj = ResourceManager.GetObject("Statistics24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
