@@ -203,6 +203,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\parkingAreaBLL .cs" />
+    <Compile Include="BLL\RecentActivityBLL.cs" />
     <Compile Include="BLL\parkingCardBLL.cs" />
     <Compile Include="BLL\parkingSlotBLL.cs" />
     <Compile Include="BLL\paymentBLL.cs" />
@@ -211,6 +212,7 @@
     <Compile Include="DAL\Database\DatabaseHelper.cs" />
     <Compile Include="DAL\Repositories\GetUserRoleStatistics.cs" />
     <Compile Include="DAL\Repositories\inOutVehicleRepository.cs" />
+    <Compile Include="DAL\Repositories\RecentActivityDAL.cs" />
     <Compile Include="DAL\Repositories\paymentRepository.cs" />
     <Compile Include="GUI\Forms\frmCreatePayment.cs">
       <SubType>Form</SubType>
@@ -224,6 +226,12 @@
     <Compile Include="GUI\Forms\frmPaymentReceipt.Designer.cs">
       <DependentUpon>frmPaymentReceipt.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Forms\LoadStartPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Forms\LoadStartPage.Designer.cs">
+      <DependentUpon>LoadStartPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Forms\statistics\frmStatistics.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -232,6 +240,7 @@
     </Compile>
     <Compile Include="Models\parkingCardDetail.cs" />
     <Compile Include="Models\paymentModel.cs" />
+    <Compile Include="Models\RecentActivityModel.cs" />
     <Compile Include="Models\TableAttribute.cs" />
     <Compile Include="Utils\SessionManager.cs" />
     <Compile Include="BLL\TicketPriceBLL.cs" />
@@ -422,6 +431,9 @@
     <EmbeddedResource Include="GUI\Forms\frmVehicleType.resx">
       <DependentUpon>frmVehicleType.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Forms\LoadStartPage.resx">
+      <DependentUpon>LoadStartPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Forms\ParkingArea.resx">
       <DependentUpon>ParkingArea.cs</DependentUpon>
     </EmbeddedResource>
@@ -541,14 +553,31 @@
     <Content Include="Resources\img\btn_text.png" />
     <Content Include="Resources\img\car_1.png" />
     <Content Include="Resources\img\car_2.png" />
+    <None Include="Resources\img\CreatePayment.png" />
+    <None Include="Resources\img\createuser.png" />
+    <None Include="Resources\img\Customerr.png" />
     <Content Include="Resources\img\DALL·E-2025-03-09-11.20.jpg" />
+    <None Include="Resources\img\doc-left.png" />
     <Content Include="Resources\img\edited_image.png" />
+    <None Include="Resources\img\Employees.png" />
     <Content Include="Resources\img\large-orange-circle.png" />
     <Content Include="Resources\img\location.png" />
+    <None Include="Resources\img\parkingcar.png" />
+    <None Include="Resources\img\parkingcard.png" />
+    <None Include="Resources\img\parkingslot.png" />
+    <None Include="Resources\img\ManageVehicle.png" />
+    <None Include="Resources\img\PaymentReceipt.png" />
+    <None Include="Resources\img\PaymentReceipt2.png" />
+    <None Include="Resources\img\PaymentReceipt3.png" />
+    <None Include="Resources\img\ManagePay.png" />
+    <None Include="Resources\img\panel.png" />
     <Content Include="Resources\img\rating.png" />
     <Content Include="Resources\img\ratingg.png" />
     <Content Include="Resources\img\ratting.png" />
     <Content Include="Resources\img\red-circle-emoji-clipart-lg.png" />
+    <None Include="Resources\img\VehicleType.png" />
+    <None Include="Resources\img\TicketPrice.png" />
+    <None Include="Resources\img\stande.png" />
     <Content Include="Resources\img\XeMayInOut.jpg" />
     <Content Include="Resources\square.png" />
   </ItemGroup>
