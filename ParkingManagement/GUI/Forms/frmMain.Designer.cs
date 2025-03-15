@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.kryptonRibbon1 = new Krypton.Ribbon.KryptonRibbon();
             this.kryptonRibbonTab1 = new Krypton.Ribbon.KryptonRibbonTab();
             this.kryptonRibbonGroup1 = new Krypton.Ribbon.KryptonRibbonGroup();
@@ -135,6 +136,7 @@
             // 
             // btnEmployee
             // 
+            this.btnEmployee.ImageLarge = ((System.Drawing.Image)(resources.GetObject("btnEmployee.ImageLarge")));
             this.btnEmployee.TextLine1 = " Nhân viên ";
             this.btnEmployee.Click += new System.EventHandler(this.btnEmployee_Click);
             // 
@@ -145,6 +147,7 @@
             // 
             // btnParkingCard
             // 
+            this.btnParkingCard.ImageLarge = ((System.Drawing.Image)(resources.GetObject("btnParkingCard.ImageLarge")));
             this.btnParkingCard.TextLine1 = "Parking Card";
             this.btnParkingCard.Click += new System.EventHandler(this.btnParkingCard_Click);
             // 
@@ -155,6 +158,7 @@
             // 
             // btnParkingSpot
             // 
+            this.btnParkingSpot.ImageLarge = ((System.Drawing.Image)(resources.GetObject("btnParkingSpot.ImageLarge")));
             this.btnParkingSpot.TextLine1 = "Parking Slot";
             this.btnParkingSpot.Click += new System.EventHandler(this.btnParkingSpot_Click);
             // 
@@ -224,6 +228,8 @@
             // btnParkingArea
             // 
             this.btnParkingArea.Checked = true;
+            this.btnParkingArea.ImageLarge = ((System.Drawing.Image)(resources.GetObject("btnParkingArea.ImageLarge")));
+            this.btnParkingArea.ImageSmall = ((System.Drawing.Image)(resources.GetObject("btnParkingArea.ImageSmall")));
             this.btnParkingArea.TextLine1 = "Parking Area";
             this.btnParkingArea.Click += new System.EventHandler(this.btnParkingArea_Click);
             // 

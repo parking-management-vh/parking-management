@@ -438,6 +438,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="bin\Debug\ParkingManagement.exe.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -453,6 +454,8 @@
     <None Include="config\App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="bin\Debug\Resources\images\" />
+    <Folder Include="bin\Release\" />
     <Folder Include="GUI\Controls\" />
     <Folder Include="Resources\video\" />
   </ItemGroup>
@@ -522,6 +525,67 @@
     <None Include="Resources\img\car.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\aa\ParkingManagement.resources.dll" />
+    <Content Include="bin\Debug\BouncyCastle.Cryptography.dll" />
+    <Content Include="bin\Debug\BouncyCastle.Cryptography.xml" />
+    <Content Include="bin\Debug\EPPlus.dll" />
+    <Content Include="bin\Debug\EPPlus.Interfaces.dll" />
+    <Content Include="bin\Debug\EPPlus.System.Drawing.dll" />
+    <Content Include="bin\Debug\EPPlus.xml" />
+    <Content Include="bin\Debug\Google.Protobuf.dll" />
+    <Content Include="bin\Debug\Google.Protobuf.pdb" />
+    <Content Include="bin\Debug\Google.Protobuf.xml" />
+    <Content Include="bin\Debug\K4os.Compression.LZ4.dll" />
+    <Content Include="bin\Debug\K4os.Compression.LZ4.Streams.dll" />
+    <Content Include="bin\Debug\K4os.Compression.LZ4.Streams.xml" />
+    <Content Include="bin\Debug\K4os.Compression.LZ4.xml" />
+    <Content Include="bin\Debug\K4os.Hash.xxHash.dll" />
+    <Content Include="bin\Debug\K4os.Hash.xxHash.xml" />
+    <Content Include="bin\Debug\Krypton.Docking.dll" />
+    <Content Include="bin\Debug\Krypton.Docking.xml" />
+    <Content Include="bin\Debug\Krypton.Navigator.dll" />
+    <Content Include="bin\Debug\Krypton.Navigator.xml" />
+    <Content Include="bin\Debug\Krypton.Ribbon.dll" />
+    <Content Include="bin\Debug\Krypton.Ribbon.xml" />
+    <Content Include="bin\Debug\Krypton.Toolkit.dll" />
+    <Content Include="bin\Debug\Krypton.Toolkit.xml" />
+    <Content Include="bin\Debug\Krypton.Workspace.dll" />
+    <Content Include="bin\Debug\Krypton.Workspace.xml" />
+    <Content Include="bin\Debug\LiveCharts.dll" />
+    <Content Include="bin\Debug\LiveCharts.pdb" />
+    <Content Include="bin\Debug\LiveCharts.WinForms.dll" />
+    <Content Include="bin\Debug\LiveCharts.WinForms.pdb" />
+    <Content Include="bin\Debug\LiveCharts.WinForms.xml" />
+    <Content Include="bin\Debug\LiveCharts.Wpf.dll" />
+    <Content Include="bin\Debug\LiveCharts.Wpf.pdb" />
+    <Content Include="bin\Debug\LiveCharts.Wpf.xml" />
+    <Content Include="bin\Debug\LiveCharts.xml" />
+    <Content Include="bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll" />
+    <Content Include="bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml" />
+    <Content Include="bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll" />
+    <Content Include="bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml" />
+    <Content Include="bin\Debug\MySql.Data.dll" />
+    <Content Include="bin\Debug\MySql.Data.xml" />
+    <Content Include="bin\Debug\ParkingManagement.exe" />
+    <Content Include="bin\Debug\ParkingManagement.pdb" />
+    <Content Include="bin\Debug\System.Buffers.dll" />
+    <Content Include="bin\Debug\System.Buffers.xml" />
+    <Content Include="bin\Debug\System.Configuration.ConfigurationManager.dll" />
+    <Content Include="bin\Debug\System.Configuration.ConfigurationManager.xml" />
+    <Content Include="bin\Debug\System.Diagnostics.DiagnosticSource.dll" />
+    <Content Include="bin\Debug\System.Diagnostics.DiagnosticSource.xml" />
+    <Content Include="bin\Debug\System.IO.Pipelines.dll" />
+    <Content Include="bin\Debug\System.IO.Pipelines.xml" />
+    <Content Include="bin\Debug\System.Memory.dll" />
+    <Content Include="bin\Debug\System.Memory.xml" />
+    <Content Include="bin\Debug\System.Numerics.Vectors.dll" />
+    <Content Include="bin\Debug\System.Numerics.Vectors.xml" />
+    <Content Include="bin\Debug\System.Runtime.CompilerServices.Unsafe.dll" />
+    <Content Include="bin\Debug\System.Runtime.CompilerServices.Unsafe.xml" />
+    <Content Include="bin\Debug\System.Threading.Tasks.Extensions.dll" />
+    <Content Include="bin\Debug\System.Threading.Tasks.Extensions.xml" />
+    <Content Include="bin\Debug\ZstdSharp.dll" />
+    <Content Include="Resources\images\test.png" />
     <Content Include="Resources\img\btn_text.png" />
     <Content Include="Resources\img\car_1.png" />
     <Content Include="Resources\img\car_2.png" />

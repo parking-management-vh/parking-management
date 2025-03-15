@@ -12,11 +12,14 @@ using System.Windows.Forms;
 using Krypton.Navigator;
 using System.Threading;
 using ParkingManagement.GUI.Forms.staff;
+using System.IO;
 
 namespace ParkingManagement
 {
     public partial class frmMain: Form
     {
+        bool isFirstPaint = true;
+
         public frmMain()
         {
             InitializeComponent();
@@ -115,5 +118,6 @@ namespace ParkingManagement
         {
 
         }
+
     }
 } 
