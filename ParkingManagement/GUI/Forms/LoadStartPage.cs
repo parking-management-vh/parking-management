@@ -49,44 +49,49 @@ namespace ParkingManagement.GUI.Forms
 
         private void LoadRecentVehicles()
         {
-            // Lấy danh sách xe mới vào từ BLL
             List<VehicleModel> recentVehicles = recentActivityBLL.GetRecentVehicles();
             foreach (var vehicle in recentVehicles)
             {
-                ListViewItem item = new ListViewItem("Xe mới vào"); // Recent Vehicle
-                item.SubItems.Add(vehicle.LicensePlate);
-                //item.SubItems.Add($"{vehicle.VehicleTypeName} | {vehicle.EntryTime:yyyy-MM-dd HH:mm}");
-                item.SubItems.Add($"Thời gian vào: {vehicle.EntryTime:yyyy-MM-dd HH:mm}");
-                item.ForeColor = Color.Blue; // Màu xanh dương cho xe mới vào
+                ListViewItem item = new ListViewItem("Xe mới vào")
+                {
+                    ForeColor = Color.Blue,
+                    UseItemStyleForSubItems = false
+                };
+                item.SubItems.Add(vehicle.LicensePlate).ForeColor = Color.Blue;
+                item.SubItems.Add($"Thời gian vào: {vehicle.EntryTime:yyyy-MM-dd HH:mm}").ForeColor = Color.Blue;
                 listViewAllData.Items.Add(item);
             }
         }
 
         private void LoadRecentTransactions()
         {
-            // Lấy danh sách giao dịch gần đây từ BLL
             List<ParkingCard> recentTransactions = recentActivityBLL.GetRecentTransactions();
             foreach (var transaction in recentTransactions)
             {
-                ListViewItem item = new ListViewItem("Giao dịch gần đây"); // Recent Transaction
-                item.SubItems.Add($"ID: {transaction.Id}");
+                ListViewItem item = new ListViewItem("Giao dịch gần đây")
+                {
+                    ForeColor = Color.DarkGreen,
+                    UseItemStyleForSubItems = false
+                };
+                item.SubItems.Add($"ID: {transaction.Id}").ForeColor = Color.DarkGreen;
                 item.SubItems.Add($"Trạng thái: {transaction.Status} | " +
-                    (transaction.EndDate.HasValue ? $"Ngày hết hạn: {transaction.EndDate.Value:yyyy-MM-dd HH:mm}" : "Chưa hết hạn"));
-                item.ForeColor = Color.DarkGreen; // Màu xanh lá cho giao dịch gần đây
+                                  (transaction.EndDate.HasValue ? $"Ngày hết hạn: {transaction.EndDate.Value:yyyy-MM-dd HH:mm}" : "Chưa hết hạn")).ForeColor = Color.DarkGreen;
                 listViewAllData.Items.Add(item);
             }
         }
 
         private void LoadOverdueVehicles()
         {
-            // Lấy danh sách xe quá hạn từ BLL
             List<VehicleModel> overdueVehicles = recentActivityBLL.GetOverdueVehicles();
             foreach (var vehicle in overdueVehicles)
             {
-                ListViewItem item = new ListViewItem("Xe quá hạn"); // Overdue Vehicle
-                item.SubItems.Add(vehicle.LicensePlate);
-                item.SubItems.Add($"Thời gian vào: {vehicle.EntryTime:yyyy-MM-dd HH:mm}");
-                item.ForeColor = Color.Red; // Màu đỏ cho xe quá hạn
+                ListViewItem item = new ListViewItem("Xe quá hạn")
+                {
+                    ForeColor = Color.Red,
+                    UseItemStyleForSubItems = false
+                };
+                item.SubItems.Add(vehicle.LicensePlate).ForeColor = Color.Red;
+                item.SubItems.Add($"Thời gian vào: {vehicle.EntryTime:yyyy-MM-dd HH:mm}").ForeColor = Color.Red;
                 listViewAllData.Items.Add(item);
             }
         }
