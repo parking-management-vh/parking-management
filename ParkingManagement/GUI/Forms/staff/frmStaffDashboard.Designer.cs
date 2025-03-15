@@ -30,7 +30,6 @@
         {
             this.kryptonStaff = new Krypton.Ribbon.KryptonRibbon();
             this.kryptonRibbonTab1 = new Krypton.Ribbon.KryptonRibbonTab();
-            this.kryptonNavigator1 = new Krypton.Navigator.KryptonNavigator();
             this.kryptonRibbonGroup1 = new Krypton.Ribbon.KryptonRibbonGroup();
             this.kryptonRibbonGroupTriple1 = new Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.btnManageVehicle = new Krypton.Ribbon.KryptonRibbonGroupButton();
@@ -40,6 +39,7 @@
             this.kryptonRibbonGroupSeparator2 = new Krypton.Ribbon.KryptonRibbonGroupSeparator();
             this.kryptonRibbonGroupTriple3 = new Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.btnInOutVehicle = new Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.kryptonNavigator1 = new Krypton.Navigator.KryptonNavigator();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonStaff)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonNavigator1)).BeginInit();
             this.kryptonNavigator1.SuspendLayout();
@@ -59,18 +59,6 @@
             this.kryptonRibbonTab1.Groups.AddRange(new Krypton.Ribbon.KryptonRibbonGroup[] {
             this.kryptonRibbonGroup1});
             this.kryptonRibbonTab1.Text = "Home";
-            // 
-            // kryptonNavigator1
-            // 
-            this.kryptonNavigator1.ControlKryptonFormFeatures = false;
-            this.kryptonNavigator1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonNavigator1.Location = new System.Drawing.Point(0, 171);
-            this.kryptonNavigator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.kryptonNavigator1.NavigatorMode = Krypton.Navigator.NavigatorMode.BarTabGroup;
-            this.kryptonNavigator1.Owner = null;
-            this.kryptonNavigator1.PageBackStyle = Krypton.Toolkit.PaletteBackStyle.PanelClient;
-            this.kryptonNavigator1.Size = new System.Drawing.Size(1264, 451);
-            this.kryptonNavigator1.TabIndex = 1;
             // 
             // kryptonRibbonGroup1
             // 
@@ -115,6 +103,18 @@
             this.btnInOutVehicle.TextLine1 = "InOutVehicle";
             this.btnInOutVehicle.Click += new System.EventHandler(this.btnInOutVehicle_Click);
             // 
+            // kryptonNavigator1
+            // 
+            this.kryptonNavigator1.ControlKryptonFormFeatures = false;
+            this.kryptonNavigator1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonNavigator1.Location = new System.Drawing.Point(0, 171);
+            this.kryptonNavigator1.Margin = new System.Windows.Forms.Padding(4);
+            this.kryptonNavigator1.NavigatorMode = Krypton.Navigator.NavigatorMode.BarTabGroup;
+            this.kryptonNavigator1.Owner = null;
+            this.kryptonNavigator1.PageBackStyle = Krypton.Toolkit.PaletteBackStyle.PanelClient;
+            this.kryptonNavigator1.Size = new System.Drawing.Size(1264, 451);
+            this.kryptonNavigator1.TabIndex = 1;
+            // 
             // frmStaffDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -123,11 +123,10 @@
             this.ClientSize = new System.Drawing.Size(1264, 622);
             this.Controls.Add(this.kryptonNavigator1);
             this.Controls.Add(this.kryptonStaff);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmStaffDashboard";
             this.Text = "frmStaffDashboard";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmStaffDashboard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonStaff)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonNavigator1)).EndInit();
             this.kryptonNavigator1.ResumeLayout(false);
