@@ -12,14 +12,12 @@ using System.Windows.Forms;
 using Krypton.Navigator;
 using System.Threading;
 using ParkingManagement.GUI.Forms.staff;
-using System.IO;
+using ParkingManagement.GUI.Forms.statistics;
 
 namespace ParkingManagement
 {
     public partial class frmMain: Form
     {
-        bool isFirstPaint = true;
-
         public frmMain()
         {
             InitializeComponent();
@@ -37,6 +35,12 @@ namespace ParkingManagement
         private void frmMain_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
+            LoadStartPage();
+
+        }
+        private void LoadStartPage()
+        {
+            OpenFormInTab<LoadStartPage>("Start Page");
         }
 
         private void OpenFormInTab<T>(string tabName) where T : Form, new()
@@ -69,55 +73,90 @@ namespace ParkingManagement
             kryptonNavigator1.SelectedPage = newPage;
         }
 
-        /// mở form trong tab mới
-        private void btnCustomer_Click(object sender, EventArgs e)
+        //tabHome
+        private void btnManageVehicle2_Click(object sender, EventArgs e)
         {
-            OpenFormInTab<frmCustomer>("Customer");
-        }
-       
-        private void btnEmployee_Click(object sender, EventArgs e)
-        {
-            OpenFormInTab<frmEmployee>("Employee");
+            OpenFormInTab<frmManageVehicle>("Manage Vehicle");
         }
 
-        private void kBtnUsers_Click(object sender, EventArgs e)
+        private void btnbtnManagePay2_Click(object sender, EventArgs e)
         {
-            OpenFormInTab<frmUsers>("Users");
+            OpenFormInTab<frmManagePay>("Manage Pay");
         }
 
-        private void btnTicketPrice_Click(object sender, EventArgs e)
+        private void btnInOutVehicle_Click(object sender, EventArgs e)
         {
-            OpenFormInTab<frmTicketPrice>("Ticket Price");
+            OpenFormInTab<frmInOutVehicle>("In Out Vehicle");
+        }
+        //tabParkingManagement
+        private void btnParkingSlot_Click(object sender, EventArgs e)
+        {
+            OpenFormInTab<frmParkingSlot>("Parking Slot");
+        }
+        private void btnParkingCard_Click(object sender, EventArgs e)
+        {
+            OpenFormInTab<frmParkingCard>("Parking Card");
+        }
+
+        private void btnParkingRecord_Click(object sender, EventArgs e)
+        {
+            //OpenFormInTab<frmParkingRecord>("Parking Record");
+        }
+
+        private void btnManageVehicle_Click(object sender, EventArgs e)
+        {
+            OpenFormInTab<frmParkingSlot>("Parking Slot");
         }
 
         private void btnVehicleType_Click(object sender, EventArgs e)
         {
             OpenFormInTab<frmVehicleType>("Vehicle Type");
         }
-        private void btnParkingSpot_Click(object sender, EventArgs e)
-        {
-            OpenFormInTab<frmParkingSlot>("Parking Slot");
-        }
 
-        private void btnParkingArea_Click(object sender, EventArgs e)
+        //tabFinancialManagement
+        private void btnTicketPrice_Click(object sender, EventArgs e)
         {
-            OpenFormInTab<frmParkingArea>("Parking Area");
-        }
-
-        private void kryptonRibbonGroupButton1_Click(object sender, EventArgs e)
-        {
-            OpenFormInTab<frmInOutVehicle>("Vehicle In Out");
-        }
-
-        private void btnParkingCard_Click(object sender, EventArgs e)
-        {
-            OpenFormInTab<frmParkingCard>("Parking Card");
-        }
-
-        private void kryptonRibbon1_SelectedTabChanged(object sender, EventArgs e)
-        {
+            OpenFormInTab<frmTicketPrice>("Ticket Price");
 
         }
+        private void btnManagePay_Click(object sender, EventArgs e)
+        {
+            OpenFormInTab<frmManagePay>("Manage Pay");
+        }
 
+        private void btnCreatePayment_Click(object sender, EventArgs e)
+        {
+            //OpenFormInTab<frmCreatePayment>("Create Payment");
+        }
+
+        private void btnPaymentReceipt_Click(object sender, EventArgs e)
+        {
+            OpenFormInTab<frmPaymentReceipt>("Payment Receipt");
+        }
+        //tabUserManagement
+        private void btnEmployee_Click(object sender, EventArgs e)
+        {
+            OpenFormInTab<frmEmployee>("Employee");
+        }
+
+        private void btnUsers_Click(object sender, EventArgs e)
+        {
+            OpenFormInTab<frmUsers>("Users");
+        }
+
+        private void btnCreateUser_Click(object sender, EventArgs e)
+        {
+            OpenFormInTab<frmCreateUser>("Create User");
+        }
+
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+            OpenFormInTab<frmCustomer>("Customer");
+        }
+        //tabStatistics
+        private void btnStatistics_Click(object sender, EventArgs e)
+        {
+            OpenFormInTab<frmStatistics>("Statistics");
+        }
     }
 } 

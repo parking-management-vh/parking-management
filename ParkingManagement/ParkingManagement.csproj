@@ -27,6 +27,8 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -66,8 +68,14 @@
     <Reference Include="EPPlus.System.Drawing, Version=6.0.0.0, Culture=neutral, PublicKeyToken=2308d35469c9bac0, processorArchitecture=MSIL">
       <HintPath>..\packages\EPPlus.System.Drawing.6.0.0\lib\net452\EPPlus.System.Drawing.dll</HintPath>
     </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=6.6.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.6.6.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
     <Reference Include="Google.Protobuf, Version=3.26.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Protobuf.3.26.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="HarfBuzzSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\packages\HarfBuzzSharp.7.3.0.3\lib\net462\HarfBuzzSharp.dll</HintPath>
     </Reference>
     <Reference Include="K4os.Compression.LZ4, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
       <HintPath>..\packages\K4os.Compression.LZ4.1.3.8\lib\net462\K4os.Compression.LZ4.dll</HintPath>
@@ -115,8 +123,29 @@
     <Reference Include="MySql.Data, Version=9.2.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.9.2.0\lib\net462\MySql.Data.dll</HintPath>
     </Reference>
+    <Reference Include="OpenTK, Version=3.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenTK.3.1.0\lib\net20\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK.GLControl, Version=3.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenTK.GLControl.3.1.0\lib\net20\OpenTK.GLControl.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="ScottPlot, Version=5.0.54.0, Culture=neutral, PublicKeyToken=86698dc10387c39e, processorArchitecture=MSIL">
+      <HintPath>..\packages\ScottPlot.5.0.54\lib\net462\ScottPlot.dll</HintPath>
+    </Reference>
+    <Reference Include="SkiaSharp, Version=2.88.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\packages\SkiaSharp.2.88.9\lib\net462\SkiaSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="SkiaSharp.HarfBuzz, Version=2.88.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\packages\SkiaSharp.HarfBuzz.2.88.9\lib\net462\SkiaSharp.HarfBuzz.dll</HintPath>
+    </Reference>
+    <Reference Include="SkiaSharp.Views.Desktop.Common, Version=2.88.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\packages\SkiaSharp.Views.Desktop.Common.2.88.9\lib\net462\SkiaSharp.Views.Desktop.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="SkiaSharp.Views.WindowsForms, Version=2.88.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\packages\SkiaSharp.Views.WindowsForms.2.88.9\lib\net462\SkiaSharp.Views.WindowsForms.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
@@ -129,6 +158,9 @@
     <Reference Include="System.Design" />
     <Reference Include="System.Diagnostics.DiagnosticSource, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Diagnostics.DiagnosticSource.8.0.1\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing.Common, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.6.0.0\lib\net461\System.Drawing.Common.dll</HintPath>
     </Reference>
     <Reference Include="System.IO.Pipelines, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.IO.Pipelines.5.0.2\lib\net461\System.IO.Pipelines.dll</HintPath>
@@ -151,6 +183,10 @@
       <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
@@ -170,6 +206,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\parkingAreaBLL .cs" />
+    <Compile Include="BLL\RecentActivityBLL.cs" />
     <Compile Include="BLL\parkingCardBLL.cs" />
     <Compile Include="BLL\parkingSlotBLL.cs" />
     <Compile Include="BLL\paymentBLL.cs" />
@@ -178,6 +215,7 @@
     <Compile Include="DAL\Database\DatabaseHelper.cs" />
     <Compile Include="DAL\Repositories\GetUserRoleStatistics.cs" />
     <Compile Include="DAL\Repositories\inOutVehicleRepository.cs" />
+    <Compile Include="DAL\Repositories\RecentActivityDAL.cs" />
     <Compile Include="DAL\Repositories\paymentRepository.cs" />
     <Compile Include="GUI\Forms\frmCreatePayment.cs">
       <SubType>Form</SubType>
@@ -191,14 +229,21 @@
     <Compile Include="GUI\Forms\frmPaymentReceipt.Designer.cs">
       <DependentUpon>frmPaymentReceipt.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Forms\statistics\StatisticsForm.cs">
+    <Compile Include="GUI\Forms\LoadStartPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Forms\statistics\StatisticsForm.Designer.cs">
-      <DependentUpon>StatisticsForm.cs</DependentUpon>
+    <Compile Include="GUI\Forms\LoadStartPage.Designer.cs">
+      <DependentUpon>LoadStartPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Forms\statistics\frmStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Forms\statistics\frmStatistics.Designer.cs">
+      <DependentUpon>frmStatistics.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\parkingCardDetail.cs" />
     <Compile Include="Models\paymentModel.cs" />
+    <Compile Include="Models\RecentActivityModel.cs" />
     <Compile Include="Models\TableAttribute.cs" />
     <Compile Include="Utils\SessionManager.cs" />
     <Compile Include="BLL\TicketPriceBLL.cs" />
@@ -259,24 +304,6 @@
     </Compile>
     <Compile Include="GUI\Forms\staff\frmStaffDashboard.Designer.cs">
       <DependentUpon>frmStaffDashboard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Forms\statistics\frmRevenueStatistics.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Forms\statistics\frmRevenueStatistics.Designer.cs">
-      <DependentUpon>frmRevenueStatistics.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Forms\statistics\frmTicketStatistics.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Forms\statistics\frmTicketStatistics.Designer.cs">
-      <DependentUpon>frmTicketStatistics.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Forms\statistics\frmParkingAreaStatistics.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Forms\statistics\frmParkingAreaStatistics.Designer.cs">
-      <DependentUpon>frmParkingAreaStatistics.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Forms\frmCreateUser.cs">
       <SubType>Form</SubType>
@@ -407,6 +434,9 @@
     <EmbeddedResource Include="GUI\Forms\frmVehicleType.resx">
       <DependentUpon>frmVehicleType.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Forms\LoadStartPage.resx">
+      <DependentUpon>LoadStartPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Forms\ParkingArea.resx">
       <DependentUpon>ParkingArea.cs</DependentUpon>
     </EmbeddedResource>
@@ -422,8 +452,8 @@
     <EmbeddedResource Include="GUI\Forms\staff\frmStaffDashboard.resx">
       <DependentUpon>frmStaffDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Forms\statistics\StatisticsForm.resx">
-      <DependentUpon>StatisticsForm.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Forms\statistics\frmStatistics.resx">
+      <DependentUpon>frmStatistics.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Forms\TestConnectDB.resx">
       <DependentUpon>TestConnectDB.cs</DependentUpon>
@@ -438,7 +468,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="bin\Debug\ParkingManagement.exe.config" />
+    <None Include="OpenTK.dll.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -454,8 +484,6 @@
     <None Include="config\App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="bin\Debug\Resources\images\" />
-    <Folder Include="bin\Release\" />
     <Folder Include="GUI\Controls\" />
     <Folder Include="Resources\video\" />
   </ItemGroup>
@@ -525,80 +553,58 @@
     <None Include="Resources\img\car.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\Debug\aa\ParkingManagement.resources.dll" />
-    <Content Include="bin\Debug\BouncyCastle.Cryptography.dll" />
-    <Content Include="bin\Debug\BouncyCastle.Cryptography.xml" />
-    <Content Include="bin\Debug\EPPlus.dll" />
-    <Content Include="bin\Debug\EPPlus.Interfaces.dll" />
-    <Content Include="bin\Debug\EPPlus.System.Drawing.dll" />
-    <Content Include="bin\Debug\EPPlus.xml" />
-    <Content Include="bin\Debug\Google.Protobuf.dll" />
-    <Content Include="bin\Debug\Google.Protobuf.pdb" />
-    <Content Include="bin\Debug\Google.Protobuf.xml" />
-    <Content Include="bin\Debug\K4os.Compression.LZ4.dll" />
-    <Content Include="bin\Debug\K4os.Compression.LZ4.Streams.dll" />
-    <Content Include="bin\Debug\K4os.Compression.LZ4.Streams.xml" />
-    <Content Include="bin\Debug\K4os.Compression.LZ4.xml" />
-    <Content Include="bin\Debug\K4os.Hash.xxHash.dll" />
-    <Content Include="bin\Debug\K4os.Hash.xxHash.xml" />
-    <Content Include="bin\Debug\Krypton.Docking.dll" />
-    <Content Include="bin\Debug\Krypton.Docking.xml" />
-    <Content Include="bin\Debug\Krypton.Navigator.dll" />
-    <Content Include="bin\Debug\Krypton.Navigator.xml" />
-    <Content Include="bin\Debug\Krypton.Ribbon.dll" />
-    <Content Include="bin\Debug\Krypton.Ribbon.xml" />
-    <Content Include="bin\Debug\Krypton.Toolkit.dll" />
-    <Content Include="bin\Debug\Krypton.Toolkit.xml" />
-    <Content Include="bin\Debug\Krypton.Workspace.dll" />
-    <Content Include="bin\Debug\Krypton.Workspace.xml" />
-    <Content Include="bin\Debug\LiveCharts.dll" />
-    <Content Include="bin\Debug\LiveCharts.pdb" />
-    <Content Include="bin\Debug\LiveCharts.WinForms.dll" />
-    <Content Include="bin\Debug\LiveCharts.WinForms.pdb" />
-    <Content Include="bin\Debug\LiveCharts.WinForms.xml" />
-    <Content Include="bin\Debug\LiveCharts.Wpf.dll" />
-    <Content Include="bin\Debug\LiveCharts.Wpf.pdb" />
-    <Content Include="bin\Debug\LiveCharts.Wpf.xml" />
-    <Content Include="bin\Debug\LiveCharts.xml" />
-    <Content Include="bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll" />
-    <Content Include="bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml" />
-    <Content Include="bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll" />
-    <Content Include="bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml" />
-    <Content Include="bin\Debug\MySql.Data.dll" />
-    <Content Include="bin\Debug\MySql.Data.xml" />
-    <Content Include="bin\Debug\ParkingManagement.exe" />
-    <Content Include="bin\Debug\ParkingManagement.pdb" />
-    <Content Include="bin\Debug\System.Buffers.dll" />
-    <Content Include="bin\Debug\System.Buffers.xml" />
-    <Content Include="bin\Debug\System.Configuration.ConfigurationManager.dll" />
-    <Content Include="bin\Debug\System.Configuration.ConfigurationManager.xml" />
-    <Content Include="bin\Debug\System.Diagnostics.DiagnosticSource.dll" />
-    <Content Include="bin\Debug\System.Diagnostics.DiagnosticSource.xml" />
-    <Content Include="bin\Debug\System.IO.Pipelines.dll" />
-    <Content Include="bin\Debug\System.IO.Pipelines.xml" />
-    <Content Include="bin\Debug\System.Memory.dll" />
-    <Content Include="bin\Debug\System.Memory.xml" />
-    <Content Include="bin\Debug\System.Numerics.Vectors.dll" />
-    <Content Include="bin\Debug\System.Numerics.Vectors.xml" />
-    <Content Include="bin\Debug\System.Runtime.CompilerServices.Unsafe.dll" />
-    <Content Include="bin\Debug\System.Runtime.CompilerServices.Unsafe.xml" />
-    <Content Include="bin\Debug\System.Threading.Tasks.Extensions.dll" />
-    <Content Include="bin\Debug\System.Threading.Tasks.Extensions.xml" />
-    <Content Include="bin\Debug\ZstdSharp.dll" />
-    <Content Include="Resources\images\test.png" />
     <Content Include="Resources\img\btn_text.png" />
     <Content Include="Resources\img\car_1.png" />
     <Content Include="Resources\img\car_2.png" />
+    <None Include="Resources\img\CreatePayment.png" />
+    <None Include="Resources\img\createuser.png" />
+    <None Include="Resources\img\Customerr.png" />
     <Content Include="Resources\img\DALL·E-2025-03-09-11.20.jpg" />
+    <None Include="Resources\img\doc-left.png" />
     <Content Include="Resources\img\edited_image.png" />
+    <None Include="Resources\img\Employees.png" />
     <Content Include="Resources\img\large-orange-circle.png" />
     <Content Include="Resources\img\location.png" />
+    <None Include="Resources\img\parkingcar.png" />
+    <None Include="Resources\img\parkingcard.png" />
+    <None Include="Resources\img\parkingslot.png" />
+    <None Include="Resources\img\ManageVehicle.png" />
+    <None Include="Resources\img\PaymentReceipt.png" />
+    <None Include="Resources\img\PaymentReceipt2.png" />
+    <None Include="Resources\img\PaymentReceipt3.png" />
+    <None Include="Resources\img\ManagePay.png" />
+    <None Include="Resources\img\panel.png" />
+    <None Include="Resources\img\Notification.png" />
     <Content Include="Resources\img\rating.png" />
     <Content Include="Resources\img\ratingg.png" />
     <Content Include="Resources\img\ratting.png" />
+    <None Include="Resources\img\RecentFiles24.png" />
     <Content Include="Resources\img\red-circle-emoji-clipart-lg.png" />
+    <None Include="Resources\img\VehicleType.png" />
+    <None Include="Resources\img\TicketPrice.png" />
+    <None Include="Resources\img\stande.png" />
+    <None Include="Resources\img\Statistics24.png" />
     <Content Include="Resources\img\XeMayInOut.jpg" />
     <Content Include="Resources\square.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\HarfBuzzSharp.NativeAssets.macOS.7.3.0.3\build\net462\HarfBuzzSharp.NativeAssets.macOS.targets" Condition="Exists('..\packages\HarfBuzzSharp.NativeAssets.macOS.7.3.0.3\build\net462\HarfBuzzSharp.NativeAssets.macOS.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\HarfBuzzSharp.NativeAssets.macOS.7.3.0.3\build\net462\HarfBuzzSharp.NativeAssets.macOS.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\HarfBuzzSharp.NativeAssets.macOS.7.3.0.3\build\net462\HarfBuzzSharp.NativeAssets.macOS.targets'))" />
+    <Error Condition="!Exists('..\packages\HarfBuzzSharp.NativeAssets.Win32.7.3.0.3\build\net462\HarfBuzzSharp.NativeAssets.Win32.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\HarfBuzzSharp.NativeAssets.Win32.7.3.0.3\build\net462\HarfBuzzSharp.NativeAssets.Win32.targets'))" />
+    <Error Condition="!Exists('..\packages\SkiaSharp.NativeAssets.macOS.2.88.9\build\net462\SkiaSharp.NativeAssets.macOS.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SkiaSharp.NativeAssets.macOS.2.88.9\build\net462\SkiaSharp.NativeAssets.macOS.targets'))" />
+    <Error Condition="!Exists('..\packages\SkiaSharp.NativeAssets.Win32.2.88.9\build\net462\SkiaSharp.NativeAssets.Win32.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SkiaSharp.NativeAssets.Win32.2.88.9\build\net462\SkiaSharp.NativeAssets.Win32.targets'))" />
+    <Error Condition="!Exists('..\packages\HarfBuzzSharp.NativeAssets.Linux.7.3.0.3\build\net462\HarfBuzzSharp.NativeAssets.Linux.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\HarfBuzzSharp.NativeAssets.Linux.7.3.0.3\build\net462\HarfBuzzSharp.NativeAssets.Linux.targets'))" />
+    <Error Condition="!Exists('..\packages\SkiaSharp.NativeAssets.Linux.NoDependencies.2.88.9\build\net462\SkiaSharp.NativeAssets.Linux.NoDependencies.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SkiaSharp.NativeAssets.Linux.NoDependencies.2.88.9\build\net462\SkiaSharp.NativeAssets.Linux.NoDependencies.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.NETFramework.ReferenceAssemblies.net472.1.0.2\build\Microsoft.NETFramework.ReferenceAssemblies.net472.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.NETFramework.ReferenceAssemblies.net472.1.0.2\build\Microsoft.NETFramework.ReferenceAssemblies.net472.targets'))" />
+  </Target>
+  <Import Project="..\packages\HarfBuzzSharp.NativeAssets.Win32.7.3.0.3\build\net462\HarfBuzzSharp.NativeAssets.Win32.targets" Condition="Exists('..\packages\HarfBuzzSharp.NativeAssets.Win32.7.3.0.3\build\net462\HarfBuzzSharp.NativeAssets.Win32.targets')" />
+  <Import Project="..\packages\SkiaSharp.NativeAssets.macOS.2.88.9\build\net462\SkiaSharp.NativeAssets.macOS.targets" Condition="Exists('..\packages\SkiaSharp.NativeAssets.macOS.2.88.9\build\net462\SkiaSharp.NativeAssets.macOS.targets')" />
+  <Import Project="..\packages\SkiaSharp.NativeAssets.Win32.2.88.9\build\net462\SkiaSharp.NativeAssets.Win32.targets" Condition="Exists('..\packages\SkiaSharp.NativeAssets.Win32.2.88.9\build\net462\SkiaSharp.NativeAssets.Win32.targets')" />
+  <Import Project="..\packages\HarfBuzzSharp.NativeAssets.Linux.7.3.0.3\build\net462\HarfBuzzSharp.NativeAssets.Linux.targets" Condition="Exists('..\packages\HarfBuzzSharp.NativeAssets.Linux.7.3.0.3\build\net462\HarfBuzzSharp.NativeAssets.Linux.targets')" />
+  <Import Project="..\packages\SkiaSharp.NativeAssets.Linux.NoDependencies.2.88.9\build\net462\SkiaSharp.NativeAssets.Linux.NoDependencies.targets" Condition="Exists('..\packages\SkiaSharp.NativeAssets.Linux.NoDependencies.2.88.9\build\net462\SkiaSharp.NativeAssets.Linux.NoDependencies.targets')" />
+  <Import Project="..\packages\Microsoft.NETFramework.ReferenceAssemblies.net472.1.0.2\build\Microsoft.NETFramework.ReferenceAssemblies.net472.targets" Condition="Exists('..\packages\Microsoft.NETFramework.ReferenceAssemblies.net472.1.0.2\build\Microsoft.NETFramework.ReferenceAssemblies.net472.targets')" />
 </Project>

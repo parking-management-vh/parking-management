@@ -1,5 +1,6 @@
 ﻿using ParkingManagement.GUI.Forms;
 using ParkingManagement.GUI.Forms.staff;
+using ParkingManagement.GUI.Forms.statistics;
 using System;
 using System.Collections.Generic;
 using System.Linq;
