@@ -1,4 +1,5 @@
 ﻿using Krypton.Navigator;
+using Krypton.Toolkit;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -55,6 +56,8 @@ namespace ParkingManagement.GUI.Forms.staff
             kryptonNavigator1.SelectedPage = newPage;
         }
 
+
+
         private void btnManageVehicle_Click(object sender, EventArgs e)
         {
             OpenFormInTab<frmManageVehicle>("ManageVehicle");
@@ -69,5 +72,19 @@ namespace ParkingManagement.GUI.Forms.staff
         {
             OpenFormInTab<frmInOutVehicle>("InOutVehicle");
         }
+        //thêm ảnh nền cho kryptonNavigator1
+        //private void KryptonGroupPanel_Paint(object sender, PaintEventArgs e)
+        //{
+        //    string imagePath = @"download.jpg";
+        //    if (System.IO.File.Exists(imagePath))
+        //    {
+        //        kryptonNavigator1.StateCommon.Back.Image = Image.FromFile(imagePath);
+        //        kryptonNavigator1.StateCommon.Back.ImageStyle = PaletteImageStyle.Stretch;
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Không tìm thấy ảnh!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //}
     }
 }
