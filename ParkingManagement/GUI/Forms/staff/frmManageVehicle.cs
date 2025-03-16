@@ -191,5 +191,10 @@ namespace ParkingManagement.GUI.Forms.staff
 
             }
         }
+
+        private void frmManageVehicle_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

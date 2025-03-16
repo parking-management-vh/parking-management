@@ -112,5 +112,10 @@ namespace ParkingManagement.GUI.Forms.staff
                 kTbBks.Text = row.Cells[7].Value?.ToString() ?? "";
             }
         }
+
+        private void kryptonGroupBox2_Panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

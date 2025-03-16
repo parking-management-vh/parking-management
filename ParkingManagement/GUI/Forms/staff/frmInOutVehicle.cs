@@ -406,5 +406,15 @@ namespace ParkingManagement.GUI.Forms.staff
             createPaymentForm.StartPosition = FormStartPosition.CenterParent;
             createPaymentForm.ShowDialog();
         }
+
+        private void kryptonGroupBox5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void kryptonGroupBox3_Panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
