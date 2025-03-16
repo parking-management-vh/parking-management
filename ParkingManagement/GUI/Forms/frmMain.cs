@@ -105,7 +105,7 @@ namespace ParkingManagement
 
         private void btnManageVehicle_Click(object sender, EventArgs e)
         {
-            OpenFormInTab<frmParkingSlot>("Parking Slot");
+            OpenFormInTab<frmManageVehicle>("Manage Vehicle");
         }
 
         private void btnVehicleType_Click(object sender, EventArgs e)
@@ -132,6 +132,15 @@ namespace ParkingManagement
         private void btnPaymentReceipt_Click(object sender, EventArgs e)
         {
             OpenFormInTab<frmPaymentReceipt>("Payment Receipt");
+        }
+        private void kryptonRibbonGroupButton1_Click(object sender, EventArgs e)
+        {
+            OpenFormInTab<frmVehicle>("Vehicle");
+        }
+
+        private void kryptonRibbonGroupButton3_Click(object sender, EventArgs e)
+        {
+            OpenFormInTab<frmParkingArea>("Parking Area");
         }
         //tabUserManagement
         private void btnEmployee_Click(object sender, EventArgs e)

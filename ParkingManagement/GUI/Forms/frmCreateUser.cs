@@ -156,5 +156,9 @@ namespace ParkingManagement.GUI.Forms
             }
         }
 
+        private void kryptonPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
