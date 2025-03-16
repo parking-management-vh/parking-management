@@ -56,6 +56,10 @@
             this.kryptonRibbonGroupSeparator6 = new Krypton.Ribbon.KryptonRibbonGroupSeparator();
             this.kryptonRibbonGroupTriple8 = new Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.btnVehicleType = new Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.kryptonRibbonGroupTriple18 = new Krypton.Ribbon.KryptonRibbonGroupTriple();
+            this.kryptonRibbonGroupButton1 = new Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.kryptonRibbonGroupTriple19 = new Krypton.Ribbon.KryptonRibbonGroupTriple();
+            this.kryptonRibbonGroupButton3 = new Krypton.Ribbon.KryptonRibbonGroupButton();
             this.tabFinancialManagement = new Krypton.Ribbon.KryptonRibbonTab();
             this.kryptonRibbonGroup3 = new Krypton.Ribbon.KryptonRibbonGroup();
             this.kryptonRibbonGroupTriple9 = new Krypton.Ribbon.KryptonRibbonGroupTriple();
@@ -102,8 +106,8 @@
             this.tabFinancialManagement,
             this.tabUserManagement,
             this.tabStatistics});
-            this.kryptonRibbon1.SelectedTab = this.tabStatistics;
-            this.kryptonRibbon1.Size = new System.Drawing.Size(880, 143);
+            this.kryptonRibbon1.SelectedTab = this.tabParkingManagement;
+            this.kryptonRibbon1.Size = new System.Drawing.Size(1173, 171);
             this.kryptonRibbon1.TabIndex = 0;
             // 
             // tabHome
@@ -171,7 +175,9 @@
             this.kryptonRibbonGroupSeparator5,
             this.kryptonRibbonGroupTriple7,
             this.kryptonRibbonGroupSeparator6,
-            this.kryptonRibbonGroupTriple8});
+            this.kryptonRibbonGroupTriple8,
+            this.kryptonRibbonGroupTriple18,
+            this.kryptonRibbonGroupTriple19});
             this.kryptonRibbonGroup2.TextLine1 = "Parking Management";
             // 
             // kryptonRibbonGroupTriple2
@@ -228,6 +234,26 @@
             this.btnVehicleType.ImageLarge = global::ParkingManagement.Properties.Resources.VehicleType;
             this.btnVehicleType.TextLine1 = "Vehicle Type";
             this.btnVehicleType.Click += new System.EventHandler(this.btnVehicleType_Click);
+            // 
+            // kryptonRibbonGroupTriple18
+            // 
+            this.kryptonRibbonGroupTriple18.Items.AddRange(new Krypton.Ribbon.KryptonRibbonGroupItem[] {
+            this.kryptonRibbonGroupButton1});
+            // 
+            // kryptonRibbonGroupButton1
+            // 
+            this.kryptonRibbonGroupButton1.TextLine1 = "Vehicle";
+            this.kryptonRibbonGroupButton1.Click += new System.EventHandler(this.kryptonRibbonGroupButton1_Click);
+            // 
+            // kryptonRibbonGroupTriple19
+            // 
+            this.kryptonRibbonGroupTriple19.Items.AddRange(new Krypton.Ribbon.KryptonRibbonGroupItem[] {
+            this.kryptonRibbonGroupButton3});
+            // 
+            // kryptonRibbonGroupButton3
+            // 
+            this.kryptonRibbonGroupButton3.TextLine1 = "Parking Area";
+            this.kryptonRibbonGroupButton3.Click += new System.EventHandler(this.kryptonRibbonGroupButton3_Click);
             // 
             // tabFinancialManagement
             // 
@@ -381,23 +407,24 @@
             this.kryptonNavigator1.AutoSize = true;
             this.kryptonNavigator1.ControlKryptonFormFeatures = false;
             this.kryptonNavigator1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonNavigator1.Location = new System.Drawing.Point(0, 143);
-            this.kryptonNavigator1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kryptonNavigator1.Location = new System.Drawing.Point(0, 171);
+            this.kryptonNavigator1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonNavigator1.NavigatorMode = Krypton.Navigator.NavigatorMode.BarTabGroup;
             this.kryptonNavigator1.Owner = null;
             this.kryptonNavigator1.PageBackStyle = Krypton.Toolkit.PaletteBackStyle.PanelClient;
-            this.kryptonNavigator1.Size = new System.Drawing.Size(880, 307);
+            this.kryptonNavigator1.Size = new System.Drawing.Size(1173, 383);
             this.kryptonNavigator1.TabIndex = 1;
             this.kryptonNavigator1.Text = "kryptonNavigator1";
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(880, 450);
+            this.ClientSize = new System.Drawing.Size(1173, 554);
             this.Controls.Add(this.kryptonNavigator1);
             this.Controls.Add(this.kryptonRibbon1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
@@ -471,6 +498,10 @@
         private Krypton.Ribbon.KryptonRibbonGroupButton btnManageVehicle2;
         private Krypton.Ribbon.KryptonRibbonGroupButton btnbtnManagePay2;
         private Krypton.Ribbon.KryptonRibbonGroupButton btnInOutVehicle;
+        private Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple18;
+        private Krypton.Ribbon.KryptonRibbonGroupButton kryptonRibbonGroupButton1;
+        private Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple19;
+        private Krypton.Ribbon.KryptonRibbonGroupButton kryptonRibbonGroupButton3;
     }
 }
 
