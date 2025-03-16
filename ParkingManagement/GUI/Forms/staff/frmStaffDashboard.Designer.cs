@@ -133,7 +133,6 @@
             this.Name = "frmStaffDashboard";
             this.Text = "frmStaffDashboard";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmStaffDashboard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonStaff)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonNavigator1)).EndInit();
             this.kryptonNavigator1.ResumeLayout(false);
