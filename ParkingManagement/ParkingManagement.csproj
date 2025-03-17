@@ -553,6 +553,8 @@
     <None Include="Resources\img\car.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\img\979713.png" />
+    <None Include="Resources\img\9835784.png" />
     <Content Include="Resources\img\btn_text.png" />
     <Content Include="Resources\img\car_1.png" />
     <Content Include="Resources\img\car_2.png" />
@@ -584,6 +586,7 @@
     <None Include="Resources\img\TicketPrice.png" />
     <None Include="Resources\img\stande.png" />
     <None Include="Resources\img\Statistics24.png" />
+    <None Include="Resources\img\stande pro.png" />
     <Content Include="Resources\img\XeMayInOut.jpg" />
     <Content Include="Resources\square.png" />
   </ItemGroup>

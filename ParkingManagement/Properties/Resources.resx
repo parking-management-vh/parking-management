@@ -118,14 +118,20 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="PaymentReceipt2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\img\PaymentReceipt2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="entry" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img\entry.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="parkingcar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\img\parkingcar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="saveExcel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\img\saveExcel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PaymentReceipt2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img\PaymentReceipt2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img\exit.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="available" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img\available.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="square1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\img\square.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,6 +145,12 @@
   <data name="refersh242" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\img\refersh24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="stande1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img\stande.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="saveExcel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img\saveExcel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="doc-left" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\img\doc-left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -148,6 +160,9 @@
   <data name="save24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\img\save24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="capacity" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img\capacity.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="parkingcar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\img\parkingcar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -156,6 +171,12 @@
   </data>
   <data name="panel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\img\panel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ManageVehicle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img\ManageVehicle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="search24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img\search24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="doc-left1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\img\doc-left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,11 +199,11 @@
   <data name="Notification" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\img\Notification.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="142_1340441927_bSook.jpg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\142_1340441927_bSook.jpg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="979713" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img\979713.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="newfile24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\img\newfile24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="TicketPrice" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img\TicketPrice.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="createuser" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\img\createuser.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,17 +217,23 @@
   <data name="PaymentReceipt" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\img\PaymentReceipt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="RecentFiles24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img\RecentFiles24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="alert" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img\alert.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="square" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\img\square.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="stande1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\img\stande.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="car_in" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img\car_in.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="parkingslot" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\img\parkingslot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ManageVehicle" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\img\ManageVehicle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="stande pro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img\stande pro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Statistics24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\img\Statistics24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,11 +244,14 @@
   <data name="search16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\img\search16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="exit_car" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img\exit_car.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="Employees1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\img\Employees.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="search24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\img\search24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="142_1340441927_bSook.jpg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\142_1340441927_bSook.jpg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="refersh24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\img\refersh24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -229,14 +259,17 @@
   <data name="newfile" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\img\newfile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="default_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img\default_icon.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="stande" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\img\stande.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\img\delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="TicketPrice" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\img\TicketPrice.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="newfile24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img\newfile24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ManagePay" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\img\ManagePay.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -247,31 +280,7 @@
   <data name="sign" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\img\sign.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="RecentFiles24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\img\RecentFiles24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="default_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\img\default_icon.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="alert" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\img\alert.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\img\exit.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="capacity" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\img\capacity.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="available" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\img\available.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="car_in" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\img\car_in.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="entry" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\img\entry.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="exit_car" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\img\exit_car.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="9835784" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img\9835784.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
