@@ -40,10 +40,11 @@ namespace ParkingManagement.BLL
             return recentActivityDAL.GetTotalSlots();
         }
 
-        public int GetAvailableSlots()
+        public int GetAvailableSlots(string parkingAreaId)
         {
-            return recentActivityDAL.GetAvailableSlots();
+            return recentActivityDAL.GetAvailableSlots(parkingAreaId);
         }
+
 
         public int GetVehiclesInParking()
         {

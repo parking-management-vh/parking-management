@@ -543,6 +543,16 @@ namespace ParkingManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap stande_pro {
+            get {
+                object obj = ResourceManager.GetObject("stande pro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap stande1 {
             get {
                 object obj = ResourceManager.GetObject("stande1", resourceCulture);

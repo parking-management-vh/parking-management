@@ -91,11 +91,15 @@ namespace ParkingManagement.DAL.Repositories
         }
 
         // Lấy số chỗ trống
-        public int GetAvailableSlots()
+        public int GetAvailableSlots(string parkingAreaId)
         {
-            string query = "SELECT COUNT(*) FROM parking_slot WHERE status = 'Sẵn sàng';";
-            return Convert.ToInt32(dbProvider.ExecuteScalar(query));
+            string query = "SELECT COUNT(*) FROM parking_slot WHERE status = 'Sẵn sàng' AND parking_area_id = @parkingAreaId;";
+
+            object[] parameters = { parkingAreaId }; // Sử dụng object[] thay vì Dictionary
+
+            return Convert.ToInt32(dbProvider.ExecuteScalar(query, parameters));
         }
+
 
         // Lấy số xe hiện đang trong bãi
         public int GetVehiclesInParking()
