@@ -102,7 +102,7 @@
             this.tabFinancialManagement,
             this.tabUserManagement,
             this.tabStatistics});
-            this.kryptonRibbon1.SelectedTab = this.tabHome;
+            this.kryptonRibbon1.SelectedTab = this.tabUserManagement;
             this.kryptonRibbon1.Size = new System.Drawing.Size(1173, 171);
             this.kryptonRibbon1.TabIndex = 0;
             // 
