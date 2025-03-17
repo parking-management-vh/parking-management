@@ -584,6 +584,7 @@
     <None Include="Resources\img\TicketPrice.png" />
     <None Include="Resources\img\stande.png" />
     <None Include="Resources\img\Statistics24.png" />
+    <None Include="Resources\img\stande pro.png" />
     <Content Include="Resources\img\XeMayInOut.jpg" />
     <Content Include="Resources\square.png" />
   </ItemGroup>

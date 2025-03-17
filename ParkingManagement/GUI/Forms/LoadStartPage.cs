@@ -19,9 +19,7 @@ namespace ParkingManagement.GUI.Forms
             InitializeComponent();
             recentActivityBLL = new RecentActivityBLL();
             InitializeListView();
-            InitializeCharts();
             LoadData();
-            LoadChartData();
             LoadNotifications();
         }
       
@@ -98,61 +96,6 @@ namespace ParkingManagement.GUI.Forms
                 listViewAllData.Items.Add(item);
             }
         }
-        private void InitializeCharts()
-        {
-            chartStatistics.Series.Clear();
-            chartStatistics.ChartAreas.Clear();
-
-            chartStatistics.Titles.Clear();
-            chartStatistics.Titles.Add("Thống kê bãi đỗ xe");
-
-            ChartArea chartArea = new ChartArea();
-
-            // Kích hoạt trục Y thứ hai để hiển thị doanh thu
-            chartArea.AxisY2.Enabled = AxisEnabled.True;
-
-            chartStatistics.ChartAreas.Add(chartArea);
-
-            // Số lượng xe hiện tại (Dạng cột)
-            Series seriesVehicleCount = new Series("Xe trong bãi")
-            {
-                ChartType = SeriesChartType.Column,
-                IsValueShownAsLabel = true
-            };
-            chartStatistics.Series.Add(seriesVehicleCount);
-
-            // Doanh thu (Dạng Line hoặc SplineArea để không bị lỗi)
-            Series seriesRevenue = new Series("Doanh thu")
-            {
-                ChartType = SeriesChartType.SplineArea, // Dùng SplineArea thay vì Doughnut
-                YAxisType = AxisType.Secondary, // Dùng trục Y thứ hai
-                IsValueShownAsLabel = true
-            };
-            chartStatistics.Series.Add(seriesRevenue);
-        }
-        private void LoadChartData()
-        {
-            Random random = new Random();
-            int totalVehicles = random.Next(50, 200);
-            int vehiclesInToday = random.Next(10, 50);
-            int vehiclesOutToday = random.Next(10, 50);
-            int revenueToday = random.Next(100000, 500000);
-            int totalRevenue = random.Next(5000000, 10000000);
-
-            if (chartStatistics.Series.Count > 0)
-            {
-                // Cập nhật biểu đồ số lượng xe hiện tại
-                chartStatistics.Series["Xe trong bãi"].Points.Clear();
-                chartStatistics.Series["Xe trong bãi"].Points.AddXY("Trong bãi", totalVehicles);
-                chartStatistics.Series["Xe trong bãi"].Points.AddXY("Vào hôm nay", vehiclesInToday);
-                chartStatistics.Series["Xe trong bãi"].Points.AddXY("Ra hôm nay", vehiclesOutToday);
-
-                // Cập nhật biểu đồ doanh thu
-                chartStatistics.Series["Doanh thu"].Points.Clear();
-                chartStatistics.Series["Doanh thu"].Points.AddXY("Hôm nay", revenueToday);
-                chartStatistics.Series["Doanh thu"].Points.AddXY("Tổng", totalRevenue);
-            }
-        }
 
         private void LoadStartPage_Resize(object sender, EventArgs e)
         {
@@ -174,20 +117,13 @@ namespace ParkingManagement.GUI.Forms
             string imgPath = Path.Combine(Application.StartupPath, "Resources\\img\\");           
             (string text, string imageName, Bitmap fallbackImage)[] data = {
                 ($"Sức chứa: {bll.GetTotalSlots()} chỗ", "capacity.png", new Bitmap(new MemoryStream(Properties.Resources.capacity))),
-                ($"Chỗ trống: {bll.GetAvailableSlots()}", "available.png", new Bitmap(new MemoryStream(Properties.Resources.available))),
+                ($"Chỗ trống (Khu 1): {bll.GetAvailableSlots("20b45e92-bfdb-46d7-9314-7a1d8f97e636")}", "available.png", new Bitmap(new MemoryStream(Properties.Resources.available))),
+                ($"Chỗ trống (Khu 2): {bll.GetAvailableSlots("a5487c87-0ee1-4861-a597-2d607d33fd43")}", "available.png", new Bitmap(new MemoryStream(Properties.Resources.available))),
                 ($"Xe trong bãi: {bll.GetVehiclesInParking()}", "car_in.png", new Bitmap(new MemoryStream(Properties.Resources.car_in))),
                 ($"Lượt vào hôm nay: {bll.GetEntriesToday()}", "entry.png", new Bitmap(new MemoryStream(Properties.Resources.entry))),
                 ($"Lượt ra hôm nay: {bll.GetExitsToday()}", "exit_car.png", new Bitmap(new MemoryStream(Properties.Resources.exit_car))),
                 ($"Doanh thu hôm nay: {bll.GetTodayRevenue():N0} VNĐ", "exit.png", new Bitmap(new MemoryStream(Properties.Resources.exit))),
-                // Thông báo mới thêm
-                ($"Xe vi phạm: 2 xe bị đỗ sai quy định", "warning.png", new Bitmap(new MemoryStream(Properties.Resources.alert))),
-                ($"Thời gian trung bình đỗ xe hôm nay: 2 giờ 15 phút", "time.png", new Bitmap(new MemoryStream(Properties.Resources.alert))),
-                ($"Hệ thống đã tự động cập nhật giá vé mới", "update.png", new Bitmap(new MemoryStream(Properties.Resources.alert))),
-                ($"Camera giám sát bị gián đoạn trong 10 phút", "camera_error.png", new Bitmap(new MemoryStream(Properties.Resources.alert))),
-                ($"Máy quét RFID sắp hết pin, cần kiểm tra", "rfid_battery.png", new Bitmap(new MemoryStream(Properties.Resources.alert))),
-                ($"Lưu lượng xe ra/vào cao hơn mức trung bình", "traffic.png", new Bitmap(new MemoryStream(Properties.Resources.alert))),
-                ($"Báo cáo doanh thu đã được tạo và lưu trữ", "report.png", new Bitmap(new MemoryStream(Properties.Resources.alert))),
-                ($"Phát hiện phương tiện không đăng ký: 1 trường hợp", "unregistered.png", new Bitmap(new MemoryStream(Properties.Resources.alert)))
+             
             };
 
             foreach (var item in data)
