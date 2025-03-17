@@ -69,14 +69,14 @@
             this.kryptonGroupBox1.Panel.Controls.Add(this.kbtnEdit);
             this.kryptonGroupBox1.Panel.Controls.Add(this.kbtnCreate);
             this.kryptonGroupBox1.Panel.Paint += new System.Windows.Forms.PaintEventHandler(this.kryptonGroupBox1_Panel_Paint);
-            this.kryptonGroupBox1.Size = new System.Drawing.Size(633, 94);
+            this.kryptonGroupBox1.Size = new System.Drawing.Size(803, 94);
             this.kryptonGroupBox1.TabIndex = 0;
             this.kryptonGroupBox1.Values.Heading = "Tùy chọn";
             // 
             // kbtnRefresh
             // 
             this.kbtnRefresh.Cursor = System.Windows.Forms.Cursors.No;
-            this.kbtnRefresh.Location = new System.Drawing.Point(492, 18);
+            this.kbtnRefresh.Location = new System.Drawing.Point(600, 18);
             this.kbtnRefresh.Name = "kbtnRefresh";
             this.kbtnRefresh.Size = new System.Drawing.Size(90, 30);
             this.kbtnRefresh.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -89,7 +89,7 @@
             // kbtnDelete
             // 
             this.kbtnDelete.Cursor = System.Windows.Forms.Cursors.No;
-            this.kbtnDelete.Location = new System.Drawing.Point(344, 18);
+            this.kbtnDelete.Location = new System.Drawing.Point(428, 18);
             this.kbtnDelete.Name = "kbtnDelete";
             this.kbtnDelete.Size = new System.Drawing.Size(90, 30);
             this.kbtnDelete.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -102,7 +102,7 @@
             // kbtnEdit
             // 
             this.kbtnEdit.Cursor = System.Windows.Forms.Cursors.No;
-            this.kbtnEdit.Location = new System.Drawing.Point(190, 18);
+            this.kbtnEdit.Location = new System.Drawing.Point(253, 18);
             this.kbtnEdit.Name = "kbtnEdit";
             this.kbtnEdit.Size = new System.Drawing.Size(90, 30);
             this.kbtnEdit.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -115,7 +115,7 @@
             // kbtnCreate
             // 
             this.kbtnCreate.Cursor = System.Windows.Forms.Cursors.No;
-            this.kbtnCreate.Location = new System.Drawing.Point(45, 18);
+            this.kbtnCreate.Location = new System.Drawing.Point(82, 18);
             this.kbtnCreate.Name = "kbtnCreate";
             this.kbtnCreate.Size = new System.Drawing.Size(90, 30);
             this.kbtnCreate.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -127,7 +127,7 @@
             // 
             // kbtnSearch
             // 
-            this.kbtnSearch.Location = new System.Drawing.Point(494, 108);
+            this.kbtnSearch.Location = new System.Drawing.Point(646, 103);
             this.kbtnSearch.Name = "kbtnSearch";
             this.kbtnSearch.Size = new System.Drawing.Size(90, 30);
             this.kbtnSearch.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -150,23 +150,23 @@
             this.kPnArea.Controls.Add(this.kryptonLabel1);
             this.kPnArea.Location = new System.Drawing.Point(2, 92);
             this.kPnArea.Name = "kPnArea";
-            this.kPnArea.Size = new System.Drawing.Size(633, 164);
+            this.kPnArea.Size = new System.Drawing.Size(803, 164);
             this.kPnArea.StateCommon.Color1 = System.Drawing.Color.White;
             this.kPnArea.TabIndex = 1;
             // 
             // kCbbSStatus
             // 
             this.kCbbSStatus.DropDownWidth = 216;
-            this.kCbbSStatus.Location = new System.Drawing.Point(494, 75);
+            this.kCbbSStatus.Location = new System.Drawing.Point(602, 68);
             this.kCbbSStatus.Name = "kCbbSStatus";
-            this.kCbbSStatus.Size = new System.Drawing.Size(90, 22);
+            this.kCbbSStatus.Size = new System.Drawing.Size(134, 22);
             this.kCbbSStatus.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.kCbbSStatus.TabIndex = 9;
             // 
             // kryptonLabel4
             // 
             this.kryptonLabel4.LabelStyle = Krypton.Toolkit.LabelStyle.BoldControl;
-            this.kryptonLabel4.Location = new System.Drawing.Point(410, 79);
+            this.kryptonLabel4.Location = new System.Drawing.Point(509, 70);
             this.kryptonLabel4.Name = "kryptonLabel4";
             this.kryptonLabel4.PaletteMode = Krypton.Toolkit.PaletteMode.Office2007Blue;
             this.kryptonLabel4.Size = new System.Drawing.Size(75, 18);
@@ -176,16 +176,16 @@
             // 
             // kTbParkingArea
             // 
-            this.kTbParkingArea.Location = new System.Drawing.Point(131, 21);
+            this.kTbParkingArea.Location = new System.Drawing.Point(173, 24);
             this.kTbParkingArea.Name = "kTbParkingArea";
-            this.kTbParkingArea.Size = new System.Drawing.Size(186, 23);
+            this.kTbParkingArea.Size = new System.Drawing.Size(214, 23);
             this.kTbParkingArea.TabIndex = 7;
             // 
             // kTbDescription
             // 
-            this.kTbDescription.Location = new System.Drawing.Point(131, 113);
+            this.kTbDescription.Location = new System.Drawing.Point(173, 116);
             this.kTbDescription.Name = "kTbDescription";
-            this.kTbDescription.Size = new System.Drawing.Size(186, 23);
+            this.kTbDescription.Size = new System.Drawing.Size(214, 23);
             this.kTbDescription.TabIndex = 5;
             // 
             // kCbbStatus
@@ -195,16 +195,16 @@
             "Đầy bãi",
             "Còn chỗ",
             "Sửa chữa"});
-            this.kCbbStatus.Location = new System.Drawing.Point(131, 68);
+            this.kCbbStatus.Location = new System.Drawing.Point(173, 71);
             this.kCbbStatus.Name = "kCbbStatus";
-            this.kCbbStatus.Size = new System.Drawing.Size(186, 22);
+            this.kCbbStatus.Size = new System.Drawing.Size(214, 22);
             this.kCbbStatus.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.kCbbStatus.TabIndex = 4;
             // 
             // kryptonLabel3
             // 
             this.kryptonLabel3.LabelStyle = Krypton.Toolkit.LabelStyle.BoldControl;
-            this.kryptonLabel3.Location = new System.Drawing.Point(20, 116);
+            this.kryptonLabel3.Location = new System.Drawing.Point(55, 116);
             this.kryptonLabel3.Name = "kryptonLabel3";
             this.kryptonLabel3.PaletteMode = Krypton.Toolkit.PaletteMode.Office2007Blue;
             this.kryptonLabel3.Size = new System.Drawing.Size(96, 18);
@@ -215,7 +215,7 @@
             // kryptonLabel2
             // 
             this.kryptonLabel2.LabelStyle = Krypton.Toolkit.LabelStyle.BoldControl;
-            this.kryptonLabel2.Location = new System.Drawing.Point(20, 70);
+            this.kryptonLabel2.Location = new System.Drawing.Point(55, 70);
             this.kryptonLabel2.Name = "kryptonLabel2";
             this.kryptonLabel2.PaletteMode = Krypton.Toolkit.PaletteMode.Office2007Blue;
             this.kryptonLabel2.Size = new System.Drawing.Size(75, 18);
@@ -226,7 +226,7 @@
             // kryptonLabel1
             // 
             this.kryptonLabel1.LabelStyle = Krypton.Toolkit.LabelStyle.BoldControl;
-            this.kryptonLabel1.Location = new System.Drawing.Point(20, 24);
+            this.kryptonLabel1.Location = new System.Drawing.Point(55, 24);
             this.kryptonLabel1.Name = "kryptonLabel1";
             this.kryptonLabel1.PaletteMode = Krypton.Toolkit.PaletteMode.Office2007Blue;
             this.kryptonLabel1.Size = new System.Drawing.Size(81, 18);
@@ -238,9 +238,11 @@
             // 
             this.kBtnPArea.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.kBtnPArea.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.kBtnPArea.Location = new System.Drawing.Point(2, 283);
+            this.kBtnPArea.Location = new System.Drawing.Point(1, 285);
             this.kBtnPArea.Name = "kBtnPArea";
-            this.kBtnPArea.Size = new System.Drawing.Size(643, 252);
+            this.kBtnPArea.Size = new System.Drawing.Size(1369, 135);
+            this.kBtnPArea.StateCommon.BackStyle = Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
+            this.kBtnPArea.StateCommon.DataCell.Content.Padding = new System.Windows.Forms.Padding(29, 2, 29, 2);
             this.kBtnPArea.TabIndex = 2;
             this.kBtnPArea.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.kBtnPArea_CellClick);
             this.kBtnPArea.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.kBtnPArea_CellContentClick);
@@ -248,7 +250,7 @@
             // kryptonLabel8
             // 
             this.kryptonLabel8.LabelStyle = Krypton.Toolkit.LabelStyle.ItalicControl;
-            this.kryptonLabel8.Location = new System.Drawing.Point(5, 262);
+            this.kryptonLabel8.Location = new System.Drawing.Point(2, 263);
             this.kryptonLabel8.Name = "kryptonLabel8";
             this.kryptonLabel8.Size = new System.Drawing.Size(114, 20);
             this.kryptonLabel8.TabIndex = 4;
@@ -258,7 +260,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(646, 539);
+            this.ClientSize = new System.Drawing.Size(1370, 429);
             this.Controls.Add(this.kryptonLabel8);
             this.Controls.Add(this.kBtnPArea);
             this.Controls.Add(this.kPnArea);

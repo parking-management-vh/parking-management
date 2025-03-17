@@ -145,7 +145,7 @@ namespace ParkingManagement
         //tabUserManagement
         private void btnEmployee_Click(object sender, EventArgs e)
         {
-            OpenFormInTab<frmEmployee>("Employee");
+            //OpenFormInTab<frmEmployee>("Employee");
         }
 
         private void btnUsers_Click(object sender, EventArgs e)
@@ -160,7 +160,7 @@ namespace ParkingManagement
 
         private void btnCustomer_Click(object sender, EventArgs e)
         {
-            OpenFormInTab<frmCustomer>("Customer");
+            //OpenFormInTab<frmCustomer>("Customer");
         }
         //tabStatistics
         private void btnStatistics_Click(object sender, EventArgs e)

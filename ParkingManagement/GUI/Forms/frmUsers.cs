@@ -540,5 +540,10 @@ namespace ParkingManagement.GUI.Forms
                 MessageBox.Show("Lỗi khi cập nhật user: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void kryptonLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

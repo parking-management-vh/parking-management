@@ -20,7 +20,7 @@ namespace ParkingManagement.GUI.Forms
         {
             InitializeComponent();
             LoadAllAreas();
-            LoadSlotNumber();
+            //LoadSlotNumber();
             LoadAllVehicle();
             LoadAllVehicleType();
             LoadAllAreasSearch();
@@ -105,26 +105,37 @@ namespace ParkingManagement.GUI.Forms
             }
         }
 
-        private void LoadSlotNumber()
-        {
-            kCbbSlot.Items.Clear();
-            kCbbSlot.Items.Add("Số vị trí");
-            kCbbSlot.Items.Add("1");
-            kCbbSlot.Items.Add("2");
-            kCbbSlot.Items.Add("3");
-            kCbbSlot.Items.Add("4");
-            kCbbSlot.Items.Add("5");
-            kCbbSlot.Items.Add("6");
-            kCbbSlot.Items.Add("7");
-            kCbbSlot.Items.Add("8");
-            kCbbSlot.Items.Add("9");
-            kCbbSlot.Items.Add("10");
-            kCbbSlot.SelectedIndex = 0;
-        }
+        //private void LoadSlotNumber()
+        //{
+        //    kCbbSlot.Items.Clear();
+        //    kCbbSlot.Items.Add("Số vị trí");
+        //    kCbbSlot.Items.Add("1");
+        //    kCbbSlot.Items.Add("2");
+        //    kCbbSlot.Items.Add("3");
+        //    kCbbSlot.Items.Add("4");
+        //    kCbbSlot.Items.Add("5");
+        //    kCbbSlot.Items.Add("6");
+        //    kCbbSlot.Items.Add("7");
+        //    kCbbSlot.Items.Add("8");
+        //    kCbbSlot.Items.Add("9");
+        //    kCbbSlot.Items.Add("10"); 
+        //    kCbbSlot.Items.Add("11");
+        //    kCbbSlot.Items.Add("12");
+        //    kCbbSlot.Items.Add("13");
+        //    kCbbSlot.Items.Add("14");
+        //    kCbbSlot.Items.Add("15");
+        //    kCbbSlot.Items.Add("16");
+        //    kCbbSlot.Items.Add("17");
+        //    kCbbSlot.Items.Add("18");
+        //    kCbbSlot.Items.Add("19");
+        //    kCbbSlot.Items.Add("20");
+        //    kCbbSlot.SelectedIndex = 0;
+        //}
 
         private void LoadSlotNumberSearch()
         {
             kCbbSSlot.Items.Clear();
+            kCbbSSlot.Items.Add("Tất cả");
             kCbbSSlot.Items.Add("1");
             kCbbSSlot.Items.Add("2");
             kCbbSSlot.Items.Add("3");
@@ -135,6 +146,16 @@ namespace ParkingManagement.GUI.Forms
             kCbbSSlot.Items.Add("8");
             kCbbSSlot.Items.Add("9");
             kCbbSSlot.Items.Add("10");
+            kCbbSSlot.Items.Add("11");
+            kCbbSSlot.Items.Add("12");
+            kCbbSSlot.Items.Add("13");
+            kCbbSSlot.Items.Add("14");
+            kCbbSSlot.Items.Add("15");
+            kCbbSSlot.Items.Add("16");
+            kCbbSSlot.Items.Add("17");
+            kCbbSSlot.Items.Add("18");
+            kCbbSSlot.Items.Add("19");
+            kCbbSSlot.Items.Add("20");
             kCbbSSlot.SelectedIndex = -1;
         }
 
@@ -454,6 +475,11 @@ namespace ParkingManagement.GUI.Forms
 
             kDgvVehicle.DataSource = null;
             kDgvVehicle.DataSource = vehicle;
+
+        }
+
+        private void kCbbTypeVehicle_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }
