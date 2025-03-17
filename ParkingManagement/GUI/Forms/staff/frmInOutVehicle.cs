@@ -9,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace ParkingManagement.GUI.Forms.staff
 {
@@ -54,6 +53,7 @@ namespace ParkingManagement.GUI.Forms.staff
         private void RefreshForm()
         {
             kTbInBks.Text = "";
+            kTbOutBks.Text = "";
             LoadAvailableSlots(selectedAreaId ?? Guid.Empty);
         }
 
@@ -180,6 +180,7 @@ namespace ParkingManagement.GUI.Forms.staff
         private void kBtnSubmitBs_Click(object sender, EventArgs e)
         {
             string licensePlate = kTbInBks.Text.Trim();
+            string status = "parked";
 
             if (string.IsNullOrWhiteSpace(licensePlate))
             {
@@ -190,36 +191,43 @@ namespace ParkingManagement.GUI.Forms.staff
             try
             {
                 Guid? vehicleId = vehicleBLL.GetVehicleIdByLicensePlate(licensePlate);
+                string currentStatus = vehicleBLL.GetVehicleStatusByLicensePlate(licensePlate);
                 Guid selectedAreaId = SessionManager.CurrentUser.AreaId ?? Guid.Empty;
 
-                if (vehicleId == null)
+                if (vehicleId != null && currentStatus == "parked")
                 {
-                    if (selectedAreaId == Guid.Empty)
-                    {
-                        MessageBox.Show("Không thể xác định khu vực đỗ xe!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
+                    MessageBox.Show("Xe đã trong bãi!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
-                    if (!Guid.TryParse(kCbbSlotNum.SelectedValue?.ToString(), out Guid parkingSlotId))
-                    {
-                        MessageBox.Show("ID chỗ đỗ không hợp lệ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
+                if (selectedAreaId == Guid.Empty)
+                {
+                    MessageBox.Show("Không thể xác định khu vực đỗ xe!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
-                    if (!Guid.TryParse(kCbbTypeVehicle.SelectedValue?.ToString(), out Guid vehicleTypeId))
-                    {
-                        MessageBox.Show("ID loại xe không hợp lệ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
+                if (!Guid.TryParse(kCbbSlotNum.SelectedValue?.ToString(), out Guid parkingSlotId))
+                {
+                    MessageBox.Show("ID chỗ đỗ không hợp lệ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
-                    DateTime now = DateTime.Now;
+                if (!Guid.TryParse(kCbbTypeVehicle.SelectedValue?.ToString(), out Guid vehicleTypeId))
+                {
+                    MessageBox.Show("ID loại xe không hợp lệ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
+                DateTime now = DateTime.Now;
+
+                if (vehicleId == null || currentStatus == "exited")
+                {
                     VehicleModel vehicle = new VehicleModel(
                         Guid.NewGuid(),
                         licensePlate,
                         vehicleTypeId,
                         parkingSlotId,
-                        selectedAreaId,  
+                        selectedAreaId,
                         now,
                         null,
                         now,
@@ -228,11 +236,12 @@ namespace ParkingManagement.GUI.Forms.staff
                     );
 
                     vehicleBLL.CreateVehicle(vehicle);
-                    vehicleId = vehicle.Id; 
+                    vehicleId = vehicle.Id;
                 }
 
+                //vehicleBLL.UpdateVehicleStatusByLicensePlate(licensePlate, status);
                 parkingCardBLL.CreateParkingCard(licensePlate, "", false);
-
+                LoadParkingSlots(selectedAreaId);
                 LoadParkingCardInfo(licensePlate);
             }
             catch (Exception ex)
@@ -262,6 +271,7 @@ namespace ParkingManagement.GUI.Forms.staff
             parkingSlotBLL.updateSlotStatusByVehicle(licensePlate);
             LoadParkingCardInfo(licensePlate);
             LoadParkingSlots(selectedAreaId.Value);
+            RefreshForm();
         }
 
         private void kTbOutBks_TextChanged(object sender, EventArgs e)
@@ -273,9 +283,9 @@ namespace ParkingManagement.GUI.Forms.staff
         {
             List<ParkingSlotModel> slots = parkingSlotBLL.GetSlotArea(areaId);
             List<ParkingSlotModel> allSlots = new List<ParkingSlotModel>();
-            int totalSlots = 15;
+            int totalSlots = 20;
             int availableSlots = 0;
-            for (int i = 1; i <= 15; i++)
+            for (int i = 1; i <= 20; i++)
             {
                 var existingSlot = slots.FirstOrDefault(s => s.SlotNumber == i);
                 if (existingSlot != null)
@@ -303,7 +313,7 @@ namespace ParkingManagement.GUI.Forms.staff
             kTLPslotArea.RowStyles.Clear();
 
             kTLPslotArea.ColumnCount = 5;  
-            kTLPslotArea.RowCount = 3;    
+            kTLPslotArea.RowCount = 4;    
             kTLPslotArea.Dock = DockStyle.Fill;  
 
             for (int i = 0; i < kTLPslotArea.ColumnCount; i++)

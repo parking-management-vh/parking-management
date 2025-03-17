@@ -14,6 +14,7 @@ namespace ParkingManagement.GUI.Forms
     public partial class frmCreatePayment: Form
     {
         private string licensePlate;
+        private vehicleBLL vehicleBLL = new vehicleBLL();
         public frmCreatePayment(string licensePlate)
         {
             InitializeComponent();
@@ -68,7 +69,7 @@ namespace ParkingManagement.GUI.Forms
         {
             string licensePlate = kTbBks.Text.Trim();
             string staffCode = selectedStaffCode;
-            //string staffCode = kLbCodeStaff.Text.ToString();
+            string status = "exited";
             string paymentMethod = kCbbPaymentMethod.SelectedItem?.ToString();
 
             if (string.IsNullOrEmpty(licensePlate))
@@ -88,6 +89,7 @@ namespace ParkingManagement.GUI.Forms
             if (isSuccess)
             {
                 MessageBox.Show("Thanh toán thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                vehicleBLL.UpdateVehicleStatusByLicensePlate(licensePlate, status);
                 this.Close(); 
             }
             else

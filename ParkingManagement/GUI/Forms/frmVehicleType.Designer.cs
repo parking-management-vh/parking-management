@@ -260,7 +260,8 @@
             "Xe khách",
             "Xe tải",
             "Ô tô điện",
-            "Ô tô 4 chỗ"});
+            "Ô tô 4 chỗ",
+            "Ô tô 16 chỗ"});
             this.cmbVehicle.Location = new System.Drawing.Point(190, 20);
             this.cmbVehicle.Name = "cmbVehicle";
             this.cmbVehicle.Size = new System.Drawing.Size(734, 31);

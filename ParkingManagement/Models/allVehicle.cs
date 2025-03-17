@@ -15,11 +15,12 @@ namespace ParkingManagement.Models
         public string ParkingArea { get; set; }
         public DateTime EntryTime { get; set; }
         public DateTime? ExitTime { get; set; }
+        public string Status { get; set; }
 
         public allVehicle() { }
 
         public allVehicle(Guid id, string licensePlate, string vehicleType, string parkingSlot, string parkingArea,
-                            DateTime entryTime, DateTime? exitTime)
+                            DateTime entryTime, DateTime? exitTime, string status)
         {
             Id = id;
             LicensePlate = licensePlate;
@@ -28,6 +29,7 @@ namespace ParkingManagement.Models
             ParkingArea = parkingArea;
             EntryTime = entryTime;
             ExitTime = exitTime;
+            Status = status;
         }
     }
 }

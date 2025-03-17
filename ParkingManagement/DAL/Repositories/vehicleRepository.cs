@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ParkingManagement.DAL.Repositories
 {
@@ -37,14 +38,14 @@ namespace ParkingManagement.DAL.Repositories
             return areas;
         }
 
-        public List<allVehicle> GetAllVehicle(string areaName = null, string slotNumber = null, string vehicleType = null, string licensePlate = null)
+        public List<allVehicle> GetAllVehicle(string areaName = null, string slotNumber = null, string vehicleType = null, string licensePlate = null, string status = null)
         {
             List<allVehicle> vehicles = new List<allVehicle>();
 
             string query = @"
                 SELECT v.id, v.license_plate, vt.vehicle_type_name, 
                        ps.slot_number AS slot_number, pa.area_name AS area_name, 
-                       v.entry_time, v.exit_time
+                       v.entry_time, v.exit_time, v.status
                 FROM vehicle v
                 JOIN vehicle_type vt ON v.vehicle_type_id = vt.id
                 JOIN parking_slot ps ON v.parking_slot_id = ps.id
@@ -77,6 +78,11 @@ namespace ParkingManagement.DAL.Repositories
                 parameters.Add(new MySqlParameter("@licensePlate", $"%{licensePlate}%"));
             }
 
+            if (!string.IsNullOrEmpty(status))
+            {
+                query += " AND v.status LIKE @status";
+                parameters.Add(new MySqlParameter("@status", $"%{status}%"));
+            }
 
             try
             {
@@ -100,7 +106,8 @@ namespace ParkingManagement.DAL.Repositories
                             row["slot_number"].ToString(),   
                             row["area_name"].ToString(),   
                             Convert.ToDateTime(row["entry_time"]),
-                            row["exit_time"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(row["exit_time"])
+                            row["exit_time"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(row["exit_time"]),
+                            row["status"].ToString()
                         ));
                     }
                     catch (Exception ex)
@@ -157,18 +164,22 @@ namespace ParkingManagement.DAL.Repositories
         public void UpdateVehicle(VehicleModel vehicle)
         {
             string query = @"
-                UPDATE vehicle 
-                SET license_plate = @license_plate, 
-                    vehicle_type_id = @vehicle_type_id, 
-                    parking_slot_id = @parking_slot_id, 
-                    parking_area_id = @parking_area_id, 
-                    entry_time = @entry_time, 
-                    exit_time = @exit_time, 
-                    save_time = @save_time, 
-                    updated_at = @updated_at
-                WHERE id = @id";
+            UPDATE vehicle 
+            SET id = @id,
+                license_plate = @license_plate, 
+                vehicle_type_id = @vehicle_type_id, 
+                parking_slot_id = @parking_slot_id, 
+                parking_area_id = @parking_area_id, 
+                entry_time = @entry_time, 
+                exit_time = @exit_time, 
+                save_time = @save_time, 
+                updated_at = @updated_at
+            WHERE id = @id";
 
             vehicle.UpdatedAt = DateTime.Now;
+
+            MessageBox.Show($"ID xe: {vehicle.Id}\nBiển số: {vehicle.LicensePlate}\nLoại xe ID: {vehicle.VehicleTypeId}\nChỗ đỗ ID: {vehicle.ParkingSlotId}\nKhu vực ID: {vehicle.ParkingAreaId}",
+                "Debug VehicleModel", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             object[] parameters =
             {
@@ -182,6 +193,19 @@ namespace ParkingManagement.DAL.Repositories
                 vehicle.SaveTime == default ? (object)DBNull.Value : vehicle.SaveTime.ToString("yyyy-MM-dd HH:mm:ss"),
                 vehicle.UpdatedAt.ToString("yyyy-MM-dd HH:mm:ss")
             };
+
+            // Debug giá trị của parameters
+            MessageBox.Show($"Params:\n" +
+                $"@id = {parameters[0]}\n" +
+                $"@license_plate = {parameters[1]}\n" +
+                $"@vehicle_type_id = {parameters[2]}\n" +
+                $"@parking_slot_id = {parameters[3]}\n" +
+                $"@parking_area_id = {parameters[4]}\n" +
+                $"@entry_time = {parameters[5]}\n" +
+                $"@exit_time = {parameters[6]}\n" +
+                $"@save_time = {parameters[7]}\n" +
+                $"@updated_at = {parameters[8]}",
+                "Debug Query Params", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             try
             {
@@ -250,6 +274,37 @@ namespace ParkingManagement.DAL.Repositories
             }
 
             return null;
+        }
+
+        public bool UpdateVehicleStatusByLicensePlate(string licensePlate, string status)
+        {
+            Guid? vehicleId = GetVehicleIdByLicensePlate(licensePlate);
+
+            if (vehicleId.HasValue)
+            {
+                string query = "UPDATE vehicle SET status = @status WHERE id = @vehicleId";
+                object[] parameters = { status, vehicleId.Value };
+
+                int rowsAffected = dbProvider.ExecuteNonQuery(query, parameters);
+                return rowsAffected > 0;
+            }
+
+            return false;
+        }
+
+        public string GetVehicleStatusByLicensePlate(string licensePlate)
+        {
+            string query = "SELECT status FROM vehicle WHERE license_plate = @licensePlate";
+            object[] parameters = { licensePlate };
+
+            DataTable data = dbProvider.ExecuteQuery(query, parameters);
+
+            if (data.Rows.Count > 0)
+            {
+                return data.Rows[0]["status"].ToString(); 
+            }
+
+            return null; 
         }
 
         public Guid? GetTicketPriceIdByVehicleType(Guid vehicleTypeId, bool? isMonth)

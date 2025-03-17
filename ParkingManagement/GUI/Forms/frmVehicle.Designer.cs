@@ -49,6 +49,7 @@
             this.kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonPanel3 = new Krypton.Toolkit.KryptonPanel();
+            this.kryptonLabel10 = new Krypton.Toolkit.KryptonLabel();
             this.kBtnSearch = new Krypton.Toolkit.KryptonButton();
             this.kTbSBks = new System.Windows.Forms.TextBox();
             this.kCbbSTypeV = new Krypton.Toolkit.KryptonComboBox();
@@ -57,7 +58,6 @@
             this.kryptonLabel8 = new Krypton.Toolkit.KryptonLabel();
             this.kCbbSArea = new Krypton.Toolkit.KryptonComboBox();
             this.kryptonLabel7 = new Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel10 = new Krypton.Toolkit.KryptonLabel();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kDgvVehicle)).BeginInit();
@@ -305,6 +305,15 @@
             this.kryptonPanel3.Size = new System.Drawing.Size(291, 209);
             this.kryptonPanel3.TabIndex = 2;
             // 
+            // kryptonLabel10
+            // 
+            this.kryptonLabel10.Location = new System.Drawing.Point(17, 125);
+            this.kryptonLabel10.Margin = new System.Windows.Forms.Padding(2);
+            this.kryptonLabel10.Name = "kryptonLabel10";
+            this.kryptonLabel10.Size = new System.Drawing.Size(90, 20);
+            this.kryptonLabel10.TabIndex = 22;
+            this.kryptonLabel10.Values.Text = "Biển kiểm soát";
+            // 
             // kBtnSearch
             // 
             this.kBtnSearch.Location = new System.Drawing.Point(204, 166);
@@ -380,15 +389,6 @@
             this.kryptonLabel7.Size = new System.Drawing.Size(36, 20);
             this.kryptonLabel7.TabIndex = 18;
             this.kryptonLabel7.Values.Text = "Vị trí";
-            // 
-            // kryptonLabel10
-            // 
-            this.kryptonLabel10.Location = new System.Drawing.Point(17, 125);
-            this.kryptonLabel10.Margin = new System.Windows.Forms.Padding(2);
-            this.kryptonLabel10.Name = "kryptonLabel10";
-            this.kryptonLabel10.Size = new System.Drawing.Size(90, 20);
-            this.kryptonLabel10.TabIndex = 22;
-            this.kryptonLabel10.Values.Text = "Biển kiểm soát";
             // 
             // frmVehicle
             // 

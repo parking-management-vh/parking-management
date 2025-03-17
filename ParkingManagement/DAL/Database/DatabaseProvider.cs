@@ -12,11 +12,11 @@ namespace ParkingManagement.DAL.Database
     class DatabaseProvider
     {
         private string connectDB = ConfigurationManager.ConnectionStrings["MySqlConnection"].ConnectionString;
-        //public static MySqlConnection GetMySqlConnection()
-        //{
-        //    string connString = ConfigurationManager.ConnectionStrings["MySqlConnection"].ConnectionString;
-        //    return new MySqlConnection(connString);
-        //}
+        public static MySqlConnection GetMySqlConnection()
+        {
+            string connString = ConfigurationManager.ConnectionStrings["MySqlConnection"].ConnectionString;
+            return new MySqlConnection(connString);
+        }
         // SELECT - Trả về DataTable
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
@@ -111,7 +111,7 @@ namespace ParkingManagement.DAL.Database
                         string paramName = match.Value;
                         object paramValue = parameter[index] ?? DBNull.Value;
 
-                        //MessageBox.Show($"Adding parameter: {paramName} = {paramValue}", "Debug");
+                        MessageBox.Show($"Adding parameter: {paramName} = {paramValue}", "Debug");
 
                         if (paramValue is MySqlParameter mySqlParam)
                         {
