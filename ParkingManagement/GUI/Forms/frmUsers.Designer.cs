@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.kPnUserInfo = new Krypton.Toolkit.KryptonPanel();
             this.kCbbSex = new Krypton.Toolkit.KryptonComboBox();
             this.kCbbParkingArea = new Krypton.Toolkit.KryptonComboBox();
@@ -173,7 +173,7 @@
             "Nữ"});
             this.kCbbSex.Location = new System.Drawing.Point(259, 81);
             this.kCbbSex.Name = "kCbbSex";
-            this.kCbbSex.Size = new System.Drawing.Size(51, 22);
+            this.kCbbSex.Size = new System.Drawing.Size(51, 21);
             this.kCbbSex.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kCbbSex.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.kCbbSex.TabIndex = 27;
@@ -183,7 +183,7 @@
             this.kCbbParkingArea.DropDownWidth = 330;
             this.kCbbParkingArea.Location = new System.Drawing.Point(259, 114);
             this.kCbbParkingArea.Name = "kCbbParkingArea";
-            this.kCbbParkingArea.Size = new System.Drawing.Size(203, 22);
+            this.kCbbParkingArea.Size = new System.Drawing.Size(203, 21);
             this.kCbbParkingArea.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kCbbParkingArea.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.kCbbParkingArea.TabIndex = 26;
@@ -497,10 +497,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.kryptonPanel2.Controls.Add(this.kDgvRoleTable);
             this.kryptonPanel2.Controls.Add(this.kryptonLabel2);
-            this.kryptonPanel2.Location = new System.Drawing.Point(121, 492);
+            this.kryptonPanel2.Location = new System.Drawing.Point(99, 499);
             this.kryptonPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonPanel2.Name = "kryptonPanel2";
-            this.kryptonPanel2.Size = new System.Drawing.Size(250, 120);
+            this.kryptonPanel2.Size = new System.Drawing.Size(292, 120);
             this.kryptonPanel2.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.kryptonPanel2.StateNormal.Color1 = System.Drawing.Color.Transparent;
             this.kryptonPanel2.TabIndex = 24;
@@ -518,7 +518,7 @@
             this.kDgvRoleTable.Name = "kDgvRoleTable";
             this.kDgvRoleTable.RowTemplate.Height = 24;
             this.kDgvRoleTable.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.kDgvRoleTable.Size = new System.Drawing.Size(245, 97);
+            this.kDgvRoleTable.Size = new System.Drawing.Size(287, 97);
             this.kDgvRoleTable.StateCommon.Background.Color1 = System.Drawing.Color.White;
             this.kDgvRoleTable.StateCommon.BackStyle = Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
             this.kDgvRoleTable.TabIndex = 0;
@@ -526,12 +526,13 @@
             // 
             // kryptonLabel2
             // 
-            this.kryptonLabel2.Location = new System.Drawing.Point(65, 3);
+            this.kryptonLabel2.Location = new System.Drawing.Point(94, 3);
             this.kryptonLabel2.Name = "kryptonLabel2";
             this.kryptonLabel2.Size = new System.Drawing.Size(119, 19);
             this.kryptonLabel2.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel2.TabIndex = 30;
             this.kryptonLabel2.Values.Text = "Bảng phân quyền";
+            this.kryptonLabel2.Click += new System.EventHandler(this.kryptonLabel2_Click);
             // 
             // kPnOption
             // 
@@ -717,8 +718,8 @@
             // 
             // kGrvUsers
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.kGrvUsers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.kGrvUsers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.kGrvUsers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));

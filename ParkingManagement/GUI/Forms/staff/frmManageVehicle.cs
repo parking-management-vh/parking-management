@@ -91,6 +91,16 @@ namespace ParkingManagement.GUI.Forms.staff
             kCbbSlot.Items.Add("8");
             kCbbSlot.Items.Add("9");
             kCbbSlot.Items.Add("10");
+            kCbbSlot.Items.Add("11");
+            kCbbSlot.Items.Add("12");
+            kCbbSlot.Items.Add("13");
+            kCbbSlot.Items.Add("14");
+            kCbbSlot.Items.Add("15");
+            kCbbSlot.Items.Add("16");
+            kCbbSlot.Items.Add("17");
+            kCbbSlot.Items.Add("18");
+            kCbbSlot.Items.Add("19");
+            kCbbSlot.Items.Add("20");
             kCbbSlot.SelectedIndex = 0;
         }
 
@@ -107,6 +117,16 @@ namespace ParkingManagement.GUI.Forms.staff
             kCbbSSlot.Items.Add("8");
             kCbbSSlot.Items.Add("9");
             kCbbSSlot.Items.Add("10");
+            kCbbSSlot.Items.Add("11");
+            kCbbSSlot.Items.Add("12");
+            kCbbSSlot.Items.Add("13");
+            kCbbSSlot.Items.Add("14");
+            kCbbSSlot.Items.Add("15");
+            kCbbSSlot.Items.Add("16");
+            kCbbSSlot.Items.Add("17");
+            kCbbSSlot.Items.Add("18");
+            kCbbSSlot.Items.Add("19");
+            kCbbSSlot.Items.Add("20");
             kCbbSSlot.SelectedIndex = -1;
         }
 
@@ -193,6 +213,11 @@ namespace ParkingManagement.GUI.Forms.staff
         }
 
         private void frmManageVehicle_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonGroupBox2_Panel_Paint(object sender, PaintEventArgs e)
         {
 
         }

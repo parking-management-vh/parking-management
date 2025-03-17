@@ -37,6 +37,7 @@
             this.btnDelete = new Krypton.Toolkit.KryptonButton();
             this.btnAdd = new Krypton.Toolkit.KryptonButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.kryptonLabel17 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonPanel1 = new Krypton.Toolkit.KryptonPanel();
             this.kryptonGroupBox1 = new Krypton.Toolkit.KryptonGroupBox();
             this.kBtnSearch = new Krypton.Toolkit.KryptonButton();
@@ -95,7 +96,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(893, 502);
+            this.panel1.Size = new System.Drawing.Size(1361, 536);
             this.panel1.TabIndex = 0;
             // 
             // kryptonGroupBox2
@@ -113,14 +114,14 @@
             this.kryptonGroupBox2.Panel.Controls.Add(this.btnUpdate);
             this.kryptonGroupBox2.Panel.Controls.Add(this.btnDelete);
             this.kryptonGroupBox2.Panel.Controls.Add(this.btnAdd);
-            this.kryptonGroupBox2.Size = new System.Drawing.Size(862, 87);
+            this.kryptonGroupBox2.Size = new System.Drawing.Size(1091, 83);
             this.kryptonGroupBox2.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonGroupBox2.TabIndex = 3;
             this.kryptonGroupBox2.Values.Heading = "Tùy chọn";
             // 
             // kBtnReset
             // 
-            this.kBtnReset.Location = new System.Drawing.Point(713, 7);
+            this.kBtnReset.Location = new System.Drawing.Point(638, 4);
             this.kBtnReset.Margin = new System.Windows.Forms.Padding(2);
             this.kBtnReset.Name = "kBtnReset";
             this.kBtnReset.Size = new System.Drawing.Size(96, 39);
@@ -133,7 +134,7 @@
             // 
             // btnExportExcel
             // 
-            this.btnExportExcel.Location = new System.Drawing.Point(587, 7);
+            this.btnExportExcel.Location = new System.Drawing.Point(524, 4);
             this.btnExportExcel.Margin = new System.Windows.Forms.Padding(2);
             this.btnExportExcel.Name = "btnExportExcel";
             this.btnExportExcel.Size = new System.Drawing.Size(82, 39);
@@ -145,7 +146,7 @@
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(311, 7);
+            this.btnRefresh.Location = new System.Drawing.Point(276, 4);
             this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(96, 39);
@@ -158,7 +159,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(179, 7);
+            this.btnUpdate.Location = new System.Drawing.Point(158, 4);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(87, 39);
@@ -171,7 +172,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(453, 7);
+            this.btnDelete.Location = new System.Drawing.Point(405, 4);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(87, 39);
@@ -184,7 +185,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(50, 7);
+            this.btnAdd.Location = new System.Drawing.Point(40, 4);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(87, 39);
@@ -197,14 +198,25 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.kryptonLabel17);
             this.panel2.Controls.Add(this.kryptonPanel1);
             this.panel2.Controls.Add(this.kDgvReceipts);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(893, 502);
+            this.panel2.Size = new System.Drawing.Size(1361, 536);
             this.panel2.TabIndex = 0;
+            // 
+            // kryptonLabel17
+            // 
+            this.kryptonLabel17.Location = new System.Drawing.Point(19, 304);
+            this.kryptonLabel17.Name = "kryptonLabel17";
+            this.kryptonLabel17.Size = new System.Drawing.Size(52, 19);
+            this.kryptonLabel17.StateCommon.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.kryptonLabel17.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel17.TabIndex = 2;
+            this.kryptonLabel17.Values.Text = "Dữ liệu";
             // 
             // kryptonPanel1
             // 
@@ -230,16 +242,16 @@
             this.kryptonPanel1.Controls.Add(this.kryptonLabel2);
             this.kryptonPanel1.Controls.Add(this.kTbStaffPay);
             this.kryptonPanel1.Controls.Add(this.kLbStaffPay);
-            this.kryptonPanel1.Location = new System.Drawing.Point(15, 87);
+            this.kryptonPanel1.Location = new System.Drawing.Point(14, 83);
             this.kryptonPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(860, 286);
+            this.kryptonPanel1.Size = new System.Drawing.Size(1091, 213);
             this.kryptonPanel1.TabIndex = 1;
             this.kryptonPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.kryptonPanel1_Paint);
             // 
             // kryptonGroupBox1
             // 
-            this.kryptonGroupBox1.Location = new System.Drawing.Point(506, 19);
+            this.kryptonGroupBox1.Location = new System.Drawing.Point(763, 8);
             // 
             // kryptonGroupBox1.Panel
             // 
@@ -251,14 +263,14 @@
             this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel10);
             this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel6);
             this.kryptonGroupBox1.Panel.Controls.Add(this.kCbbSFilter);
-            this.kryptonGroupBox1.Size = new System.Drawing.Size(319, 237);
+            this.kryptonGroupBox1.Size = new System.Drawing.Size(298, 188);
             this.kryptonGroupBox1.TabIndex = 71;
             this.kryptonGroupBox1.Values.Heading = "Lọc";
             this.kryptonGroupBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.kryptonGroupBox1_Paint);
             // 
             // kBtnSearch
             // 
-            this.kBtnSearch.Location = new System.Drawing.Point(223, 159);
+            this.kBtnSearch.Location = new System.Drawing.Point(212, 118);
             this.kBtnSearch.Name = "kBtnSearch";
             this.kBtnSearch.Size = new System.Drawing.Size(58, 25);
             this.kBtnSearch.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -270,7 +282,7 @@
             // kTbSearch
             // 
             this.kTbSearch.Font = new System.Drawing.Font("Arial", 12F);
-            this.kTbSearch.Location = new System.Drawing.Point(35, 158);
+            this.kTbSearch.Location = new System.Drawing.Point(24, 117);
             this.kTbSearch.Margin = new System.Windows.Forms.Padding(2);
             this.kTbSearch.Name = "kTbSearch";
             this.kTbSearch.Size = new System.Drawing.Size(169, 26);
@@ -279,7 +291,7 @@
             // kDtpSDate
             // 
             this.kDtpSDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.kDtpSDate.Location = new System.Drawing.Point(130, 102);
+            this.kDtpSDate.Location = new System.Drawing.Point(119, 77);
             this.kDtpSDate.Margin = new System.Windows.Forms.Padding(2);
             this.kDtpSDate.Name = "kDtpSDate";
             this.kDtpSDate.Size = new System.Drawing.Size(151, 24);
@@ -288,7 +300,7 @@
             // 
             // kryptonLabel16
             // 
-            this.kryptonLabel16.Location = new System.Drawing.Point(31, 107);
+            this.kryptonLabel16.Location = new System.Drawing.Point(20, 82);
             this.kryptonLabel16.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonLabel16.Name = "kryptonLabel16";
             this.kryptonLabel16.Size = new System.Drawing.Size(52, 19);
@@ -299,7 +311,7 @@
             // kCbbPayMethod
             // 
             this.kCbbPayMethod.DropDownWidth = 217;
-            this.kCbbPayMethod.Location = new System.Drawing.Point(130, 60);
+            this.kCbbPayMethod.Location = new System.Drawing.Point(119, 46);
             this.kCbbPayMethod.Name = "kCbbPayMethod";
             this.kCbbPayMethod.Size = new System.Drawing.Size(151, 22);
             this.kCbbPayMethod.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
@@ -307,7 +319,7 @@
             // 
             // kryptonLabel10
             // 
-            this.kryptonLabel10.Location = new System.Drawing.Point(31, 63);
+            this.kryptonLabel10.Location = new System.Drawing.Point(20, 49);
             this.kryptonLabel10.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonLabel10.Name = "kryptonLabel10";
             this.kryptonLabel10.Size = new System.Drawing.Size(91, 19);
@@ -317,7 +329,7 @@
             // 
             // kryptonLabel6
             // 
-            this.kryptonLabel6.Location = new System.Drawing.Point(31, 19);
+            this.kryptonLabel6.Location = new System.Drawing.Point(20, 17);
             this.kryptonLabel6.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonLabel6.Name = "kryptonLabel6";
             this.kryptonLabel6.Size = new System.Drawing.Size(70, 19);
@@ -328,7 +340,7 @@
             // kCbbSFilter
             // 
             this.kCbbSFilter.DropDownWidth = 217;
-            this.kCbbSFilter.Location = new System.Drawing.Point(130, 16);
+            this.kCbbSFilter.Location = new System.Drawing.Point(119, 14);
             this.kCbbSFilter.Name = "kCbbSFilter";
             this.kCbbSFilter.Size = new System.Drawing.Size(151, 22);
             this.kCbbSFilter.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
@@ -337,15 +349,15 @@
             // kCbPaymentMethod
             // 
             this.kCbPaymentMethod.DropDownWidth = 217;
-            this.kCbPaymentMethod.Location = new System.Drawing.Point(262, 170);
+            this.kCbPaymentMethod.Location = new System.Drawing.Point(582, 29);
             this.kCbPaymentMethod.Name = "kCbPaymentMethod";
-            this.kCbPaymentMethod.Size = new System.Drawing.Size(198, 22);
+            this.kCbPaymentMethod.Size = new System.Drawing.Size(146, 22);
             this.kCbPaymentMethod.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.kCbPaymentMethod.TabIndex = 70;
             // 
             // kryptonLabel5
             // 
-            this.kryptonLabel5.Location = new System.Drawing.Point(212, 26);
+            this.kryptonLabel5.Location = new System.Drawing.Point(192, 31);
             this.kryptonLabel5.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonLabel5.Name = "kryptonLabel5";
             this.kryptonLabel5.Size = new System.Drawing.Size(17, 22);
@@ -356,33 +368,33 @@
             // kTbBks
             // 
             this.kTbBks.Font = new System.Drawing.Font("Arial", 12F);
-            this.kTbBks.Location = new System.Drawing.Point(261, 98);
+            this.kTbBks.Location = new System.Drawing.Point(224, 117);
             this.kTbBks.Margin = new System.Windows.Forms.Padding(2);
             this.kTbBks.Name = "kTbBks";
-            this.kTbBks.Size = new System.Drawing.Size(198, 26);
+            this.kTbBks.Size = new System.Drawing.Size(170, 26);
             this.kTbBks.TabIndex = 68;
             // 
             // kTbCodeInvoice
             // 
             this.kTbCodeInvoice.Font = new System.Drawing.Font("Arial", 12F);
-            this.kTbCodeInvoice.Location = new System.Drawing.Point(261, 59);
+            this.kTbCodeInvoice.Location = new System.Drawing.Point(224, 73);
             this.kTbCodeInvoice.Margin = new System.Windows.Forms.Padding(2);
             this.kTbCodeInvoice.Name = "kTbCodeInvoice";
-            this.kTbCodeInvoice.Size = new System.Drawing.Size(198, 26);
+            this.kTbCodeInvoice.Size = new System.Drawing.Size(170, 26);
             this.kTbCodeInvoice.TabIndex = 67;
             // 
             // kTbTotalTime
             // 
             this.kTbTotalTime.Font = new System.Drawing.Font("Arial", 12F);
-            this.kTbTotalTime.Location = new System.Drawing.Point(261, 203);
+            this.kTbTotalTime.Location = new System.Drawing.Point(582, 70);
             this.kTbTotalTime.Margin = new System.Windows.Forms.Padding(2);
             this.kTbTotalTime.Name = "kTbTotalTime";
-            this.kTbTotalTime.Size = new System.Drawing.Size(198, 26);
+            this.kTbTotalTime.Size = new System.Drawing.Size(146, 26);
             this.kTbTotalTime.TabIndex = 66;
             // 
             // kryptonLabel14
             // 
-            this.kryptonLabel14.Location = new System.Drawing.Point(212, 207);
+            this.kryptonLabel14.Location = new System.Drawing.Point(560, 74);
             this.kryptonLabel14.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonLabel14.Name = "kryptonLabel14";
             this.kryptonLabel14.Size = new System.Drawing.Size(17, 22);
@@ -392,7 +404,7 @@
             // 
             // kryptonLabel15
             // 
-            this.kryptonLabel15.Location = new System.Drawing.Point(33, 207);
+            this.kryptonLabel15.Location = new System.Drawing.Point(436, 74);
             this.kryptonLabel15.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonLabel15.Name = "kryptonLabel15";
             this.kryptonLabel15.Size = new System.Drawing.Size(127, 22);
@@ -403,15 +415,15 @@
             // kTbTotalPrice
             // 
             this.kTbTotalPrice.Font = new System.Drawing.Font("Arial", 12F);
-            this.kTbTotalPrice.Location = new System.Drawing.Point(262, 239);
+            this.kTbTotalPrice.Location = new System.Drawing.Point(581, 113);
             this.kTbTotalPrice.Margin = new System.Windows.Forms.Padding(2);
             this.kTbTotalPrice.Name = "kTbTotalPrice";
-            this.kTbTotalPrice.Size = new System.Drawing.Size(198, 26);
+            this.kTbTotalPrice.Size = new System.Drawing.Size(146, 26);
             this.kTbTotalPrice.TabIndex = 62;
             // 
             // kryptonLabel12
             // 
-            this.kryptonLabel12.Location = new System.Drawing.Point(212, 243);
+            this.kryptonLabel12.Location = new System.Drawing.Point(560, 117);
             this.kryptonLabel12.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonLabel12.Name = "kryptonLabel12";
             this.kryptonLabel12.Size = new System.Drawing.Size(17, 22);
@@ -421,7 +433,7 @@
             // 
             // kryptonLabel13
             // 
-            this.kryptonLabel13.Location = new System.Drawing.Point(33, 243);
+            this.kryptonLabel13.Location = new System.Drawing.Point(436, 118);
             this.kryptonLabel13.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonLabel13.Name = "kryptonLabel13";
             this.kryptonLabel13.Size = new System.Drawing.Size(86, 22);
@@ -431,7 +443,7 @@
             // 
             // kryptonLabel11
             // 
-            this.kryptonLabel11.Location = new System.Drawing.Point(212, 170);
+            this.kryptonLabel11.Location = new System.Drawing.Point(560, 30);
             this.kryptonLabel11.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonLabel11.Name = "kryptonLabel11";
             this.kryptonLabel11.Size = new System.Drawing.Size(17, 22);
@@ -441,7 +453,7 @@
             // 
             // kryptonLabel9
             // 
-            this.kryptonLabel9.Location = new System.Drawing.Point(33, 170);
+            this.kryptonLabel9.Location = new System.Drawing.Point(438, 30);
             this.kryptonLabel9.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonLabel9.Name = "kryptonLabel9";
             this.kryptonLabel9.Size = new System.Drawing.Size(118, 22);
@@ -451,16 +463,16 @@
             // 
             // kDtpPaymentDate
             // 
-            this.kDtpPaymentDate.Location = new System.Drawing.Point(262, 135);
+            this.kDtpPaymentDate.Location = new System.Drawing.Point(224, 159);
             this.kDtpPaymentDate.Margin = new System.Windows.Forms.Padding(2);
             this.kDtpPaymentDate.Name = "kDtpPaymentDate";
-            this.kDtpPaymentDate.Size = new System.Drawing.Size(198, 24);
+            this.kDtpPaymentDate.Size = new System.Drawing.Size(200, 24);
             this.kDtpPaymentDate.StateCommon.Content.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kDtpPaymentDate.TabIndex = 54;
             // 
             // kryptonLabel7
             // 
-            this.kryptonLabel7.Location = new System.Drawing.Point(212, 137);
+            this.kryptonLabel7.Location = new System.Drawing.Point(191, 161);
             this.kryptonLabel7.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonLabel7.Name = "kryptonLabel7";
             this.kryptonLabel7.Size = new System.Drawing.Size(17, 22);
@@ -470,7 +482,7 @@
             // 
             // kryptonLabel8
             // 
-            this.kryptonLabel8.Location = new System.Drawing.Point(33, 137);
+            this.kryptonLabel8.Location = new System.Drawing.Point(19, 161);
             this.kryptonLabel8.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonLabel8.Name = "kryptonLabel8";
             this.kryptonLabel8.Size = new System.Drawing.Size(141, 22);
@@ -480,7 +492,7 @@
             // 
             // kryptonLabel3
             // 
-            this.kryptonLabel3.Location = new System.Drawing.Point(212, 102);
+            this.kryptonLabel3.Location = new System.Drawing.Point(192, 121);
             this.kryptonLabel3.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonLabel3.Name = "kryptonLabel3";
             this.kryptonLabel3.Size = new System.Drawing.Size(17, 22);
@@ -490,7 +502,7 @@
             // 
             // kryptonLabel4
             // 
-            this.kryptonLabel4.Location = new System.Drawing.Point(33, 102);
+            this.kryptonLabel4.Location = new System.Drawing.Point(20, 121);
             this.kryptonLabel4.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonLabel4.Name = "kryptonLabel4";
             this.kryptonLabel4.Size = new System.Drawing.Size(94, 22);
@@ -500,7 +512,7 @@
             // 
             // kryptonLabel1
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(212, 63);
+            this.kryptonLabel1.Location = new System.Drawing.Point(192, 77);
             this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonLabel1.Name = "kryptonLabel1";
             this.kryptonLabel1.Size = new System.Drawing.Size(17, 22);
@@ -510,7 +522,7 @@
             // 
             // kryptonLabel2
             // 
-            this.kryptonLabel2.Location = new System.Drawing.Point(33, 63);
+            this.kryptonLabel2.Location = new System.Drawing.Point(20, 77);
             this.kryptonLabel2.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonLabel2.Name = "kryptonLabel2";
             this.kryptonLabel2.Size = new System.Drawing.Size(105, 22);
@@ -521,15 +533,15 @@
             // kTbStaffPay
             // 
             this.kTbStaffPay.Font = new System.Drawing.Font("Arial", 12F);
-            this.kTbStaffPay.Location = new System.Drawing.Point(261, 22);
+            this.kTbStaffPay.Location = new System.Drawing.Point(224, 27);
             this.kTbStaffPay.Margin = new System.Windows.Forms.Padding(2);
             this.kTbStaffPay.Name = "kTbStaffPay";
-            this.kTbStaffPay.Size = new System.Drawing.Size(198, 26);
+            this.kTbStaffPay.Size = new System.Drawing.Size(170, 26);
             this.kTbStaffPay.TabIndex = 43;
             // 
             // kLbStaffPay
             // 
-            this.kLbStaffPay.Location = new System.Drawing.Point(33, 26);
+            this.kLbStaffPay.Location = new System.Drawing.Point(20, 31);
             this.kLbStaffPay.Margin = new System.Windows.Forms.Padding(2);
             this.kLbStaffPay.Name = "kLbStaffPay";
             this.kLbStaffPay.Size = new System.Drawing.Size(179, 22);
@@ -539,14 +551,21 @@
             // 
             // kDgvReceipts
             // 
+            this.kDgvReceipts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.kDgvReceipts.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.kDgvReceipts.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.kDgvReceipts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.kDgvReceipts.Location = new System.Drawing.Point(15, 373);
+            this.kDgvReceipts.Location = new System.Drawing.Point(14, 325);
             this.kDgvReceipts.Margin = new System.Windows.Forms.Padding(2);
             this.kDgvReceipts.Name = "kDgvReceipts";
             this.kDgvReceipts.RowHeadersWidth = 51;
             this.kDgvReceipts.RowTemplate.Height = 24;
-            this.kDgvReceipts.Size = new System.Drawing.Size(860, 114);
+            this.kDgvReceipts.Size = new System.Drawing.Size(1345, 217);
+            this.kDgvReceipts.StateCommon.BackStyle = Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
+            this.kDgvReceipts.StateCommon.DataCell.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kDgvReceipts.StateCommon.DataCell.Content.Padding = new System.Windows.Forms.Padding(38, 2, 38, 2);
+            this.kDgvReceipts.StateCommon.HeaderColumn.Content.Padding = new System.Windows.Forms.Padding(1);
+            this.kDgvReceipts.StateCommon.HeaderRow.Content.Padding = new System.Windows.Forms.Padding(5);
             this.kDgvReceipts.TabIndex = 0;
             this.kDgvReceipts.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.kDgvReceipts_CellClick);
             // 
@@ -554,7 +573,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(893, 502);
+            this.ClientSize = new System.Drawing.Size(1361, 536);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmPaymentReceipt";
@@ -565,6 +584,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2)).EndInit();
             this.kryptonGroupBox2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
             this.kryptonPanel1.PerformLayout();
@@ -624,5 +644,6 @@
         private Krypton.Toolkit.KryptonComboBox kCbbPayMethod;
         private Krypton.Toolkit.KryptonLabel kryptonLabel10;
         private Krypton.Toolkit.KryptonButton kBtnReset;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel17;
     }
 }

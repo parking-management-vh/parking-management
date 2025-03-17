@@ -273,9 +273,9 @@ namespace ParkingManagement.GUI.Forms.staff
         {
             List<ParkingSlotModel> slots = parkingSlotBLL.GetSlotArea(areaId);
             List<ParkingSlotModel> allSlots = new List<ParkingSlotModel>();
-            int totalSlots = 15;
+            int totalSlots = 20;
             int availableSlots = 0;
-            for (int i = 1; i <= 15; i++)
+            for (int i = 1; i <= 20; i++)
             {
                 var existingSlot = slots.FirstOrDefault(s => s.SlotNumber == i);
                 if (existingSlot != null)
@@ -303,7 +303,7 @@ namespace ParkingManagement.GUI.Forms.staff
             kTLPslotArea.RowStyles.Clear();
 
             kTLPslotArea.ColumnCount = 5;  
-            kTLPslotArea.RowCount = 3;    
+            kTLPslotArea.RowCount = 4;    
             kTLPslotArea.Dock = DockStyle.Fill;  
 
             for (int i = 0; i < kTLPslotArea.ColumnCount; i++)

@@ -158,7 +158,8 @@ namespace ParkingManagement.DAL.Repositories
         {
             string query = @"
                 UPDATE vehicle 
-                SET license_plate = @license_plate, 
+                SET id = @id,
+                    license_plate = @license_plate, 
                     vehicle_type_id = @vehicle_type_id, 
                     parking_slot_id = @parking_slot_id, 
                     parking_area_id = @parking_area_id, 
