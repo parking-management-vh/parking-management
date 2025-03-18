@@ -1,4 +1,4 @@
-﻿namespace ParkingManagement.GUI.Forms
+namespace ParkingManagement.GUI.Forms
 {
     partial class frmPaymentReceipt
     {

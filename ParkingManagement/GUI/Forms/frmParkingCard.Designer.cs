@@ -94,7 +94,7 @@
             this.kTbBs.Location = new System.Drawing.Point(497, 102);
             this.kTbBs.Margin = new System.Windows.Forms.Padding(4);
             this.kTbBs.Name = "kTbBs";
-            this.kTbBs.Size = new System.Drawing.Size(116, 23);
+            this.kTbBs.Size = new System.Drawing.Size(116, 23);p
             this.kTbBs.TabIndex = 17;
             this.kTbBs.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -128,7 +128,7 @@
             this.kRBtnSAll.Location = new System.Drawing.Point(192, 11);
             this.kRBtnSAll.Margin = new System.Windows.Forms.Padding(4);
             this.kRBtnSAll.Name = "kRBtnSAll";
-            this.kRBtnSAll.Size = new System.Drawing.Size(36, 16);
+            this.kRBtnSAll.Size = new System.Drawing.Size(43, 20);
             this.kRBtnSAll.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kRBtnSAll.TabIndex = 27;
             this.kRBtnSAll.Values.Text = "All";
@@ -138,7 +138,7 @@
             this.kBbnCardMonth.Location = new System.Drawing.Point(23, 10);
             this.kBbnCardMonth.Margin = new System.Windows.Forms.Padding(4);
             this.kBbnCardMonth.Name = "kBbnCardMonth";
-            this.kBbnCardMonth.Size = new System.Drawing.Size(55, 16);
+            this.kBbnCardMonth.Size = new System.Drawing.Size(68, 20);
             this.kBbnCardMonth.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kBbnCardMonth.TabIndex = 26;
             this.kBbnCardMonth.Values.Text = "Tháng";
@@ -148,7 +148,7 @@
             this.kBbnCardDay.Location = new System.Drawing.Point(111, 10);
             this.kBbnCardDay.Margin = new System.Windows.Forms.Padding(4);
             this.kBbnCardDay.Name = "kBbnCardDay";
-            this.kBbnCardDay.Size = new System.Drawing.Size(50, 16);
+            this.kBbnCardDay.Size = new System.Drawing.Size(60, 20);
             this.kBbnCardDay.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kBbnCardDay.TabIndex = 24;
             this.kBbnCardDay.Values.Text = "Ngày";
@@ -206,7 +206,7 @@
             this.kRbtnDay.Location = new System.Drawing.Point(249, 230);
             this.kRbtnDay.Margin = new System.Windows.Forms.Padding(4);
             this.kRbtnDay.Name = "kRbtnDay";
-            this.kRbtnDay.Size = new System.Drawing.Size(51, 20);
+            this.kRbtnDay.Size = new System.Drawing.Size(62, 24);
             this.kRbtnDay.TabIndex = 14;
             this.kRbtnDay.Values.Text = "Ngày";
             this.kRbtnDay.CheckedChanged += new System.EventHandler(this.kRbtnDay_CheckedChanged);
@@ -216,7 +216,7 @@
             this.kRbtnMonth.Location = new System.Drawing.Point(151, 230);
             this.kRbtnMonth.Margin = new System.Windows.Forms.Padding(4);
             this.kRbtnMonth.Name = "kRbtnMonth";
-            this.kRbtnMonth.Size = new System.Drawing.Size(57, 20);
+            this.kRbtnMonth.Size = new System.Drawing.Size(69, 24);
             this.kRbtnMonth.TabIndex = 13;
             this.kRbtnMonth.Values.Text = "Tháng";
             this.kRbtnMonth.CheckedChanged += new System.EventHandler(this.kRbtnMonth_CheckedChanged);
@@ -255,7 +255,7 @@
             this.kryptonLabel5.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel5.Name = "kryptonLabel5";
             this.kryptonLabel5.PaletteMode = Krypton.Toolkit.PaletteMode.Office2007Blue;
-            this.kryptonLabel5.Size = new System.Drawing.Size(62, 18);
+            this.kryptonLabel5.Size = new System.Drawing.Size(76, 21);
             this.kryptonLabel5.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel5.TabIndex = 9;
             this.kryptonLabel5.Values.Text = "Giá tiền :";
@@ -266,7 +266,7 @@
             this.kryptonLabel4.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel4.Name = "kryptonLabel4";
             this.kryptonLabel4.PaletteMode = Krypton.Toolkit.PaletteMode.Office2007Blue;
-            this.kryptonLabel4.Size = new System.Drawing.Size(39, 18);
+            this.kryptonLabel4.Size = new System.Drawing.Size(48, 21);
             this.kryptonLabel4.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel4.TabIndex = 8;
             this.kryptonLabel4.Values.Text = "Thẻ :";
@@ -277,7 +277,7 @@
             this.kryptonLabel3.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel3.Name = "kryptonLabel3";
             this.kryptonLabel3.PaletteMode = Krypton.Toolkit.PaletteMode.Office2007Blue;
-            this.kryptonLabel3.Size = new System.Drawing.Size(96, 18);
+            this.kryptonLabel3.Size = new System.Drawing.Size(119, 21);
             this.kryptonLabel3.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel3.TabIndex = 7;
             this.kryptonLabel3.Values.Text = "Trạng thái thẻ :";
@@ -288,7 +288,7 @@
             this.kryptonLabel2.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel2.Name = "kryptonLabel2";
             this.kryptonLabel2.PaletteMode = Krypton.Toolkit.PaletteMode.Office2007Blue;
-            this.kryptonLabel2.Size = new System.Drawing.Size(93, 18);
+            this.kryptonLabel2.Size = new System.Drawing.Size(115, 21);
             this.kryptonLabel2.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel2.TabIndex = 6;
             this.kryptonLabel2.Values.Text = "Ngày hết hạn :";
@@ -299,7 +299,7 @@
             this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel1.Name = "kryptonLabel1";
             this.kryptonLabel1.PaletteMode = Krypton.Toolkit.PaletteMode.Office2007Blue;
-            this.kryptonLabel1.Size = new System.Drawing.Size(93, 18);
+            this.kryptonLabel1.Size = new System.Drawing.Size(115, 21);
             this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel1.TabIndex = 5;
             this.kryptonLabel1.Values.Text = "Ngày bắt đầu :";
@@ -338,7 +338,7 @@
             this.kryptonLabel8.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel8.Name = "kryptonLabel8";
             this.kryptonLabel8.PaletteMode = Krypton.Toolkit.PaletteMode.Office2007Blue;
-            this.kryptonLabel8.Size = new System.Drawing.Size(60, 18);
+            this.kryptonLabel8.Size = new System.Drawing.Size(73, 21);
             this.kryptonLabel8.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel8.TabIndex = 19;
             this.kryptonLabel8.Values.Text = "Biển số :";
@@ -349,7 +349,7 @@
             this.kryptonLabel7.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel7.Name = "kryptonLabel7";
             this.kryptonLabel7.PaletteMode = Krypton.Toolkit.PaletteMode.Office2007Blue;
-            this.kryptonLabel7.Size = new System.Drawing.Size(102, 18);
+            this.kryptonLabel7.Size = new System.Drawing.Size(126, 21);
             this.kryptonLabel7.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel7.TabIndex = 18;
             this.kryptonLabel7.Values.Text = "Mã người dùng :";

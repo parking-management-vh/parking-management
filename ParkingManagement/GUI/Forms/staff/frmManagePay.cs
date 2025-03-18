@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace ParkingManagement.GUI.Forms.staff
 {
-    public partial class frmManagePay: Form
+    public partial class frmManagePay : Form
     {
         private readonly paymentBLL paymentBLL = new paymentBLL();
         private string selectedPaymentId;
