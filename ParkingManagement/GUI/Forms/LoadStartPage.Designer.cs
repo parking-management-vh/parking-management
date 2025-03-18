@@ -347,10 +347,10 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("UTM Avo", 9.8F, System.Drawing.FontStyle.Bold);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.8F, System.Drawing.FontStyle.Bold);
             this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(111, 24);
+            this.label4.Size = new System.Drawing.Size(90, 17);
             this.label4.TabIndex = 2;
             this.label4.Text = "Notification";
             // 
@@ -524,10 +524,10 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Font = new System.Drawing.Font("UTM Avo", 9.8F, System.Drawing.FontStyle.Bold);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.8F, System.Drawing.FontStyle.Bold);
             this.label5.Location = new System.Drawing.Point(0, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(114, 24);
+            this.label5.Size = new System.Drawing.Size(98, 17);
             this.label5.TabIndex = 2;
             this.label5.Text = "Recent Files";
             // 
@@ -727,6 +727,7 @@
             this.kryptonPanel7.PaletteMode = Krypton.Toolkit.PaletteMode.SparkleBlue;
             this.kryptonPanel7.Size = new System.Drawing.Size(1837, 22);
             this.kryptonPanel7.TabIndex = 1;
+            this.kryptonPanel7.Paint += new System.Windows.Forms.PaintEventHandler(this.kryptonPanel7_Paint);
             // 
             // LoadStartPage
             // 

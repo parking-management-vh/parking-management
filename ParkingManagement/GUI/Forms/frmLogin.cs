@@ -47,7 +47,7 @@ namespace ParkingManagement.GUI.Forms
                 {
                     SessionManager.SetUser(user);
 
-                    MessageBox.Show($"Welcome {user.Code}!", "Login Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show($"Welcome {user.FullName}!", "Login Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
 
                     if (user.Role == "Admin")

@@ -87,7 +87,6 @@ namespace ParkingManagement.DAL.Repositories
             try
             {
                 DataTable data = dbProvider.ExecuteQuery(query, parameters.ToArray());
-                MessageBox.Show("Rows returned: " + data.Rows.Count, "Debug");
 
                 foreach (DataRow row in data.Rows)
                 {
@@ -178,8 +177,8 @@ namespace ParkingManagement.DAL.Repositories
 
             vehicle.UpdatedAt = DateTime.Now;
 
-            MessageBox.Show($"ID xe: {vehicle.Id}\nBiển số: {vehicle.LicensePlate}\nLoại xe ID: {vehicle.VehicleTypeId}\nChỗ đỗ ID: {vehicle.ParkingSlotId}\nKhu vực ID: {vehicle.ParkingAreaId}",
-                "Debug VehicleModel", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //MessageBox.Show($"ID xe: {vehicle.Id}\nBiển số: {vehicle.LicensePlate}\nLoại xe ID: {vehicle.VehicleTypeId}\nChỗ đỗ ID: {vehicle.ParkingSlotId}\nKhu vực ID: {vehicle.ParkingAreaId}",
+            //    "Debug VehicleModel", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             object[] parameters =
             {
@@ -195,17 +194,17 @@ namespace ParkingManagement.DAL.Repositories
             };
 
             // Debug giá trị của parameters
-            MessageBox.Show($"Params:\n" +
-                $"@id = {parameters[0]}\n" +
-                $"@license_plate = {parameters[1]}\n" +
-                $"@vehicle_type_id = {parameters[2]}\n" +
-                $"@parking_slot_id = {parameters[3]}\n" +
-                $"@parking_area_id = {parameters[4]}\n" +
-                $"@entry_time = {parameters[5]}\n" +
-                $"@exit_time = {parameters[6]}\n" +
-                $"@save_time = {parameters[7]}\n" +
-                $"@updated_at = {parameters[8]}",
-                "Debug Query Params", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //MessageBox.Show($"Params:\n" +
+            //    $"@id = {parameters[0]}\n" +
+            //    $"@license_plate = {parameters[1]}\n" +
+            //    $"@vehicle_type_id = {parameters[2]}\n" +
+            //    $"@parking_slot_id = {parameters[3]}\n" +
+            //    $"@parking_area_id = {parameters[4]}\n" +
+            //    $"@entry_time = {parameters[5]}\n" +
+            //    $"@exit_time = {parameters[6]}\n" +
+            //    $"@save_time = {parameters[7]}\n" +
+            //    $"@updated_at = {parameters[8]}",
+            //    "Debug Query Params", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             try
             {
@@ -235,7 +234,7 @@ namespace ParkingManagement.DAL.Repositories
             try
             {
                 dbProvider.ExecuteNonQuery(query, parameters);
-                MessageBox.Show("Cập nhật thời gian ra thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Cập nhật thời gian ra thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {

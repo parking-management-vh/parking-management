@@ -200,5 +200,10 @@ namespace ParkingManagement.GUI.Forms
                 panelNotifications.Controls.Add(notificationPanel);
             }
         }
+
+        private void kryptonPanel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

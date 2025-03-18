@@ -23,6 +23,7 @@ namespace ParkingManagement.GUI.Forms
             LoadAllParkingCards();
             LoadStatusFilter();
             LoadStatusSearch();
+            LoadSlotNumber();
 
             kDtpStartdate.Format = DateTimePickerFormat.Custom;
             kDtpStartdate.CustomFormat = "yyyy-MM-dd HH:mm:ss";
@@ -68,9 +69,6 @@ namespace ParkingManagement.GUI.Forms
                     MessageBox.Show("Không có thẻ giữ xe nào trong cơ sở dữ liệu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
-
-                MessageBox.Show($"Số lượng thẻ lấy được: {cards.Count}"); // Kiểm tra số lượng dữ liệu
-
                 kDgvParkingCard.DataSource = null;  // Reset trước khi gán
                 kDgvParkingCard.DataSource = cards; // Gán danh sách vào DataGridView
             }
@@ -208,7 +206,7 @@ namespace ParkingManagement.GUI.Forms
                     }
                     else
                     {
-                        MessageBox.Show($"Lỗi chuyển đổi 6: {entryTimeStr}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show($"Lỗi chuyển đổi : {entryTimeStr}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         kDtpEnddate.Value = DateTime.Now;
                     }
                 }

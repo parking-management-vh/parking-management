@@ -147,9 +147,19 @@ namespace ParkingManagement.GUI.Forms.staff
             List<paymentModel> filteredPayments = paymentBLL.GetAllPaymentsByStaffCode(staffCode, filterType, filterValue, paymentMethodFilter, paymentDate);
 
             kDgvListVehiclePay.DataSource = filteredPayments;
+        }
         private void kryptonGroupBox2_Panel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void kBtnRef_Click(object sender, EventArgs e)
+        {
+            LoadAllPayment();
+            LoadFilter();
+            LoadPayMethodSearch();
+            LoadUserSession();
+            LoadPaymentmethod();
         }
     }
 }

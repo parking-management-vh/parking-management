@@ -485,5 +485,15 @@ namespace ParkingManagement.GUI.Forms
         {
 
         }
+
+        private void kBtnRef_Click(object sender, EventArgs e)
+        {
+            LoadAllAreas();
+            LoadAllVehicle();
+            LoadAllVehicleType();
+            LoadAllAreasSearch();
+            LoadSlotNumberSearch();
+            LoadAllVehicleTypeSearch();
+        }
     }
 }

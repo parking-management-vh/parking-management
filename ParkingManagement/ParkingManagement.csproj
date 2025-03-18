@@ -235,6 +235,12 @@
     <Compile Include="GUI\Forms\LoadStartPage.Designer.cs">
       <DependentUpon>LoadStartPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Forms\staff\frmStartStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Forms\staff\frmStartStaff.Designer.cs">
+      <DependentUpon>frmStartStaff.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Forms\statistics\frmStatistics.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -451,6 +457,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Forms\staff\frmStaffDashboard.resx">
       <DependentUpon>frmStaffDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Forms\staff\frmStartStaff.resx">
+      <DependentUpon>frmStartStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Forms\statistics\frmStatistics.resx">
       <DependentUpon>frmStatistics.cs</DependentUpon>

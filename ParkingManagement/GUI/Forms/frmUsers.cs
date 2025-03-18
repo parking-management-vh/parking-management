@@ -304,7 +304,7 @@ namespace ParkingManagement.GUI.Forms
             }
             else if (kRBtnCustomer.Checked)
             {
-                roleName = "Customer";
+                roleName = "Staff";
             } 
             else if (kRBtnAllAcc.Checked)
             {

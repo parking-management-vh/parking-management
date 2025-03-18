@@ -22,7 +22,7 @@ namespace ParkingManagement.GUI.Forms.staff
         }
         private void LoadStartPage()
         {
-            OpenFormInTab<LoadStartPage>("Start Page");
+            OpenFormInTab<frmStartStaff>("StartStaff");
         }
 
 
