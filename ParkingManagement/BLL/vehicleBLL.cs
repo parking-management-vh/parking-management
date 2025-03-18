@@ -17,9 +17,9 @@ namespace ParkingManagement.BLL
         {
             return repository.GetAllVehicleType();
         }
-        public List<allVehicle> GetAllVehicle(string areaName = null, string slotNumber = null, string vehicleType = null, string licensePlate = null)
+        public List<allVehicle> GetAllVehicle(string areaName = null, string slotNumber = null, string vehicleType = null, string licensePlate = null, string status = null)
         {
-            return repository.GetAllVehicle(areaName, slotNumber, vehicleType, licensePlate);
+            return repository.GetAllVehicle(areaName, slotNumber, vehicleType, licensePlate, status);
         }
         public void CreateVehicle(VehicleModel vehicle)
         {
@@ -40,6 +40,11 @@ namespace ParkingManagement.BLL
             return repository.GetVehicleIdByLicensePlate(licensePlate);
         }
 
+        public bool UpdateVehicleStatusByLicensePlate(string licensePlate, string status)
+        {
+            return repository.UpdateVehicleStatusByLicensePlate(licensePlate, status);
+        }
+
         public Guid? GetTicketPriceIdByVehicleType(Guid vehicleTypeId, bool? isMonth)
         {
             return repository.GetTicketPriceIdByVehicleType(vehicleTypeId, isMonth);
@@ -53,6 +58,11 @@ namespace ParkingManagement.BLL
         public void UpdateExitTime(Guid vehicleId)
         {
             repository.UpdateExitTime(vehicleId);
+        }
+
+        public string GetVehicleStatusByLicensePlate(string licensePlate)
+        {
+            return repository.GetVehicleStatusByLicensePlate(licensePlate);
         }
 
     }

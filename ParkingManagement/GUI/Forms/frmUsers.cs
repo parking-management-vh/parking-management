@@ -25,6 +25,7 @@ namespace ParkingManagement.GUI.Forms
         public frmUsers()
         {
             InitializeComponent();
+            LoadAccountLogin();
         }
 
         private void kLbCode_Click(object sender, EventArgs e)
@@ -69,6 +70,12 @@ namespace ParkingManagement.GUI.Forms
                 currentPage--;
                 LoadAllUsersData();
             }
+        }
+        private void LoadAccountLogin()
+        {
+            kTbManagerCode.Text = SessionManager.CurrentUser.Code ?? "ADMIN";
+            kTbManagerFullName.Text = SessionManager.CurrentUser.FullName ?? "Groud 10";
+            kTbPosition.Text = SessionManager.CurrentUser.Role ?? "Quản lý hệ thống";
         }
 
         private void kBtnLastPage_Click(object sender, EventArgs e)

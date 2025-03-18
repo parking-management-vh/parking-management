@@ -28,32 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
             this.SuspendLayout();
-            // 
-            // kryptonLabel1
-            // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(508, 158);
-            this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(28, 20);
-            this.kryptonLabel1.TabIndex = 0;
-            this.kryptonLabel1.Values.Text = "acc";
             // 
             // frmAccount
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.kryptonLabel1);
+            this.ClientSize = new System.Drawing.Size(456, 554);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmAccount";
             this.Text = "frmAccount";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private Krypton.Toolkit.KryptonLabel kryptonLabel1;
     }
 }

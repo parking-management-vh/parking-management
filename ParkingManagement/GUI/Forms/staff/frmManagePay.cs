@@ -113,6 +113,40 @@ namespace ParkingManagement.GUI.Forms.staff
             }
         }
 
+        private void kBtnSearch_Click(object sender, EventArgs e)
+        {
+            string staffCode = SessionManager.CurrentUser.Code;
+            string filterType = kCbbSFilter.SelectedItem.ToString();
+            string filterValue = kTbSearch.Text.Trim();
+            string paymentMethodFilter = kCbbPayMethod.SelectedItem.ToString();
+            DateTime? paymentDate = kDtpSDate.Value.Date;
+
+            if (filterType == "Tất cả")
+            {
+                filterValue = null;
+            }
+
+            List<paymentModel> filteredPayments = paymentBLL.GetAllPaymentsByStaffCode(staffCode, filterType, filterValue, paymentMethodFilter, paymentDate);
+
+            kDgvListVehiclePay.DataSource = filteredPayments;
+        }
+
+        private void kBtnSearch_Click_1(object sender, EventArgs e)
+        {
+            string staffCode = SessionManager.CurrentUser.Code;
+            string filterType = kCbbSFilter.SelectedItem.ToString();
+            string filterValue = kTbSearch.Text.Trim();
+            string paymentMethodFilter = kCbbPayMethod.SelectedItem.ToString();
+            DateTime? paymentDate = kDtpSDate.Value.Date;
+
+            if (filterType == "Tất cả")
+            {
+                filterValue = null;
+            }
+
+            List<paymentModel> filteredPayments = paymentBLL.GetAllPaymentsByStaffCode(staffCode, filterType, filterValue, paymentMethodFilter, paymentDate);
+
+            kDgvListVehiclePay.DataSource = filteredPayments;
         private void kryptonGroupBox2_Panel_Paint(object sender, PaintEventArgs e)
         {
 

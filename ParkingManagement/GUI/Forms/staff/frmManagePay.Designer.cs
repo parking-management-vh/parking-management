@@ -131,6 +131,7 @@
             this.kBtnSearch.TabIndex = 84;
             this.kBtnSearch.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.kBtnSearch.Values.Text = "Tìm";
+            this.kBtnSearch.Click += new System.EventHandler(this.kBtnSearch_Click_1);
             // 
             // kTbSearch
             // 
@@ -138,7 +139,7 @@
             this.kTbSearch.Location = new System.Drawing.Point(23, 154);
             this.kTbSearch.Margin = new System.Windows.Forms.Padding(2);
             this.kTbSearch.Name = "kTbSearch";
-            this.kTbSearch.Size = new System.Drawing.Size(178, 26);
+            this.kTbSearch.Size = new System.Drawing.Size(236, 26);
             this.kTbSearch.TabIndex = 77;
             // 
             // kDtpSDate
@@ -204,7 +205,7 @@
             this.kCbPaymentMethod.DropDownWidth = 217;
             this.kCbPaymentMethod.Location = new System.Drawing.Point(250, 162);
             this.kCbPaymentMethod.Name = "kCbPaymentMethod";
-            this.kCbPaymentMethod.Size = new System.Drawing.Size(217, 22);
+            this.kCbPaymentMethod.Size = new System.Drawing.Size(289, 22);
             this.kCbPaymentMethod.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.kCbPaymentMethod.TabIndex = 91;
             // 
@@ -224,7 +225,7 @@
             this.kTbBks.Location = new System.Drawing.Point(248, 93);
             this.kTbBks.Margin = new System.Windows.Forms.Padding(2);
             this.kTbBks.Name = "kTbBks";
-            this.kTbBks.Size = new System.Drawing.Size(217, 26);
+            this.kTbBks.Size = new System.Drawing.Size(288, 26);
             this.kTbBks.TabIndex = 89;
             // 
             // kTbCodeInvoice
@@ -233,7 +234,7 @@
             this.kTbCodeInvoice.Location = new System.Drawing.Point(248, 59);
             this.kTbCodeInvoice.Margin = new System.Windows.Forms.Padding(2);
             this.kTbCodeInvoice.Name = "kTbCodeInvoice";
-            this.kTbCodeInvoice.Size = new System.Drawing.Size(217, 26);
+            this.kTbCodeInvoice.Size = new System.Drawing.Size(288, 26);
             this.kTbCodeInvoice.TabIndex = 88;
             // 
             // kTbTotalTime
@@ -242,7 +243,7 @@
             this.kTbTotalTime.Location = new System.Drawing.Point(249, 193);
             this.kTbTotalTime.Margin = new System.Windows.Forms.Padding(2);
             this.kTbTotalTime.Name = "kTbTotalTime";
-            this.kTbTotalTime.Size = new System.Drawing.Size(217, 26);
+            this.kTbTotalTime.Size = new System.Drawing.Size(288, 26);
             this.kTbTotalTime.TabIndex = 87;
             // 
             // kryptonLabel14
@@ -271,7 +272,7 @@
             this.kTbTotalPrice.Location = new System.Drawing.Point(249, 227);
             this.kTbTotalPrice.Margin = new System.Windows.Forms.Padding(2);
             this.kTbTotalPrice.Name = "kTbTotalPrice";
-            this.kTbTotalPrice.Size = new System.Drawing.Size(217, 26);
+            this.kTbTotalPrice.Size = new System.Drawing.Size(288, 26);
             this.kTbTotalPrice.TabIndex = 84;
             // 
             // kryptonLabel12
@@ -319,7 +320,7 @@
             this.kDtpPaymentDate.Location = new System.Drawing.Point(248, 129);
             this.kDtpPaymentDate.Margin = new System.Windows.Forms.Padding(2);
             this.kDtpPaymentDate.Name = "kDtpPaymentDate";
-            this.kDtpPaymentDate.Size = new System.Drawing.Size(217, 24);
+            this.kDtpPaymentDate.Size = new System.Drawing.Size(289, 24);
             this.kDtpPaymentDate.StateCommon.Content.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kDtpPaymentDate.TabIndex = 79;
             // 
@@ -390,7 +391,7 @@
             this.kTbStaffPay.Margin = new System.Windows.Forms.Padding(2);
             this.kTbStaffPay.Multiline = true;
             this.kTbStaffPay.Name = "kTbStaffPay";
-            this.kTbStaffPay.Size = new System.Drawing.Size(217, 20);
+            this.kTbStaffPay.Size = new System.Drawing.Size(288, 24);
             this.kTbStaffPay.TabIndex = 72;
             // 
             // kLbStaffPay
@@ -405,7 +406,7 @@
             // 
             // frmManagePay
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1015, 498);
             this.Controls.Add(this.kCbPaymentMethod);
@@ -431,6 +432,7 @@
             this.Controls.Add(this.kLbStaffPay);
             this.Controls.Add(this.kryptonGroupBox1);
             this.Controls.Add(this.kryptonGroupBox2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmManagePay";
             this.Text = "frmManagePay";
             ((System.ComponentModel.ISupportInitialize)(this.kDgvListVehiclePay)).EndInit();

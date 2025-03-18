@@ -330,7 +330,6 @@
             this.kTbInfoPrice.ReadOnly = true;
             this.kTbInfoPrice.Size = new System.Drawing.Size(152, 20);
             this.kTbInfoPrice.TabIndex = 5;
-            this.kTbInfoPrice.Text = "20000";
             this.kTbInfoPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // kryptonLabel3
@@ -351,7 +350,6 @@
             this.kTbInfoUser.ReadOnly = true;
             this.kTbInfoUser.Size = new System.Drawing.Size(152, 20);
             this.kTbInfoUser.TabIndex = 3;
-            this.kTbInfoUser.Text = "Cus-01";
             this.kTbInfoUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // kryptonLabel2
@@ -372,7 +370,6 @@
             this.kTbInfoBs.ReadOnly = true;
             this.kTbInfoBs.Size = new System.Drawing.Size(152, 20);
             this.kTbInfoBs.TabIndex = 1;
-            this.kTbInfoBs.Text = "34E1-22434";
             this.kTbInfoBs.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // kryptonLabel1

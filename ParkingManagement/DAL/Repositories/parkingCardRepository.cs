@@ -81,9 +81,11 @@ namespace ParkingManagement.DAL.Repositories
         public void CreateParkingCard(string vehicleLicensePlate, string userCode, bool isMonth)
         {
             Guid? vehicleId = vehicleBLL.GetVehicleIdByLicensePlate(vehicleLicensePlate);
+            //string status = vehicleBLL.GetVehicleStatusByLicensePlate(vehicleLicensePlate);
+
             if (vehicleId == null)
             {
-                MessageBox.Show("Không tìm thấy phương tiện với biển số xe này.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Không tìm thấy phương tiện đang trong bãi với biển số này.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -106,7 +108,7 @@ namespace ParkingManagement.DAL.Repositories
             ParkingCard newCard = new ParkingCard(
                 Guid.NewGuid(),
                 DateTime.Now,
-                null, 
+                null,
                 "Hoạt động",
                 isMonth,
                 vehicleId.Value,
@@ -115,8 +117,8 @@ namespace ParkingManagement.DAL.Repositories
             );
 
             string query = @"
-                INSERT INTO parking_card (id, start_date, end_date, status, is_month, created_at, updated_at, vehicle_id, user_id, ticket_price_id)
-                VALUES (@id, @start_date, @end_date, @status, @is_month, NOW(), NOW(), @vehicle_id, @user_id, @ticket_price_id)";
+            INSERT INTO parking_card (id, start_date, end_date, status, is_month, created_at, updated_at, vehicle_id, user_id, ticket_price_id)
+            VALUES (@id, @start_date, @end_date, @status, @is_month, NOW(), NOW(), @vehicle_id, @user_id, @ticket_price_id)";
 
             object[] parameters =
             {

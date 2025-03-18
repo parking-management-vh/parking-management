@@ -378,6 +378,9 @@ namespace ParkingManagement.GUI.Forms
                 MessageBox.Show("ID khu vực không hợp lệ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
+            MessageBox.Show($"SelectedValue của kCbbSlot: {kCbbSlot.SelectedValue}", "Debug", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             if (!Guid.TryParse(kCbbSlot.SelectedValue?.ToString(), out Guid parkingSlotId))
             {
                 MessageBox.Show("ID chỗ đỗ không hợp lệ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
