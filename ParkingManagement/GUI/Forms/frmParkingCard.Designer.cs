@@ -94,7 +94,7 @@
             this.kTbBs.Location = new System.Drawing.Point(497, 102);
             this.kTbBs.Margin = new System.Windows.Forms.Padding(4);
             this.kTbBs.Name = "kTbBs";
-            this.kTbBs.Size = new System.Drawing.Size(116, 23);p
+            this.kTbBs.Size = new System.Drawing.Size(116, 23);
             this.kTbBs.TabIndex = 17;
             this.kTbBs.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
