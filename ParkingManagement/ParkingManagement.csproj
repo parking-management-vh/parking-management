@@ -553,6 +553,7 @@
     <None Include="Resources\img\car.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Untitled-2.png" />
     <None Include="Resources\img\979713.png" />
     <None Include="Resources\img\9835784.png" />
     <Content Include="Resources\img\btn_text.png" />
