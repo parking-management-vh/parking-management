@@ -81,9 +81,9 @@ namespace ParkingManagement.DAL.Repositories
         public void CreateParkingCard(string vehicleLicensePlate, string userCode, bool isMonth)
         {
             Guid? vehicleId = vehicleBLL.GetVehicleIdByLicensePlate(vehicleLicensePlate);
-            string status = vehicleBLL.GetVehicleStatusByLicensePlate(vehicleLicensePlate);
+            //string status = vehicleBLL.GetVehicleStatusByLicensePlate(vehicleLicensePlate);
 
-            if (vehicleId == null || status != "parked")
+            if (vehicleId == null)
             {
                 MessageBox.Show("Không tìm thấy phương tiện đang trong bãi với biển số này.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;

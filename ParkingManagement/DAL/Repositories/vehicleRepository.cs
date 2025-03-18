@@ -263,7 +263,7 @@ namespace ParkingManagement.DAL.Repositories
 
         public Guid? GetVehicleIdByLicensePlate(string licensePlate)
         {
-            string query = "SELECT id FROM vehicle WHERE license_plate = @licensePlate";
+            string query = "SELECT id FROM vehicle WHERE license_plate = @licensePlate AND status = 'parked' LIMIT 1";
             object[] parameters = { licensePlate };
 
             DataTable data = dbProvider.ExecuteQuery(query, parameters);

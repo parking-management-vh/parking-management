@@ -110,7 +110,7 @@ namespace ParkingManagement.DAL.Repositories
 
         public Guid? GetParkingSlotIdByLicensePlate(string licensePlate)
         {
-            string query = "SELECT parking_slot_id FROM vehicle WHERE license_plate = @licensePlate";
+            string query = "SELECT parking_slot_id FROM vehicle WHERE license_plate = @licensePlate AND status = 'parked' LIMIT 1";
             object[] parameters = { licensePlate };
 
             System.Data.DataTable data = dbProvider.ExecuteQuery(query, parameters);

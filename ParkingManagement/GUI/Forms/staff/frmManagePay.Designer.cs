@@ -78,28 +78,37 @@
             // 
             this.kDgvListVehiclePay.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.kDgvListVehiclePay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.kDgvListVehiclePay.Location = new System.Drawing.Point(3, 3);
+            this.kDgvListVehiclePay.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.kDgvListVehiclePay.Location = new System.Drawing.Point(0, 9);
+            this.kDgvListVehiclePay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kDgvListVehiclePay.Name = "kDgvListVehiclePay";
-            this.kDgvListVehiclePay.Size = new System.Drawing.Size(766, 212);
+            this.kDgvListVehiclePay.Size = new System.Drawing.Size(1349, 265);
             this.kDgvListVehiclePay.StateCommon.Background.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.kDgvListVehiclePay.StateCommon.BackStyle = Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
+            this.kDgvListVehiclePay.StateCommon.DataCell.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kDgvListVehiclePay.StateCommon.DataCell.Content.Padding = new System.Windows.Forms.Padding(40, 2, 40, 1);
+            this.kDgvListVehiclePay.StateCommon.HeaderColumn.Content.Padding = new System.Windows.Forms.Padding(2);
             this.kDgvListVehiclePay.TabIndex = 0;
             this.kDgvListVehiclePay.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.kDgvListVehiclePay_CellClick);
             // 
             // kryptonGroupBox1
             // 
-            this.kryptonGroupBox1.Location = new System.Drawing.Point(12, 213);
+            this.kryptonGroupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.kryptonGroupBox1.Location = new System.Drawing.Point(0, 316);
+            this.kryptonGroupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             // 
             // kryptonGroupBox1.Panel
             // 
             this.kryptonGroupBox1.Panel.Controls.Add(this.kDgvListVehiclePay);
-            this.kryptonGroupBox1.Size = new System.Drawing.Size(776, 225);
+            this.kryptonGroupBox1.Size = new System.Drawing.Size(1353, 297);
+            this.kryptonGroupBox1.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonGroupBox1.TabIndex = 2;
             this.kryptonGroupBox1.Values.Heading = "Quản lý thanh toán";
             // 
             // kryptonGroupBox2
             // 
-            this.kryptonGroupBox2.Location = new System.Drawing.Point(479, -2);
+            this.kryptonGroupBox2.Location = new System.Drawing.Point(709, 17);
+            this.kryptonGroupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             // 
             // kryptonGroupBox2.Panel
             // 
@@ -111,298 +120,301 @@
             this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonLabel10);
             this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonLabel6);
             this.kryptonGroupBox2.Panel.Controls.Add(this.kCbbSFilter);
-            this.kryptonGroupBox2.Size = new System.Drawing.Size(290, 183);
+            this.kryptonGroupBox2.Size = new System.Drawing.Size(401, 299);
             this.kryptonGroupBox2.TabIndex = 3;
             this.kryptonGroupBox2.Values.Heading = "Lọc";
             // 
             // kBtnSearch
             // 
-            this.kBtnSearch.Location = new System.Drawing.Point(206, 124);
+            this.kBtnSearch.Location = new System.Drawing.Point(288, 187);
+            this.kBtnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kBtnSearch.Name = "kBtnSearch";
-            this.kBtnSearch.Size = new System.Drawing.Size(58, 25);
+            this.kBtnSearch.Size = new System.Drawing.Size(77, 31);
+            this.kBtnSearch.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kBtnSearch.TabIndex = 84;
             this.kBtnSearch.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.kBtnSearch.Values.Text = "Tìm";
-            this.kBtnSearch.Click += new System.EventHandler(this.kBtnSearch_Click);
+            this.kBtnSearch.Click += new System.EventHandler(this.kBtnSearch_Click_1);
             // 
             // kTbSearch
             // 
             this.kTbSearch.Font = new System.Drawing.Font("Arial", 12F);
-            this.kTbSearch.Location = new System.Drawing.Point(23, 123);
-            this.kTbSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kTbSearch.Location = new System.Drawing.Point(31, 190);
+            this.kTbSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kTbSearch.Name = "kTbSearch";
-            this.kTbSearch.Size = new System.Drawing.Size(178, 26);
+            this.kTbSearch.Size = new System.Drawing.Size(236, 26);
             this.kTbSearch.TabIndex = 77;
             // 
             // kDtpSDate
             // 
-            this.kDtpSDate.CalendarTodayDate = new System.DateTime(2025, 3, 17, 0, 0, 0, 0);
             this.kDtpSDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.kDtpSDate.Location = new System.Drawing.Point(105, 75);
-            this.kDtpSDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kDtpSDate.Location = new System.Drawing.Point(163, 128);
+            this.kDtpSDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kDtpSDate.Name = "kDtpSDate";
-            this.kDtpSDate.Size = new System.Drawing.Size(159, 24);
+            this.kDtpSDate.Size = new System.Drawing.Size(187, 24);
             this.kDtpSDate.StateCommon.Content.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kDtpSDate.TabIndex = 78;
             // 
             // kryptonLabel16
             // 
-            this.kryptonLabel16.Location = new System.Drawing.Point(23, 78);
-            this.kryptonLabel16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kryptonLabel16.Location = new System.Drawing.Point(39, 133);
+            this.kryptonLabel16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel16.Name = "kryptonLabel16";
-            this.kryptonLabel16.Size = new System.Drawing.Size(42, 19);
-            this.kryptonLabel16.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel16.Size = new System.Drawing.Size(52, 19);
+            this.kryptonLabel16.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel16.TabIndex = 83;
-            this.kryptonLabel16.Values.Text = "Ngày";
+            this.kryptonLabel16.Values.Text = "Ngày :";
             // 
             // kCbbPayMethod
             // 
             this.kCbbPayMethod.DropDownWidth = 217;
-            this.kCbbPayMethod.Location = new System.Drawing.Point(105, 43);
+            this.kCbbPayMethod.Location = new System.Drawing.Point(163, 80);
+            this.kCbbPayMethod.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kCbbPayMethod.Name = "kCbbPayMethod";
-            this.kCbbPayMethod.Size = new System.Drawing.Size(159, 22);
+            this.kCbbPayMethod.Size = new System.Drawing.Size(187, 22);
             this.kCbbPayMethod.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.kCbbPayMethod.TabIndex = 82;
             // 
             // kryptonLabel10
             // 
-            this.kryptonLabel10.Location = new System.Drawing.Point(23, 45);
-            this.kryptonLabel10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kryptonLabel10.Location = new System.Drawing.Point(39, 85);
+            this.kryptonLabel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel10.Name = "kryptonLabel10";
-            this.kryptonLabel10.Size = new System.Drawing.Size(79, 19);
-            this.kryptonLabel10.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel10.Size = new System.Drawing.Size(91, 19);
+            this.kryptonLabel10.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel10.TabIndex = 81;
-            this.kryptonLabel10.Values.Text = "Thanh toán";
+            this.kryptonLabel10.Values.Text = "Thanh toán :";
             // 
             // kryptonLabel6
             // 
-            this.kryptonLabel6.Location = new System.Drawing.Point(23, 13);
-            this.kryptonLabel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kryptonLabel6.Location = new System.Drawing.Point(39, 39);
+            this.kryptonLabel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel6.Name = "kryptonLabel6";
-            this.kryptonLabel6.Size = new System.Drawing.Size(58, 19);
-            this.kryptonLabel6.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel6.Size = new System.Drawing.Size(70, 19);
+            this.kryptonLabel6.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel6.TabIndex = 79;
-            this.kryptonLabel6.Values.Text = "Tiêu chí";
+            this.kryptonLabel6.Values.Text = "Tiêu chí :";
             // 
             // kCbbSFilter
             // 
             this.kCbbSFilter.DropDownWidth = 217;
-            this.kCbbSFilter.Location = new System.Drawing.Point(105, 10);
+            this.kCbbSFilter.Location = new System.Drawing.Point(163, 34);
+            this.kCbbSFilter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kCbbSFilter.Name = "kCbbSFilter";
-            this.kCbbSFilter.Size = new System.Drawing.Size(159, 22);
+            this.kCbbSFilter.Size = new System.Drawing.Size(187, 22);
             this.kCbbSFilter.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.kCbbSFilter.TabIndex = 80;
             // 
             // kCbPaymentMethod
             // 
             this.kCbPaymentMethod.DropDownWidth = 217;
-            this.kCbPaymentMethod.Location = new System.Drawing.Point(247, 127);
+            this.kCbPaymentMethod.Location = new System.Drawing.Point(333, 199);
+            this.kCbPaymentMethod.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kCbPaymentMethod.Name = "kCbPaymentMethod";
-            this.kCbPaymentMethod.Size = new System.Drawing.Size(217, 22);
+            this.kCbPaymentMethod.Size = new System.Drawing.Size(289, 22);
             this.kCbPaymentMethod.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.kCbPaymentMethod.TabIndex = 91;
             // 
             // kryptonLabel5
             // 
-            this.kryptonLabel5.Location = new System.Drawing.Point(199, 13);
-            this.kryptonLabel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kryptonLabel5.Location = new System.Drawing.Point(267, 39);
+            this.kryptonLabel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel5.Name = "kryptonLabel5";
-            this.kryptonLabel5.Size = new System.Drawing.Size(15, 20);
-            this.kryptonLabel5.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel5.Size = new System.Drawing.Size(17, 21);
+            this.kryptonLabel5.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel5.TabIndex = 90;
             this.kryptonLabel5.Values.Text = ":";
             // 
             // kTbBks
             // 
             this.kTbBks.Font = new System.Drawing.Font("Arial", 12F);
-            this.kTbBks.Location = new System.Drawing.Point(247, 65);
-            this.kTbBks.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kTbBks.Location = new System.Drawing.Point(331, 114);
+            this.kTbBks.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kTbBks.Name = "kTbBks";
-            this.kTbBks.Size = new System.Drawing.Size(217, 26);
+            this.kTbBks.Size = new System.Drawing.Size(288, 26);
             this.kTbBks.TabIndex = 89;
             // 
             // kTbCodeInvoice
             // 
             this.kTbCodeInvoice.Font = new System.Drawing.Font("Arial", 12F);
-            this.kTbCodeInvoice.Location = new System.Drawing.Point(247, 37);
-            this.kTbCodeInvoice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kTbCodeInvoice.Location = new System.Drawing.Point(331, 73);
+            this.kTbCodeInvoice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kTbCodeInvoice.Name = "kTbCodeInvoice";
-            this.kTbCodeInvoice.Size = new System.Drawing.Size(217, 26);
+            this.kTbCodeInvoice.Size = new System.Drawing.Size(288, 26);
             this.kTbCodeInvoice.TabIndex = 88;
             // 
             // kTbTotalTime
             // 
             this.kTbTotalTime.Font = new System.Drawing.Font("Arial", 12F);
-            this.kTbTotalTime.Location = new System.Drawing.Point(248, 154);
-            this.kTbTotalTime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kTbTotalTime.Location = new System.Drawing.Point(332, 238);
+            this.kTbTotalTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kTbTotalTime.Name = "kTbTotalTime";
-            this.kTbTotalTime.Size = new System.Drawing.Size(217, 26);
+            this.kTbTotalTime.Size = new System.Drawing.Size(288, 26);
             this.kTbTotalTime.TabIndex = 87;
             // 
             // kryptonLabel14
             // 
-            this.kryptonLabel14.Location = new System.Drawing.Point(199, 154);
-            this.kryptonLabel14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kryptonLabel14.Location = new System.Drawing.Point(267, 244);
+            this.kryptonLabel14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel14.Name = "kryptonLabel14";
-            this.kryptonLabel14.Size = new System.Drawing.Size(15, 20);
-            this.kryptonLabel14.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel14.Size = new System.Drawing.Size(17, 21);
+            this.kryptonLabel14.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel14.TabIndex = 86;
             this.kryptonLabel14.Values.Text = ":";
             // 
             // kryptonLabel15
             // 
-            this.kryptonLabel15.Location = new System.Drawing.Point(36, 154);
-            this.kryptonLabel15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kryptonLabel15.Location = new System.Drawing.Point(53, 244);
+            this.kryptonLabel15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel15.Name = "kryptonLabel15";
-            this.kryptonLabel15.Size = new System.Drawing.Size(97, 19);
-            this.kryptonLabel15.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel15.Size = new System.Drawing.Size(119, 21);
+            this.kryptonLabel15.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel15.TabIndex = 85;
             this.kryptonLabel15.Values.Text = "Tổng thời gian";
             // 
             // kTbTotalPrice
             // 
             this.kTbTotalPrice.Font = new System.Drawing.Font("Arial", 12F);
-            this.kTbTotalPrice.Location = new System.Drawing.Point(248, 184);
-            this.kTbTotalPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kTbTotalPrice.Location = new System.Drawing.Point(332, 279);
+            this.kTbTotalPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kTbTotalPrice.Name = "kTbTotalPrice";
-            this.kTbTotalPrice.Size = new System.Drawing.Size(217, 26);
+            this.kTbTotalPrice.Size = new System.Drawing.Size(288, 26);
             this.kTbTotalPrice.TabIndex = 84;
             // 
             // kryptonLabel12
             // 
-            this.kryptonLabel12.Location = new System.Drawing.Point(199, 186);
-            this.kryptonLabel12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kryptonLabel12.Location = new System.Drawing.Point(265, 286);
+            this.kryptonLabel12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel12.Name = "kryptonLabel12";
-            this.kryptonLabel12.Size = new System.Drawing.Size(15, 20);
-            this.kryptonLabel12.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel12.Size = new System.Drawing.Size(17, 21);
+            this.kryptonLabel12.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel12.TabIndex = 83;
             this.kryptonLabel12.Values.Text = ":";
             // 
             // kryptonLabel13
             // 
-            this.kryptonLabel13.Location = new System.Drawing.Point(36, 186);
-            this.kryptonLabel13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kryptonLabel13.Location = new System.Drawing.Point(53, 286);
+            this.kryptonLabel13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel13.Name = "kryptonLabel13";
-            this.kryptonLabel13.Size = new System.Drawing.Size(67, 19);
-            this.kryptonLabel13.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel13.Size = new System.Drawing.Size(81, 21);
+            this.kryptonLabel13.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel13.TabIndex = 82;
             this.kryptonLabel13.Values.Text = "Tổng tiền";
             // 
             // kryptonLabel11
             // 
-            this.kryptonLabel11.Location = new System.Drawing.Point(198, 127);
-            this.kryptonLabel11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kryptonLabel11.Location = new System.Drawing.Point(267, 201);
+            this.kryptonLabel11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel11.Name = "kryptonLabel11";
-            this.kryptonLabel11.Size = new System.Drawing.Size(15, 20);
-            this.kryptonLabel11.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel11.Size = new System.Drawing.Size(17, 21);
+            this.kryptonLabel11.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel11.TabIndex = 81;
             this.kryptonLabel11.Values.Text = ":";
             // 
             // kryptonLabel9
             // 
-            this.kryptonLabel9.Location = new System.Drawing.Point(37, 125);
-            this.kryptonLabel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kryptonLabel9.Location = new System.Drawing.Point(53, 201);
+            this.kryptonLabel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel9.Name = "kryptonLabel9";
-            this.kryptonLabel9.Size = new System.Drawing.Size(90, 19);
-            this.kryptonLabel9.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel9.Size = new System.Drawing.Size(111, 21);
+            this.kryptonLabel9.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel9.TabIndex = 80;
             this.kryptonLabel9.Values.Text = "Phương thức";
             // 
             // kDtpPaymentDate
             // 
-            this.kDtpPaymentDate.CalendarTodayDate = new System.DateTime(2025, 3, 17, 0, 0, 0, 0);
-            this.kDtpPaymentDate.Location = new System.Drawing.Point(247, 96);
-            this.kDtpPaymentDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kDtpPaymentDate.Location = new System.Drawing.Point(331, 159);
+            this.kDtpPaymentDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kDtpPaymentDate.Name = "kDtpPaymentDate";
-            this.kDtpPaymentDate.Size = new System.Drawing.Size(217, 24);
+            this.kDtpPaymentDate.Size = new System.Drawing.Size(289, 24);
             this.kDtpPaymentDate.StateCommon.Content.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kDtpPaymentDate.TabIndex = 79;
             // 
             // kryptonLabel7
             // 
-            this.kryptonLabel7.Location = new System.Drawing.Point(198, 97);
-            this.kryptonLabel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kryptonLabel7.Location = new System.Drawing.Point(267, 162);
+            this.kryptonLabel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel7.Name = "kryptonLabel7";
-            this.kryptonLabel7.Size = new System.Drawing.Size(15, 20);
-            this.kryptonLabel7.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel7.Size = new System.Drawing.Size(17, 21);
+            this.kryptonLabel7.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel7.TabIndex = 78;
             this.kryptonLabel7.Values.Text = ":";
             // 
             // kryptonLabel8
             // 
-            this.kryptonLabel8.Location = new System.Drawing.Point(36, 100);
-            this.kryptonLabel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kryptonLabel8.Location = new System.Drawing.Point(53, 162);
+            this.kryptonLabel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel8.Name = "kryptonLabel8";
-            this.kryptonLabel8.Size = new System.Drawing.Size(109, 19);
-            this.kryptonLabel8.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel8.Size = new System.Drawing.Size(133, 21);
+            this.kryptonLabel8.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel8.TabIndex = 77;
             this.kryptonLabel8.Values.Text = "Ngày thanh toán";
             // 
             // kryptonLabel3
             // 
-            this.kryptonLabel3.Location = new System.Drawing.Point(198, 70);
-            this.kryptonLabel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kryptonLabel3.Location = new System.Drawing.Point(267, 121);
+            this.kryptonLabel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel3.Name = "kryptonLabel3";
-            this.kryptonLabel3.Size = new System.Drawing.Size(15, 20);
-            this.kryptonLabel3.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel3.Size = new System.Drawing.Size(17, 21);
+            this.kryptonLabel3.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel3.TabIndex = 76;
             this.kryptonLabel3.Values.Text = ":";
             // 
             // kryptonLabel4
             // 
-            this.kryptonLabel4.Location = new System.Drawing.Point(37, 70);
-            this.kryptonLabel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kryptonLabel4.Location = new System.Drawing.Point(53, 121);
+            this.kryptonLabel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel4.Name = "kryptonLabel4";
-            this.kryptonLabel4.Size = new System.Drawing.Size(73, 19);
-            this.kryptonLabel4.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel4.Size = new System.Drawing.Size(89, 21);
+            this.kryptonLabel4.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel4.TabIndex = 75;
             this.kryptonLabel4.Values.Text = "Biển số xe";
             // 
             // kryptonLabel1
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(198, 41);
-            this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kryptonLabel1.Location = new System.Drawing.Point(267, 79);
+            this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(15, 20);
-            this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel1.Size = new System.Drawing.Size(17, 21);
+            this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel1.TabIndex = 74;
             this.kryptonLabel1.Values.Text = ":";
             // 
             // kryptonLabel2
             // 
-            this.kryptonLabel2.Location = new System.Drawing.Point(39, 41);
-            this.kryptonLabel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kryptonLabel2.Location = new System.Drawing.Point(53, 79);
+            this.kryptonLabel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(83, 19);
-            this.kryptonLabel2.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel2.Size = new System.Drawing.Size(99, 21);
+            this.kryptonLabel2.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel2.TabIndex = 73;
             this.kryptonLabel2.Values.Text = "Mã hoá đơn";
             // 
             // kTbStaffPay
             // 
             this.kTbStaffPay.Font = new System.Drawing.Font("Arial", 12F);
-            this.kTbStaffPay.Location = new System.Drawing.Point(247, 7);
-            this.kTbStaffPay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kTbStaffPay.Location = new System.Drawing.Point(331, 36);
+            this.kTbStaffPay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kTbStaffPay.Multiline = true;
             this.kTbStaffPay.Name = "kTbStaffPay";
-            this.kTbStaffPay.Size = new System.Drawing.Size(217, 20);
+            this.kTbStaffPay.Size = new System.Drawing.Size(288, 24);
             this.kTbStaffPay.TabIndex = 72;
             // 
             // kLbStaffPay
             // 
-            this.kLbStaffPay.Location = new System.Drawing.Point(36, 11);
-            this.kLbStaffPay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kLbStaffPay.Location = new System.Drawing.Point(53, 39);
+            this.kLbStaffPay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kLbStaffPay.Name = "kLbStaffPay";
-            this.kLbStaffPay.Size = new System.Drawing.Size(138, 19);
-            this.kLbStaffPay.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kLbStaffPay.Size = new System.Drawing.Size(169, 21);
+            this.kLbStaffPay.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kLbStaffPay.TabIndex = 71;
             this.kLbStaffPay.Values.Text = "Nhân viên thanh toán";
             // 
             // frmManagePay
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1353, 613);
             this.Controls.Add(this.kCbPaymentMethod);
             this.Controls.Add(this.kryptonLabel5);
             this.Controls.Add(this.kTbBks);
@@ -426,6 +438,7 @@
             this.Controls.Add(this.kLbStaffPay);
             this.Controls.Add(this.kryptonGroupBox1);
             this.Controls.Add(this.kryptonGroupBox2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmManagePay";
             this.Text = "frmManagePay";
             ((System.ComponentModel.ISupportInitialize)(this.kDgvListVehiclePay)).EndInit();

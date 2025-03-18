@@ -71,6 +71,26 @@ namespace ParkingManagement.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _979713 {
+            get {
+                object obj = ResourceManager.GetObject("979713", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _9835784 {
+            get {
+                object obj = ResourceManager.GetObject("9835784", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
         internal static byte[] alert {
@@ -536,6 +556,16 @@ namespace ParkingManagement.Properties {
         internal static System.Drawing.Bitmap stande {
             get {
                 object obj = ResourceManager.GetObject("stande", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stande_pro {
+            get {
+                object obj = ResourceManager.GetObject("stande pro", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
