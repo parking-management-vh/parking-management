@@ -82,7 +82,7 @@
             // kryptonPictureBox1
             // 
             this.kryptonPictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("kryptonPictureBox1.Image")));
+            this.kryptonPictureBox1.Image = global::ParkingManagement.Properties.Resources.Untitled_2;
             this.kryptonPictureBox1.Location = new System.Drawing.Point(0, 0);
             this.kryptonPictureBox1.Name = "kryptonPictureBox1";
             this.kryptonPictureBox1.Size = new System.Drawing.Size(973, 501);
