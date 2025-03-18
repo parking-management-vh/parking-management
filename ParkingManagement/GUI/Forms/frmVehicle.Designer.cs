@@ -233,6 +233,7 @@
             this.kCbbTypeVehicle.Size = new System.Drawing.Size(148, 22);
             this.kCbbTypeVehicle.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.kCbbTypeVehicle.TabIndex = 8;
+            this.kCbbTypeVehicle.SelectedIndexChanged += new System.EventHandler(this.kCbbTypeVehicle_SelectedIndexChanged);
             // 
             // kCbbSlot
             // 

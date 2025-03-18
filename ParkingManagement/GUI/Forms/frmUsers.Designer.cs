@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.kPnUserInfo = new Krypton.Toolkit.KryptonPanel();
             this.kCbbSex = new Krypton.Toolkit.KryptonComboBox();
             this.kCbbParkingArea = new Krypton.Toolkit.KryptonComboBox();
@@ -172,10 +172,9 @@
             this.kCbbSex.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.kCbbSex.Location = new System.Drawing.Point(345, 100);
-            this.kCbbSex.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kCbbSex.Location = new System.Drawing.Point(259, 81);
             this.kCbbSex.Name = "kCbbSex";
-            this.kCbbSex.Size = new System.Drawing.Size(68, 21);
+            this.kCbbSex.Size = new System.Drawing.Size(51, 21);
             this.kCbbSex.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kCbbSex.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.kCbbSex.TabIndex = 27;
@@ -183,10 +182,9 @@
             // kCbbParkingArea
             // 
             this.kCbbParkingArea.DropDownWidth = 330;
-            this.kCbbParkingArea.Location = new System.Drawing.Point(345, 140);
-            this.kCbbParkingArea.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kCbbParkingArea.Location = new System.Drawing.Point(259, 114);
             this.kCbbParkingArea.Name = "kCbbParkingArea";
-            this.kCbbParkingArea.Size = new System.Drawing.Size(271, 21);
+            this.kCbbParkingArea.Size = new System.Drawing.Size(203, 21);
             this.kCbbParkingArea.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kCbbParkingArea.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.kCbbParkingArea.TabIndex = 26;
@@ -194,10 +192,9 @@
             // kCbbTypeAcount
             // 
             this.kCbbTypeAcount.DropDownWidth = 330;
-            this.kCbbTypeAcount.Location = new System.Drawing.Point(180, 324);
-            this.kCbbTypeAcount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kCbbTypeAcount.Location = new System.Drawing.Point(135, 263);
             this.kCbbTypeAcount.Name = "kCbbTypeAcount";
-            this.kCbbTypeAcount.Size = new System.Drawing.Size(436, 20);
+            this.kCbbTypeAcount.Size = new System.Drawing.Size(327, 20);
             this.kCbbTypeAcount.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kCbbTypeAcount.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.kCbbTypeAcount.TabIndex = 25;
@@ -205,11 +202,10 @@
             // kBtnReset
             // 
             this.kBtnReset.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kBtnReset.Location = new System.Drawing.Point(200, 372);
-            this.kBtnReset.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kBtnReset.Location = new System.Drawing.Point(150, 302);
             this.kBtnReset.Name = "kBtnReset";
             this.kBtnReset.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.kBtnReset.Size = new System.Drawing.Size(108, 31);
+            this.kBtnReset.Size = new System.Drawing.Size(81, 25);
             this.kBtnReset.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kBtnReset.TabIndex = 24;
             this.kBtnReset.Values.DropDownArrowColor = System.Drawing.Color.Empty;
@@ -229,11 +225,10 @@
             // kBtnSave
             // 
             this.kBtnSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kBtnSave.Location = new System.Drawing.Point(496, 372);
-            this.kBtnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kBtnSave.Location = new System.Drawing.Point(372, 302);
             this.kBtnSave.Name = "kBtnSave";
             this.kBtnSave.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.kBtnSave.Size = new System.Drawing.Size(120, 31);
+            this.kBtnSave.Size = new System.Drawing.Size(90, 25);
             this.kBtnSave.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kBtnSave.TabIndex = 21;
             this.kBtnSave.Values.DropDownArrowColor = System.Drawing.Color.Empty;
@@ -243,11 +238,10 @@
             // kBtnDelete
             // 
             this.kBtnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kBtnDelete.Location = new System.Drawing.Point(341, 372);
-            this.kBtnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kBtnDelete.Location = new System.Drawing.Point(256, 302);
             this.kBtnDelete.Name = "kBtnDelete";
             this.kBtnDelete.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.kBtnDelete.Size = new System.Drawing.Size(120, 31);
+            this.kBtnDelete.Size = new System.Drawing.Size(90, 25);
             this.kBtnDelete.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kBtnDelete.TabIndex = 20;
             this.kBtnDelete.Values.DropDownArrowColor = System.Drawing.Color.Empty;
@@ -257,11 +251,10 @@
             // kBtnCreateUser
             // 
             this.kBtnCreateUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kBtnCreateUser.Location = new System.Drawing.Point(52, 372);
-            this.kBtnCreateUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kBtnCreateUser.Location = new System.Drawing.Point(39, 302);
             this.kBtnCreateUser.Name = "kBtnCreateUser";
             this.kBtnCreateUser.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.kBtnCreateUser.Size = new System.Drawing.Size(116, 31);
+            this.kBtnCreateUser.Size = new System.Drawing.Size(87, 25);
             this.kBtnCreateUser.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kBtnCreateUser.TabIndex = 19;
             this.kBtnCreateUser.Values.DropDownArrowColor = System.Drawing.Color.Empty;
@@ -270,8 +263,7 @@
             // 
             // kLbArea
             // 
-            this.kLbArea.Location = new System.Drawing.Point(211, 144);
-            this.kLbArea.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kLbArea.Location = new System.Drawing.Point(158, 117);
             this.kLbArea.Name = "kLbArea";
             this.kLbArea.Size = new System.Drawing.Size(58, 20);
             this.kLbArea.TabIndex = 17;
@@ -280,8 +272,7 @@
             // 
             // kLbTypeAccount
             // 
-            this.kLbTypeAccount.Location = new System.Drawing.Point(48, 324);
-            this.kLbTypeAccount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kLbTypeAccount.Location = new System.Drawing.Point(36, 263);
             this.kLbTypeAccount.Name = "kLbTypeAccount";
             this.kLbTypeAccount.Size = new System.Drawing.Size(93, 20);
             this.kLbTypeAccount.TabIndex = 15;
@@ -289,10 +280,9 @@
             // 
             // kTbAddress
             // 
-            this.kTbAddress.Location = new System.Drawing.Point(180, 281);
-            this.kTbAddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kTbAddress.Location = new System.Drawing.Point(135, 228);
             this.kTbAddress.Name = "kTbAddress";
-            this.kTbAddress.Size = new System.Drawing.Size(436, 23);
+            this.kTbAddress.Size = new System.Drawing.Size(327, 23);
             this.kTbAddress.TabIndex = 14;
             this.kTbAddress.TextChanged += new System.EventHandler(this.kTbAddress_TextChanged);
             // 
@@ -308,10 +298,9 @@
             // 
             // kTbPhone
             // 
-            this.kTbPhone.Location = new System.Drawing.Point(180, 238);
-            this.kTbPhone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kTbPhone.Location = new System.Drawing.Point(135, 193);
             this.kTbPhone.Name = "kTbPhone";
-            this.kTbPhone.Size = new System.Drawing.Size(436, 23);
+            this.kTbPhone.Size = new System.Drawing.Size(327, 23);
             this.kTbPhone.TabIndex = 12;
             // 
             // kLbPhone
@@ -325,10 +314,9 @@
             // 
             // kTbEmail
             // 
-            this.kTbEmail.Location = new System.Drawing.Point(180, 196);
-            this.kTbEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kTbEmail.Location = new System.Drawing.Point(135, 159);
             this.kTbEmail.Name = "kTbEmail";
-            this.kTbEmail.Size = new System.Drawing.Size(436, 23);
+            this.kTbEmail.Size = new System.Drawing.Size(327, 23);
             this.kTbEmail.TabIndex = 10;
             // 
             // kLbEmail
@@ -342,8 +330,7 @@
             // 
             // kLbBirthday
             // 
-            this.kLbBirthday.Location = new System.Drawing.Point(420, 100);
-            this.kLbBirthday.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kLbBirthday.Location = new System.Drawing.Point(315, 81);
             this.kLbBirthday.Name = "kLbBirthday";
             this.kLbBirthday.Size = new System.Drawing.Size(71, 20);
             this.kLbBirthday.TabIndex = 7;
@@ -351,8 +338,7 @@
             // 
             // kLbSex
             // 
-            this.kLbSex.Location = new System.Drawing.Point(211, 102);
-            this.kLbSex.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kLbSex.Location = new System.Drawing.Point(158, 83);
             this.kLbSex.Name = "kLbSex";
             this.kLbSex.Size = new System.Drawing.Size(63, 20);
             this.kLbSex.TabIndex = 5;
@@ -360,17 +346,15 @@
             // 
             // kTbCode
             // 
-            this.kTbCode.Location = new System.Drawing.Point(345, 14);
-            this.kTbCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kTbCode.Location = new System.Drawing.Point(259, 11);
             this.kTbCode.Name = "kTbCode";
-            this.kTbCode.Size = new System.Drawing.Size(271, 23);
+            this.kTbCode.Size = new System.Drawing.Size(203, 23);
             this.kTbCode.TabIndex = 4;
             this.kTbCode.TextChanged += new System.EventHandler(this.kTbCode_TextChanged);
             // 
             // kLbCode
             // 
-            this.kLbCode.Location = new System.Drawing.Point(211, 17);
-            this.kLbCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kLbCode.Location = new System.Drawing.Point(158, 14);
             this.kLbCode.Name = "kLbCode";
             this.kLbCode.Size = new System.Drawing.Size(101, 20);
             this.kLbCode.TabIndex = 3;
@@ -379,16 +363,14 @@
             // 
             // kTbFullName
             // 
-            this.kTbFullName.Location = new System.Drawing.Point(345, 54);
-            this.kTbFullName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kTbFullName.Location = new System.Drawing.Point(259, 44);
             this.kTbFullName.Name = "kTbFullName";
-            this.kTbFullName.Size = new System.Drawing.Size(271, 23);
+            this.kTbFullName.Size = new System.Drawing.Size(203, 23);
             this.kTbFullName.TabIndex = 2;
             // 
             // kLbFullName
             // 
-            this.kLbFullName.Location = new System.Drawing.Point(211, 58);
-            this.kLbFullName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kLbFullName.Location = new System.Drawing.Point(158, 47);
             this.kLbFullName.Name = "kLbFullName";
             this.kLbFullName.Size = new System.Drawing.Size(69, 20);
             this.kLbFullName.TabIndex = 1;
@@ -437,7 +419,7 @@
             this.kPnUsers.Location = new System.Drawing.Point(709, 16);
             this.kPnUsers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kPnUsers.Name = "kPnUsers";
-            this.kPnUsers.Size = new System.Drawing.Size(635, 763);
+            this.kPnUsers.Size = new System.Drawing.Size(476, 620);
             this.kPnUsers.TabIndex = 1;
             // 
             // kryptonPanel4
@@ -449,8 +431,7 @@
             this.kryptonPanel4.Controls.Add(this.kBtnNexPage);
             this.kryptonPanel4.Controls.Add(this.kBtnPrevious);
             this.kryptonPanel4.Controls.Add(this.kBtnLastPage);
-            this.kryptonPanel4.Location = new System.Drawing.Point(8, 555);
-            this.kryptonPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonPanel4.Location = new System.Drawing.Point(6, 451);
             this.kryptonPanel4.Name = "kryptonPanel4";
             this.kryptonPanel4.Size = new System.Drawing.Size(623, 39);
             this.kryptonPanel4.TabIndex = 2;
@@ -529,10 +510,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.kryptonPanel2.Controls.Add(this.kDgvRoleTable);
             this.kryptonPanel2.Controls.Add(this.kryptonLabel2);
-            this.kryptonPanel2.Location = new System.Drawing.Point(132, 614);
-            this.kryptonPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kryptonPanel2.Location = new System.Drawing.Point(99, 499);
+            this.kryptonPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonPanel2.Name = "kryptonPanel2";
-            this.kryptonPanel2.Size = new System.Drawing.Size(389, 148);
+            this.kryptonPanel2.Size = new System.Drawing.Size(292, 120);
             this.kryptonPanel2.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.kryptonPanel2.StateNormal.Color1 = System.Drawing.Color.Transparent;
             this.kryptonPanel2.TabIndex = 24;
@@ -550,7 +531,7 @@
             this.kDgvRoleTable.Name = "kDgvRoleTable";
             this.kDgvRoleTable.RowTemplate.Height = 24;
             this.kDgvRoleTable.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.kDgvRoleTable.Size = new System.Drawing.Size(383, 119);
+            this.kDgvRoleTable.Size = new System.Drawing.Size(287, 97);
             this.kDgvRoleTable.StateCommon.Background.Color1 = System.Drawing.Color.White;
             this.kDgvRoleTable.StateCommon.BackStyle = Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
             this.kDgvRoleTable.TabIndex = 0;
@@ -558,8 +539,7 @@
             // 
             // kryptonLabel2
             // 
-            this.kryptonLabel2.Location = new System.Drawing.Point(125, 4);
-            this.kryptonLabel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonLabel2.Location = new System.Drawing.Point(94, 3);
             this.kryptonLabel2.Name = "kryptonLabel2";
             this.kryptonLabel2.Size = new System.Drawing.Size(119, 19);
             this.kryptonLabel2.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -605,8 +585,7 @@
             // 
             // kRBtnAllAcc
             // 
-            this.kRBtnAllAcc.Location = new System.Drawing.Point(129, 28);
-            this.kRBtnAllAcc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kRBtnAllAcc.Location = new System.Drawing.Point(97, 23);
             this.kRBtnAllAcc.Name = "kRBtnAllAcc";
             this.kRBtnAllAcc.Size = new System.Drawing.Size(55, 20);
             this.kRBtnAllAcc.TabIndex = 27;
@@ -614,8 +593,7 @@
             // 
             // kRBtnCustomer
             // 
-            this.kRBtnCustomer.Location = new System.Drawing.Point(13, 28);
-            this.kRBtnCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kRBtnCustomer.Location = new System.Drawing.Point(10, 23);
             this.kRBtnCustomer.Name = "kRBtnCustomer";
             this.kRBtnCustomer.Size = new System.Drawing.Size(87, 20);
             this.kRBtnCustomer.TabIndex = 35;
@@ -623,8 +601,7 @@
             // 
             // kRBtnStaff
             // 
-            this.kRBtnStaff.Location = new System.Drawing.Point(128, 4);
-            this.kRBtnStaff.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kRBtnStaff.Location = new System.Drawing.Point(96, 3);
             this.kRBtnStaff.Name = "kRBtnStaff";
             this.kRBtnStaff.Size = new System.Drawing.Size(78, 20);
             this.kRBtnStaff.TabIndex = 34;
@@ -632,8 +609,7 @@
             // 
             // kRbtnManager
             // 
-            this.kRbtnManager.Location = new System.Drawing.Point(13, 1);
-            this.kRbtnManager.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kRbtnManager.Location = new System.Drawing.Point(10, 1);
             this.kRbtnManager.Name = "kRbtnManager";
             this.kRbtnManager.Size = new System.Drawing.Size(64, 20);
             this.kRbtnManager.TabIndex = 33;
@@ -653,7 +629,7 @@
             this.kCbbArea.Location = new System.Drawing.Point(112, 101);
             this.kCbbArea.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kCbbArea.Name = "kCbbArea";
-            this.kCbbArea.Size = new System.Drawing.Size(143, 22);
+            this.kCbbArea.Size = new System.Drawing.Size(107, 22);
             this.kCbbArea.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.kCbbArea.TabIndex = 31;
             this.kCbbArea.Text = "Tất cả";
@@ -661,8 +637,7 @@
             // 
             // kLbSearchArea
             // 
-            this.kLbSearchArea.Location = new System.Drawing.Point(29, 102);
-            this.kLbSearchArea.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kLbSearchArea.Location = new System.Drawing.Point(22, 83);
             this.kLbSearchArea.Name = "kLbSearchArea";
             this.kLbSearchArea.Size = new System.Drawing.Size(60, 20);
             this.kLbSearchArea.TabIndex = 30;
@@ -673,10 +648,9 @@
             // 
             this.kBtnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.kBtnSearch.Location = new System.Drawing.Point(441, 138);
-            this.kBtnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kBtnSearch.Location = new System.Drawing.Point(331, 112);
             this.kBtnSearch.Name = "kBtnSearch";
-            this.kBtnSearch.Size = new System.Drawing.Size(69, 28);
+            this.kBtnSearch.Size = new System.Drawing.Size(52, 23);
             this.kBtnSearch.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kBtnSearch.TabIndex = 29;
             this.kBtnSearch.Values.DropDownArrowColor = System.Drawing.Color.Empty;
@@ -705,16 +679,14 @@
             // 
             this.kTbContentSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.kTbContentSearch.Location = new System.Drawing.Point(35, 138);
-            this.kTbContentSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kTbContentSearch.Location = new System.Drawing.Point(26, 112);
             this.kTbContentSearch.Name = "kTbContentSearch";
-            this.kTbContentSearch.Size = new System.Drawing.Size(380, 23);
+            this.kTbContentSearch.Size = new System.Drawing.Size(285, 23);
             this.kTbContentSearch.TabIndex = 27;
             // 
             // kLbSearch
             // 
-            this.kLbSearch.Location = new System.Drawing.Point(288, 102);
-            this.kLbSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kLbSearch.Location = new System.Drawing.Point(216, 83);
             this.kLbSearch.Name = "kLbSearch";
             this.kLbSearch.Size = new System.Drawing.Size(59, 20);
             this.kLbSearch.TabIndex = 23;
@@ -722,8 +694,7 @@
             // 
             // kryptonGroupBox1
             // 
-            this.kryptonGroupBox1.Location = new System.Drawing.Point(35, 4);
-            this.kryptonGroupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonGroupBox1.Location = new System.Drawing.Point(26, 3);
             // 
             // kryptonGroupBox1.Panel
             // 
@@ -737,8 +708,7 @@
             // 
             // kRbtnAllUser
             // 
-            this.kRbtnAllUser.Location = new System.Drawing.Point(19, 1);
-            this.kRbtnAllUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kRbtnAllUser.Location = new System.Drawing.Point(14, 1);
             this.kRbtnAllUser.Name = "kRbtnAllUser";
             this.kRbtnAllUser.Size = new System.Drawing.Size(55, 20);
             this.kRbtnAllUser.TabIndex = 26;
@@ -747,8 +717,7 @@
             // 
             // kRBtnInactive
             // 
-            this.kRBtnInactive.Location = new System.Drawing.Point(19, 28);
-            this.kRBtnInactive.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kRBtnInactive.Location = new System.Drawing.Point(14, 23);
             this.kRBtnInactive.Name = "kRBtnInactive";
             this.kRBtnInactive.Size = new System.Drawing.Size(118, 20);
             this.kRBtnInactive.TabIndex = 25;
@@ -757,8 +726,7 @@
             // 
             // kRBtnActive
             // 
-            this.kRBtnActive.Location = new System.Drawing.Point(100, 1);
-            this.kRBtnActive.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kRBtnActive.Location = new System.Drawing.Point(75, 1);
             this.kRBtnActive.Name = "kRBtnActive";
             this.kRBtnActive.Size = new System.Drawing.Size(81, 20);
             this.kRBtnActive.TabIndex = 24;
@@ -767,8 +735,8 @@
             // 
             // kGrvUsers
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.kGrvUsers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.kGrvUsers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.kGrvUsers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -778,7 +746,7 @@
             this.kGrvUsers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kGrvUsers.Name = "kGrvUsers";
             this.kGrvUsers.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.kGrvUsers.Size = new System.Drawing.Size(543, 348);
+            this.kGrvUsers.Size = new System.Drawing.Size(407, 283);
             this.kGrvUsers.StateCommon.Background.Color1 = System.Drawing.Color.White;
             this.kGrvUsers.StateCommon.BackStyle = Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
             this.kGrvUsers.TabIndex = 1;
@@ -801,8 +769,7 @@
             // 
             // kLbTitle
             // 
-            this.kLbTitle.Location = new System.Drawing.Point(176, 7);
-            this.kLbTitle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kLbTitle.Location = new System.Drawing.Point(132, 6);
             this.kLbTitle.Name = "kLbTitle";
             this.kLbTitle.Size = new System.Drawing.Size(232, 33);
             this.kLbTitle.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -811,8 +778,7 @@
             // 
             // kTbPosition
             // 
-            this.kTbPosition.Location = new System.Drawing.Point(273, 135);
-            this.kTbPosition.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kTbPosition.Location = new System.Drawing.Point(205, 110);
             this.kTbPosition.Name = "kTbPosition";
             this.kTbPosition.ReadOnly = true;
             this.kTbPosition.Size = new System.Drawing.Size(256, 23);
@@ -820,8 +786,7 @@
             // 
             // kLbManagerPosition
             // 
-            this.kLbManagerPosition.Location = new System.Drawing.Point(115, 139);
-            this.kLbManagerPosition.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kLbManagerPosition.Location = new System.Drawing.Point(86, 113);
             this.kLbManagerPosition.Name = "kLbManagerPosition";
             this.kLbManagerPosition.Size = new System.Drawing.Size(60, 20);
             this.kLbManagerPosition.TabIndex = 27;
@@ -829,8 +794,7 @@
             // 
             // kTbManagerFullName
             // 
-            this.kTbManagerFullName.Location = new System.Drawing.Point(273, 96);
-            this.kTbManagerFullName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kTbManagerFullName.Location = new System.Drawing.Point(205, 78);
             this.kTbManagerFullName.Name = "kTbManagerFullName";
             this.kTbManagerFullName.ReadOnly = true;
             this.kTbManagerFullName.Size = new System.Drawing.Size(256, 23);
@@ -838,8 +802,7 @@
             // 
             // kLbManagerFullName
             // 
-            this.kLbManagerFullName.Location = new System.Drawing.Point(115, 100);
-            this.kLbManagerFullName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kLbManagerFullName.Location = new System.Drawing.Point(86, 81);
             this.kLbManagerFullName.Name = "kLbManagerFullName";
             this.kLbManagerFullName.Size = new System.Drawing.Size(69, 20);
             this.kLbManagerFullName.TabIndex = 25;
@@ -847,8 +810,7 @@
             // 
             // kTbManagerCode
             // 
-            this.kTbManagerCode.Location = new System.Drawing.Point(273, 57);
-            this.kTbManagerCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kTbManagerCode.Location = new System.Drawing.Point(205, 46);
             this.kTbManagerCode.Name = "kTbManagerCode";
             this.kTbManagerCode.ReadOnly = true;
             this.kTbManagerCode.Size = new System.Drawing.Size(256, 23);
@@ -856,8 +818,7 @@
             // 
             // kLbManagerCode
             // 
-            this.kLbManagerCode.Location = new System.Drawing.Point(115, 65);
-            this.kLbManagerCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kLbManagerCode.Location = new System.Drawing.Point(86, 53);
             this.kLbManagerCode.Name = "kLbManagerCode";
             this.kLbManagerCode.Size = new System.Drawing.Size(91, 16);
             this.kLbManagerCode.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -891,8 +852,8 @@
             this.kryptonPanel3.Controls.Add(this.kLbRoleName);
             this.kryptonPanel3.Controls.Add(this.kTbNameRole);
             this.kryptonPanel3.Controls.Add(this.kLbRoleDes);
-            this.kryptonPanel3.Location = new System.Drawing.Point(28, 629);
-            this.kryptonPanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kryptonPanel3.Location = new System.Drawing.Point(21, 511);
+            this.kryptonPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonPanel3.Name = "kryptonPanel3";
             this.kryptonPanel3.Size = new System.Drawing.Size(644, 130);
             this.kryptonPanel3.TabIndex = 3;
@@ -904,7 +865,7 @@
             this.kBtnDeleteRole.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kBtnDeleteRole.Name = "kBtnDeleteRole";
             this.kBtnDeleteRole.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.kBtnDeleteRole.Size = new System.Drawing.Size(93, 30);
+            this.kBtnDeleteRole.Size = new System.Drawing.Size(70, 24);
             this.kBtnDeleteRole.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kBtnDeleteRole.TabIndex = 27;
             this.kBtnDeleteRole.Values.DropDownArrowColor = System.Drawing.Color.Empty;
@@ -918,7 +879,7 @@
             this.kBtnRoleSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kBtnRoleSave.Name = "kBtnRoleSave";
             this.kBtnRoleSave.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.kBtnRoleSave.Size = new System.Drawing.Size(85, 30);
+            this.kBtnRoleSave.Size = new System.Drawing.Size(64, 24);
             this.kBtnRoleSave.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kBtnRoleSave.TabIndex = 26;
             this.kBtnRoleSave.Values.DropDownArrowColor = System.Drawing.Color.Empty;
@@ -927,8 +888,7 @@
             // 
             // kTbDesRole
             // 
-            this.kTbDesRole.Location = new System.Drawing.Point(176, 52);
-            this.kTbDesRole.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kTbDesRole.Location = new System.Drawing.Point(132, 42);
             this.kTbDesRole.Name = "kTbDesRole";
             this.kTbDesRole.Size = new System.Drawing.Size(440, 23);
             this.kTbDesRole.TabIndex = 24;
@@ -940,7 +900,7 @@
             this.kBtnAddRole.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kBtnAddRole.Name = "kBtnAddRole";
             this.kBtnAddRole.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.kBtnAddRole.Size = new System.Drawing.Size(92, 30);
+            this.kBtnAddRole.Size = new System.Drawing.Size(69, 24);
             this.kBtnAddRole.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kBtnAddRole.TabIndex = 23;
             this.kBtnAddRole.Values.DropDownArrowColor = System.Drawing.Color.Empty;
@@ -949,8 +909,7 @@
             // 
             // kLbRoleName
             // 
-            this.kLbRoleName.Location = new System.Drawing.Point(52, 20);
-            this.kLbRoleName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kLbRoleName.Location = new System.Drawing.Point(39, 16);
             this.kLbRoleName.Name = "kLbRoleName";
             this.kLbRoleName.Size = new System.Drawing.Size(52, 20);
             this.kLbRoleName.TabIndex = 23;
@@ -958,16 +917,14 @@
             // 
             // kTbNameRole
             // 
-            this.kTbNameRole.Location = new System.Drawing.Point(176, 16);
-            this.kTbNameRole.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kTbNameRole.Location = new System.Drawing.Point(132, 13);
             this.kTbNameRole.Name = "kTbNameRole";
             this.kTbNameRole.Size = new System.Drawing.Size(440, 23);
             this.kTbNameRole.TabIndex = 23;
             // 
             // kLbRoleDes
             // 
-            this.kLbRoleDes.Location = new System.Drawing.Point(52, 55);
-            this.kLbRoleDes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kLbRoleDes.Location = new System.Drawing.Point(39, 45);
             this.kLbRoleDes.Name = "kLbRoleDes";
             this.kLbRoleDes.Size = new System.Drawing.Size(49, 20);
             this.kLbRoleDes.TabIndex = 25;
@@ -977,7 +934,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1360, 822);
+            this.ClientSize = new System.Drawing.Size(1020, 668);
             this.Controls.Add(this.kryptonPanel3);
             this.Controls.Add(this.kPnInfoManager);
             this.Controls.Add(this.kPnUsers);
