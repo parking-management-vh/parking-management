@@ -1,4 +1,6 @@
 ﻿using ParkingManagement.GUI.Forms;
+using ParkingManagement.GUI.Forms.staff;
+using ParkingManagement.GUI.Forms.statistics;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,10 +16,10 @@ namespace ParkingManagement
         /// </summary>
         [STAThread]
         static void Main()
-        {
+        { 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TestConnectDB());
+            Application.Run(new frmLogin());
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using ParkingManagement.BLL;
+using ParkingManagement.BLL;
 using ParkingManagement.Models;
 using ParkingManagement.Utils;
 using System;
@@ -25,6 +25,7 @@ namespace ParkingManagement.GUI.Forms
         public frmUsers()
         {
             InitializeComponent();
+            LoadAccountLogin();
         }
 
         private void kLbCode_Click(object sender, EventArgs e)
@@ -69,6 +70,12 @@ namespace ParkingManagement.GUI.Forms
                 currentPage--;
                 LoadAllUsersData();
             }
+        }
+        private void LoadAccountLogin()
+        {
+            kTbManagerCode.Text = SessionManager.CurrentUser.Code ?? "ADMIN";
+            kTbManagerFullName.Text = SessionManager.CurrentUser.FullName ?? "Groud 10";
+            kTbPosition.Text = SessionManager.CurrentUser.Role ?? "Quản lý hệ thống";
         }
 
         private void kBtnLastPage_Click(object sender, EventArgs e)
@@ -297,7 +304,7 @@ namespace ParkingManagement.GUI.Forms
             }
             else if (kRBtnCustomer.Checked)
             {
-                roleName = "Customer";
+                roleName = "Staff";
             } 
             else if (kRBtnAllAcc.Checked)
             {
@@ -539,6 +546,11 @@ namespace ParkingManagement.GUI.Forms
             {
                 MessageBox.Show("Lỗi khi cập nhật user: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void kryptonLabel2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -74,17 +74,19 @@
             this.kryptonPanel1.Controls.Add(this.kFullNameTb);
             this.kryptonPanel1.Location = new System.Drawing.Point(12, 12);
             this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(776, 426);
+            this.kryptonPanel1.Size = new System.Drawing.Size(349, 382);
             this.kryptonPanel1.TabIndex = 0;
+            this.kryptonPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.kryptonPanel1_Paint);
             // 
             // kSaveAddUser
             // 
-            this.kSaveAddUser.Location = new System.Drawing.Point(141, 341);
+            this.kSaveAddUser.Location = new System.Drawing.Point(205, 328);
             this.kSaveAddUser.Name = "kSaveAddUser";
-            this.kSaveAddUser.Size = new System.Drawing.Size(90, 25);
+            this.kSaveAddUser.Size = new System.Drawing.Size(92, 30);
+            this.kSaveAddUser.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kSaveAddUser.TabIndex = 19;
             this.kSaveAddUser.Values.DropDownArrowColor = System.Drawing.Color.Empty;
-            this.kSaveAddUser.Values.Text = "Save";
+            this.kSaveAddUser.Values.Text = "Lưu";
             this.kSaveAddUser.Click += new System.EventHandler(this.kSaveAddUser_Click);
             // 
             // kAreaCbb
@@ -93,7 +95,7 @@
             this.kAreaCbb.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.kAreaCbb.Location = new System.Drawing.Point(234, 282);
+            this.kAreaCbb.Location = new System.Drawing.Point(152, 282);
             this.kAreaCbb.Name = "kAreaCbb";
             this.kAreaCbb.Size = new System.Drawing.Size(145, 22);
             this.kAreaCbb.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
@@ -101,11 +103,12 @@
             // 
             // kAreaLb
             // 
-            this.kAreaLb.Location = new System.Drawing.Point(141, 284);
+            this.kAreaLb.Location = new System.Drawing.Point(37, 285);
             this.kAreaLb.Name = "kAreaLb";
-            this.kAreaLb.Size = new System.Drawing.Size(54, 20);
+            this.kAreaLb.Size = new System.Drawing.Size(63, 18);
+            this.kAreaLb.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kAreaLb.TabIndex = 17;
-            this.kAreaLb.Values.Text = "Khu vực";
+            this.kAreaLb.Values.Text = "Khu vực :";
             // 
             // kTypeAccCbb
             // 
@@ -113,7 +116,7 @@
             this.kTypeAccCbb.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.kTypeAccCbb.Location = new System.Drawing.Point(234, 254);
+            this.kTypeAccCbb.Location = new System.Drawing.Point(152, 246);
             this.kTypeAccCbb.Name = "kTypeAccCbb";
             this.kTypeAccCbb.Size = new System.Drawing.Size(145, 22);
             this.kTypeAccCbb.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
@@ -121,8 +124,9 @@
             // 
             // kDtBirthday
             // 
+            this.kDtBirthday.CalendarTodayDate = new System.DateTime(2025, 3, 16, 0, 0, 0, 0);
             this.kDtBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.kDtBirthday.Location = new System.Drawing.Point(234, 227);
+            this.kDtBirthday.Location = new System.Drawing.Point(152, 209);
             this.kDtBirthday.Name = "kDtBirthday";
             this.kDtBirthday.Size = new System.Drawing.Size(145, 21);
             this.kDtBirthday.TabIndex = 15;
@@ -133,7 +137,7 @@
             this.kSexCbb.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.kSexCbb.Location = new System.Drawing.Point(234, 198);
+            this.kSexCbb.Location = new System.Drawing.Point(152, 172);
             this.kSexCbb.Name = "kSexCbb";
             this.kSexCbb.Size = new System.Drawing.Size(145, 22);
             this.kSexCbb.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
@@ -141,84 +145,91 @@
             // 
             // kTypeAccLb
             // 
-            this.kTypeAccLb.Location = new System.Drawing.Point(141, 256);
+            this.kTypeAccLb.Location = new System.Drawing.Point(37, 249);
             this.kTypeAccLb.Name = "kTypeAccLb";
-            this.kTypeAccLb.Size = new System.Drawing.Size(87, 20);
+            this.kTypeAccLb.Size = new System.Drawing.Size(97, 18);
+            this.kTypeAccLb.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kTypeAccLb.TabIndex = 13;
-            this.kTypeAccLb.Values.Text = "Loại tài khoản";
+            this.kTypeAccLb.Values.Text = "Loại tài khoản :";
             // 
             // kBirthdayLb
             // 
-            this.kBirthdayLb.Location = new System.Drawing.Point(141, 227);
+            this.kBirthdayLb.Location = new System.Drawing.Point(37, 211);
             this.kBirthdayLb.Name = "kBirthdayLb";
-            this.kBirthdayLb.Size = new System.Drawing.Size(65, 20);
+            this.kBirthdayLb.Size = new System.Drawing.Size(74, 18);
+            this.kBirthdayLb.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kBirthdayLb.TabIndex = 11;
-            this.kBirthdayLb.Values.Text = "Ngày sinh";
+            this.kBirthdayLb.Values.Text = "Ngày sinh :";
             // 
             // kSexLb
             // 
-            this.kSexLb.Location = new System.Drawing.Point(141, 198);
+            this.kSexLb.Location = new System.Drawing.Point(37, 175);
             this.kSexLb.Name = "kSexLb";
-            this.kSexLb.Size = new System.Drawing.Size(57, 20);
+            this.kSexLb.Size = new System.Drawing.Size(65, 18);
+            this.kSexLb.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kSexLb.TabIndex = 9;
-            this.kSexLb.Values.Text = "Giới tính";
+            this.kSexLb.Values.Text = "Giới tính :";
             // 
             // kAddressLb
             // 
-            this.kAddressLb.Location = new System.Drawing.Point(141, 169);
+            this.kAddressLb.Location = new System.Drawing.Point(37, 139);
             this.kAddressLb.Name = "kAddressLb";
-            this.kAddressLb.Size = new System.Drawing.Size(48, 20);
+            this.kAddressLb.Size = new System.Drawing.Size(57, 18);
+            this.kAddressLb.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kAddressLb.TabIndex = 7;
-            this.kAddressLb.Values.Text = "Địa chỉ";
+            this.kAddressLb.Values.Text = "Địa chỉ :";
             // 
             // kAddressTb
             // 
-            this.kAddressTb.Location = new System.Drawing.Point(234, 166);
+            this.kAddressTb.Location = new System.Drawing.Point(152, 135);
             this.kAddressTb.Name = "kAddressTb";
             this.kAddressTb.Size = new System.Drawing.Size(145, 23);
             this.kAddressTb.TabIndex = 6;
             // 
             // kEmailLb
             // 
-            this.kEmailLb.Location = new System.Drawing.Point(141, 140);
+            this.kEmailLb.Location = new System.Drawing.Point(37, 102);
             this.kEmailLb.Name = "kEmailLb";
-            this.kEmailLb.Size = new System.Drawing.Size(40, 20);
+            this.kEmailLb.Size = new System.Drawing.Size(50, 18);
+            this.kEmailLb.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kEmailLb.TabIndex = 5;
-            this.kEmailLb.Values.Text = "Email";
+            this.kEmailLb.Values.Text = "Email :";
             // 
             // kEmailTb
             // 
-            this.kEmailTb.Location = new System.Drawing.Point(234, 137);
+            this.kEmailTb.Location = new System.Drawing.Point(152, 98);
             this.kEmailTb.Name = "kEmailTb";
             this.kEmailTb.Size = new System.Drawing.Size(145, 23);
             this.kEmailTb.TabIndex = 4;
             // 
             // kPhoneLb
             // 
-            this.kPhoneLb.Location = new System.Drawing.Point(141, 111);
+            this.kPhoneLb.Location = new System.Drawing.Point(37, 64);
             this.kPhoneLb.Name = "kPhoneLb";
-            this.kPhoneLb.Size = new System.Drawing.Size(83, 20);
+            this.kPhoneLb.Size = new System.Drawing.Size(92, 18);
+            this.kPhoneLb.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kPhoneLb.TabIndex = 3;
-            this.kPhoneLb.Values.Text = "Số điện thoại";
+            this.kPhoneLb.Values.Text = "Số điện thoại :";
             // 
             // kPhoneTb
             // 
-            this.kPhoneTb.Location = new System.Drawing.Point(234, 108);
+            this.kPhoneTb.Location = new System.Drawing.Point(152, 61);
             this.kPhoneTb.Name = "kPhoneTb";
             this.kPhoneTb.Size = new System.Drawing.Size(145, 23);
             this.kPhoneTb.TabIndex = 2;
             // 
             // kFullNameLb
             // 
-            this.kFullNameLb.Location = new System.Drawing.Point(141, 82);
+            this.kFullNameLb.Location = new System.Drawing.Point(37, 27);
             this.kFullNameLb.Name = "kFullNameLb";
-            this.kFullNameLb.Size = new System.Drawing.Size(63, 20);
+            this.kFullNameLb.Size = new System.Drawing.Size(72, 18);
+            this.kFullNameLb.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kFullNameLb.TabIndex = 1;
-            this.kFullNameLb.Values.Text = "Họ và tên";
+            this.kFullNameLb.Values.Text = "Họ và tên :";
             // 
             // kFullNameTb
             // 
-            this.kFullNameTb.Location = new System.Drawing.Point(234, 79);
+            this.kFullNameTb.Location = new System.Drawing.Point(152, 23);
             this.kFullNameTb.Name = "kFullNameTb";
             this.kFullNameTb.Size = new System.Drawing.Size(145, 23);
             this.kFullNameTb.TabIndex = 0;
@@ -227,7 +238,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(373, 407);
             this.Controls.Add(this.kryptonPanel1);
             this.Name = "frmCreateUser";
             this.Text = "CreateUser";

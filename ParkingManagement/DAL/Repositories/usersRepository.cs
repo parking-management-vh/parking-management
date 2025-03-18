@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using Mysqlx.Crud;
+using ParkingManagement.BLL;
 using ParkingManagement.DAL.Database;
 using ParkingManagement.GUI.Forms;
 using ParkingManagement.Models;
@@ -18,6 +19,72 @@ namespace ParkingManagement.DAL.Repositories
     class userRepository
     {
         private readonly DatabaseProvider dbProvider = new DatabaseProvider();
+
+        public createUser LoginUser(string code, string password)
+        {
+            string query = @"
+                SELECT u.id, u.code, u.full_name, u.date_of_birth, u.gender, 
+                       u.phone_number, u.email, u.address, u.password, 
+                       u.role_id, r.role_name, 
+                       u.area_id, p.area_name, 
+                       u.created_at, u.updated_at, u.status
+                FROM user u
+                LEFT JOIN role r ON u.role_id = r.id
+                LEFT JOIN parking_area p ON u.area_id = p.id
+                WHERE u.code = @code AND u.password = @password AND u.status = 1";
+
+            try
+            {
+                object[] parameters = {
+            new MySqlParameter("@code", code),
+            new MySqlParameter("@password", password)
+        };
+
+                DataTable data = dbProvider.ExecuteQuery(query, parameters);
+
+                if (data.Rows.Count > 0)
+                {
+                    DataRow row = data.Rows[0];
+                    createUser user = new createUser
+                    {
+                        Id = Guid.Parse(row["id"].ToString()),
+                        Code = row["code"].ToString(),
+                        FullName = row["full_name"].ToString(),
+                        DateOfBirth = row["date_of_birth"] != DBNull.Value ? Convert.ToDateTime(row["date_of_birth"]) : (DateTime?)null,
+                        Gender = row["gender"].ToString(),
+                        PhoneNumber = row["phone_number"].ToString(),
+                        Email = row["email"].ToString(),
+                        Address = row["address"].ToString(),
+                        Password = row["password"].ToString(),
+                        RoleId = row["role_id"] != DBNull.Value ? Guid.Parse(row["role_id"].ToString()) : (Guid?)null,
+                        AreaId = row["area_id"] != DBNull.Value ? Guid.Parse(row["area_id"].ToString()) : (Guid?)null,
+                        AreaName = row["area_name"] != DBNull.Value ? row["area_name"].ToString() : "Không có khu vực",
+                        Role = row["role_name"] != DBNull.Value ? row["role_name"].ToString() : "Không có role",
+                        CreatedAt = Convert.ToDateTime(row["created_at"]),
+                        UpdatedAt = Convert.ToDateTime(row["updated_at"]),
+                        Status = Convert.ToBoolean(row["status"])
+                    };
+
+                    string roleName = row["role_name"] != DBNull.Value ? row["role_name"].ToString() : null;
+                    string areaName = row["area_name"] != DBNull.Value ? row["area_name"].ToString() : null;
+
+                    SessionManager.SetUser(user);
+
+                    return user;
+                }
+                else
+                {
+                    MessageBox.Show("⚠️ No User Found!", "Debug User");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"❌ Error: {ex.Message}", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return null;
+        }
+
 
         public (List<allUserModel>, int) GetUsersByPage(
             int page, 
@@ -197,6 +264,21 @@ namespace ParkingManagement.DAL.Repositories
                 MessageBox.Show("Lỗi khi xóa user: " + ex.Message);
                 return false;
             }
+        }
+
+        public Guid? GetUserIdByCode(string userCode)
+        {
+            string query = "SELECT id FROM user WHERE code = @userCode";
+            object[] parameters = { userCode };
+
+            DataTable data = dbProvider.ExecuteQuery(query, parameters);
+
+            if (data.Rows.Count > 0 && Guid.TryParse(data.Rows[0]["id"].ToString(), out Guid userId))
+            {
+                return userId; 
+            }
+
+            return null; 
         }
     }
 
