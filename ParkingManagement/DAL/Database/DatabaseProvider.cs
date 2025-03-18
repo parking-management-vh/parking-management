@@ -111,7 +111,7 @@ namespace ParkingManagement.DAL.Database
                         string paramName = match.Value;
                         object paramValue = parameter[index] ?? DBNull.Value;
 
-                        MessageBox.Show($"Adding parameter: {paramName} = {paramValue}", "Debug");
+                        //MessageBox.Show($"Adding parameter: {paramName} = {paramValue}", "Debug");
 
                         if (paramValue is MySqlParameter mySqlParam)
                         {

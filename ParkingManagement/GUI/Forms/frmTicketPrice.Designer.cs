@@ -185,7 +185,7 @@
             // 
             // txtDescriptionn
             // 
-            this.txtDescriptionn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtDescriptionn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDescriptionn.Location = new System.Drawing.Point(186, 104);
             this.txtDescriptionn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
@@ -218,7 +218,7 @@
             // 
             // cmbVehicleType
             // 
-            this.cmbVehicleType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.cmbVehicleType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbVehicleType.Font = new System.Drawing.Font("Arial", 12F);
             this.cmbVehicleType.FormattingEnabled = true;

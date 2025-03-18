@@ -152,5 +152,14 @@ namespace ParkingManagement.GUI.Forms.staff
         {
 
         }
+
+        private void kBtnRef_Click(object sender, EventArgs e)
+        {
+            LoadAllPayment();
+            LoadFilter();
+            LoadPayMethodSearch();
+            LoadUserSession();
+            LoadPaymentmethod();
+        }
     }
 }

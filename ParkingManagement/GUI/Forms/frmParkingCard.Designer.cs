@@ -92,18 +92,18 @@
             // kTbBs
             // 
             this.kTbBs.Location = new System.Drawing.Point(497, 102);
-            this.kTbBs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kTbBs.Margin = new System.Windows.Forms.Padding(4);
             this.kTbBs.Name = "kTbBs";
-            this.kTbBs.Size = new System.Drawing.Size(116, 27);
+            this.kTbBs.Size = new System.Drawing.Size(116, 23);p
             this.kTbBs.TabIndex = 17;
             this.kTbBs.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // kTbUserCode
             // 
             this.kTbUserCode.Location = new System.Drawing.Point(497, 37);
-            this.kTbUserCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kTbUserCode.Margin = new System.Windows.Forms.Padding(4);
             this.kTbUserCode.Name = "kTbUserCode";
-            this.kTbUserCode.Size = new System.Drawing.Size(116, 27);
+            this.kTbUserCode.Size = new System.Drawing.Size(116, 23);
             this.kTbUserCode.TabIndex = 16;
             this.kTbUserCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -111,7 +111,7 @@
             // 
             this.kryptonGroupBox2.CaptionStyle = Krypton.Toolkit.LabelStyle.ItalicControl;
             this.kryptonGroupBox2.Location = new System.Drawing.Point(40, 129);
-            this.kryptonGroupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonGroupBox2.Margin = new System.Windows.Forms.Padding(4);
             // 
             // kryptonGroupBox2.Panel
             // 
@@ -126,7 +126,7 @@
             // kRBtnSAll
             // 
             this.kRBtnSAll.Location = new System.Drawing.Point(192, 11);
-            this.kRBtnSAll.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kRBtnSAll.Margin = new System.Windows.Forms.Padding(4);
             this.kRBtnSAll.Name = "kRBtnSAll";
             this.kRBtnSAll.Size = new System.Drawing.Size(43, 20);
             this.kRBtnSAll.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -136,7 +136,7 @@
             // kBbnCardMonth
             // 
             this.kBbnCardMonth.Location = new System.Drawing.Point(23, 10);
-            this.kBbnCardMonth.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kBbnCardMonth.Margin = new System.Windows.Forms.Padding(4);
             this.kBbnCardMonth.Name = "kBbnCardMonth";
             this.kBbnCardMonth.Size = new System.Drawing.Size(68, 20);
             this.kBbnCardMonth.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -146,7 +146,7 @@
             // kBbnCardDay
             // 
             this.kBbnCardDay.Location = new System.Drawing.Point(111, 10);
-            this.kBbnCardDay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kBbnCardDay.Margin = new System.Windows.Forms.Padding(4);
             this.kBbnCardDay.Name = "kBbnCardDay";
             this.kBbnCardDay.Size = new System.Drawing.Size(60, 20);
             this.kBbnCardDay.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -158,7 +158,7 @@
             // 
             this.kryptonGroupBox3.CaptionStyle = Krypton.Toolkit.LabelStyle.ItalicControl;
             this.kryptonGroupBox3.Location = new System.Drawing.Point(40, 53);
-            this.kryptonGroupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonGroupBox3.Margin = new System.Windows.Forms.Padding(4);
             // 
             // kryptonGroupBox3.Panel
             // 
@@ -173,9 +173,9 @@
             // 
             this.kCbbSStatus.DropDownWidth = 168;
             this.kCbbSStatus.Location = new System.Drawing.Point(19, 9);
-            this.kCbbSStatus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kCbbSStatus.Margin = new System.Windows.Forms.Padding(4);
             this.kCbbSStatus.Name = "kCbbSStatus";
-            this.kCbbSStatus.Size = new System.Drawing.Size(225, 26);
+            this.kCbbSStatus.Size = new System.Drawing.Size(225, 22);
             this.kCbbSStatus.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.kCbbSStatus.TabIndex = 18;
             // 
@@ -195,16 +195,16 @@
             // kTbPrice
             // 
             this.kTbPrice.Location = new System.Drawing.Point(151, 169);
-            this.kTbPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kTbPrice.Margin = new System.Windows.Forms.Padding(4);
             this.kTbPrice.Name = "kTbPrice";
-            this.kTbPrice.Size = new System.Drawing.Size(183, 27);
+            this.kTbPrice.Size = new System.Drawing.Size(183, 23);
             this.kTbPrice.TabIndex = 15;
             this.kTbPrice.TextChanged += new System.EventHandler(this.kTbPrice_TextChanged);
             // 
             // kRbtnDay
             // 
             this.kRbtnDay.Location = new System.Drawing.Point(249, 230);
-            this.kRbtnDay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kRbtnDay.Margin = new System.Windows.Forms.Padding(4);
             this.kRbtnDay.Name = "kRbtnDay";
             this.kRbtnDay.Size = new System.Drawing.Size(62, 24);
             this.kRbtnDay.TabIndex = 14;
@@ -214,7 +214,7 @@
             // kRbtnMonth
             // 
             this.kRbtnMonth.Location = new System.Drawing.Point(151, 230);
-            this.kRbtnMonth.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kRbtnMonth.Margin = new System.Windows.Forms.Padding(4);
             this.kRbtnMonth.Name = "kRbtnMonth";
             this.kRbtnMonth.Size = new System.Drawing.Size(69, 24);
             this.kRbtnMonth.TabIndex = 13;
@@ -225,9 +225,9 @@
             // 
             this.kCbbStatus.DropDownWidth = 168;
             this.kCbbStatus.Location = new System.Drawing.Point(496, 171);
-            this.kCbbStatus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kCbbStatus.Margin = new System.Windows.Forms.Padding(4);
             this.kCbbStatus.Name = "kCbbStatus";
-            this.kCbbStatus.Size = new System.Drawing.Size(116, 26);
+            this.kCbbStatus.Size = new System.Drawing.Size(116, 22);
             this.kCbbStatus.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.kCbbStatus.TabIndex = 12;
             // 
@@ -235,24 +235,24 @@
             // 
             this.kDtpEnddate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.kDtpEnddate.Location = new System.Drawing.Point(149, 103);
-            this.kDtpEnddate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kDtpEnddate.Margin = new System.Windows.Forms.Padding(4);
             this.kDtpEnddate.Name = "kDtpEnddate";
-            this.kDtpEnddate.Size = new System.Drawing.Size(184, 25);
+            this.kDtpEnddate.Size = new System.Drawing.Size(184, 21);
             this.kDtpEnddate.TabIndex = 11;
             // 
             // kDtpStartdate
             // 
             this.kDtpStartdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.kDtpStartdate.Location = new System.Drawing.Point(149, 37);
-            this.kDtpStartdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kDtpStartdate.Margin = new System.Windows.Forms.Padding(4);
             this.kDtpStartdate.Name = "kDtpStartdate";
-            this.kDtpStartdate.Size = new System.Drawing.Size(184, 25);
+            this.kDtpStartdate.Size = new System.Drawing.Size(184, 21);
             this.kDtpStartdate.TabIndex = 10;
             // 
             // kryptonLabel5
             // 
             this.kryptonLabel5.Location = new System.Drawing.Point(23, 174);
-            this.kryptonLabel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonLabel5.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel5.Name = "kryptonLabel5";
             this.kryptonLabel5.PaletteMode = Krypton.Toolkit.PaletteMode.Office2007Blue;
             this.kryptonLabel5.Size = new System.Drawing.Size(76, 21);
@@ -263,7 +263,7 @@
             // kryptonLabel4
             // 
             this.kryptonLabel4.Location = new System.Drawing.Point(24, 230);
-            this.kryptonLabel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonLabel4.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel4.Name = "kryptonLabel4";
             this.kryptonLabel4.PaletteMode = Krypton.Toolkit.PaletteMode.Office2007Blue;
             this.kryptonLabel4.Size = new System.Drawing.Size(48, 21);
@@ -274,7 +274,7 @@
             // kryptonLabel3
             // 
             this.kryptonLabel3.Location = new System.Drawing.Point(360, 174);
-            this.kryptonLabel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonLabel3.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel3.Name = "kryptonLabel3";
             this.kryptonLabel3.PaletteMode = Krypton.Toolkit.PaletteMode.Office2007Blue;
             this.kryptonLabel3.Size = new System.Drawing.Size(119, 21);
@@ -285,7 +285,7 @@
             // kryptonLabel2
             // 
             this.kryptonLabel2.Location = new System.Drawing.Point(21, 106);
-            this.kryptonLabel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonLabel2.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel2.Name = "kryptonLabel2";
             this.kryptonLabel2.PaletteMode = Krypton.Toolkit.PaletteMode.Office2007Blue;
             this.kryptonLabel2.Size = new System.Drawing.Size(115, 21);
@@ -296,7 +296,7 @@
             // kryptonLabel1
             // 
             this.kryptonLabel1.Location = new System.Drawing.Point(19, 41);
-            this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel1.Name = "kryptonLabel1";
             this.kryptonLabel1.PaletteMode = Krypton.Toolkit.PaletteMode.Office2007Blue;
             this.kryptonLabel1.Size = new System.Drawing.Size(115, 21);
@@ -308,7 +308,7 @@
             // 
             this.kryptonGroupBox1.CaptionStyle = Krypton.Toolkit.LabelStyle.ItalicControl;
             this.kryptonGroupBox1.Location = new System.Drawing.Point(39, 30);
-            this.kryptonGroupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonGroupBox1.Margin = new System.Windows.Forms.Padding(4);
             // 
             // kryptonGroupBox1.Panel
             // 
@@ -335,7 +335,7 @@
             // kryptonLabel8
             // 
             this.kryptonLabel8.Location = new System.Drawing.Point(360, 106);
-            this.kryptonLabel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonLabel8.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel8.Name = "kryptonLabel8";
             this.kryptonLabel8.PaletteMode = Krypton.Toolkit.PaletteMode.Office2007Blue;
             this.kryptonLabel8.Size = new System.Drawing.Size(73, 21);
@@ -346,7 +346,7 @@
             // kryptonLabel7
             // 
             this.kryptonLabel7.Location = new System.Drawing.Point(360, 41);
-            this.kryptonLabel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonLabel7.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel7.Name = "kryptonLabel7";
             this.kryptonLabel7.PaletteMode = Krypton.Toolkit.PaletteMode.Office2007Blue;
             this.kryptonLabel7.Size = new System.Drawing.Size(126, 21);
@@ -411,10 +411,10 @@
             this.kDgvParkingCard.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.kDgvParkingCard.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kDgvParkingCard.Location = new System.Drawing.Point(0, 0);
-            this.kDgvParkingCard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kDgvParkingCard.Margin = new System.Windows.Forms.Padding(4);
             this.kDgvParkingCard.Name = "kDgvParkingCard";
             this.kDgvParkingCard.RowHeadersWidth = 51;
-            this.kDgvParkingCard.Size = new System.Drawing.Size(1397, 259);
+            this.kDgvParkingCard.Size = new System.Drawing.Size(1397, 263);
             this.kDgvParkingCard.StateCommon.BackStyle = Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
             this.kDgvParkingCard.StateCommon.DataCell.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kDgvParkingCard.StateCommon.DataCell.Content.Padding = new System.Windows.Forms.Padding(30, 2, 30, 2);
@@ -426,7 +426,7 @@
             // 
             this.kryptonGroupBox4.CaptionStyle = Krypton.Toolkit.LabelStyle.ItalicControl;
             this.kryptonGroupBox4.Location = new System.Drawing.Point(719, 30);
-            this.kryptonGroupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonGroupBox4.Margin = new System.Windows.Forms.Padding(4);
             // 
             // kryptonGroupBox4.Panel
             // 
@@ -479,7 +479,7 @@
             this.ClientSize = new System.Drawing.Size(1401, 649);
             this.Controls.Add(this.kryptonPanel2);
             this.Controls.Add(this.kryptonPanel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmParkingCard";
             this.Text = "frmParkingCard";
             this.Load += new System.EventHandler(this.frmParkingCard_Load);

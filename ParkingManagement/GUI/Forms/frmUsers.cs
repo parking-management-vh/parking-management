@@ -1,4 +1,4 @@
-﻿using ParkingManagement.BLL;
+using ParkingManagement.BLL;
 using ParkingManagement.Models;
 using ParkingManagement.Utils;
 using System;
@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace ParkingManagement.GUI.Forms
 {
-    public partial class frmUsers : Form
+    public partial class frmUsers: Form
     {
         private userBLL userBLL = new userBLL();
         private roleBLL roleBLL = new roleBLL();
@@ -97,10 +97,10 @@ namespace ParkingManagement.GUI.Forms
         }
 
         private void LoadAllUsersData(
-            bool? status = null,
-            string roleName = null,
+            bool? status = null, 
+            string roleName = null, 
             string areaName = null,
-            string searchColumn = null,
+            string searchColumn = null, 
             string searchValue = null)
         {
             try
@@ -146,7 +146,7 @@ namespace ParkingManagement.GUI.Forms
                 kCbbParkingArea.SelectedIndex = -1;
 
                 kCbbArea.Items.Clear();
-                kCbbArea.Items.Add("Tất cả");
+                kCbbArea.Items.Add("Tất cả"); 
 
                 foreach (var area in areas)
                 {
@@ -195,7 +195,7 @@ namespace ParkingManagement.GUI.Forms
 
         private void kGrvUsers_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
+            if (e.RowIndex >= 0) 
             {
                 DataGridViewRow row = kGrvUsers.Rows[e.RowIndex];
 
@@ -243,7 +243,7 @@ namespace ParkingManagement.GUI.Forms
             ClearDatForm();
         }
 
-        private Guid selectedRoleId;
+        private Guid selectedRoleId; 
 
         private void kDgvRoleTable_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -279,7 +279,7 @@ namespace ParkingManagement.GUI.Forms
             string roleName = null;
             string areaName = kCbbArea.SelectedItem?.ToString();
             string searchValue = kTbContentSearch.Text.Trim();
-            string searchColumn = null;
+            string searchColumn = null; 
 
             if (kRBtnActive.Checked)
             {
@@ -304,8 +304,8 @@ namespace ParkingManagement.GUI.Forms
             }
             else if (kRBtnCustomer.Checked)
             {
-                roleName = "Customer";
-            }
+                roleName = "Staff";
+            } 
             else if (kRBtnAllAcc.Checked)
             {
                 roleName = null;
@@ -402,7 +402,7 @@ namespace ParkingManagement.GUI.Forms
 
         private void kBtnDeleteRole_Click(object sender, EventArgs e)
         {
-            if (selectedRoleId == Guid.Empty)
+            if (selectedRoleId == Guid.Empty) 
             {
                 MessageBox.Show("Vui lòng chọn vai trò để xoá!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -418,7 +418,7 @@ namespace ParkingManagement.GUI.Forms
 
                 MessageBox.Show("Xoá vai trò thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                LoadAllRoleData();
+                LoadAllRoleData(); 
                 selectedRoleId = Guid.Empty;
             }
 
@@ -485,7 +485,7 @@ namespace ParkingManagement.GUI.Forms
                 }
 
                 string codePrefix = "USER";
-                string selectedRole = kCbbTypeAcount.Text.Trim().ToLower();
+                string selectedRole = kCbbTypeAcount.Text.Trim().ToLower(); 
 
                 if (selectedRole.Contains("admin")) codePrefix = "AD";
                 else if (selectedRole.Contains("customer")) codePrefix = "KH";

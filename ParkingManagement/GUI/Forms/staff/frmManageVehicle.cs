@@ -221,5 +221,14 @@ namespace ParkingManagement.GUI.Forms.staff
         {
 
         }
+
+        private void kBtnRef_Click(object sender, EventArgs e)
+        {
+            loadAllVehicleByArea();
+            LoadAllVehicleType();
+            LoadAllVehicleTypeSearch();
+            LoadSlotNumber();
+            LoadSlotNumberSearch();
+        }
     }
 }
