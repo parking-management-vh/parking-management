@@ -331,15 +331,15 @@ namespace ParkingManagement.GUI.Forms
             this.kTbCode.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kTbCode.Location = new System.Drawing.Point(3, 3);
             this.kTbCode.Name = "kTbCode";
-            this.kTbCode.Size = new System.Drawing.Size(203, 23);
+            this.kTbCode.Size = new System.Drawing.Size(203, 27);
             this.kTbCode.TabIndex = 4;
             this.kTbCode.TextChanged += new System.EventHandler(this.kTbCode_TextChanged);
             // 
             // kTbFullName
             // 
-            this.kTbFullName.Location = new System.Drawing.Point(3, 32);
+            this.kTbFullName.Location = new System.Drawing.Point(3, 36);
             this.kTbFullName.Name = "kTbFullName";
-            this.kTbFullName.Size = new System.Drawing.Size(203, 23);
+            this.kTbFullName.Size = new System.Drawing.Size(203, 27);
             this.kTbFullName.TabIndex = 2;
             // 
             // kDtpBirthday
@@ -347,10 +347,10 @@ namespace ParkingManagement.GUI.Forms
             this.kDtpBirthday.CalendarTodayDate = new System.DateTime(2025, 3, 1, 0, 0, 0, 0);
             this.kDtpBirthday.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kDtpBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.kDtpBirthday.Location = new System.Drawing.Point(3, 60);
+            this.kDtpBirthday.Location = new System.Drawing.Point(3, 68);
             this.kDtpBirthday.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kDtpBirthday.Name = "kDtpBirthday";
-            this.kDtpBirthday.Size = new System.Drawing.Size(203, 21);
+            this.kDtpBirthday.Size = new System.Drawing.Size(203, 25);
             this.kDtpBirthday.TabIndex = 22;
             // 
             // kCbbSex
@@ -360,9 +360,9 @@ namespace ParkingManagement.GUI.Forms
             this.kCbbSex.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.kCbbSex.Location = new System.Drawing.Point(3, 86);
+            this.kCbbSex.Location = new System.Drawing.Point(3, 98);
             this.kCbbSex.Name = "kCbbSex";
-            this.kCbbSex.Size = new System.Drawing.Size(203, 21);
+            this.kCbbSex.Size = new System.Drawing.Size(203, 25);
             this.kCbbSex.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kCbbSex.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.kCbbSex.TabIndex = 27;
@@ -371,9 +371,9 @@ namespace ParkingManagement.GUI.Forms
             // 
             this.kCbbParkingArea.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kCbbParkingArea.DropDownWidth = 330;
-            this.kCbbParkingArea.Location = new System.Drawing.Point(3, 113);
+            this.kCbbParkingArea.Location = new System.Drawing.Point(3, 129);
             this.kCbbParkingArea.Name = "kCbbParkingArea";
-            this.kCbbParkingArea.Size = new System.Drawing.Size(203, 21);
+            this.kCbbParkingArea.Size = new System.Drawing.Size(203, 25);
             this.kCbbParkingArea.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kCbbParkingArea.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.kCbbParkingArea.TabIndex = 26;
@@ -381,25 +381,25 @@ namespace ParkingManagement.GUI.Forms
             // kTbEmail
             // 
             this.kTbEmail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kTbEmail.Location = new System.Drawing.Point(3, 140);
+            this.kTbEmail.Location = new System.Drawing.Point(3, 160);
             this.kTbEmail.Name = "kTbEmail";
-            this.kTbEmail.Size = new System.Drawing.Size(203, 23);
+            this.kTbEmail.Size = new System.Drawing.Size(203, 27);
             this.kTbEmail.TabIndex = 10;
             // 
             // kTbPhone
             // 
             this.kTbPhone.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kTbPhone.Location = new System.Drawing.Point(3, 169);
+            this.kTbPhone.Location = new System.Drawing.Point(3, 193);
             this.kTbPhone.Name = "kTbPhone";
-            this.kTbPhone.Size = new System.Drawing.Size(203, 23);
+            this.kTbPhone.Size = new System.Drawing.Size(203, 27);
             this.kTbPhone.TabIndex = 12;
             // 
             // kTbAddress
             // 
             this.kTbAddress.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kTbAddress.Location = new System.Drawing.Point(3, 198);
+            this.kTbAddress.Location = new System.Drawing.Point(3, 226);
             this.kTbAddress.Name = "kTbAddress";
-            this.kTbAddress.Size = new System.Drawing.Size(203, 23);
+            this.kTbAddress.Size = new System.Drawing.Size(203, 27);
             this.kTbAddress.TabIndex = 14;
             this.kTbAddress.TextChanged += new System.EventHandler(this.kTbAddress_TextChanged);
             // 
@@ -407,9 +407,9 @@ namespace ParkingManagement.GUI.Forms
             // 
             this.kCbbTypeAcount.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kCbbTypeAcount.DropDownWidth = 330;
-            this.kCbbTypeAcount.Location = new System.Drawing.Point(3, 227);
+            this.kCbbTypeAcount.Location = new System.Drawing.Point(3, 259);
             this.kCbbTypeAcount.Name = "kCbbTypeAcount";
-            this.kCbbTypeAcount.Size = new System.Drawing.Size(203, 20);
+            this.kCbbTypeAcount.Size = new System.Drawing.Size(203, 23);
             this.kCbbTypeAcount.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kCbbTypeAcount.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.kCbbTypeAcount.TabIndex = 25;
@@ -436,63 +436,63 @@ namespace ParkingManagement.GUI.Forms
             // 
             this.kryptonLabel1.Location = new System.Drawing.Point(3, 3);
             this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(13, 20);
+            this.kryptonLabel1.Size = new System.Drawing.Size(15, 24);
             this.kryptonLabel1.TabIndex = 3;
             this.kryptonLabel1.Values.Text = ":";
             // 
             // kryptonLabel3
             // 
-            this.kryptonLabel3.Location = new System.Drawing.Point(3, 29);
+            this.kryptonLabel3.Location = new System.Drawing.Point(3, 33);
             this.kryptonLabel3.Name = "kryptonLabel3";
-            this.kryptonLabel3.Size = new System.Drawing.Size(13, 20);
+            this.kryptonLabel3.Size = new System.Drawing.Size(15, 24);
             this.kryptonLabel3.TabIndex = 4;
             this.kryptonLabel3.Values.Text = ":";
             // 
             // kryptonLabel4
             // 
-            this.kryptonLabel4.Location = new System.Drawing.Point(3, 55);
+            this.kryptonLabel4.Location = new System.Drawing.Point(3, 63);
             this.kryptonLabel4.Name = "kryptonLabel4";
-            this.kryptonLabel4.Size = new System.Drawing.Size(13, 20);
+            this.kryptonLabel4.Size = new System.Drawing.Size(15, 24);
             this.kryptonLabel4.TabIndex = 5;
             this.kryptonLabel4.Values.Text = ":";
             // 
             // kryptonLabel5
             // 
-            this.kryptonLabel5.Location = new System.Drawing.Point(3, 81);
+            this.kryptonLabel5.Location = new System.Drawing.Point(3, 93);
             this.kryptonLabel5.Name = "kryptonLabel5";
-            this.kryptonLabel5.Size = new System.Drawing.Size(13, 20);
+            this.kryptonLabel5.Size = new System.Drawing.Size(15, 24);
             this.kryptonLabel5.TabIndex = 6;
             this.kryptonLabel5.Values.Text = ":";
             // 
             // kryptonLabel6
             // 
-            this.kryptonLabel6.Location = new System.Drawing.Point(3, 107);
+            this.kryptonLabel6.Location = new System.Drawing.Point(3, 123);
             this.kryptonLabel6.Name = "kryptonLabel6";
-            this.kryptonLabel6.Size = new System.Drawing.Size(13, 20);
+            this.kryptonLabel6.Size = new System.Drawing.Size(15, 24);
             this.kryptonLabel6.TabIndex = 7;
             this.kryptonLabel6.Values.Text = ":";
             // 
             // kryptonLabel7
             // 
-            this.kryptonLabel7.Location = new System.Drawing.Point(3, 133);
+            this.kryptonLabel7.Location = new System.Drawing.Point(3, 153);
             this.kryptonLabel7.Name = "kryptonLabel7";
-            this.kryptonLabel7.Size = new System.Drawing.Size(13, 20);
+            this.kryptonLabel7.Size = new System.Drawing.Size(15, 24);
             this.kryptonLabel7.TabIndex = 8;
             this.kryptonLabel7.Values.Text = ":";
             // 
             // kryptonLabel8
             // 
-            this.kryptonLabel8.Location = new System.Drawing.Point(3, 159);
+            this.kryptonLabel8.Location = new System.Drawing.Point(3, 183);
             this.kryptonLabel8.Name = "kryptonLabel8";
-            this.kryptonLabel8.Size = new System.Drawing.Size(13, 20);
+            this.kryptonLabel8.Size = new System.Drawing.Size(15, 24);
             this.kryptonLabel8.TabIndex = 9;
             this.kryptonLabel8.Values.Text = ":";
             // 
             // kryptonLabel9
             // 
-            this.kryptonLabel9.Location = new System.Drawing.Point(3, 185);
+            this.kryptonLabel9.Location = new System.Drawing.Point(3, 213);
             this.kryptonLabel9.Name = "kryptonLabel9";
-            this.kryptonLabel9.Size = new System.Drawing.Size(13, 20);
+            this.kryptonLabel9.Size = new System.Drawing.Size(15, 24);
             this.kryptonLabel9.TabIndex = 10;
             this.kryptonLabel9.Values.Text = ":";
             // 
@@ -519,76 +519,76 @@ namespace ParkingManagement.GUI.Forms
             // 
             this.kLbCode.Location = new System.Drawing.Point(3, 3);
             this.kLbCode.Name = "kLbCode";
-            this.kLbCode.Size = new System.Drawing.Size(101, 20);
+            this.kLbCode.Size = new System.Drawing.Size(125, 24);
             this.kLbCode.TabIndex = 3;
             this.kLbCode.Values.Text = "Mã người dùng :";
             this.kLbCode.Click += new System.EventHandler(this.kLbCode_Click);
             // 
             // kLbFullName
             // 
-            this.kLbFullName.Location = new System.Drawing.Point(3, 29);
+            this.kLbFullName.Location = new System.Drawing.Point(3, 33);
             this.kLbFullName.Name = "kLbFullName";
-            this.kLbFullName.Size = new System.Drawing.Size(69, 20);
+            this.kLbFullName.Size = new System.Drawing.Size(85, 24);
             this.kLbFullName.TabIndex = 1;
             this.kLbFullName.Values.Text = "Họ và tên :";
             // 
             // kLbBirthday
             // 
-            this.kLbBirthday.Location = new System.Drawing.Point(3, 55);
+            this.kLbBirthday.Location = new System.Drawing.Point(3, 63);
             this.kLbBirthday.Name = "kLbBirthday";
-            this.kLbBirthday.Size = new System.Drawing.Size(71, 20);
+            this.kLbBirthday.Size = new System.Drawing.Size(87, 24);
             this.kLbBirthday.TabIndex = 7;
             this.kLbBirthday.Values.Text = "Ngày sinh :";
             // 
             // kLbSex
             // 
-            this.kLbSex.Location = new System.Drawing.Point(3, 81);
+            this.kLbSex.Location = new System.Drawing.Point(3, 93);
             this.kLbSex.Name = "kLbSex";
-            this.kLbSex.Size = new System.Drawing.Size(63, 20);
+            this.kLbSex.Size = new System.Drawing.Size(77, 24);
             this.kLbSex.TabIndex = 5;
             this.kLbSex.Values.Text = "Giới tính :";
             // 
             // kLbArea
             // 
-            this.kLbArea.Location = new System.Drawing.Point(3, 107);
+            this.kLbArea.Location = new System.Drawing.Point(3, 123);
             this.kLbArea.Name = "kLbArea";
-            this.kLbArea.Size = new System.Drawing.Size(58, 20);
+            this.kLbArea.Size = new System.Drawing.Size(70, 24);
             this.kLbArea.TabIndex = 17;
             this.kLbArea.Values.Text = "Khu bãi :";
             this.kLbArea.Click += new System.EventHandler(this.kLbArea_Click);
             // 
             // kLbEmail
             // 
-            this.kLbEmail.Location = new System.Drawing.Point(4, 134);
+            this.kLbEmail.Location = new System.Drawing.Point(4, 154);
             this.kLbEmail.Margin = new System.Windows.Forms.Padding(4);
             this.kLbEmail.Name = "kLbEmail";
-            this.kLbEmail.Size = new System.Drawing.Size(46, 20);
+            this.kLbEmail.Size = new System.Drawing.Size(56, 24);
             this.kLbEmail.TabIndex = 9;
             this.kLbEmail.Values.Text = "Email :";
             // 
             // kLbPhone
             // 
-            this.kLbPhone.Location = new System.Drawing.Point(4, 162);
+            this.kLbPhone.Location = new System.Drawing.Point(4, 186);
             this.kLbPhone.Margin = new System.Windows.Forms.Padding(4);
             this.kLbPhone.Name = "kLbPhone";
-            this.kLbPhone.Size = new System.Drawing.Size(89, 20);
+            this.kLbPhone.Size = new System.Drawing.Size(109, 24);
             this.kLbPhone.TabIndex = 11;
             this.kLbPhone.Values.Text = "Số điện thoại :";
             // 
             // kLbTypeAccount
             // 
-            this.kLbTypeAccount.Location = new System.Drawing.Point(3, 189);
+            this.kLbTypeAccount.Location = new System.Drawing.Point(3, 217);
             this.kLbTypeAccount.Name = "kLbTypeAccount";
-            this.kLbTypeAccount.Size = new System.Drawing.Size(93, 20);
+            this.kLbTypeAccount.Size = new System.Drawing.Size(114, 24);
             this.kLbTypeAccount.TabIndex = 15;
             this.kLbTypeAccount.Values.Text = "Loại tài khoản :";
             // 
             // kLbAddress
             // 
-            this.kLbAddress.Location = new System.Drawing.Point(4, 216);
+            this.kLbAddress.Location = new System.Drawing.Point(4, 248);
             this.kLbAddress.Margin = new System.Windows.Forms.Padding(4);
             this.kLbAddress.Name = "kLbAddress";
-            this.kLbAddress.Size = new System.Drawing.Size(54, 20);
+            this.kLbAddress.Size = new System.Drawing.Size(65, 24);
             this.kLbAddress.TabIndex = 13;
             this.kLbAddress.Values.Text = "Địa chỉ :";
             this.kLbAddress.Click += new System.EventHandler(this.kLbAddress_Click);
@@ -776,7 +776,7 @@ namespace ParkingManagement.GUI.Forms
             this.kDgvRoleTable.Name = "kDgvRoleTable";
             this.kDgvRoleTable.RowHeadersWidth = 51;
             this.kDgvRoleTable.RowTemplate.Height = 24;
-            this.kDgvRoleTable.Size = new System.Drawing.Size(1065, 135);
+            this.kDgvRoleTable.Size = new System.Drawing.Size(1065, 130);
             this.kDgvRoleTable.TabIndex = 0;
             this.kDgvRoleTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.kDgvRoleTable_CellClick);
             // 
@@ -986,7 +986,7 @@ namespace ParkingManagement.GUI.Forms
             this.kCbbArea.Location = new System.Drawing.Point(99, 122);
             this.kCbbArea.Margin = new System.Windows.Forms.Padding(4);
             this.kCbbArea.Name = "kCbbArea";
-            this.kCbbArea.Size = new System.Drawing.Size(134, 22);
+            this.kCbbArea.Size = new System.Drawing.Size(134, 26);
             this.kCbbArea.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.kCbbArea.TabIndex = 31;
             this.kCbbArea.Text = "Tất cả";
@@ -998,7 +998,7 @@ namespace ParkingManagement.GUI.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.kTbContentSearch.Location = new System.Drawing.Point(19, 166);
             this.kTbContentSearch.Name = "kTbContentSearch";
-            this.kTbContentSearch.Size = new System.Drawing.Size(479, 23);
+            this.kTbContentSearch.Size = new System.Drawing.Size(479, 27);
             this.kTbContentSearch.TabIndex = 27;
             // 
             // kCbbOptionSearch
@@ -1015,7 +1015,7 @@ namespace ParkingManagement.GUI.Forms
             this.kCbbOptionSearch.Location = new System.Drawing.Point(336, 124);
             this.kCbbOptionSearch.Margin = new System.Windows.Forms.Padding(4);
             this.kCbbOptionSearch.Name = "kCbbOptionSearch";
-            this.kCbbOptionSearch.Size = new System.Drawing.Size(162, 22);
+            this.kCbbOptionSearch.Size = new System.Drawing.Size(162, 26);
             this.kCbbOptionSearch.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.kCbbOptionSearch.TabIndex = 28;
             // 
@@ -1042,38 +1042,38 @@ namespace ParkingManagement.GUI.Forms
             this.flowLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel6.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel6.Name = "flowLayoutPanel6";
-            this.flowLayoutPanel6.Size = new System.Drawing.Size(240, 67);
+            this.flowLayoutPanel6.Size = new System.Drawing.Size(240, 63);
             this.flowLayoutPanel6.TabIndex = 0;
             // 
             // kRbtnManager
             // 
             this.kRbtnManager.Location = new System.Drawing.Point(3, 3);
             this.kRbtnManager.Name = "kRbtnManager";
-            this.kRbtnManager.Size = new System.Drawing.Size(64, 20);
+            this.kRbtnManager.Size = new System.Drawing.Size(79, 24);
             this.kRbtnManager.TabIndex = 33;
             this.kRbtnManager.Values.Text = "Quản lý";
             // 
             // kRBtnStaff
             // 
-            this.kRBtnStaff.Location = new System.Drawing.Point(73, 3);
+            this.kRBtnStaff.Location = new System.Drawing.Point(88, 3);
             this.kRBtnStaff.Name = "kRBtnStaff";
-            this.kRBtnStaff.Size = new System.Drawing.Size(78, 20);
+            this.kRBtnStaff.Size = new System.Drawing.Size(96, 24);
             this.kRBtnStaff.TabIndex = 34;
             this.kRBtnStaff.Values.Text = "Nhân viên";
             // 
             // kRBtnCustomer
             // 
-            this.kRBtnCustomer.Location = new System.Drawing.Point(3, 29);
+            this.kRBtnCustomer.Location = new System.Drawing.Point(3, 33);
             this.kRBtnCustomer.Name = "kRBtnCustomer";
-            this.kRBtnCustomer.Size = new System.Drawing.Size(87, 20);
+            this.kRBtnCustomer.Size = new System.Drawing.Size(107, 24);
             this.kRBtnCustomer.TabIndex = 35;
             this.kRBtnCustomer.Values.Text = "Khách hàng";
             // 
             // kRBtnAllAcc
             // 
-            this.kRBtnAllAcc.Location = new System.Drawing.Point(96, 29);
+            this.kRBtnAllAcc.Location = new System.Drawing.Point(116, 33);
             this.kRBtnAllAcc.Name = "kRBtnAllAcc";
-            this.kRBtnAllAcc.Size = new System.Drawing.Size(55, 20);
+            this.kRBtnAllAcc.Size = new System.Drawing.Size(67, 24);
             this.kRBtnAllAcc.TabIndex = 27;
             this.kRBtnAllAcc.Values.Text = "Tất cả";
             // 
@@ -1081,7 +1081,7 @@ namespace ParkingManagement.GUI.Forms
             // 
             this.kLbSearchArea.Location = new System.Drawing.Point(19, 124);
             this.kLbSearchArea.Name = "kLbSearchArea";
-            this.kLbSearchArea.Size = new System.Drawing.Size(60, 20);
+            this.kLbSearchArea.Size = new System.Drawing.Size(73, 24);
             this.kLbSearchArea.TabIndex = 30;
             this.kLbSearchArea.Values.Text = "Khu vực :";
             this.kLbSearchArea.Click += new System.EventHandler(this.kLbSearchArea_Click);
@@ -1090,7 +1090,7 @@ namespace ParkingManagement.GUI.Forms
             // 
             this.kLbSearch.Location = new System.Drawing.Point(257, 126);
             this.kLbSearch.Name = "kLbSearch";
-            this.kLbSearch.Size = new System.Drawing.Size(59, 20);
+            this.kLbSearch.Size = new System.Drawing.Size(72, 24);
             this.kLbSearch.TabIndex = 23;
             this.kLbSearch.Values.Text = "Tiêu chí :";
             // 
@@ -1115,32 +1115,32 @@ namespace ParkingManagement.GUI.Forms
             this.flowLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel8.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel8.Name = "flowLayoutPanel8";
-            this.flowLayoutPanel8.Size = new System.Drawing.Size(214, 67);
+            this.flowLayoutPanel8.Size = new System.Drawing.Size(214, 63);
             this.flowLayoutPanel8.TabIndex = 0;
             // 
             // kRbtnAllUser
             // 
             this.kRbtnAllUser.Location = new System.Drawing.Point(3, 3);
             this.kRbtnAllUser.Name = "kRbtnAllUser";
-            this.kRbtnAllUser.Size = new System.Drawing.Size(55, 20);
+            this.kRbtnAllUser.Size = new System.Drawing.Size(67, 24);
             this.kRbtnAllUser.TabIndex = 26;
             this.kRbtnAllUser.Values.Text = "Tất cả";
             this.kRbtnAllUser.CheckedChanged += new System.EventHandler(this.kRbtnAllUser_CheckedChanged);
             // 
             // kRBtnActive
             // 
-            this.kRBtnActive.Location = new System.Drawing.Point(64, 3);
+            this.kRBtnActive.Location = new System.Drawing.Point(76, 3);
             this.kRBtnActive.Name = "kRBtnActive";
-            this.kRBtnActive.Size = new System.Drawing.Size(81, 20);
+            this.kRBtnActive.Size = new System.Drawing.Size(100, 24);
             this.kRBtnActive.TabIndex = 24;
             this.kRBtnActive.Values.Text = "Hoạt động";
             this.kRBtnActive.CheckedChanged += new System.EventHandler(this.kRBtnActive_CheckedChanged);
             // 
             // kRBtnInactive
             // 
-            this.kRBtnInactive.Location = new System.Drawing.Point(3, 29);
+            this.kRBtnInactive.Location = new System.Drawing.Point(3, 33);
             this.kRBtnInactive.Name = "kRBtnInactive";
-            this.kRBtnInactive.Size = new System.Drawing.Size(118, 20);
+            this.kRBtnInactive.Size = new System.Drawing.Size(146, 24);
             this.kRBtnInactive.TabIndex = 25;
             this.kRBtnInactive.Values.Text = "Không hoạt động";
             this.kRBtnInactive.CheckedChanged += new System.EventHandler(this.kRBtnInactive_CheckedChanged);
@@ -1194,7 +1194,7 @@ namespace ParkingManagement.GUI.Forms
             this.kTbManagerCode.Location = new System.Drawing.Point(244, 13);
             this.kTbManagerCode.Name = "kTbManagerCode";
             this.kTbManagerCode.ReadOnly = true;
-            this.kTbManagerCode.Size = new System.Drawing.Size(256, 23);
+            this.kTbManagerCode.Size = new System.Drawing.Size(256, 27);
             this.kTbManagerCode.TabIndex = 24;
             // 
             // kTbPosition
@@ -1202,14 +1202,14 @@ namespace ParkingManagement.GUI.Forms
             this.kTbPosition.Location = new System.Drawing.Point(244, 77);
             this.kTbPosition.Name = "kTbPosition";
             this.kTbPosition.ReadOnly = true;
-            this.kTbPosition.Size = new System.Drawing.Size(256, 23);
+            this.kTbPosition.Size = new System.Drawing.Size(256, 27);
             this.kTbPosition.TabIndex = 28;
             // 
             // kLbManagerCode
             // 
             this.kLbManagerCode.Location = new System.Drawing.Point(125, 20);
             this.kLbManagerCode.Name = "kLbManagerCode";
-            this.kLbManagerCode.Size = new System.Drawing.Size(91, 16);
+            this.kLbManagerCode.Size = new System.Drawing.Size(112, 20);
             this.kLbManagerCode.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kLbManagerCode.TabIndex = 23;
             this.kLbManagerCode.Values.Text = "Mã người dùng :";
@@ -1218,7 +1218,7 @@ namespace ParkingManagement.GUI.Forms
             // 
             this.kLbManagerFullName.Location = new System.Drawing.Point(125, 48);
             this.kLbManagerFullName.Name = "kLbManagerFullName";
-            this.kLbManagerFullName.Size = new System.Drawing.Size(69, 20);
+            this.kLbManagerFullName.Size = new System.Drawing.Size(85, 24);
             this.kLbManagerFullName.TabIndex = 25;
             this.kLbManagerFullName.Values.Text = "Họ và tên :";
             // 
@@ -1226,7 +1226,7 @@ namespace ParkingManagement.GUI.Forms
             // 
             this.kLbManagerPosition.Location = new System.Drawing.Point(125, 80);
             this.kLbManagerPosition.Name = "kLbManagerPosition";
-            this.kLbManagerPosition.Size = new System.Drawing.Size(60, 20);
+            this.kLbManagerPosition.Size = new System.Drawing.Size(74, 24);
             this.kLbManagerPosition.TabIndex = 27;
             this.kLbManagerPosition.Values.Text = "Chức vụ :";
             // 
@@ -1235,7 +1235,7 @@ namespace ParkingManagement.GUI.Forms
             this.kTbManagerFullName.Location = new System.Drawing.Point(244, 45);
             this.kTbManagerFullName.Name = "kTbManagerFullName";
             this.kTbManagerFullName.ReadOnly = true;
-            this.kTbManagerFullName.Size = new System.Drawing.Size(256, 23);
+            this.kTbManagerFullName.Size = new System.Drawing.Size(256, 27);
             this.kTbManagerFullName.TabIndex = 26;
             // 
             // kryptonPanel13
@@ -1252,7 +1252,7 @@ namespace ParkingManagement.GUI.Forms
             this.kLbTitle.Location = new System.Drawing.Point(174, 0);
             this.kLbTitle.Name = "kLbTitle";
             this.kLbTitle.PaletteMode = Krypton.Toolkit.PaletteMode.Office2007Blue;
-            this.kLbTitle.Size = new System.Drawing.Size(232, 33);
+            this.kLbTitle.Size = new System.Drawing.Size(288, 40);
             this.kLbTitle.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kLbTitle.TabIndex = 29;
             this.kLbTitle.Values.Text = "Thông tin tài khoản";
@@ -1429,14 +1429,14 @@ namespace ParkingManagement.GUI.Forms
             // 
             this.kTbDesRole.Location = new System.Drawing.Point(3, 3);
             this.kTbDesRole.Name = "kTbDesRole";
-            this.kTbDesRole.Size = new System.Drawing.Size(381, 23);
+            this.kTbDesRole.Size = new System.Drawing.Size(381, 27);
             this.kTbDesRole.TabIndex = 24;
             // 
             // kTbNameRole
             // 
-            this.kTbNameRole.Location = new System.Drawing.Point(3, 32);
+            this.kTbNameRole.Location = new System.Drawing.Point(3, 36);
             this.kTbNameRole.Name = "kTbNameRole";
-            this.kTbNameRole.Size = new System.Drawing.Size(381, 23);
+            this.kTbNameRole.Size = new System.Drawing.Size(381, 27);
             this.kTbNameRole.TabIndex = 23;
             // 
             // flowLayoutPanel4
@@ -1455,15 +1455,15 @@ namespace ParkingManagement.GUI.Forms
             // 
             this.kryptonLabel16.Location = new System.Drawing.Point(3, 3);
             this.kryptonLabel16.Name = "kryptonLabel16";
-            this.kryptonLabel16.Size = new System.Drawing.Size(13, 20);
+            this.kryptonLabel16.Size = new System.Drawing.Size(15, 24);
             this.kryptonLabel16.TabIndex = 9;
             this.kryptonLabel16.Values.Text = ":";
             // 
             // kryptonLabel17
             // 
-            this.kryptonLabel17.Location = new System.Drawing.Point(3, 29);
+            this.kryptonLabel17.Location = new System.Drawing.Point(3, 33);
             this.kryptonLabel17.Name = "kryptonLabel17";
-            this.kryptonLabel17.Size = new System.Drawing.Size(13, 20);
+            this.kryptonLabel17.Size = new System.Drawing.Size(15, 24);
             this.kryptonLabel17.TabIndex = 10;
             this.kryptonLabel17.Values.Text = ":";
             // 
@@ -1483,15 +1483,15 @@ namespace ParkingManagement.GUI.Forms
             // 
             this.kLbRoleName.Location = new System.Drawing.Point(3, 3);
             this.kLbRoleName.Name = "kLbRoleName";
-            this.kLbRoleName.Size = new System.Drawing.Size(46, 20);
+            this.kLbRoleName.Size = new System.Drawing.Size(56, 24);
             this.kLbRoleName.TabIndex = 23;
             this.kLbRoleName.Values.Text = "Quyền";
             // 
             // kLbRoleDes
             // 
-            this.kLbRoleDes.Location = new System.Drawing.Point(3, 29);
+            this.kLbRoleDes.Location = new System.Drawing.Point(3, 33);
             this.kLbRoleDes.Name = "kLbRoleDes";
-            this.kLbRoleDes.Size = new System.Drawing.Size(43, 20);
+            this.kLbRoleDes.Size = new System.Drawing.Size(52, 24);
             this.kLbRoleDes.TabIndex = 25;
             this.kLbRoleDes.Values.Text = "Mô tả";
             // 
