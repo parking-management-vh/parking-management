@@ -167,5 +167,10 @@ namespace ParkingManagement
         {
             OpenFormInTab<frmStatistics>("Statistics");
         }
+
+        private void kGrbWorkPage_Click(object sender, EventArgs e)
+        {
+            OpenFormInTab<frmStaffDashboard>("Staff Dashboard");
+        }
     }
 } 

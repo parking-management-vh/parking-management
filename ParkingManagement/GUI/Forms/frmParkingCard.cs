@@ -69,7 +69,6 @@ namespace ParkingManagement.GUI.Forms
                     MessageBox.Show("Không có thẻ giữ xe nào trong cơ sở dữ liệu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
-                kDgvParkingCard.DataSource = null;  // Reset trước khi gán
                 kDgvParkingCard.DataSource = cards; // Gán danh sách vào DataGridView
             }
             catch (Exception ex)
@@ -77,7 +76,6 @@ namespace ParkingManagement.GUI.Forms
                 MessageBox.Show($"Lỗi khi tải danh sách thẻ giữ xe: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        
 
 
         //Load danh sách trạng thái thẻ giữ xe vào ComboBox
@@ -273,7 +271,6 @@ namespace ParkingManagement.GUI.Forms
 
             List<allParkingCard> parkingCards = parkingCardBLL.GetAllParkingCards(status, isMonth);
 
-            kDgvParkingCard.DataSource = null;
             kDgvParkingCard.DataSource = parkingCards;
         }
 
@@ -301,6 +298,34 @@ namespace ParkingManagement.GUI.Forms
         private void kryptonGroupBox1_Panel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void kBtnDelete_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(selectedPCId))
+            {
+                MessageBox.Show("Vui lòng chọn chỗ đỗ để xoá!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xoá chỗ đỗ này?", "Xác nhận xoá",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (result == DialogResult.Yes)
+            {
+                try
+                {
+                    parkingCardBLL.DeleteParkingCard(selectedPCId);
+
+                    MessageBox.Show("Xoá chỗ đỗ thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    LoadAllParkingCards();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Lỗi khi xoá chỗ đỗ: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

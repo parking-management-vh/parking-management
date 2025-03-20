@@ -139,7 +139,6 @@ namespace ParkingManagement.GUI.Forms.staff
 
             List<allVehicle> vehicle = vehicleBLL.GetAllVehicle(selectedArea, selectedSlot, selectedVehicleType, licensePlate);
 
-            kDgvListVehicle.DataSource = null;
             kDgvListVehicle.DataSource = vehicle;
         }
 
@@ -152,7 +151,6 @@ namespace ParkingManagement.GUI.Forms.staff
 
             List<allVehicle> vehicle = vehicleBLL.GetAllVehicle(selectedArea, selectedSlot, selectedVehicleType, licensePlate);
 
-            kDgvListVehicle.DataSource = null;
             kDgvListVehicle.DataSource = vehicle;
         }
 

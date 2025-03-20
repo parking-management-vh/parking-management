@@ -26,5 +26,10 @@ namespace ParkingManagement.BLL
         {
             repository.UpdateParkingCardEndDate(vehicleId);
         }
+        public void DeleteParkingCard(string id)
+        {
+            repository.DeleteParkingCard(id);
+        }
+        
     }
 }

@@ -92,6 +92,8 @@
             this.btnStatistics = new Krypton.Ribbon.KryptonRibbonGroupButton();
             this.kryptonNavigator1 = new Krypton.Navigator.KryptonNavigator();
             this.kryptonRibbonGroupButton2 = new Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.kryptonRibbonGroupTriple20 = new Krypton.Ribbon.KryptonRibbonGroupTriple();
+            this.kGrbWorkPage = new Krypton.Ribbon.KryptonRibbonGroupButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonRibbon1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonNavigator1)).BeginInit();
             this.kryptonNavigator1.SuspendLayout();
@@ -107,7 +109,7 @@
             this.tabUserManagement,
             this.tabStatistics});
             this.kryptonRibbon1.SelectedTab = this.tabHome;
-            this.kryptonRibbon1.Size = new System.Drawing.Size(1173, 171);
+            this.kryptonRibbon1.Size = new System.Drawing.Size(880, 143);
             this.kryptonRibbon1.TabIndex = 0;
             // 
             // tabHome
@@ -123,7 +125,8 @@
             this.kryptonRibbonGroupSeparator1,
             this.kryptonRibbonGroupTriple3,
             this.kryptonRibbonGroupSeparator2,
-            this.kryptonRibbonGroupTriple4});
+            this.kryptonRibbonGroupTriple4,
+            this.kryptonRibbonGroupTriple20});
             this.kryptonRibbonGroup1.TextLine1 = "Home";
             // 
             // kryptonRibbonGroupTriple1
@@ -410,24 +413,35 @@
             this.kryptonNavigator1.AutoSize = true;
             this.kryptonNavigator1.ControlKryptonFormFeatures = false;
             this.kryptonNavigator1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonNavigator1.Location = new System.Drawing.Point(0, 171);
-            this.kryptonNavigator1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kryptonNavigator1.Location = new System.Drawing.Point(0, 143);
+            this.kryptonNavigator1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kryptonNavigator1.NavigatorMode = Krypton.Navigator.NavigatorMode.BarTabGroup;
             this.kryptonNavigator1.Owner = null;
             this.kryptonNavigator1.PageBackStyle = Krypton.Toolkit.PaletteBackStyle.PanelClient;
-            this.kryptonNavigator1.Size = new System.Drawing.Size(1173, 383);
+            this.kryptonNavigator1.Size = new System.Drawing.Size(880, 307);
             this.kryptonNavigator1.TabIndex = 1;
             this.kryptonNavigator1.Text = "kryptonNavigator1";
             // 
+            // kryptonRibbonGroupTriple20
+            // 
+            this.kryptonRibbonGroupTriple20.Items.AddRange(new Krypton.Ribbon.KryptonRibbonGroupItem[] {
+            this.kGrbWorkPage});
+            // 
+            // kGrbWorkPage
+            // 
+            this.kGrbWorkPage.ImageLarge = global::ParkingManagement.Properties.Resources._979713;
+            this.kGrbWorkPage.ImageSmall = global::ParkingManagement.Properties.Resources._979713;
+            this.kGrbWorkPage.TextLine1 = "Work Page";
+            this.kGrbWorkPage.Click += new System.EventHandler(this.kGrbWorkPage_Click);
+            // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1173, 554);
+            this.ClientSize = new System.Drawing.Size(880, 450);
             this.Controls.Add(this.kryptonNavigator1);
             this.Controls.Add(this.kryptonRibbon1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
@@ -505,6 +519,8 @@
         private Krypton.Ribbon.KryptonRibbonGroupButton kryptonRibbonGroupButton1;
         private Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple19;
         private Krypton.Ribbon.KryptonRibbonGroupButton kryptonRibbonGroupButton3;
+        private Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple20;
+        private Krypton.Ribbon.KryptonRibbonGroupButton kGrbWorkPage;
     }
 }
 
