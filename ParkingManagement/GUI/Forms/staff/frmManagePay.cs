@@ -112,7 +112,16 @@ namespace ParkingManagement.GUI.Forms.staff
                 kTbBks.Text = row.Cells[7].Value?.ToString() ?? "";
             }
         }
-
+        private void ResetBox()
+        {
+            kDtpPaymentDate.Value = DateTime.Now;
+            kTbTotalPrice.Text = "";
+            kCbPaymentMethod.SelectedItem = -1;
+            kTbTotalTime.Text = "";
+            kTbStaffPay.Text = "";
+            kTbCodeInvoice.Text = "";
+            kTbBks.Text = "";
+        }
         private void kBtnSearch_Click(object sender, EventArgs e)
         {
             string staffCode = SessionManager.CurrentUser.Code;
@@ -133,20 +142,7 @@ namespace ParkingManagement.GUI.Forms.staff
 
         private void kBtnSearch_Click_1(object sender, EventArgs e)
         {
-            string staffCode = SessionManager.CurrentUser.Code;
-            string filterType = kCbbSFilter.SelectedItem.ToString();
-            string filterValue = kTbSearch.Text.Trim();
-            string paymentMethodFilter = kCbbPayMethod.SelectedItem.ToString();
-            DateTime? paymentDate = kDtpSDate.Value.Date;
-
-            if (filterType == "Tất cả")
-            {
-                filterValue = null;
-            }
-
-            List<paymentModel> filteredPayments = paymentBLL.GetAllPaymentsByStaffCode(staffCode, filterType, filterValue, paymentMethodFilter, paymentDate);
-
-            kDgvListVehiclePay.DataSource = filteredPayments;
+            
         }
         private void kryptonGroupBox2_Panel_Paint(object sender, PaintEventArgs e)
         {
@@ -156,10 +152,28 @@ namespace ParkingManagement.GUI.Forms.staff
         private void kBtnRef_Click(object sender, EventArgs e)
         {
             LoadAllPayment();
+            ResetBox();
             LoadFilter();
             LoadPayMethodSearch();
             LoadUserSession();
             LoadPaymentmethod();
+        }
+
+        private void kBtnSearch_Click_2(object sender, EventArgs e)
+        {
+            string staffCode = SessionManager.CurrentUser.Code;
+            string filterType = kCbbSFilter.SelectedItem.ToString();
+            string filterValue = kTbSearch.Text.Trim();
+            string paymentMethodFilter = kCbbPayMethod.SelectedItem.ToString();
+            DateTime? paymentDate = kDtpSDate.Value.Date;
+            if (filterType == "Tất cả")
+            {
+                filterValue = null;
+            }
+
+            List<paymentModel> filteredPayments = paymentBLL.GetAllPaymentsByStaffCode(staffCode, filterType, filterValue, paymentMethodFilter, paymentDate);
+
+            kDgvListVehiclePay.DataSource = filteredPayments;
         }
     }
 }

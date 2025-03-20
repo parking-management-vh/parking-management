@@ -42,15 +42,6 @@ namespace ParkingManagement.GUI.Forms
             this.kTbPhone = new Krypton.Toolkit.KryptonTextBox();
             this.kTbAddress = new Krypton.Toolkit.KryptonTextBox();
             this.kCbbTypeAcount = new Krypton.Toolkit.KryptonComboBox();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel3 = new Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel4 = new Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel5 = new Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel6 = new Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel7 = new Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel8 = new Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel9 = new Krypton.Toolkit.KryptonLabel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.kLbCode = new Krypton.Toolkit.KryptonLabel();
             this.kLbFullName = new Krypton.Toolkit.KryptonLabel();
@@ -165,7 +156,6 @@ namespace ParkingManagement.GUI.Forms
             ((System.ComponentModel.ISupportInitialize)(this.kCbbSex)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kCbbParkingArea)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kCbbTypeAcount)).BeginInit();
-            this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel20)).BeginInit();
@@ -265,10 +255,9 @@ namespace ParkingManagement.GUI.Forms
             this.kPnUserInfo.Controls.Add(this.kryptonPanel16);
             this.kPnUserInfo.Controls.Add(this.kryptonPanel15);
             this.kPnUserInfo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.kPnUserInfo.Location = new System.Drawing.Point(0, 182);
-            this.kPnUserInfo.Margin = new System.Windows.Forms.Padding(4);
+            this.kPnUserInfo.Location = new System.Drawing.Point(0, 148);
             this.kPnUserInfo.Name = "kPnUserInfo";
-            this.kPnUserInfo.Size = new System.Drawing.Size(611, 365);
+            this.kPnUserInfo.Size = new System.Drawing.Size(458, 297);
             this.kPnUserInfo.TabIndex = 0;
             this.kPnUserInfo.Paint += new System.Windows.Forms.PaintEventHandler(this.kPnUserInfo_Paint);
             // 
@@ -277,10 +266,9 @@ namespace ParkingManagement.GUI.Forms
             this.kryptonPanel17.Controls.Add(this.kryptonPanel19);
             this.kryptonPanel17.Controls.Add(this.kryptonPanel18);
             this.kryptonPanel17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonPanel17.Location = new System.Drawing.Point(14, 11);
-            this.kryptonPanel17.Margin = new System.Windows.Forms.Padding(4);
+            this.kryptonPanel17.Location = new System.Drawing.Point(10, 9);
             this.kryptonPanel17.Name = "kryptonPanel17";
-            this.kryptonPanel17.Size = new System.Drawing.Size(597, 354);
+            this.kryptonPanel17.Size = new System.Drawing.Size(448, 288);
             this.kryptonPanel17.TabIndex = 30;
             // 
             // kryptonPanel19
@@ -289,29 +277,26 @@ namespace ParkingManagement.GUI.Forms
             this.kryptonPanel19.Controls.Add(this.kryptonPanel21);
             this.kryptonPanel19.Controls.Add(this.kryptonPanel20);
             this.kryptonPanel19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonPanel19.Location = new System.Drawing.Point(165, 0);
-            this.kryptonPanel19.Margin = new System.Windows.Forms.Padding(4);
+            this.kryptonPanel19.Location = new System.Drawing.Point(85, 0);
             this.kryptonPanel19.Name = "kryptonPanel19";
-            this.kryptonPanel19.Size = new System.Drawing.Size(432, 354);
+            this.kryptonPanel19.Size = new System.Drawing.Size(363, 288);
             this.kryptonPanel19.TabIndex = 31;
             // 
             // kryptonPanel22
             // 
             this.kryptonPanel22.Controls.Add(this.flowLayoutPanel3);
-            this.kryptonPanel22.Controls.Add(this.flowLayoutPanel2);
             this.kryptonPanel22.Controls.Add(this.flowLayoutPanel1);
             this.kryptonPanel22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonPanel22.Location = new System.Drawing.Point(0, 10);
-            this.kryptonPanel22.Margin = new System.Windows.Forms.Padding(4);
+            this.kryptonPanel22.Location = new System.Drawing.Point(0, 8);
             this.kryptonPanel22.Name = "kryptonPanel22";
-            this.kryptonPanel22.Size = new System.Drawing.Size(432, 297);
+            this.kryptonPanel22.Size = new System.Drawing.Size(363, 242);
             this.kryptonPanel22.TabIndex = 34;
             // 
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.BackColor = System.Drawing.Color.Transparent;
-            this.flowLayoutPanel3.Controls.Add(this.kTbCode);
             this.flowLayoutPanel3.Controls.Add(this.kTbFullName);
+            this.flowLayoutPanel3.Controls.Add(this.kTbCode);
             this.flowLayoutPanel3.Controls.Add(this.kDtpBirthday);
             this.flowLayoutPanel3.Controls.Add(this.kCbbSex);
             this.flowLayoutPanel3.Controls.Add(this.kCbbParkingArea);
@@ -321,25 +306,28 @@ namespace ParkingManagement.GUI.Forms
             this.flowLayoutPanel3.Controls.Add(this.kCbbTypeAcount);
             this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(165, 0);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(107, 0);
+            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(267, 297);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(256, 242);
             this.flowLayoutPanel3.TabIndex = 4;
             // 
             // kTbCode
             // 
             this.kTbCode.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kTbCode.Location = new System.Drawing.Point(3, 3);
+            this.kTbCode.Location = new System.Drawing.Point(2, 29);
+            this.kTbCode.Margin = new System.Windows.Forms.Padding(2);
             this.kTbCode.Name = "kTbCode";
-            this.kTbCode.Size = new System.Drawing.Size(203, 27);
+            this.kTbCode.Size = new System.Drawing.Size(237, 23);
             this.kTbCode.TabIndex = 4;
             this.kTbCode.TextChanged += new System.EventHandler(this.kTbCode_TextChanged);
             // 
             // kTbFullName
             // 
-            this.kTbFullName.Location = new System.Drawing.Point(3, 36);
+            this.kTbFullName.Location = new System.Drawing.Point(2, 2);
+            this.kTbFullName.Margin = new System.Windows.Forms.Padding(2);
             this.kTbFullName.Name = "kTbFullName";
-            this.kTbFullName.Size = new System.Drawing.Size(203, 27);
+            this.kTbFullName.Size = new System.Drawing.Size(237, 23);
             this.kTbFullName.TabIndex = 2;
             // 
             // kDtpBirthday
@@ -347,10 +335,10 @@ namespace ParkingManagement.GUI.Forms
             this.kDtpBirthday.CalendarTodayDate = new System.DateTime(2025, 3, 1, 0, 0, 0, 0);
             this.kDtpBirthday.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kDtpBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.kDtpBirthday.Location = new System.Drawing.Point(3, 68);
-            this.kDtpBirthday.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kDtpBirthday.Location = new System.Drawing.Point(2, 56);
+            this.kDtpBirthday.Margin = new System.Windows.Forms.Padding(2);
             this.kDtpBirthday.Name = "kDtpBirthday";
-            this.kDtpBirthday.Size = new System.Drawing.Size(203, 25);
+            this.kDtpBirthday.Size = new System.Drawing.Size(237, 21);
             this.kDtpBirthday.TabIndex = 22;
             // 
             // kCbbSex
@@ -360,9 +348,10 @@ namespace ParkingManagement.GUI.Forms
             this.kCbbSex.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.kCbbSex.Location = new System.Drawing.Point(3, 98);
+            this.kCbbSex.Location = new System.Drawing.Point(2, 81);
+            this.kCbbSex.Margin = new System.Windows.Forms.Padding(2);
             this.kCbbSex.Name = "kCbbSex";
-            this.kCbbSex.Size = new System.Drawing.Size(203, 25);
+            this.kCbbSex.Size = new System.Drawing.Size(237, 21);
             this.kCbbSex.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kCbbSex.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.kCbbSex.TabIndex = 27;
@@ -371,9 +360,10 @@ namespace ParkingManagement.GUI.Forms
             // 
             this.kCbbParkingArea.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kCbbParkingArea.DropDownWidth = 330;
-            this.kCbbParkingArea.Location = new System.Drawing.Point(3, 129);
+            this.kCbbParkingArea.Location = new System.Drawing.Point(2, 106);
+            this.kCbbParkingArea.Margin = new System.Windows.Forms.Padding(2);
             this.kCbbParkingArea.Name = "kCbbParkingArea";
-            this.kCbbParkingArea.Size = new System.Drawing.Size(203, 25);
+            this.kCbbParkingArea.Size = new System.Drawing.Size(237, 21);
             this.kCbbParkingArea.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kCbbParkingArea.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.kCbbParkingArea.TabIndex = 26;
@@ -381,25 +371,28 @@ namespace ParkingManagement.GUI.Forms
             // kTbEmail
             // 
             this.kTbEmail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kTbEmail.Location = new System.Drawing.Point(3, 160);
+            this.kTbEmail.Location = new System.Drawing.Point(2, 131);
+            this.kTbEmail.Margin = new System.Windows.Forms.Padding(2);
             this.kTbEmail.Name = "kTbEmail";
-            this.kTbEmail.Size = new System.Drawing.Size(203, 27);
+            this.kTbEmail.Size = new System.Drawing.Size(237, 23);
             this.kTbEmail.TabIndex = 10;
             // 
             // kTbPhone
             // 
             this.kTbPhone.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kTbPhone.Location = new System.Drawing.Point(3, 193);
+            this.kTbPhone.Location = new System.Drawing.Point(2, 158);
+            this.kTbPhone.Margin = new System.Windows.Forms.Padding(2);
             this.kTbPhone.Name = "kTbPhone";
-            this.kTbPhone.Size = new System.Drawing.Size(203, 27);
+            this.kTbPhone.Size = new System.Drawing.Size(237, 23);
             this.kTbPhone.TabIndex = 12;
             // 
             // kTbAddress
             // 
             this.kTbAddress.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kTbAddress.Location = new System.Drawing.Point(3, 226);
+            this.kTbAddress.Location = new System.Drawing.Point(2, 185);
+            this.kTbAddress.Margin = new System.Windows.Forms.Padding(2);
             this.kTbAddress.Name = "kTbAddress";
-            this.kTbAddress.Size = new System.Drawing.Size(203, 27);
+            this.kTbAddress.Size = new System.Drawing.Size(237, 23);
             this.kTbAddress.TabIndex = 14;
             this.kTbAddress.TextChanged += new System.EventHandler(this.kTbAddress_TextChanged);
             // 
@@ -407,94 +400,13 @@ namespace ParkingManagement.GUI.Forms
             // 
             this.kCbbTypeAcount.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kCbbTypeAcount.DropDownWidth = 330;
-            this.kCbbTypeAcount.Location = new System.Drawing.Point(3, 259);
+            this.kCbbTypeAcount.Location = new System.Drawing.Point(2, 212);
+            this.kCbbTypeAcount.Margin = new System.Windows.Forms.Padding(2);
             this.kCbbTypeAcount.Name = "kCbbTypeAcount";
-            this.kCbbTypeAcount.Size = new System.Drawing.Size(203, 23);
+            this.kCbbTypeAcount.Size = new System.Drawing.Size(237, 20);
             this.kCbbTypeAcount.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kCbbTypeAcount.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.kCbbTypeAcount.TabIndex = 25;
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.flowLayoutPanel2.Controls.Add(this.kryptonLabel1);
-            this.flowLayoutPanel2.Controls.Add(this.kryptonLabel3);
-            this.flowLayoutPanel2.Controls.Add(this.kryptonLabel4);
-            this.flowLayoutPanel2.Controls.Add(this.kryptonLabel5);
-            this.flowLayoutPanel2.Controls.Add(this.kryptonLabel6);
-            this.flowLayoutPanel2.Controls.Add(this.kryptonLabel7);
-            this.flowLayoutPanel2.Controls.Add(this.kryptonLabel8);
-            this.flowLayoutPanel2.Controls.Add(this.kryptonLabel9);
-            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(143, 0);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(22, 297);
-            this.flowLayoutPanel2.TabIndex = 3;
-            // 
-            // kryptonLabel1
-            // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(3, 3);
-            this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(15, 24);
-            this.kryptonLabel1.TabIndex = 3;
-            this.kryptonLabel1.Values.Text = ":";
-            // 
-            // kryptonLabel3
-            // 
-            this.kryptonLabel3.Location = new System.Drawing.Point(3, 33);
-            this.kryptonLabel3.Name = "kryptonLabel3";
-            this.kryptonLabel3.Size = new System.Drawing.Size(15, 24);
-            this.kryptonLabel3.TabIndex = 4;
-            this.kryptonLabel3.Values.Text = ":";
-            // 
-            // kryptonLabel4
-            // 
-            this.kryptonLabel4.Location = new System.Drawing.Point(3, 63);
-            this.kryptonLabel4.Name = "kryptonLabel4";
-            this.kryptonLabel4.Size = new System.Drawing.Size(15, 24);
-            this.kryptonLabel4.TabIndex = 5;
-            this.kryptonLabel4.Values.Text = ":";
-            // 
-            // kryptonLabel5
-            // 
-            this.kryptonLabel5.Location = new System.Drawing.Point(3, 93);
-            this.kryptonLabel5.Name = "kryptonLabel5";
-            this.kryptonLabel5.Size = new System.Drawing.Size(15, 24);
-            this.kryptonLabel5.TabIndex = 6;
-            this.kryptonLabel5.Values.Text = ":";
-            // 
-            // kryptonLabel6
-            // 
-            this.kryptonLabel6.Location = new System.Drawing.Point(3, 123);
-            this.kryptonLabel6.Name = "kryptonLabel6";
-            this.kryptonLabel6.Size = new System.Drawing.Size(15, 24);
-            this.kryptonLabel6.TabIndex = 7;
-            this.kryptonLabel6.Values.Text = ":";
-            // 
-            // kryptonLabel7
-            // 
-            this.kryptonLabel7.Location = new System.Drawing.Point(3, 153);
-            this.kryptonLabel7.Name = "kryptonLabel7";
-            this.kryptonLabel7.Size = new System.Drawing.Size(15, 24);
-            this.kryptonLabel7.TabIndex = 8;
-            this.kryptonLabel7.Values.Text = ":";
-            // 
-            // kryptonLabel8
-            // 
-            this.kryptonLabel8.Location = new System.Drawing.Point(3, 183);
-            this.kryptonLabel8.Name = "kryptonLabel8";
-            this.kryptonLabel8.Size = new System.Drawing.Size(15, 24);
-            this.kryptonLabel8.TabIndex = 9;
-            this.kryptonLabel8.Values.Text = ":";
-            // 
-            // kryptonLabel9
-            // 
-            this.kryptonLabel9.Location = new System.Drawing.Point(3, 213);
-            this.kryptonLabel9.Name = "kryptonLabel9";
-            this.kryptonLabel9.Size = new System.Drawing.Size(15, 24);
-            this.kryptonLabel9.TabIndex = 10;
-            this.kryptonLabel9.Values.Text = ":";
             // 
             // flowLayoutPanel1
             // 
@@ -511,84 +423,88 @@ namespace ParkingManagement.GUI.Forms
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(143, 297);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(107, 242);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // kLbCode
             // 
-            this.kLbCode.Location = new System.Drawing.Point(3, 3);
+            this.kLbCode.Location = new System.Drawing.Point(2, 2);
+            this.kLbCode.Margin = new System.Windows.Forms.Padding(2);
             this.kLbCode.Name = "kLbCode";
-            this.kLbCode.Size = new System.Drawing.Size(125, 24);
+            this.kLbCode.Size = new System.Drawing.Size(101, 20);
             this.kLbCode.TabIndex = 3;
             this.kLbCode.Values.Text = "Mã người dùng :";
             this.kLbCode.Click += new System.EventHandler(this.kLbCode_Click);
             // 
             // kLbFullName
             // 
-            this.kLbFullName.Location = new System.Drawing.Point(3, 33);
+            this.kLbFullName.Location = new System.Drawing.Point(2, 26);
+            this.kLbFullName.Margin = new System.Windows.Forms.Padding(2);
             this.kLbFullName.Name = "kLbFullName";
-            this.kLbFullName.Size = new System.Drawing.Size(85, 24);
+            this.kLbFullName.Size = new System.Drawing.Size(69, 20);
             this.kLbFullName.TabIndex = 1;
             this.kLbFullName.Values.Text = "Họ và tên :";
             // 
             // kLbBirthday
             // 
-            this.kLbBirthday.Location = new System.Drawing.Point(3, 63);
+            this.kLbBirthday.Location = new System.Drawing.Point(2, 50);
+            this.kLbBirthday.Margin = new System.Windows.Forms.Padding(2);
             this.kLbBirthday.Name = "kLbBirthday";
-            this.kLbBirthday.Size = new System.Drawing.Size(87, 24);
+            this.kLbBirthday.Size = new System.Drawing.Size(71, 20);
             this.kLbBirthday.TabIndex = 7;
             this.kLbBirthday.Values.Text = "Ngày sinh :";
             // 
             // kLbSex
             // 
-            this.kLbSex.Location = new System.Drawing.Point(3, 93);
+            this.kLbSex.Location = new System.Drawing.Point(2, 74);
+            this.kLbSex.Margin = new System.Windows.Forms.Padding(2);
             this.kLbSex.Name = "kLbSex";
-            this.kLbSex.Size = new System.Drawing.Size(77, 24);
+            this.kLbSex.Size = new System.Drawing.Size(63, 20);
             this.kLbSex.TabIndex = 5;
             this.kLbSex.Values.Text = "Giới tính :";
             // 
             // kLbArea
             // 
-            this.kLbArea.Location = new System.Drawing.Point(3, 123);
+            this.kLbArea.Location = new System.Drawing.Point(2, 98);
+            this.kLbArea.Margin = new System.Windows.Forms.Padding(2);
             this.kLbArea.Name = "kLbArea";
-            this.kLbArea.Size = new System.Drawing.Size(70, 24);
+            this.kLbArea.Size = new System.Drawing.Size(58, 20);
             this.kLbArea.TabIndex = 17;
             this.kLbArea.Values.Text = "Khu bãi :";
             this.kLbArea.Click += new System.EventHandler(this.kLbArea_Click);
             // 
             // kLbEmail
             // 
-            this.kLbEmail.Location = new System.Drawing.Point(4, 154);
-            this.kLbEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.kLbEmail.Location = new System.Drawing.Point(3, 123);
             this.kLbEmail.Name = "kLbEmail";
-            this.kLbEmail.Size = new System.Drawing.Size(56, 24);
+            this.kLbEmail.Size = new System.Drawing.Size(46, 20);
             this.kLbEmail.TabIndex = 9;
             this.kLbEmail.Values.Text = "Email :";
             // 
             // kLbPhone
             // 
-            this.kLbPhone.Location = new System.Drawing.Point(4, 186);
-            this.kLbPhone.Margin = new System.Windows.Forms.Padding(4);
+            this.kLbPhone.Location = new System.Drawing.Point(3, 149);
             this.kLbPhone.Name = "kLbPhone";
-            this.kLbPhone.Size = new System.Drawing.Size(109, 24);
+            this.kLbPhone.Size = new System.Drawing.Size(89, 20);
             this.kLbPhone.TabIndex = 11;
             this.kLbPhone.Values.Text = "Số điện thoại :";
             // 
             // kLbTypeAccount
             // 
-            this.kLbTypeAccount.Location = new System.Drawing.Point(3, 217);
+            this.kLbTypeAccount.Location = new System.Drawing.Point(2, 174);
+            this.kLbTypeAccount.Margin = new System.Windows.Forms.Padding(2);
             this.kLbTypeAccount.Name = "kLbTypeAccount";
-            this.kLbTypeAccount.Size = new System.Drawing.Size(114, 24);
+            this.kLbTypeAccount.Size = new System.Drawing.Size(93, 20);
             this.kLbTypeAccount.TabIndex = 15;
             this.kLbTypeAccount.Values.Text = "Loại tài khoản :";
             // 
             // kLbAddress
             // 
-            this.kLbAddress.Location = new System.Drawing.Point(4, 248);
-            this.kLbAddress.Margin = new System.Windows.Forms.Padding(4);
+            this.kLbAddress.Location = new System.Drawing.Point(3, 199);
             this.kLbAddress.Name = "kLbAddress";
-            this.kLbAddress.Size = new System.Drawing.Size(65, 24);
+            this.kLbAddress.Size = new System.Drawing.Size(54, 20);
             this.kLbAddress.TabIndex = 13;
             this.kLbAddress.Values.Text = "Địa chỉ :";
             this.kLbAddress.Click += new System.EventHandler(this.kLbAddress_Click);
@@ -597,9 +513,8 @@ namespace ParkingManagement.GUI.Forms
             // 
             this.kryptonPanel21.Dock = System.Windows.Forms.DockStyle.Top;
             this.kryptonPanel21.Location = new System.Drawing.Point(0, 0);
-            this.kryptonPanel21.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonPanel21.Name = "kryptonPanel21";
-            this.kryptonPanel21.Size = new System.Drawing.Size(432, 10);
+            this.kryptonPanel21.Size = new System.Drawing.Size(363, 8);
             this.kryptonPanel21.TabIndex = 33;
             // 
             // kryptonPanel20
@@ -609,19 +524,19 @@ namespace ParkingManagement.GUI.Forms
             this.kryptonPanel20.Controls.Add(this.kBtnDelete);
             this.kryptonPanel20.Controls.Add(this.kBtnSave);
             this.kryptonPanel20.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.kryptonPanel20.Location = new System.Drawing.Point(0, 307);
-            this.kryptonPanel20.Margin = new System.Windows.Forms.Padding(4);
+            this.kryptonPanel20.Location = new System.Drawing.Point(0, 250);
             this.kryptonPanel20.Name = "kryptonPanel20";
-            this.kryptonPanel20.Size = new System.Drawing.Size(432, 47);
+            this.kryptonPanel20.Size = new System.Drawing.Size(363, 38);
             this.kryptonPanel20.TabIndex = 32;
             // 
             // kBtnCreateUser
             // 
             this.kBtnCreateUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kBtnCreateUser.Location = new System.Drawing.Point(7, 11);
+            this.kBtnCreateUser.Location = new System.Drawing.Point(21, 9);
+            this.kBtnCreateUser.Margin = new System.Windows.Forms.Padding(2);
             this.kBtnCreateUser.Name = "kBtnCreateUser";
             this.kBtnCreateUser.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.kBtnCreateUser.Size = new System.Drawing.Size(87, 25);
+            this.kBtnCreateUser.Size = new System.Drawing.Size(65, 20);
             this.kBtnCreateUser.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kBtnCreateUser.TabIndex = 19;
             this.kBtnCreateUser.Values.DropDownArrowColor = System.Drawing.Color.Empty;
@@ -631,10 +546,11 @@ namespace ParkingManagement.GUI.Forms
             // kBtnReset
             // 
             this.kBtnReset.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kBtnReset.Location = new System.Drawing.Point(100, 11);
+            this.kBtnReset.Location = new System.Drawing.Point(106, 9);
+            this.kBtnReset.Margin = new System.Windows.Forms.Padding(2);
             this.kBtnReset.Name = "kBtnReset";
             this.kBtnReset.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.kBtnReset.Size = new System.Drawing.Size(81, 25);
+            this.kBtnReset.Size = new System.Drawing.Size(61, 20);
             this.kBtnReset.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kBtnReset.TabIndex = 24;
             this.kBtnReset.Values.DropDownArrowColor = System.Drawing.Color.Empty;
@@ -644,10 +560,11 @@ namespace ParkingManagement.GUI.Forms
             // kBtnDelete
             // 
             this.kBtnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kBtnDelete.Location = new System.Drawing.Point(187, 11);
+            this.kBtnDelete.Location = new System.Drawing.Point(188, 9);
+            this.kBtnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.kBtnDelete.Name = "kBtnDelete";
             this.kBtnDelete.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.kBtnDelete.Size = new System.Drawing.Size(90, 25);
+            this.kBtnDelete.Size = new System.Drawing.Size(68, 20);
             this.kBtnDelete.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kBtnDelete.TabIndex = 20;
             this.kBtnDelete.Values.DropDownArrowColor = System.Drawing.Color.Empty;
@@ -657,10 +574,11 @@ namespace ParkingManagement.GUI.Forms
             // kBtnSave
             // 
             this.kBtnSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kBtnSave.Location = new System.Drawing.Point(281, 11);
+            this.kBtnSave.Location = new System.Drawing.Point(276, 9);
+            this.kBtnSave.Margin = new System.Windows.Forms.Padding(2);
             this.kBtnSave.Name = "kBtnSave";
             this.kBtnSave.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.kBtnSave.Size = new System.Drawing.Size(90, 25);
+            this.kBtnSave.Size = new System.Drawing.Size(68, 20);
             this.kBtnSave.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kBtnSave.TabIndex = 21;
             this.kBtnSave.Values.DropDownArrowColor = System.Drawing.Color.Empty;
@@ -672,9 +590,8 @@ namespace ParkingManagement.GUI.Forms
             this.kryptonPanel18.Controls.Add(this.kryptonPanel1);
             this.kryptonPanel18.Dock = System.Windows.Forms.DockStyle.Left;
             this.kryptonPanel18.Location = new System.Drawing.Point(0, 0);
-            this.kryptonPanel18.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonPanel18.Name = "kryptonPanel18";
-            this.kryptonPanel18.Size = new System.Drawing.Size(165, 354);
+            this.kryptonPanel18.Size = new System.Drawing.Size(85, 288);
             this.kryptonPanel18.TabIndex = 30;
             // 
             // kryptonPanel1
@@ -683,18 +600,16 @@ namespace ParkingManagement.GUI.Forms
             this.kryptonPanel1.Controls.Add(this.kryptonPictureBox1);
             this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
-            this.kryptonPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(165, 147);
+            this.kryptonPanel1.Size = new System.Drawing.Size(85, 119);
             this.kryptonPanel1.TabIndex = 0;
             // 
             // kBtnAddAvatar
             // 
             this.kBtnAddAvatar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kBtnAddAvatar.Location = new System.Drawing.Point(0, 107);
-            this.kBtnAddAvatar.Margin = new System.Windows.Forms.Padding(4);
+            this.kBtnAddAvatar.Location = new System.Drawing.Point(0, 87);
             this.kBtnAddAvatar.Name = "kBtnAddAvatar";
-            this.kBtnAddAvatar.Size = new System.Drawing.Size(165, 40);
+            this.kBtnAddAvatar.Size = new System.Drawing.Size(85, 32);
             this.kBtnAddAvatar.TabIndex = 1;
             this.kBtnAddAvatar.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.kBtnAddAvatar.Values.Text = "Chọn ảnh";
@@ -704,9 +619,8 @@ namespace ParkingManagement.GUI.Forms
             this.kryptonPictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.kryptonPictureBox1.Image = global::ParkingManagement.Properties.Resources.createuser;
             this.kryptonPictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.kryptonPictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonPictureBox1.Name = "kryptonPictureBox1";
-            this.kryptonPictureBox1.Size = new System.Drawing.Size(165, 107);
+            this.kryptonPictureBox1.Size = new System.Drawing.Size(85, 87);
             this.kryptonPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.kryptonPictureBox1.TabIndex = 0;
             this.kryptonPictureBox1.TabStop = false;
@@ -714,20 +628,18 @@ namespace ParkingManagement.GUI.Forms
             // kryptonPanel16
             // 
             this.kryptonPanel16.Dock = System.Windows.Forms.DockStyle.Left;
-            this.kryptonPanel16.Location = new System.Drawing.Point(0, 11);
-            this.kryptonPanel16.Margin = new System.Windows.Forms.Padding(4);
+            this.kryptonPanel16.Location = new System.Drawing.Point(0, 9);
             this.kryptonPanel16.Name = "kryptonPanel16";
-            this.kryptonPanel16.Size = new System.Drawing.Size(14, 354);
+            this.kryptonPanel16.Size = new System.Drawing.Size(10, 288);
             this.kryptonPanel16.TabIndex = 29;
             // 
             // kryptonPanel15
             // 
             this.kryptonPanel15.Dock = System.Windows.Forms.DockStyle.Top;
             this.kryptonPanel15.Location = new System.Drawing.Point(0, 0);
-            this.kryptonPanel15.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonPanel15.Name = "kryptonPanel15";
             this.kryptonPanel15.PaletteMode = Krypton.Toolkit.PaletteMode.Office2010BlueLightMode;
-            this.kryptonPanel15.Size = new System.Drawing.Size(611, 11);
+            this.kryptonPanel15.Size = new System.Drawing.Size(458, 9);
             this.kryptonPanel15.TabIndex = 28;
             // 
             // kPnUsers
@@ -740,29 +652,30 @@ namespace ParkingManagement.GUI.Forms
             this.kPnUsers.Controls.Add(this.kryptonPanel30);
             this.kPnUsers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kPnUsers.Location = new System.Drawing.Point(0, 0);
-            this.kPnUsers.Margin = new System.Windows.Forms.Padding(4);
             this.kPnUsers.Name = "kPnUsers";
-            this.kPnUsers.Size = new System.Drawing.Size(1096, 705);
+            this.kPnUsers.Size = new System.Drawing.Size(822, 573);
             this.kPnUsers.TabIndex = 1;
             // 
             // kryptonPanel41
             // 
             this.kryptonPanel41.Controls.Add(this.kryptonGroupBox3);
             this.kryptonPanel41.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonPanel41.Location = new System.Drawing.Point(27, 546);
+            this.kryptonPanel41.Location = new System.Drawing.Point(20, 444);
+            this.kryptonPanel41.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonPanel41.Name = "kryptonPanel41";
-            this.kryptonPanel41.Size = new System.Drawing.Size(1069, 159);
+            this.kryptonPanel41.Size = new System.Drawing.Size(802, 129);
             this.kryptonPanel41.TabIndex = 33;
             // 
             // kryptonGroupBox3
             // 
             this.kryptonGroupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonGroupBox3.Location = new System.Drawing.Point(0, 0);
+            this.kryptonGroupBox3.Margin = new System.Windows.Forms.Padding(2);
             // 
             // kryptonGroupBox3.Panel
             // 
             this.kryptonGroupBox3.Panel.Controls.Add(this.kDgvRoleTable);
-            this.kryptonGroupBox3.Size = new System.Drawing.Size(1069, 159);
+            this.kryptonGroupBox3.Size = new System.Drawing.Size(802, 129);
             this.kryptonGroupBox3.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonGroupBox3.TabIndex = 31;
             this.kryptonGroupBox3.Values.Heading = "Bảng phân quyền";
@@ -773,10 +686,11 @@ namespace ParkingManagement.GUI.Forms
             this.kDgvRoleTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.kDgvRoleTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kDgvRoleTable.Location = new System.Drawing.Point(0, 0);
+            this.kDgvRoleTable.Margin = new System.Windows.Forms.Padding(2);
             this.kDgvRoleTable.Name = "kDgvRoleTable";
             this.kDgvRoleTable.RowHeadersWidth = 51;
             this.kDgvRoleTable.RowTemplate.Height = 24;
-            this.kDgvRoleTable.Size = new System.Drawing.Size(1065, 130);
+            this.kDgvRoleTable.Size = new System.Drawing.Size(798, 105);
             this.kDgvRoleTable.TabIndex = 0;
             this.kDgvRoleTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.kDgvRoleTable_CellClick);
             // 
@@ -784,29 +698,32 @@ namespace ParkingManagement.GUI.Forms
             // 
             this.kryptonPanel37.Controls.Add(this.kryptonPanel40);
             this.kryptonPanel37.Dock = System.Windows.Forms.DockStyle.Top;
-            this.kryptonPanel37.Location = new System.Drawing.Point(27, 535);
+            this.kryptonPanel37.Location = new System.Drawing.Point(20, 435);
+            this.kryptonPanel37.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonPanel37.Name = "kryptonPanel37";
             this.kryptonPanel37.PaletteMode = Krypton.Toolkit.PaletteMode.Office2010BlueLightMode;
-            this.kryptonPanel37.Size = new System.Drawing.Size(1069, 11);
+            this.kryptonPanel37.Size = new System.Drawing.Size(802, 9);
             this.kryptonPanel37.TabIndex = 29;
             // 
             // kryptonPanel40
             // 
             this.kryptonPanel40.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel40.Location = new System.Drawing.Point(0, 0);
+            this.kryptonPanel40.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonPanel40.Name = "kryptonPanel40";
             this.kryptonPanel40.PaletteMode = Krypton.Toolkit.PaletteMode.Office2010BlueLightMode;
-            this.kryptonPanel40.Size = new System.Drawing.Size(1069, 11);
+            this.kryptonPanel40.Size = new System.Drawing.Size(802, 9);
             this.kryptonPanel40.TabIndex = 32;
             // 
             // kryptonPanel36
             // 
             this.kryptonPanel36.Controls.Add(this.panelview);
             this.kryptonPanel36.Dock = System.Windows.Forms.DockStyle.Top;
-            this.kryptonPanel36.Location = new System.Drawing.Point(27, 232);
+            this.kryptonPanel36.Location = new System.Drawing.Point(20, 189);
+            this.kryptonPanel36.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonPanel36.Name = "kryptonPanel36";
             this.kryptonPanel36.PaletteMode = Krypton.Toolkit.PaletteMode.Office2010BlueLightMode;
-            this.kryptonPanel36.Size = new System.Drawing.Size(1069, 303);
+            this.kryptonPanel36.Size = new System.Drawing.Size(802, 246);
             this.kryptonPanel36.TabIndex = 28;
             // 
             // panelview
@@ -816,18 +733,18 @@ namespace ParkingManagement.GUI.Forms
             this.panelview.Controls.Add(this.kryptonPanel2);
             this.panelview.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelview.Location = new System.Drawing.Point(0, 0);
+            this.panelview.Margin = new System.Windows.Forms.Padding(2);
             this.panelview.Name = "panelview";
-            this.panelview.Size = new System.Drawing.Size(1069, 303);
+            this.panelview.Size = new System.Drawing.Size(802, 246);
             this.panelview.TabIndex = 28;
             // 
             // kryptonPanel38
             // 
             this.kryptonPanel38.Controls.Add(this.kryptonPanel4);
             this.kryptonPanel38.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonPanel38.Location = new System.Drawing.Point(0, 252);
-            this.kryptonPanel38.Margin = new System.Windows.Forms.Padding(4);
+            this.kryptonPanel38.Location = new System.Drawing.Point(0, 205);
             this.kryptonPanel38.Name = "kryptonPanel38";
-            this.kryptonPanel38.Size = new System.Drawing.Size(1069, 51);
+            this.kryptonPanel38.Size = new System.Drawing.Size(802, 41);
             this.kryptonPanel38.TabIndex = 35;
             // 
             // kryptonPanel4
@@ -839,18 +756,18 @@ namespace ParkingManagement.GUI.Forms
             this.kryptonPanel4.Controls.Add(this.kBtnLastPage);
             this.kryptonPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel4.Location = new System.Drawing.Point(0, 0);
+            this.kryptonPanel4.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonPanel4.Name = "kryptonPanel4";
-            this.kryptonPanel4.Size = new System.Drawing.Size(1069, 51);
+            this.kryptonPanel4.Size = new System.Drawing.Size(802, 41);
             this.kryptonPanel4.TabIndex = 2;
             // 
             // kLbCountPage
             // 
             this.kLbCountPage.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.kLbCountPage.AutoSize = false;
-            this.kLbCountPage.Location = new System.Drawing.Point(510, 18);
-            this.kLbCountPage.Margin = new System.Windows.Forms.Padding(4);
+            this.kLbCountPage.Location = new System.Drawing.Point(382, 15);
             this.kLbCountPage.Name = "kLbCountPage";
-            this.kLbCountPage.Size = new System.Drawing.Size(56, 25);
+            this.kLbCountPage.Size = new System.Drawing.Size(42, 20);
             this.kLbCountPage.TabIndex = 27;
             this.kLbCountPage.Values.Text = "";
             this.kLbCountPage.Click += new System.EventHandler(this.kLbCountPage_Click);
@@ -859,11 +776,10 @@ namespace ParkingManagement.GUI.Forms
             // 
             this.kBtnFirstPage.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.kBtnFirstPage.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kBtnFirstPage.Location = new System.Drawing.Point(239, 12);
-            this.kBtnFirstPage.Margin = new System.Windows.Forms.Padding(4);
+            this.kBtnFirstPage.Location = new System.Drawing.Point(179, 10);
             this.kBtnFirstPage.Name = "kBtnFirstPage";
             this.kBtnFirstPage.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.kBtnFirstPage.Size = new System.Drawing.Size(120, 31);
+            this.kBtnFirstPage.Size = new System.Drawing.Size(90, 25);
             this.kBtnFirstPage.TabIndex = 23;
             this.kBtnFirstPage.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.kBtnFirstPage.Values.Text = "Trang đầu";
@@ -873,11 +789,10 @@ namespace ParkingManagement.GUI.Forms
             // 
             this.kBtnNexPage.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.kBtnNexPage.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kBtnNexPage.Location = new System.Drawing.Point(367, 12);
-            this.kBtnNexPage.Margin = new System.Windows.Forms.Padding(4);
+            this.kBtnNexPage.Location = new System.Drawing.Point(275, 10);
             this.kBtnNexPage.Name = "kBtnNexPage";
             this.kBtnNexPage.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.kBtnNexPage.Size = new System.Drawing.Size(120, 31);
+            this.kBtnNexPage.Size = new System.Drawing.Size(90, 25);
             this.kBtnNexPage.TabIndex = 24;
             this.kBtnNexPage.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.kBtnNexPage.Values.Text = "Trang tiếp";
@@ -887,11 +802,10 @@ namespace ParkingManagement.GUI.Forms
             // 
             this.kBtnPrevious.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.kBtnPrevious.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kBtnPrevious.Location = new System.Drawing.Point(578, 12);
-            this.kBtnPrevious.Margin = new System.Windows.Forms.Padding(4);
+            this.kBtnPrevious.Location = new System.Drawing.Point(434, 10);
             this.kBtnPrevious.Name = "kBtnPrevious";
             this.kBtnPrevious.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.kBtnPrevious.Size = new System.Drawing.Size(120, 31);
+            this.kBtnPrevious.Size = new System.Drawing.Size(90, 25);
             this.kBtnPrevious.TabIndex = 26;
             this.kBtnPrevious.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.kBtnPrevious.Values.Text = "Trang trước";
@@ -901,11 +815,10 @@ namespace ParkingManagement.GUI.Forms
             // 
             this.kBtnLastPage.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.kBtnLastPage.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kBtnLastPage.Location = new System.Drawing.Point(706, 12);
-            this.kBtnLastPage.Margin = new System.Windows.Forms.Padding(4);
+            this.kBtnLastPage.Location = new System.Drawing.Point(530, 10);
             this.kBtnLastPage.Name = "kBtnLastPage";
             this.kBtnLastPage.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.kBtnLastPage.Size = new System.Drawing.Size(120, 31);
+            this.kBtnLastPage.Size = new System.Drawing.Size(90, 25);
             this.kBtnLastPage.TabIndex = 25;
             this.kBtnLastPage.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.kBtnLastPage.Values.Text = "Trang cuối";
@@ -916,9 +829,8 @@ namespace ParkingManagement.GUI.Forms
             this.kryptonPanel2.Controls.Add(this.kGrvUsers);
             this.kryptonPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.kryptonPanel2.Location = new System.Drawing.Point(0, 0);
-            this.kryptonPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonPanel2.Name = "kryptonPanel2";
-            this.kryptonPanel2.Size = new System.Drawing.Size(1069, 252);
+            this.kryptonPanel2.Size = new System.Drawing.Size(802, 205);
             this.kryptonPanel2.TabIndex = 34;
             // 
             // kGrvUsers
@@ -927,20 +839,22 @@ namespace ParkingManagement.GUI.Forms
             this.kGrvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.kGrvUsers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kGrvUsers.Location = new System.Drawing.Point(0, 0);
+            this.kGrvUsers.Margin = new System.Windows.Forms.Padding(2);
             this.kGrvUsers.Name = "kGrvUsers";
             this.kGrvUsers.RowHeadersWidth = 51;
             this.kGrvUsers.RowTemplate.Height = 24;
-            this.kGrvUsers.Size = new System.Drawing.Size(1069, 252);
+            this.kGrvUsers.Size = new System.Drawing.Size(802, 205);
             this.kGrvUsers.TabIndex = 0;
             this.kGrvUsers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.kGrvUsers_CellClick);
             // 
             // kryptonPanel35
             // 
             this.kryptonPanel35.Dock = System.Windows.Forms.DockStyle.Top;
-            this.kryptonPanel35.Location = new System.Drawing.Point(27, 220);
+            this.kryptonPanel35.Location = new System.Drawing.Point(20, 179);
+            this.kryptonPanel35.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonPanel35.Name = "kryptonPanel35";
             this.kryptonPanel35.PaletteMode = Krypton.Toolkit.PaletteMode.Office2010BlueLightMode;
-            this.kryptonPanel35.Size = new System.Drawing.Size(1069, 12);
+            this.kryptonPanel35.Size = new System.Drawing.Size(802, 10);
             this.kryptonPanel35.TabIndex = 27;
             // 
             // kryptonPanel32
@@ -954,18 +868,20 @@ namespace ParkingManagement.GUI.Forms
             this.kryptonPanel32.Controls.Add(this.kLbSearch);
             this.kryptonPanel32.Controls.Add(this.kryptonGroupBox1);
             this.kryptonPanel32.Dock = System.Windows.Forms.DockStyle.Top;
-            this.kryptonPanel32.Location = new System.Drawing.Point(27, 0);
+            this.kryptonPanel32.Location = new System.Drawing.Point(20, 0);
+            this.kryptonPanel32.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonPanel32.Name = "kryptonPanel32";
-            this.kryptonPanel32.Size = new System.Drawing.Size(1069, 220);
+            this.kryptonPanel32.Size = new System.Drawing.Size(802, 179);
             this.kryptonPanel32.TabIndex = 26;
             // 
             // kBtnSearch
             // 
             this.kBtnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.kBtnSearch.Location = new System.Drawing.Point(510, 169);
+            this.kBtnSearch.Location = new System.Drawing.Point(382, 139);
+            this.kBtnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.kBtnSearch.Name = "kBtnSearch";
-            this.kBtnSearch.Size = new System.Drawing.Size(85, 27);
+            this.kBtnSearch.Size = new System.Drawing.Size(64, 22);
             this.kBtnSearch.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kBtnSearch.TabIndex = 29;
             this.kBtnSearch.Values.DropDownArrowColor = System.Drawing.Color.Empty;
@@ -983,10 +899,9 @@ namespace ParkingManagement.GUI.Forms
             "Đống Đa - Hà Nội",
             "Hoàn Kiếm - Hà Nội",
             "Quận 1 - TP. HCM"});
-            this.kCbbArea.Location = new System.Drawing.Point(99, 122);
-            this.kCbbArea.Margin = new System.Windows.Forms.Padding(4);
+            this.kCbbArea.Location = new System.Drawing.Point(252, 108);
             this.kCbbArea.Name = "kCbbArea";
-            this.kCbbArea.Size = new System.Drawing.Size(134, 26);
+            this.kCbbArea.Size = new System.Drawing.Size(194, 22);
             this.kCbbArea.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.kCbbArea.TabIndex = 31;
             this.kCbbArea.Text = "Tất cả";
@@ -996,9 +911,10 @@ namespace ParkingManagement.GUI.Forms
             // 
             this.kTbContentSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.kTbContentSearch.Location = new System.Drawing.Point(19, 166);
+            this.kTbContentSearch.Location = new System.Drawing.Point(15, 138);
+            this.kTbContentSearch.Margin = new System.Windows.Forms.Padding(2);
             this.kTbContentSearch.Name = "kTbContentSearch";
-            this.kTbContentSearch.Size = new System.Drawing.Size(479, 27);
+            this.kTbContentSearch.Size = new System.Drawing.Size(351, 23);
             this.kTbContentSearch.TabIndex = 27;
             // 
             // kCbbOptionSearch
@@ -1012,22 +928,20 @@ namespace ParkingManagement.GUI.Forms
             "Mã người dùng",
             "Số điện thoại",
             "Email"});
-            this.kCbbOptionSearch.Location = new System.Drawing.Point(336, 124);
-            this.kCbbOptionSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.kCbbOptionSearch.Location = new System.Drawing.Point(74, 109);
             this.kCbbOptionSearch.Name = "kCbbOptionSearch";
-            this.kCbbOptionSearch.Size = new System.Drawing.Size(162, 26);
+            this.kCbbOptionSearch.Size = new System.Drawing.Size(103, 22);
             this.kCbbOptionSearch.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.kCbbOptionSearch.TabIndex = 28;
             // 
             // kryptonGroupBox2
             // 
-            this.kryptonGroupBox2.Location = new System.Drawing.Point(254, 15);
-            this.kryptonGroupBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.kryptonGroupBox2.Location = new System.Drawing.Point(190, 12);
             // 
             // kryptonGroupBox2.Panel
             // 
             this.kryptonGroupBox2.Panel.Controls.Add(this.flowLayoutPanel6);
-            this.kryptonGroupBox2.Size = new System.Drawing.Size(244, 91);
+            this.kryptonGroupBox2.Size = new System.Drawing.Size(183, 74);
             this.kryptonGroupBox2.StateNormal.Back.Color1 = System.Drawing.Color.Transparent;
             this.kryptonGroupBox2.TabIndex = 33;
             this.kryptonGroupBox2.Values.Heading = "Loại tài khoản";
@@ -1041,67 +955,75 @@ namespace ParkingManagement.GUI.Forms
             this.flowLayoutPanel6.Controls.Add(this.kRBtnAllAcc);
             this.flowLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel6.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel6.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel6.Name = "flowLayoutPanel6";
-            this.flowLayoutPanel6.Size = new System.Drawing.Size(240, 63);
+            this.flowLayoutPanel6.Size = new System.Drawing.Size(179, 50);
             this.flowLayoutPanel6.TabIndex = 0;
             // 
             // kRbtnManager
             // 
-            this.kRbtnManager.Location = new System.Drawing.Point(3, 3);
+            this.kRbtnManager.Location = new System.Drawing.Point(2, 2);
+            this.kRbtnManager.Margin = new System.Windows.Forms.Padding(2);
             this.kRbtnManager.Name = "kRbtnManager";
-            this.kRbtnManager.Size = new System.Drawing.Size(79, 24);
+            this.kRbtnManager.Size = new System.Drawing.Size(64, 20);
             this.kRbtnManager.TabIndex = 33;
             this.kRbtnManager.Values.Text = "Quản lý";
             // 
             // kRBtnStaff
             // 
-            this.kRBtnStaff.Location = new System.Drawing.Point(88, 3);
+            this.kRBtnStaff.Location = new System.Drawing.Point(70, 2);
+            this.kRBtnStaff.Margin = new System.Windows.Forms.Padding(2);
             this.kRBtnStaff.Name = "kRBtnStaff";
-            this.kRBtnStaff.Size = new System.Drawing.Size(96, 24);
+            this.kRBtnStaff.Size = new System.Drawing.Size(78, 20);
             this.kRBtnStaff.TabIndex = 34;
             this.kRBtnStaff.Values.Text = "Nhân viên";
             // 
             // kRBtnCustomer
             // 
-            this.kRBtnCustomer.Location = new System.Drawing.Point(3, 33);
+            this.kRBtnCustomer.Location = new System.Drawing.Point(2, 26);
+            this.kRBtnCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.kRBtnCustomer.Name = "kRBtnCustomer";
-            this.kRBtnCustomer.Size = new System.Drawing.Size(107, 24);
+            this.kRBtnCustomer.Size = new System.Drawing.Size(87, 20);
             this.kRBtnCustomer.TabIndex = 35;
             this.kRBtnCustomer.Values.Text = "Khách hàng";
             // 
             // kRBtnAllAcc
             // 
-            this.kRBtnAllAcc.Location = new System.Drawing.Point(116, 33);
+            this.kRBtnAllAcc.Location = new System.Drawing.Point(93, 26);
+            this.kRBtnAllAcc.Margin = new System.Windows.Forms.Padding(2);
             this.kRBtnAllAcc.Name = "kRBtnAllAcc";
-            this.kRBtnAllAcc.Size = new System.Drawing.Size(67, 24);
+            this.kRBtnAllAcc.Size = new System.Drawing.Size(55, 20);
             this.kRBtnAllAcc.TabIndex = 27;
             this.kRBtnAllAcc.Values.Text = "Tất cả";
             // 
             // kLbSearchArea
             // 
-            this.kLbSearchArea.Location = new System.Drawing.Point(19, 124);
+            this.kLbSearchArea.Location = new System.Drawing.Point(192, 110);
+            this.kLbSearchArea.Margin = new System.Windows.Forms.Padding(2);
             this.kLbSearchArea.Name = "kLbSearchArea";
-            this.kLbSearchArea.Size = new System.Drawing.Size(73, 24);
+            this.kLbSearchArea.Size = new System.Drawing.Size(60, 20);
             this.kLbSearchArea.TabIndex = 30;
             this.kLbSearchArea.Values.Text = "Khu vực :";
             this.kLbSearchArea.Click += new System.EventHandler(this.kLbSearchArea_Click);
             // 
             // kLbSearch
             // 
-            this.kLbSearch.Location = new System.Drawing.Point(257, 126);
+            this.kLbSearch.Location = new System.Drawing.Point(15, 110);
+            this.kLbSearch.Margin = new System.Windows.Forms.Padding(2);
             this.kLbSearch.Name = "kLbSearch";
-            this.kLbSearch.Size = new System.Drawing.Size(72, 24);
+            this.kLbSearch.Size = new System.Drawing.Size(59, 20);
             this.kLbSearch.TabIndex = 23;
             this.kLbSearch.Values.Text = "Tiêu chí :";
             // 
             // kryptonGroupBox1
             // 
-            this.kryptonGroupBox1.Location = new System.Drawing.Point(17, 15);
+            this.kryptonGroupBox1.Location = new System.Drawing.Point(13, 12);
+            this.kryptonGroupBox1.Margin = new System.Windows.Forms.Padding(2);
             // 
             // kryptonGroupBox1.Panel
             // 
             this.kryptonGroupBox1.Panel.Controls.Add(this.flowLayoutPanel8);
-            this.kryptonGroupBox1.Size = new System.Drawing.Size(218, 91);
+            this.kryptonGroupBox1.Size = new System.Drawing.Size(164, 74);
             this.kryptonGroupBox1.StateNormal.Back.Color1 = System.Drawing.Color.Transparent;
             this.kryptonGroupBox1.TabIndex = 32;
             this.kryptonGroupBox1.Values.Heading = "Tình trạng";
@@ -1114,33 +1036,37 @@ namespace ParkingManagement.GUI.Forms
             this.flowLayoutPanel8.Controls.Add(this.kRBtnInactive);
             this.flowLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel8.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel8.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel8.Name = "flowLayoutPanel8";
-            this.flowLayoutPanel8.Size = new System.Drawing.Size(214, 63);
+            this.flowLayoutPanel8.Size = new System.Drawing.Size(160, 50);
             this.flowLayoutPanel8.TabIndex = 0;
             // 
             // kRbtnAllUser
             // 
-            this.kRbtnAllUser.Location = new System.Drawing.Point(3, 3);
+            this.kRbtnAllUser.Location = new System.Drawing.Point(2, 2);
+            this.kRbtnAllUser.Margin = new System.Windows.Forms.Padding(2);
             this.kRbtnAllUser.Name = "kRbtnAllUser";
-            this.kRbtnAllUser.Size = new System.Drawing.Size(67, 24);
+            this.kRbtnAllUser.Size = new System.Drawing.Size(55, 20);
             this.kRbtnAllUser.TabIndex = 26;
             this.kRbtnAllUser.Values.Text = "Tất cả";
             this.kRbtnAllUser.CheckedChanged += new System.EventHandler(this.kRbtnAllUser_CheckedChanged);
             // 
             // kRBtnActive
             // 
-            this.kRBtnActive.Location = new System.Drawing.Point(76, 3);
+            this.kRBtnActive.Location = new System.Drawing.Point(61, 2);
+            this.kRBtnActive.Margin = new System.Windows.Forms.Padding(2);
             this.kRBtnActive.Name = "kRBtnActive";
-            this.kRBtnActive.Size = new System.Drawing.Size(100, 24);
+            this.kRBtnActive.Size = new System.Drawing.Size(81, 20);
             this.kRBtnActive.TabIndex = 24;
             this.kRBtnActive.Values.Text = "Hoạt động";
             this.kRBtnActive.CheckedChanged += new System.EventHandler(this.kRBtnActive_CheckedChanged);
             // 
             // kRBtnInactive
             // 
-            this.kRBtnInactive.Location = new System.Drawing.Point(3, 33);
+            this.kRBtnInactive.Location = new System.Drawing.Point(2, 26);
+            this.kRBtnInactive.Margin = new System.Windows.Forms.Padding(2);
             this.kRBtnInactive.Name = "kRBtnInactive";
-            this.kRBtnInactive.Size = new System.Drawing.Size(146, 24);
+            this.kRBtnInactive.Size = new System.Drawing.Size(118, 20);
             this.kRBtnInactive.TabIndex = 25;
             this.kRBtnInactive.Values.Text = "Không hoạt động";
             this.kRBtnInactive.CheckedChanged += new System.EventHandler(this.kRBtnInactive_CheckedChanged);
@@ -1149,9 +1075,10 @@ namespace ParkingManagement.GUI.Forms
             // 
             this.kryptonPanel30.Dock = System.Windows.Forms.DockStyle.Left;
             this.kryptonPanel30.Location = new System.Drawing.Point(0, 0);
+            this.kryptonPanel30.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonPanel30.Name = "kryptonPanel30";
             this.kryptonPanel30.PaletteMode = Krypton.Toolkit.PaletteMode.Office2010BlueLightMode;
-            this.kryptonPanel30.Size = new System.Drawing.Size(27, 705);
+            this.kryptonPanel30.Size = new System.Drawing.Size(20, 573);
             this.kryptonPanel30.TabIndex = 25;
             // 
             // kPnInfoManager
@@ -1160,9 +1087,8 @@ namespace ParkingManagement.GUI.Forms
             this.kPnInfoManager.Controls.Add(this.kryptonPanel11);
             this.kPnInfoManager.Dock = System.Windows.Forms.DockStyle.Top;
             this.kPnInfoManager.Location = new System.Drawing.Point(0, 0);
-            this.kPnInfoManager.Margin = new System.Windows.Forms.Padding(4);
             this.kPnInfoManager.Name = "kPnInfoManager";
-            this.kPnInfoManager.Size = new System.Drawing.Size(611, 182);
+            this.kPnInfoManager.Size = new System.Drawing.Size(458, 148);
             this.kPnInfoManager.TabIndex = 2;
             // 
             // kryptonPanel12
@@ -1170,9 +1096,10 @@ namespace ParkingManagement.GUI.Forms
             this.kryptonPanel12.Controls.Add(this.kryptonPanel14);
             this.kryptonPanel12.Controls.Add(this.kryptonPanel13);
             this.kryptonPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonPanel12.Location = new System.Drawing.Point(0, 15);
+            this.kryptonPanel12.Location = new System.Drawing.Point(0, 12);
+            this.kryptonPanel12.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonPanel12.Name = "kryptonPanel12";
-            this.kryptonPanel12.Size = new System.Drawing.Size(611, 167);
+            this.kryptonPanel12.Size = new System.Drawing.Size(458, 136);
             this.kryptonPanel12.TabIndex = 31;
             // 
             // kryptonPanel14
@@ -1184,58 +1111,65 @@ namespace ParkingManagement.GUI.Forms
             this.kryptonPanel14.Controls.Add(this.kLbManagerPosition);
             this.kryptonPanel14.Controls.Add(this.kTbManagerFullName);
             this.kryptonPanel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonPanel14.Location = new System.Drawing.Point(0, 43);
+            this.kryptonPanel14.Location = new System.Drawing.Point(0, 35);
+            this.kryptonPanel14.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonPanel14.Name = "kryptonPanel14";
-            this.kryptonPanel14.Size = new System.Drawing.Size(611, 124);
+            this.kryptonPanel14.Size = new System.Drawing.Size(458, 101);
             this.kryptonPanel14.TabIndex = 32;
             // 
             // kTbManagerCode
             // 
-            this.kTbManagerCode.Location = new System.Drawing.Point(244, 13);
+            this.kTbManagerCode.Location = new System.Drawing.Point(183, 11);
+            this.kTbManagerCode.Margin = new System.Windows.Forms.Padding(2);
             this.kTbManagerCode.Name = "kTbManagerCode";
             this.kTbManagerCode.ReadOnly = true;
-            this.kTbManagerCode.Size = new System.Drawing.Size(256, 27);
+            this.kTbManagerCode.Size = new System.Drawing.Size(192, 23);
             this.kTbManagerCode.TabIndex = 24;
             // 
             // kTbPosition
             // 
-            this.kTbPosition.Location = new System.Drawing.Point(244, 77);
+            this.kTbPosition.Location = new System.Drawing.Point(183, 63);
+            this.kTbPosition.Margin = new System.Windows.Forms.Padding(2);
             this.kTbPosition.Name = "kTbPosition";
             this.kTbPosition.ReadOnly = true;
-            this.kTbPosition.Size = new System.Drawing.Size(256, 27);
+            this.kTbPosition.Size = new System.Drawing.Size(192, 23);
             this.kTbPosition.TabIndex = 28;
             // 
             // kLbManagerCode
             // 
-            this.kLbManagerCode.Location = new System.Drawing.Point(125, 20);
+            this.kLbManagerCode.Location = new System.Drawing.Point(94, 16);
+            this.kLbManagerCode.Margin = new System.Windows.Forms.Padding(2);
             this.kLbManagerCode.Name = "kLbManagerCode";
-            this.kLbManagerCode.Size = new System.Drawing.Size(112, 20);
+            this.kLbManagerCode.Size = new System.Drawing.Size(91, 16);
             this.kLbManagerCode.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kLbManagerCode.TabIndex = 23;
             this.kLbManagerCode.Values.Text = "Mã người dùng :";
             // 
             // kLbManagerFullName
             // 
-            this.kLbManagerFullName.Location = new System.Drawing.Point(125, 48);
+            this.kLbManagerFullName.Location = new System.Drawing.Point(94, 39);
+            this.kLbManagerFullName.Margin = new System.Windows.Forms.Padding(2);
             this.kLbManagerFullName.Name = "kLbManagerFullName";
-            this.kLbManagerFullName.Size = new System.Drawing.Size(85, 24);
+            this.kLbManagerFullName.Size = new System.Drawing.Size(69, 20);
             this.kLbManagerFullName.TabIndex = 25;
             this.kLbManagerFullName.Values.Text = "Họ và tên :";
             // 
             // kLbManagerPosition
             // 
-            this.kLbManagerPosition.Location = new System.Drawing.Point(125, 80);
+            this.kLbManagerPosition.Location = new System.Drawing.Point(94, 65);
+            this.kLbManagerPosition.Margin = new System.Windows.Forms.Padding(2);
             this.kLbManagerPosition.Name = "kLbManagerPosition";
-            this.kLbManagerPosition.Size = new System.Drawing.Size(74, 24);
+            this.kLbManagerPosition.Size = new System.Drawing.Size(60, 20);
             this.kLbManagerPosition.TabIndex = 27;
             this.kLbManagerPosition.Values.Text = "Chức vụ :";
             // 
             // kTbManagerFullName
             // 
-            this.kTbManagerFullName.Location = new System.Drawing.Point(244, 45);
+            this.kTbManagerFullName.Location = new System.Drawing.Point(183, 37);
+            this.kTbManagerFullName.Margin = new System.Windows.Forms.Padding(2);
             this.kTbManagerFullName.Name = "kTbManagerFullName";
             this.kTbManagerFullName.ReadOnly = true;
-            this.kTbManagerFullName.Size = new System.Drawing.Size(256, 27);
+            this.kTbManagerFullName.Size = new System.Drawing.Size(192, 23);
             this.kTbManagerFullName.TabIndex = 26;
             // 
             // kryptonPanel13
@@ -1243,16 +1177,18 @@ namespace ParkingManagement.GUI.Forms
             this.kryptonPanel13.Controls.Add(this.kLbTitle);
             this.kryptonPanel13.Dock = System.Windows.Forms.DockStyle.Top;
             this.kryptonPanel13.Location = new System.Drawing.Point(0, 0);
+            this.kryptonPanel13.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonPanel13.Name = "kryptonPanel13";
-            this.kryptonPanel13.Size = new System.Drawing.Size(611, 43);
+            this.kryptonPanel13.Size = new System.Drawing.Size(458, 35);
             this.kryptonPanel13.TabIndex = 31;
             // 
             // kLbTitle
             // 
-            this.kLbTitle.Location = new System.Drawing.Point(174, 0);
+            this.kLbTitle.Location = new System.Drawing.Point(130, 0);
+            this.kLbTitle.Margin = new System.Windows.Forms.Padding(2);
             this.kLbTitle.Name = "kLbTitle";
             this.kLbTitle.PaletteMode = Krypton.Toolkit.PaletteMode.Office2007Blue;
-            this.kLbTitle.Size = new System.Drawing.Size(288, 40);
+            this.kLbTitle.Size = new System.Drawing.Size(232, 33);
             this.kLbTitle.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kLbTitle.TabIndex = 29;
             this.kLbTitle.Values.Text = "Thông tin tài khoản";
@@ -1261,8 +1197,9 @@ namespace ParkingManagement.GUI.Forms
             // 
             this.kryptonPanel11.Dock = System.Windows.Forms.DockStyle.Top;
             this.kryptonPanel11.Location = new System.Drawing.Point(0, 0);
+            this.kryptonPanel11.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonPanel11.Name = "kryptonPanel11";
-            this.kryptonPanel11.Size = new System.Drawing.Size(611, 15);
+            this.kryptonPanel11.Size = new System.Drawing.Size(458, 12);
             this.kryptonPanel11.TabIndex = 30;
             // 
             // kTbRoleDes
@@ -1270,7 +1207,7 @@ namespace ParkingManagement.GUI.Forms
             this.kTbRoleDes.Location = new System.Drawing.Point(58, 59);
             this.kTbRoleDes.Margin = new System.Windows.Forms.Padding(4);
             this.kTbRoleDes.Name = "kTbRoleDes";
-            this.kTbRoleDes.Size = new System.Drawing.Size(162, 22);
+            this.kTbRoleDes.Size = new System.Drawing.Size(162, 20);
             this.kTbRoleDes.TabIndex = 25;
             this.kTbRoleDes.Text = "Tất cả hành động";
             // 
@@ -1279,7 +1216,7 @@ namespace ParkingManagement.GUI.Forms
             this.kTbRoleName.Location = new System.Drawing.Point(58, 28);
             this.kTbRoleName.Margin = new System.Windows.Forms.Padding(4);
             this.kTbRoleName.Name = "kTbRoleName";
-            this.kTbRoleName.Size = new System.Drawing.Size(162, 22);
+            this.kTbRoleName.Size = new System.Drawing.Size(162, 20);
             this.kTbRoleName.TabIndex = 23;
             this.kTbRoleName.Text = "Admin";
             // 
@@ -1291,7 +1228,7 @@ namespace ParkingManagement.GUI.Forms
             this.kryptonPanel3.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonPanel3.Name = "kryptonPanel3";
-            this.kryptonPanel3.Size = new System.Drawing.Size(611, 158);
+            this.kryptonPanel3.Size = new System.Drawing.Size(458, 128);
             this.kryptonPanel3.TabIndex = 3;
             // 
             // kryptonPanel24
@@ -1300,20 +1237,18 @@ namespace ParkingManagement.GUI.Forms
             this.kryptonPanel24.Controls.Add(this.kryptonPanel26);
             this.kryptonPanel24.Controls.Add(this.kryptonPanel25);
             this.kryptonPanel24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonPanel24.Location = new System.Drawing.Point(0, 11);
-            this.kryptonPanel24.Margin = new System.Windows.Forms.Padding(4);
+            this.kryptonPanel24.Location = new System.Drawing.Point(0, 9);
             this.kryptonPanel24.Name = "kryptonPanel24";
-            this.kryptonPanel24.Size = new System.Drawing.Size(611, 147);
+            this.kryptonPanel24.Size = new System.Drawing.Size(458, 119);
             this.kryptonPanel24.TabIndex = 30;
             // 
             // kryptonPanel27
             // 
             this.kryptonPanel27.Controls.Add(this.kryptonPanel29);
             this.kryptonPanel27.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonPanel27.Location = new System.Drawing.Point(14, 0);
-            this.kryptonPanel27.Margin = new System.Windows.Forms.Padding(4);
+            this.kryptonPanel27.Location = new System.Drawing.Point(10, 0);
             this.kryptonPanel27.Name = "kryptonPanel27";
-            this.kryptonPanel27.Size = new System.Drawing.Size(597, 137);
+            this.kryptonPanel27.Size = new System.Drawing.Size(448, 111);
             this.kryptonPanel27.TabIndex = 35;
             // 
             // kryptonPanel29
@@ -1321,9 +1256,8 @@ namespace ParkingManagement.GUI.Forms
             this.kryptonPanel29.Controls.Add(this.kryptonPanel31);
             this.kryptonPanel29.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel29.Location = new System.Drawing.Point(0, 0);
-            this.kryptonPanel29.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonPanel29.Name = "kryptonPanel29";
-            this.kryptonPanel29.Size = new System.Drawing.Size(597, 137);
+            this.kryptonPanel29.Size = new System.Drawing.Size(448, 111);
             this.kryptonPanel29.TabIndex = 36;
             // 
             // kryptonPanel31
@@ -1332,19 +1266,17 @@ namespace ParkingManagement.GUI.Forms
             this.kryptonPanel31.Controls.Add(this.kryptonPanel33);
             this.kryptonPanel31.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel31.Location = new System.Drawing.Point(0, 0);
-            this.kryptonPanel31.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonPanel31.Name = "kryptonPanel31";
-            this.kryptonPanel31.Size = new System.Drawing.Size(597, 137);
+            this.kryptonPanel31.Size = new System.Drawing.Size(448, 111);
             this.kryptonPanel31.TabIndex = 35;
             // 
             // kryptonPanel34
             // 
             this.kryptonPanel34.Controls.Add(this.kryptonPanel28);
             this.kryptonPanel34.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonPanel34.Location = new System.Drawing.Point(0, 72);
-            this.kryptonPanel34.Margin = new System.Windows.Forms.Padding(4);
+            this.kryptonPanel34.Location = new System.Drawing.Point(0, 58);
             this.kryptonPanel34.Name = "kryptonPanel34";
-            this.kryptonPanel34.Size = new System.Drawing.Size(597, 65);
+            this.kryptonPanel34.Size = new System.Drawing.Size(448, 53);
             this.kryptonPanel34.TabIndex = 38;
             // 
             // kryptonPanel28
@@ -1354,19 +1286,17 @@ namespace ParkingManagement.GUI.Forms
             this.kryptonPanel28.Controls.Add(this.kBtnRoleSave);
             this.kryptonPanel28.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel28.Location = new System.Drawing.Point(0, 0);
-            this.kryptonPanel28.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonPanel28.Name = "kryptonPanel28";
-            this.kryptonPanel28.Size = new System.Drawing.Size(597, 65);
+            this.kryptonPanel28.Size = new System.Drawing.Size(448, 53);
             this.kryptonPanel28.TabIndex = 35;
             // 
             // kBtnAddRole
             // 
             this.kBtnAddRole.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kBtnAddRole.Location = new System.Drawing.Point(197, 4);
-            this.kBtnAddRole.Margin = new System.Windows.Forms.Padding(4);
+            this.kBtnAddRole.Location = new System.Drawing.Point(148, 3);
             this.kBtnAddRole.Name = "kBtnAddRole";
             this.kBtnAddRole.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.kBtnAddRole.Size = new System.Drawing.Size(121, 24);
+            this.kBtnAddRole.Size = new System.Drawing.Size(91, 20);
             this.kBtnAddRole.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kBtnAddRole.TabIndex = 23;
             this.kBtnAddRole.Values.DropDownArrowColor = System.Drawing.Color.Empty;
@@ -1376,11 +1306,10 @@ namespace ParkingManagement.GUI.Forms
             // kBtnDeleteRole
             // 
             this.kBtnDeleteRole.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kBtnDeleteRole.Location = new System.Drawing.Point(453, 4);
-            this.kBtnDeleteRole.Margin = new System.Windows.Forms.Padding(4);
+            this.kBtnDeleteRole.Location = new System.Drawing.Point(340, 3);
             this.kBtnDeleteRole.Name = "kBtnDeleteRole";
             this.kBtnDeleteRole.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.kBtnDeleteRole.Size = new System.Drawing.Size(118, 24);
+            this.kBtnDeleteRole.Size = new System.Drawing.Size(88, 20);
             this.kBtnDeleteRole.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kBtnDeleteRole.TabIndex = 27;
             this.kBtnDeleteRole.Values.DropDownArrowColor = System.Drawing.Color.Empty;
@@ -1390,11 +1319,10 @@ namespace ParkingManagement.GUI.Forms
             // kBtnRoleSave
             // 
             this.kBtnRoleSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kBtnRoleSave.Location = new System.Drawing.Point(326, 4);
-            this.kBtnRoleSave.Margin = new System.Windows.Forms.Padding(4);
+            this.kBtnRoleSave.Location = new System.Drawing.Point(244, 3);
             this.kBtnRoleSave.Name = "kBtnRoleSave";
             this.kBtnRoleSave.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.kBtnRoleSave.Size = new System.Drawing.Size(119, 24);
+            this.kBtnRoleSave.Size = new System.Drawing.Size(89, 20);
             this.kBtnRoleSave.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kBtnRoleSave.TabIndex = 26;
             this.kBtnRoleSave.Values.DropDownArrowColor = System.Drawing.Color.Empty;
@@ -1408,9 +1336,8 @@ namespace ParkingManagement.GUI.Forms
             this.kryptonPanel33.Controls.Add(this.flowLayoutPanel5);
             this.kryptonPanel33.Dock = System.Windows.Forms.DockStyle.Top;
             this.kryptonPanel33.Location = new System.Drawing.Point(0, 0);
-            this.kryptonPanel33.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonPanel33.Name = "kryptonPanel33";
-            this.kryptonPanel33.Size = new System.Drawing.Size(597, 72);
+            this.kryptonPanel33.Size = new System.Drawing.Size(448, 58);
             this.kryptonPanel33.TabIndex = 37;
             // 
             // flowLayoutPanel7
@@ -1420,23 +1347,26 @@ namespace ParkingManagement.GUI.Forms
             this.flowLayoutPanel7.Controls.Add(this.kTbNameRole);
             this.flowLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel7.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel7.Location = new System.Drawing.Point(187, 0);
+            this.flowLayoutPanel7.Location = new System.Drawing.Point(140, 0);
+            this.flowLayoutPanel7.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel7.Name = "flowLayoutPanel7";
-            this.flowLayoutPanel7.Size = new System.Drawing.Size(410, 72);
+            this.flowLayoutPanel7.Size = new System.Drawing.Size(308, 58);
             this.flowLayoutPanel7.TabIndex = 34;
             // 
             // kTbDesRole
             // 
-            this.kTbDesRole.Location = new System.Drawing.Point(3, 3);
+            this.kTbDesRole.Location = new System.Drawing.Point(2, 2);
+            this.kTbDesRole.Margin = new System.Windows.Forms.Padding(2);
             this.kTbDesRole.Name = "kTbDesRole";
-            this.kTbDesRole.Size = new System.Drawing.Size(381, 27);
+            this.kTbDesRole.Size = new System.Drawing.Size(286, 23);
             this.kTbDesRole.TabIndex = 24;
             // 
             // kTbNameRole
             // 
-            this.kTbNameRole.Location = new System.Drawing.Point(3, 36);
+            this.kTbNameRole.Location = new System.Drawing.Point(2, 29);
+            this.kTbNameRole.Margin = new System.Windows.Forms.Padding(2);
             this.kTbNameRole.Name = "kTbNameRole";
-            this.kTbNameRole.Size = new System.Drawing.Size(381, 27);
+            this.kTbNameRole.Size = new System.Drawing.Size(286, 23);
             this.kTbNameRole.TabIndex = 23;
             // 
             // flowLayoutPanel4
@@ -1446,24 +1376,27 @@ namespace ParkingManagement.GUI.Forms
             this.flowLayoutPanel4.Controls.Add(this.kryptonLabel17);
             this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel4.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(165, 0);
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(124, 0);
+            this.flowLayoutPanel4.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(22, 72);
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(16, 58);
             this.flowLayoutPanel4.TabIndex = 31;
             // 
             // kryptonLabel16
             // 
-            this.kryptonLabel16.Location = new System.Drawing.Point(3, 3);
+            this.kryptonLabel16.Location = new System.Drawing.Point(2, 2);
+            this.kryptonLabel16.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonLabel16.Name = "kryptonLabel16";
-            this.kryptonLabel16.Size = new System.Drawing.Size(15, 24);
+            this.kryptonLabel16.Size = new System.Drawing.Size(13, 20);
             this.kryptonLabel16.TabIndex = 9;
             this.kryptonLabel16.Values.Text = ":";
             // 
             // kryptonLabel17
             // 
-            this.kryptonLabel17.Location = new System.Drawing.Point(3, 33);
+            this.kryptonLabel17.Location = new System.Drawing.Point(2, 26);
+            this.kryptonLabel17.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonLabel17.Name = "kryptonLabel17";
-            this.kryptonLabel17.Size = new System.Drawing.Size(15, 24);
+            this.kryptonLabel17.Size = new System.Drawing.Size(13, 20);
             this.kryptonLabel17.TabIndex = 10;
             this.kryptonLabel17.Values.Text = ":";
             // 
@@ -1475,52 +1408,52 @@ namespace ParkingManagement.GUI.Forms
             this.flowLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel5.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel5.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel5.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(165, 72);
+            this.flowLayoutPanel5.Size = new System.Drawing.Size(124, 58);
             this.flowLayoutPanel5.TabIndex = 32;
             // 
             // kLbRoleName
             // 
-            this.kLbRoleName.Location = new System.Drawing.Point(3, 3);
+            this.kLbRoleName.Location = new System.Drawing.Point(2, 2);
+            this.kLbRoleName.Margin = new System.Windows.Forms.Padding(2);
             this.kLbRoleName.Name = "kLbRoleName";
-            this.kLbRoleName.Size = new System.Drawing.Size(56, 24);
+            this.kLbRoleName.Size = new System.Drawing.Size(46, 20);
             this.kLbRoleName.TabIndex = 23;
             this.kLbRoleName.Values.Text = "Quyền";
             // 
             // kLbRoleDes
             // 
-            this.kLbRoleDes.Location = new System.Drawing.Point(3, 33);
+            this.kLbRoleDes.Location = new System.Drawing.Point(2, 26);
+            this.kLbRoleDes.Margin = new System.Windows.Forms.Padding(2);
             this.kLbRoleDes.Name = "kLbRoleDes";
-            this.kLbRoleDes.Size = new System.Drawing.Size(52, 24);
+            this.kLbRoleDes.Size = new System.Drawing.Size(43, 20);
             this.kLbRoleDes.TabIndex = 25;
             this.kLbRoleDes.Values.Text = "Mô tả";
             // 
             // kryptonPanel26
             // 
             this.kryptonPanel26.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.kryptonPanel26.Location = new System.Drawing.Point(14, 137);
-            this.kryptonPanel26.Margin = new System.Windows.Forms.Padding(4);
+            this.kryptonPanel26.Location = new System.Drawing.Point(10, 111);
             this.kryptonPanel26.Name = "kryptonPanel26";
-            this.kryptonPanel26.Size = new System.Drawing.Size(597, 10);
+            this.kryptonPanel26.Size = new System.Drawing.Size(448, 8);
             this.kryptonPanel26.TabIndex = 34;
             // 
             // kryptonPanel25
             // 
             this.kryptonPanel25.Dock = System.Windows.Forms.DockStyle.Left;
             this.kryptonPanel25.Location = new System.Drawing.Point(0, 0);
-            this.kryptonPanel25.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonPanel25.Name = "kryptonPanel25";
-            this.kryptonPanel25.Size = new System.Drawing.Size(14, 147);
+            this.kryptonPanel25.Size = new System.Drawing.Size(10, 119);
             this.kryptonPanel25.TabIndex = 30;
             // 
             // kryptonPanel23
             // 
             this.kryptonPanel23.Dock = System.Windows.Forms.DockStyle.Top;
             this.kryptonPanel23.Location = new System.Drawing.Point(0, 0);
-            this.kryptonPanel23.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonPanel23.Name = "kryptonPanel23";
             this.kryptonPanel23.PaletteMode = Krypton.Toolkit.PaletteMode.Office2010BlueLightMode;
-            this.kryptonPanel23.Size = new System.Drawing.Size(611, 11);
+            this.kryptonPanel23.Size = new System.Drawing.Size(458, 9);
             this.kryptonPanel23.TabIndex = 29;
             // 
             // kryptonPanel5
@@ -1532,8 +1465,9 @@ namespace ParkingManagement.GUI.Forms
             this.kryptonPanel5.Controls.Add(this.kryptonPanel6);
             this.kryptonPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel5.Location = new System.Drawing.Point(0, 0);
+            this.kryptonPanel5.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonPanel5.Name = "kryptonPanel5";
-            this.kryptonPanel5.Size = new System.Drawing.Size(1734, 746);
+            this.kryptonPanel5.Size = new System.Drawing.Size(1300, 606);
             this.kryptonPanel5.TabIndex = 4;
             // 
             // kryptonPanel10
@@ -1541,9 +1475,10 @@ namespace ParkingManagement.GUI.Forms
             this.kryptonPanel10.AutoScroll = true;
             this.kryptonPanel10.Controls.Add(this.kPnUsers);
             this.kryptonPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonPanel10.Location = new System.Drawing.Point(638, 41);
+            this.kryptonPanel10.Location = new System.Drawing.Point(478, 33);
+            this.kryptonPanel10.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonPanel10.Name = "kryptonPanel10";
-            this.kryptonPanel10.Size = new System.Drawing.Size(1096, 705);
+            this.kryptonPanel10.Size = new System.Drawing.Size(822, 573);
             this.kryptonPanel10.TabIndex = 8;
             // 
             // kryptonPanel7
@@ -1552,47 +1487,48 @@ namespace ParkingManagement.GUI.Forms
             this.kryptonPanel7.Controls.Add(this.kPnUserInfo);
             this.kryptonPanel7.Controls.Add(this.kPnInfoManager);
             this.kryptonPanel7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.kryptonPanel7.Location = new System.Drawing.Point(27, 41);
+            this.kryptonPanel7.Location = new System.Drawing.Point(20, 33);
+            this.kryptonPanel7.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonPanel7.Name = "kryptonPanel7";
-            this.kryptonPanel7.Size = new System.Drawing.Size(611, 705);
+            this.kryptonPanel7.Size = new System.Drawing.Size(458, 573);
             this.kryptonPanel7.TabIndex = 5;
             // 
             // kryptonPanel8
             // 
             this.kryptonPanel8.Controls.Add(this.kryptonPanel3);
             this.kryptonPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonPanel8.Location = new System.Drawing.Point(0, 547);
-            this.kryptonPanel8.Margin = new System.Windows.Forms.Padding(4);
+            this.kryptonPanel8.Location = new System.Drawing.Point(0, 445);
             this.kryptonPanel8.Name = "kryptonPanel8";
-            this.kryptonPanel8.Size = new System.Drawing.Size(611, 158);
+            this.kryptonPanel8.Size = new System.Drawing.Size(458, 128);
             this.kryptonPanel8.TabIndex = 8;
             // 
             // kryptonPanel9
             // 
             this.kryptonPanel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.kryptonPanel9.Location = new System.Drawing.Point(27, 0);
+            this.kryptonPanel9.Location = new System.Drawing.Point(20, 0);
+            this.kryptonPanel9.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonPanel9.Name = "kryptonPanel9";
             this.kryptonPanel9.PaletteMode = Krypton.Toolkit.PaletteMode.Office2010BlueLightMode;
-            this.kryptonPanel9.Size = new System.Drawing.Size(1707, 41);
+            this.kryptonPanel9.Size = new System.Drawing.Size(1280, 33);
             this.kryptonPanel9.TabIndex = 7;
             // 
             // kryptonPanel6
             // 
             this.kryptonPanel6.Dock = System.Windows.Forms.DockStyle.Left;
             this.kryptonPanel6.Location = new System.Drawing.Point(0, 0);
+            this.kryptonPanel6.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonPanel6.Name = "kryptonPanel6";
             this.kryptonPanel6.PaletteMode = Krypton.Toolkit.PaletteMode.Office2010BlueLightMode;
-            this.kryptonPanel6.Size = new System.Drawing.Size(27, 746);
+            this.kryptonPanel6.Size = new System.Drawing.Size(20, 606);
             this.kryptonPanel6.TabIndex = 4;
             // 
             // frmUsers
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1734, 746);
+            this.ClientSize = new System.Drawing.Size(1300, 606);
             this.Controls.Add(this.kryptonPanel5);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmUsers";
             this.Text = "frmUsers";
             this.Load += new System.EventHandler(this.frmUsers_Load);
@@ -1609,8 +1545,6 @@ namespace ParkingManagement.GUI.Forms
             ((System.ComponentModel.ISupportInitialize)(this.kCbbSex)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kCbbParkingArea)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kCbbTypeAcount)).EndInit();
-            this.flowLayoutPanel2.ResumeLayout(false);
-            this.flowLayoutPanel2.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel21)).EndInit();
@@ -1803,15 +1737,6 @@ namespace ParkingManagement.GUI.Forms
         private Krypton.Toolkit.KryptonPanel kryptonPanel21;
         private Krypton.Toolkit.KryptonPanel kryptonPanel22;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private Krypton.Toolkit.KryptonLabel kryptonLabel1;
-        private Krypton.Toolkit.KryptonLabel kryptonLabel3;
-        private Krypton.Toolkit.KryptonLabel kryptonLabel4;
-        private Krypton.Toolkit.KryptonLabel kryptonLabel5;
-        private Krypton.Toolkit.KryptonLabel kryptonLabel6;
-        private Krypton.Toolkit.KryptonLabel kryptonLabel7;
-        private Krypton.Toolkit.KryptonLabel kryptonLabel8;
-        private Krypton.Toolkit.KryptonLabel kryptonLabel9;
         private Krypton.Toolkit.KryptonPanel kryptonPanel23;
         private Krypton.Toolkit.KryptonPanel kryptonPanel24;
         private Krypton.Toolkit.KryptonPanel kryptonPanel25;

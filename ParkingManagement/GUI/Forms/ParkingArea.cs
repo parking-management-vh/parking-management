@@ -148,6 +148,7 @@ namespace ParkingManagement.GUI.Forms
             kTbParkingArea.Text = "";
             kTbDescription.Text = "";
             kCbbStatus.Text = "";
+            LoadAllAreas();
         }
         private void LoadStatusFilter()
         {
@@ -170,7 +171,6 @@ namespace ParkingManagement.GUI.Forms
             parkingAreaBLL parkingAreaBLL = new parkingAreaBLL();
             List<parkingAreaModel> areas = parkingAreaBLL.GetAllParkingAreas( statusFilter);
 
-            kBtnPArea.DataSource = null;
             kBtnPArea.DataSource = areas;
         }
 
@@ -180,6 +180,11 @@ namespace ParkingManagement.GUI.Forms
         }
 
         private void kryptonGroupBox1_Panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void kCbbStatus_Click(object sender, EventArgs e)
         {
 
         }
