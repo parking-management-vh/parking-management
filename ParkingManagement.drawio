@@ -1232,7 +1232,7 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="NRZu5aAUt4a1-Oj7xEvV-1" value="&lt;div&gt;&lt;h4&gt;4.1 DFD Mức 2 cho Quy trình 1.1: Thêm người dùng&lt;/h4&gt;&lt;/div&gt;" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="620" y="20" width="520" height="310" as="geometry">
+          <mxGeometry x="620" y="20" width="540" height="310" as="geometry">
             <mxRectangle x="450" y="130" width="260" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
@@ -1403,7 +1403,7 @@
         <mxCell id="jqGM3VJVD8HcVVIe0gwy-60" value="&lt;div&gt;D9: payment_receipt&lt;/div&gt;" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="485.03000000000014" y="-289.99999999999994" width="120" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="jqGM3VJVD8HcVVIe0gwy-86" value="&lt;h4&gt;4.2 DFD Mức 2 cho Quy trình 2.1: Thêm xe&lt;/h4&gt;" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="jqGM3VJVD8HcVVIe0gwy-86" value="&lt;h4&gt;4.2 DFD Mức 2 cho Quy trình 2.1: Thêm xe&lt;/h4&gt;" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" vertex="1" parent="1">
           <mxGeometry x="620" y="350" width="540" height="310" as="geometry">
             <mxRectangle x="450" y="130" width="260" height="30" as="alternateBounds" />
           </mxGeometry>
@@ -1724,6 +1724,16 @@
         <mxCell id="HtQbgrp3tKAfvstvhAIg-19" value="&lt;div&gt;Kết quả kiểm tra&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="HtQbgrp3tKAfvstvhAIg-18">
           <mxGeometry x="0.1846" relative="1" as="geometry">
             <mxPoint x="30" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HtQbgrp3tKAfvstvhAIg-53" value="&lt;h4&gt;4.3 DFD Mức 2 cho Quy trình 4.2: Ghi nhận thời gian vào/ra&lt;/h4&gt;" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" vertex="1" parent="1">
+          <mxGeometry x="620" y="680" width="540" height="310" as="geometry">
+            <mxRectangle x="450" y="130" width="260" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HtQbgrp3tKAfvstvhAIg-85" value="&lt;h4&gt;&lt;div&gt;4.4 DFD Mức 2 cho Quy trình 5.2: Tính phí và thanh toán&lt;/div&gt;&lt;/h4&gt;" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" vertex="1" parent="1">
+          <mxGeometry x="620" y="1000" width="540" height="310" as="geometry">
+            <mxRectangle x="450" y="130" width="260" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
       </root>
