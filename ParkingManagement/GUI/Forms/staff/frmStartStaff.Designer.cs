@@ -69,10 +69,11 @@
             this.kryptonPanel7.Controls.Add(this.kryptonPanel1);
             this.kryptonPanel7.Controls.Add(this.kryptonPictureBox1);
             this.kryptonPanel7.Controls.Add(this.pictureBox1);
-            this.kryptonPanel7.Location = new System.Drawing.Point(0, -2);
+            this.kryptonPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonPanel7.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel7.Name = "kryptonPanel7";
             this.kryptonPanel7.PaletteMode = Krypton.Toolkit.PaletteMode.SparkleBlue;
-            this.kryptonPanel7.Size = new System.Drawing.Size(2021, 722);
+            this.kryptonPanel7.Size = new System.Drawing.Size(1924, 718);
             this.kryptonPanel7.TabIndex = 2;
             // 
             // kryptonWebBrowser1
@@ -324,7 +325,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2021, 718);
+            this.ClientSize = new System.Drawing.Size(1924, 718);
             this.Controls.Add(this.kryptonPanel7);
             this.Name = "frmStartStaff";
             this.Text = "frmStartStaff";
