@@ -1819,12 +1819,12 @@
     </mxGraphModel>
   </diagram>
   <diagram id="WtbBr8Q-UOfW8nz02FKK" name="use-case(Tổng quát)">
-    <mxGraphModel dx="2100" dy="1044" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1750" dy="870" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="r3Q7j_nCvbr8qygkYldQ-1" value="UseCase Tổng quát" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="125" y="40" width="920" height="700" as="geometry" />
+          <mxGeometry x="140" y="50" width="920" height="700" as="geometry" />
         </mxCell>
         <mxCell id="r3Q7j_nCvbr8qygkYldQ-3" value="Nhân viên&lt;div&gt;(Staff)&lt;/div&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="r3Q7j_nCvbr8qygkYldQ-1">
           <mxGeometry x="860" y="144" width="30" height="60" as="geometry" />
