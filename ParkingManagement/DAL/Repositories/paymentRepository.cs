@@ -119,12 +119,6 @@ namespace ParkingManagement.DAL.Repositories
                 parameters.Add(new MySqlParameter("@paymentDate", paymentDate.Value.ToString("yyyy-MM-dd")));
             }
 
-            if (paymentDate.HasValue)
-            {
-                query += " AND DATE(pr.payment_date) = @paymentDate";
-                parameters.Add(new MySqlParameter("@paymentDate", paymentDate.Value.ToString("yyyy-MM-dd")));
-            }
-
             DataTable data = dbProvider.ExecuteQuery(query, parameters.ToArray());
 
             foreach (DataRow row in data.Rows)

@@ -476,7 +476,6 @@ namespace ParkingManagement.GUI.Forms
             vehicleBLL vehicleBLL = new vehicleBLL();
             List<allVehicle> vehicle = vehicleBLL.GetAllVehicle(selectedArea, selectedSlot, selectedVehicleType, licensePlate);
 
-            kDgvVehicle.DataSource = null;
             kDgvVehicle.DataSource = vehicle;
 
         }
@@ -494,6 +493,11 @@ namespace ParkingManagement.GUI.Forms
             LoadAllAreasSearch();
             LoadSlotNumberSearch();
             LoadAllVehicleTypeSearch();
+        }
+
+        private void kryptonPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

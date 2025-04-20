@@ -1,4 +1,4 @@
-﻿namespace ParkingManagement
+namespace ParkingManagement
 {
     partial class frmMain
     {
