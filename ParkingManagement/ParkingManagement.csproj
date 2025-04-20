@@ -598,6 +598,7 @@
     <None Include="Resources\img\Statistics24.png" />
     <None Include="Resources\img\stande pro.png" />
     <Content Include="Resources\img\XeMayInOut.jpg" />
+    <None Include="Resources\red-circle-emoji-clipart-lg.png" />
     <Content Include="Resources\square.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
