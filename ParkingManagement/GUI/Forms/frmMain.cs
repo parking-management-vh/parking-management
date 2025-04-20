@@ -1,4 +1,4 @@
-﻿using ParkingManagement.DAL.Database;
+using ParkingManagement.DAL.Database;
 using ParkingManagement.GUI.Forms;
 using System;
 using System.Collections.Generic;

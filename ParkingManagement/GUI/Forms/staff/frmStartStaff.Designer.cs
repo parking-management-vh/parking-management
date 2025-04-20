@@ -1,4 +1,4 @@
-﻿namespace ParkingManagement.GUI.Forms.staff
+namespace ParkingManagement.GUI.Forms.staff
 {
     partial class frmStartStaff
     {

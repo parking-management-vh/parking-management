@@ -27,6 +27,31 @@ namespace ParkingManagement.GUI.Forms
             this.TransparencyKey = this.BackColor;
 
         }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            kTbCodeUser.KeyDown += kTbCodeUser_KeyDown;
+            kTbPwUser.KeyDown += kTbPwUser_KeyDown;
+        }
+
+        private void kTbCodeUser_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true; // Ngăn Enter tạo tiếng "bíp"
+                kBtbLogin.PerformClick();
+            }
+        }
+
+        private void kTbPwUser_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                kBtbLogin.PerformClick();
+            }
+        }
+
         private void kBtbLogin_Click(object sender, EventArgs e)
         {
             string inputCode = kTbCodeUser.Text.Trim();
@@ -91,7 +116,5 @@ namespace ParkingManagement.GUI.Forms
         {
             Application.Exit();
         }
-
-
     }
 }

@@ -52,7 +52,6 @@ namespace ParkingManagement.GUI.Forms
                 parkingAreaBLL parkingAreaBLL = new parkingAreaBLL();
                 List<parkingAreaModel> areas = parkingAreaBLL.GetAllParkingAreas();
 
-                kCbbSArea.DataSource = null;
                 kCbbSArea.Items.Clear();
                 kCbbSArea.Items.Add("Tất cả");
 
@@ -270,7 +269,6 @@ namespace ParkingManagement.GUI.Forms
             parkingSlotBLL parkingSlotBLL = new parkingSlotBLL();
             List<allParkingSlot> slots = parkingSlotBLL.GetAllParkingSlots(selectedArea, statusFilter, slotTypeFilter);
 
-            kDgvParkingSlot.DataSource = null; 
             kDgvParkingSlot.DataSource = slots; 
         }
 

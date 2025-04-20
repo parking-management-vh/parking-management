@@ -77,7 +77,22 @@ namespace ParkingManagement.DAL.Repositories
             }
             return cards;
         }
+        public void DeleteParkingCard(string id)
+        {
+            string query = "DELETE FROM parking_card WHERE id = @id";
 
+            object[] parameters = { id };
+
+            try
+            {
+                dbProvider.ExecuteNonQuery(query, parameters);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi xoá chỗ đỗ: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw;
+            }
+        }
         public void CreateParkingCard(string vehicleLicensePlate, string userCode, bool isMonth)
         {
             Guid? vehicleId = vehicleBLL.GetVehicleIdByLicensePlate(vehicleLicensePlate);
