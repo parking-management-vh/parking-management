@@ -1,4 +1,4 @@
-﻿using ParkingManagement.DAL.Database;
+using ParkingManagement.DAL.Database;
 using ParkingManagement.GUI.Forms;
 using System;
 using System.Collections.Generic;
@@ -168,9 +168,39 @@ namespace ParkingManagement
             OpenFormInTab<frmStatistics>("Statistics");
         }
 
-        private void kGrbWorkPage_Click(object sender, EventArgs e)
+        private void kryptonRibbon1_SelectedTabChanged(object sender, EventArgs e)
         {
-            OpenFormInTab<frmStaffDashboard>("Staff Dashboard");
+
+        }
+
+        private void kryptonRibbonGroup1_DialogBoxLauncherClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonRibbonGroup2_DialogBoxLauncherClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonRibbonGroup3_DialogBoxLauncherClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonRibbonGroup4_DialogBoxLauncherClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonRibbonGroup5_DialogBoxLauncherClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonRibbonGroupButton2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 } 
