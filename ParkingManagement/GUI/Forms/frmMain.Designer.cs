@@ -109,6 +109,7 @@
             this.kryptonRibbon1.SelectedTab = this.tabHome;
             this.kryptonRibbon1.Size = new System.Drawing.Size(1173, 171);
             this.kryptonRibbon1.TabIndex = 0;
+            this.kryptonRibbon1.SelectedTabChanged += new System.EventHandler(this.kryptonRibbon1_SelectedTabChanged);
             // 
             // tabHome
             // 
@@ -125,6 +126,7 @@
             this.kryptonRibbonGroupSeparator2,
             this.kryptonRibbonGroupTriple4});
             this.kryptonRibbonGroup1.TextLine1 = "Home";
+            this.kryptonRibbonGroup1.DialogBoxLauncherClick += new System.EventHandler(this.kryptonRibbonGroup1_DialogBoxLauncherClick);
             // 
             // kryptonRibbonGroupTriple1
             // 
@@ -180,6 +182,7 @@
             this.kryptonRibbonGroupTriple18,
             this.kryptonRibbonGroupTriple19});
             this.kryptonRibbonGroup2.TextLine1 = "Parking Management";
+            this.kryptonRibbonGroup2.DialogBoxLauncherClick += new System.EventHandler(this.kryptonRibbonGroup2_DialogBoxLauncherClick);
             // 
             // kryptonRibbonGroupTriple2
             // 
@@ -275,6 +278,7 @@
             this.kryptonRibbonGroupSeparator9,
             this.kryptonRibbonGroupTriple12});
             this.kryptonRibbonGroup3.TextLine1 = "Financial Management";
+            this.kryptonRibbonGroup3.DialogBoxLauncherClick += new System.EventHandler(this.kryptonRibbonGroup3_DialogBoxLauncherClick);
             // 
             // kryptonRibbonGroupTriple9
             // 
@@ -337,6 +341,7 @@
             this.kryptonRibbonGroupSeparator12,
             this.kryptonRibbonGroupTriple16});
             this.kryptonRibbonGroup4.TextLine1 = "User Management";
+            this.kryptonRibbonGroup4.DialogBoxLauncherClick += new System.EventHandler(this.kryptonRibbonGroup4_DialogBoxLauncherClick);
             // 
             // kryptonRibbonGroupTriple13
             // 
@@ -393,6 +398,7 @@
             this.kryptonRibbonGroup5.Items.AddRange(new Krypton.Ribbon.KryptonRibbonGroupContainer[] {
             this.kryptonRibbonGroupTriple17});
             this.kryptonRibbonGroup5.TextLine1 = "Statistics";
+            this.kryptonRibbonGroup5.DialogBoxLauncherClick += new System.EventHandler(this.kryptonRibbonGroup5_DialogBoxLauncherClick);
             // 
             // kryptonRibbonGroupTriple17
             // 
@@ -418,6 +424,10 @@
             this.kryptonNavigator1.Size = new System.Drawing.Size(1173, 383);
             this.kryptonNavigator1.TabIndex = 1;
             this.kryptonNavigator1.Text = "kryptonNavigator1";
+            // 
+            // kryptonRibbonGroupButton2
+            // 
+            this.kryptonRibbonGroupButton2.Click += new System.EventHandler(this.kryptonRibbonGroupButton2_Click);
             // 
             // frmMain
             // 

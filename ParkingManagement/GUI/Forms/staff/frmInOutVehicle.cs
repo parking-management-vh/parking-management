@@ -1,4 +1,5 @@
 ﻿using ParkingManagement.BLL;
+using ParkingManagement.DAL.Repositories;
 using ParkingManagement.Models;
 using System;
 using System.Collections.Generic;
@@ -37,14 +38,27 @@ namespace ParkingManagement.GUI.Forms.staff
         {
             LoadUserSession();
         }
+        private void LoadAreas()
+        {
+            var parkingAreaRepo = new ParkingAreaRepository();
 
+            // Lấy tất cả các bãi đỗ xe (không lọc theo status)
+            var parkingAreas = parkingAreaRepo.GetAllParkingAreas(); // đây là hàm của bạn
+
+            comboBoxAreas.DataSource = parkingAreas;
+            comboBoxAreas.DisplayMember = "AreaName";
+            comboBoxAreas.ValueMember = "Id";
+        }
         private void LoadUserSession()
         {
+            LoadAreas(); // Load combobox trước
+
             if (SessionManager.CurrentUser == null) return;
 
-            kLbAreaName.Text = $"Khu vực: {SessionManager.CurrentUser.AreaName}";
-
             selectedAreaId = SessionManager.CurrentUser.AreaId ?? Guid.Empty;
+
+            // Set combobox về đúng khu vực của user
+            comboBoxAreas.SelectedValue = selectedAreaId.ToString();
 
             LoadAvailableSlots(selectedAreaId.Value);
             LoadParkingSlots(selectedAreaId.Value);
@@ -425,6 +439,17 @@ namespace ParkingManagement.GUI.Forms.staff
         private void kryptonGroupBox3_Panel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void comboBoxAreas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            if (comboBoxAreas.SelectedValue is string selectedId)
+            {
+                selectedAreaId = Guid.Parse(selectedId); // nếu id dạng Guid string
+                LoadAvailableSlots(selectedAreaId.Value);
+                LoadParkingSlots(selectedAreaId.Value);
+            }
         }
     }
 }
