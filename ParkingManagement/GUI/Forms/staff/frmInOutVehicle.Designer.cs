@@ -111,7 +111,7 @@ namespace ParkingManagement.GUI.Forms.staff
             // lblClock
             // 
             this.lblClock.Location = new System.Drawing.Point(16, 11);
-            this.lblClock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblClock.Margin = new System.Windows.Forms.Padding(4);
             this.lblClock.Name = "lblClock";
             this.lblClock.Size = new System.Drawing.Size(66, 20);
             this.lblClock.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -129,7 +129,7 @@ namespace ParkingManagement.GUI.Forms.staff
             this.kryptonPanel1.Controls.Add(this.kryptonGroupBox2);
             this.kryptonPanel1.Controls.Add(this.kryptonGroupBox1);
             this.kryptonPanel1.Location = new System.Drawing.Point(16, 41);
-            this.kryptonPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(343, 335);
             this.kryptonPanel1.TabIndex = 1;
@@ -137,7 +137,7 @@ namespace ParkingManagement.GUI.Forms.staff
             // kBtnOutBks
             // 
             this.kBtnOutBks.Location = new System.Drawing.Point(199, 289);
-            this.kBtnOutBks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kBtnOutBks.Margin = new System.Windows.Forms.Padding(4);
             this.kBtnOutBks.Name = "kBtnOutBks";
             this.kBtnOutBks.Size = new System.Drawing.Size(120, 31);
             this.kBtnOutBks.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -149,7 +149,7 @@ namespace ParkingManagement.GUI.Forms.staff
             // kryptonLabel10
             // 
             this.kryptonLabel10.Location = new System.Drawing.Point(19, 135);
-            this.kryptonLabel10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonLabel10.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel10.Name = "kryptonLabel10";
             this.kryptonLabel10.Size = new System.Drawing.Size(49, 20);
             this.kryptonLabel10.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -159,7 +159,7 @@ namespace ParkingManagement.GUI.Forms.staff
             // kryptonLabel9
             // 
             this.kryptonLabel9.Location = new System.Drawing.Point(16, 96);
-            this.kryptonLabel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonLabel9.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel9.Name = "kryptonLabel9";
             this.kryptonLabel9.Size = new System.Drawing.Size(66, 20);
             this.kryptonLabel9.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -170,7 +170,7 @@ namespace ParkingManagement.GUI.Forms.staff
             // 
             this.kCbbSlotNum.DropDownWidth = 224;
             this.kCbbSlotNum.Location = new System.Drawing.Point(92, 127);
-            this.kCbbSlotNum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kCbbSlotNum.Margin = new System.Windows.Forms.Padding(4);
             this.kCbbSlotNum.Name = "kCbbSlotNum";
             this.kCbbSlotNum.Size = new System.Drawing.Size(227, 28);
             this.kCbbSlotNum.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -181,7 +181,7 @@ namespace ParkingManagement.GUI.Forms.staff
             // 
             this.kCbbTypeVehicle.DropDownWidth = 224;
             this.kCbbTypeVehicle.Location = new System.Drawing.Point(92, 86);
-            this.kCbbTypeVehicle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kCbbTypeVehicle.Margin = new System.Windows.Forms.Padding(4);
             this.kCbbTypeVehicle.Name = "kCbbTypeVehicle";
             this.kCbbTypeVehicle.Size = new System.Drawing.Size(227, 28);
             this.kCbbTypeVehicle.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -191,7 +191,7 @@ namespace ParkingManagement.GUI.Forms.staff
             // kBtnSubmitBs
             // 
             this.kBtnSubmitBs.Location = new System.Drawing.Point(199, 166);
-            this.kBtnSubmitBs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kBtnSubmitBs.Margin = new System.Windows.Forms.Padding(4);
             this.kBtnSubmitBs.Name = "kBtnSubmitBs";
             this.kBtnSubmitBs.Size = new System.Drawing.Size(120, 31);
             this.kBtnSubmitBs.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -203,7 +203,7 @@ namespace ParkingManagement.GUI.Forms.staff
             // kryptonGroupBox2
             // 
             this.kryptonGroupBox2.Location = new System.Drawing.Point(20, 199);
-            this.kryptonGroupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonGroupBox2.Margin = new System.Windows.Forms.Padding(4);
             // 
             // kryptonGroupBox2.Panel
             // 
@@ -215,7 +215,7 @@ namespace ParkingManagement.GUI.Forms.staff
             // kTbOutBks
             // 
             this.kTbOutBks.Location = new System.Drawing.Point(4, 4);
-            this.kTbOutBks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kTbOutBks.Margin = new System.Windows.Forms.Padding(4);
             this.kTbOutBks.Name = "kTbOutBks";
             this.kTbOutBks.Size = new System.Drawing.Size(285, 39);
             this.kTbOutBks.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -227,7 +227,7 @@ namespace ParkingManagement.GUI.Forms.staff
             // 
             this.kryptonGroupBox1.CaptionStyle = Krypton.Toolkit.LabelStyle.NormalControl;
             this.kryptonGroupBox1.Location = new System.Drawing.Point(20, 4);
-            this.kryptonGroupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonGroupBox1.Margin = new System.Windows.Forms.Padding(4);
             // 
             // kryptonGroupBox1.Panel
             // 
@@ -239,7 +239,7 @@ namespace ParkingManagement.GUI.Forms.staff
             // kTbInBks
             // 
             this.kTbInBks.Location = new System.Drawing.Point(4, 2);
-            this.kTbInBks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kTbInBks.Margin = new System.Windows.Forms.Padding(4);
             this.kTbInBks.Name = "kTbInBks";
             this.kTbInBks.Size = new System.Drawing.Size(285, 39);
             this.kTbInBks.StateCommon.Content.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -250,7 +250,7 @@ namespace ParkingManagement.GUI.Forms.staff
             // kryptonGroupBox3
             // 
             this.kryptonGroupBox3.Location = new System.Drawing.Point(16, 378);
-            this.kryptonGroupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonGroupBox3.Margin = new System.Windows.Forms.Padding(4);
             // 
             // kryptonGroupBox3.Panel
             // 
@@ -277,7 +277,7 @@ namespace ParkingManagement.GUI.Forms.staff
             this.kDTPInfoOut.CalendarTodayDate = new System.DateTime(2025, 3, 11, 0, 0, 0, 0);
             this.kDTPInfoOut.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.kDTPInfoOut.Location = new System.Drawing.Point(124, 186);
-            this.kDTPInfoOut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kDTPInfoOut.Margin = new System.Windows.Forms.Padding(4);
             this.kDTPInfoOut.Name = "kDTPInfoOut";
             this.kDTPInfoOut.Size = new System.Drawing.Size(203, 25);
             this.kDTPInfoOut.TabIndex = 12;
@@ -285,7 +285,7 @@ namespace ParkingManagement.GUI.Forms.staff
             // kryptonLabel6
             // 
             this.kryptonLabel6.Location = new System.Drawing.Point(5, 187);
-            this.kryptonLabel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonLabel6.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel6.Name = "kryptonLabel6";
             this.kryptonLabel6.Size = new System.Drawing.Size(96, 20);
             this.kryptonLabel6.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -297,7 +297,7 @@ namespace ParkingManagement.GUI.Forms.staff
             this.kDTPInfoIn.CalendarTodayDate = new System.DateTime(2025, 3, 11, 0, 0, 0, 0);
             this.kDTPInfoIn.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.kDTPInfoIn.Location = new System.Drawing.Point(124, 149);
-            this.kDTPInfoIn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kDTPInfoIn.Margin = new System.Windows.Forms.Padding(4);
             this.kDTPInfoIn.Name = "kDTPInfoIn";
             this.kDTPInfoIn.Size = new System.Drawing.Size(203, 25);
             this.kDTPInfoIn.TabIndex = 10;
@@ -305,7 +305,7 @@ namespace ParkingManagement.GUI.Forms.staff
             // kryptonLabel5
             // 
             this.kryptonLabel5.Location = new System.Drawing.Point(5, 151);
-            this.kryptonLabel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonLabel5.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel5.Name = "kryptonLabel5";
             this.kryptonLabel5.Size = new System.Drawing.Size(107, 20);
             this.kryptonLabel5.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -315,7 +315,7 @@ namespace ParkingManagement.GUI.Forms.staff
             // kRBtnInfoDay
             // 
             this.kRBtnInfoDay.Location = new System.Drawing.Point(241, 117);
-            this.kRBtnInfoDay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kRBtnInfoDay.Margin = new System.Windows.Forms.Padding(4);
             this.kRBtnInfoDay.Name = "kRBtnInfoDay";
             this.kRBtnInfoDay.Size = new System.Drawing.Size(60, 20);
             this.kRBtnInfoDay.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -325,7 +325,7 @@ namespace ParkingManagement.GUI.Forms.staff
             // kRbtnInfoMonth
             // 
             this.kRbtnInfoMonth.Location = new System.Drawing.Point(124, 117);
-            this.kRbtnInfoMonth.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kRbtnInfoMonth.Margin = new System.Windows.Forms.Padding(4);
             this.kRbtnInfoMonth.Name = "kRbtnInfoMonth";
             this.kRbtnInfoMonth.Size = new System.Drawing.Size(68, 20);
             this.kRbtnInfoMonth.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -335,7 +335,7 @@ namespace ParkingManagement.GUI.Forms.staff
             // kryptonLabel4
             // 
             this.kryptonLabel4.Location = new System.Drawing.Point(4, 117);
-            this.kryptonLabel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonLabel4.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel4.Name = "kryptonLabel4";
             this.kryptonLabel4.Size = new System.Drawing.Size(66, 20);
             this.kryptonLabel4.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -346,7 +346,7 @@ namespace ParkingManagement.GUI.Forms.staff
             // 
             this.kTbInfoPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kTbInfoPrice.Location = new System.Drawing.Point(124, 81);
-            this.kTbInfoPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kTbInfoPrice.Margin = new System.Windows.Forms.Padding(4);
             this.kTbInfoPrice.Multiline = true;
             this.kTbInfoPrice.Name = "kTbInfoPrice";
             this.kTbInfoPrice.ReadOnly = true;
@@ -357,7 +357,7 @@ namespace ParkingManagement.GUI.Forms.staff
             // kryptonLabel3
             // 
             this.kryptonLabel3.Location = new System.Drawing.Point(4, 81);
-            this.kryptonLabel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonLabel3.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel3.Name = "kryptonLabel3";
             this.kryptonLabel3.Size = new System.Drawing.Size(42, 20);
             this.kryptonLabel3.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -368,7 +368,7 @@ namespace ParkingManagement.GUI.Forms.staff
             // 
             this.kTbInfoUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kTbInfoUser.Location = new System.Drawing.Point(124, 47);
-            this.kTbInfoUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kTbInfoUser.Margin = new System.Windows.Forms.Padding(4);
             this.kTbInfoUser.Multiline = true;
             this.kTbInfoUser.Name = "kTbInfoUser";
             this.kTbInfoUser.ReadOnly = true;
@@ -379,7 +379,7 @@ namespace ParkingManagement.GUI.Forms.staff
             // kryptonLabel2
             // 
             this.kryptonLabel2.Location = new System.Drawing.Point(4, 47);
-            this.kryptonLabel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonLabel2.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel2.Name = "kryptonLabel2";
             this.kryptonLabel2.Size = new System.Drawing.Size(94, 20);
             this.kryptonLabel2.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -390,7 +390,7 @@ namespace ParkingManagement.GUI.Forms.staff
             // 
             this.kTbInfoBs.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kTbInfoBs.Location = new System.Drawing.Point(124, 10);
-            this.kTbInfoBs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kTbInfoBs.Margin = new System.Windows.Forms.Padding(4);
             this.kTbInfoBs.Multiline = true;
             this.kTbInfoBs.Name = "kTbInfoBs";
             this.kTbInfoBs.ReadOnly = true;
@@ -401,7 +401,7 @@ namespace ParkingManagement.GUI.Forms.staff
             // kryptonLabel1
             // 
             this.kryptonLabel1.Location = new System.Drawing.Point(4, 12);
-            this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel1.Name = "kryptonLabel1";
             this.kryptonLabel1.Size = new System.Drawing.Size(68, 20);
             this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -411,7 +411,7 @@ namespace ParkingManagement.GUI.Forms.staff
             // kryptonGroupBox4
             // 
             this.kryptonGroupBox4.Location = new System.Drawing.Point(427, 45);
-            this.kryptonGroupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonGroupBox4.Margin = new System.Windows.Forms.Padding(4);
             // 
             // kryptonGroupBox4.Panel
             // 
@@ -427,7 +427,7 @@ namespace ParkingManagement.GUI.Forms.staff
             // 
             this.kLbIbBs.AutoSize = false;
             this.kLbIbBs.Location = new System.Drawing.Point(152, 118);
-            this.kLbIbBs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kLbIbBs.Margin = new System.Windows.Forms.Padding(4);
             this.kLbIbBs.Name = "kLbIbBs";
             this.kLbIbBs.Size = new System.Drawing.Size(112, 31);
             this.kLbIbBs.StateCommon.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
@@ -438,7 +438,7 @@ namespace ParkingManagement.GUI.Forms.staff
             // kryptonGroupBox5
             // 
             this.kryptonGroupBox5.Location = new System.Drawing.Point(935, 45);
-            this.kryptonGroupBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonGroupBox5.Margin = new System.Windows.Forms.Padding(4);
             // 
             // kryptonGroupBox5.Panel
             // 
@@ -456,7 +456,7 @@ namespace ParkingManagement.GUI.Forms.staff
             // 
             this.kLbOutTextBs.AutoSize = false;
             this.kLbOutTextBs.Location = new System.Drawing.Point(149, 117);
-            this.kLbOutTextBs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kLbOutTextBs.Margin = new System.Windows.Forms.Padding(4);
             this.kLbOutTextBs.Name = "kLbOutTextBs";
             this.kLbOutTextBs.Size = new System.Drawing.Size(112, 31);
             this.kLbOutTextBs.StateCommon.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
@@ -467,7 +467,7 @@ namespace ParkingManagement.GUI.Forms.staff
             // kryptonLabel8
             // 
             this.kryptonLabel8.Location = new System.Drawing.Point(119, 103);
-            this.kryptonLabel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonLabel8.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel8.Name = "kryptonLabel8";
             this.kryptonLabel8.Size = new System.Drawing.Size(6, 2);
             this.kryptonLabel8.StateCommon.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
@@ -478,7 +478,7 @@ namespace ParkingManagement.GUI.Forms.staff
             // kLbCountSlot
             // 
             this.kLbCountSlot.Location = new System.Drawing.Point(20, 17);
-            this.kLbCountSlot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kLbCountSlot.Margin = new System.Windows.Forms.Padding(4);
             this.kLbCountSlot.Name = "kLbCountSlot";
             this.kLbCountSlot.Size = new System.Drawing.Size(156, 26);
             this.kLbCountSlot.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -488,7 +488,7 @@ namespace ParkingManagement.GUI.Forms.staff
             // kryptonGroupBox6
             // 
             this.kryptonGroupBox6.Location = new System.Drawing.Point(203, 4);
-            this.kryptonGroupBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonGroupBox6.Margin = new System.Windows.Forms.Padding(4);
             // 
             // kryptonGroupBox6.Panel
             // 
@@ -503,7 +503,7 @@ namespace ParkingManagement.GUI.Forms.staff
             this.kTLPslotArea.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.kTLPslotArea.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.kTLPslotArea.Location = new System.Drawing.Point(4, 4);
-            this.kTLPslotArea.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kTLPslotArea.Margin = new System.Windows.Forms.Padding(4);
             this.kTLPslotArea.Name = "kTLPslotArea";
             this.kTLPslotArea.RowCount = 2;
             this.kTLPslotArea.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -514,7 +514,7 @@ namespace ParkingManagement.GUI.Forms.staff
             // kBtnRefreshmap
             // 
             this.kBtnRefreshmap.Location = new System.Drawing.Point(23, 53);
-            this.kBtnRefreshmap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kBtnRefreshmap.Margin = new System.Windows.Forms.Padding(4);
             this.kBtnRefreshmap.Name = "kBtnRefreshmap";
             this.kBtnRefreshmap.Size = new System.Drawing.Size(168, 31);
             this.kBtnRefreshmap.TabIndex = 16;
@@ -529,7 +529,7 @@ namespace ParkingManagement.GUI.Forms.staff
             this.kryptonPanel2.Controls.Add(this.kLbCountSlot);
             this.kryptonPanel2.Controls.Add(this.kryptonGroupBox6);
             this.kryptonPanel2.Location = new System.Drawing.Point(427, 384);
-            this.kryptonPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonPanel2.Name = "kryptonPanel2";
             this.kryptonPanel2.Size = new System.Drawing.Size(932, 305);
             this.kryptonPanel2.TabIndex = 17;
@@ -537,7 +537,7 @@ namespace ParkingManagement.GUI.Forms.staff
             // kryptonGroupBox7
             // 
             this.kryptonGroupBox7.Location = new System.Drawing.Point(4, 106);
-            this.kryptonGroupBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonGroupBox7.Margin = new System.Windows.Forms.Padding(4);
             // 
             // kryptonGroupBox7.Panel
             // 
@@ -552,7 +552,7 @@ namespace ParkingManagement.GUI.Forms.staff
             this.kTLPdescription.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.kTLPdescription.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.kTLPdescription.Location = new System.Drawing.Point(4, 4);
-            this.kTLPdescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kTLPdescription.Margin = new System.Windows.Forms.Padding(4);
             this.kTLPdescription.Name = "kTLPdescription";
             this.kTLPdescription.RowCount = 2;
             this.kTLPdescription.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -563,7 +563,7 @@ namespace ParkingManagement.GUI.Forms.staff
             // kTbBillPay
             // 
             this.kTbBillPay.Location = new System.Drawing.Point(215, 655);
-            this.kTbBillPay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kTbBillPay.Margin = new System.Windows.Forms.Padding(4);
             this.kTbBillPay.Name = "kTbBillPay";
             this.kTbBillPay.Size = new System.Drawing.Size(144, 31);
             this.kTbBillPay.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -577,15 +577,15 @@ namespace ParkingManagement.GUI.Forms.staff
             this.comboBoxAreas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxAreas.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.comboBoxAreas.FormattingEnabled = true;
-            this.comboBoxAreas.Location = new System.Drawing.Point(1061, 11);
+            this.comboBoxAreas.Location = new System.Drawing.Point(1045, 11);
             this.comboBoxAreas.Name = "comboBoxAreas";
-            this.comboBoxAreas.Size = new System.Drawing.Size(298, 28);
+            this.comboBoxAreas.Size = new System.Drawing.Size(314, 28);
             this.comboBoxAreas.TabIndex = 19;
             this.comboBoxAreas.SelectedIndexChanged += new System.EventHandler(this.comboBoxAreas_SelectedIndexChanged);
             // 
             // kryptonLabel7
             // 
-            this.kryptonLabel7.Location = new System.Drawing.Point(998, 19);
+            this.kryptonLabel7.Location = new System.Drawing.Point(982, 19);
             this.kryptonLabel7.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel7.Name = "kryptonLabel7";
             this.kryptonLabel7.Size = new System.Drawing.Size(56, 20);
@@ -607,7 +607,7 @@ namespace ParkingManagement.GUI.Forms.staff
             this.Controls.Add(this.kryptonPanel1);
             this.Controls.Add(this.lblClock);
             this.Controls.Add(this.kryptonPanel2);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmInOutVehicle";
             this.Load += new System.EventHandler(this.frmInOutVehicle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
