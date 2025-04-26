@@ -549,6 +549,82 @@ namespace ParkingManagement.GUI.Forms.statistics
             UpdateHeaderLabels();
         }
 
+        private void btnExportExcel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dataGridViewStatistics.Rows.Count == 0)
+                {
+                    MessageBox.Show("Không có dữ liệu để xuất!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
 
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+                saveFileDialog.Filter = "Excel Files|*.xlsx";
+                saveFileDialog.Title = "Chọn nơi lưu file Excel";
+                saveFileDialog.FileName = "BaoCaoDoanhThu.xlsx";
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    var filePath = saveFileDialog.FileName;
+
+                    var excelApp = new Microsoft.Office.Interop.Excel.Application();
+                    var workbook = excelApp.Workbooks.Add(Type.Missing);
+                    Microsoft.Office.Interop.Excel._Worksheet worksheet = (Microsoft.Office.Interop.Excel._Worksheet)workbook.ActiveSheet;
+                    worksheet.Name = "Báo Cáo";
+
+                    int totalColumns = dataGridViewStatistics.Columns.Count;
+
+                    // ===== Thêm tiêu đề =====
+                    Microsoft.Office.Interop.Excel.Range titleRange = worksheet.Range["A1", worksheet.Cells[1, totalColumns]];
+                    titleRange.Merge();
+                    titleRange.Value = "BÁO CÁO DOANH THU";
+                    titleRange.Font.Size = 18;
+                    titleRange.Font.Bold = true;
+                    titleRange.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+
+                    // ===== Thêm ngày xuất báo cáo =====
+                    Microsoft.Office.Interop.Excel.Range dateRange = worksheet.Range["A2", worksheet.Cells[2, totalColumns]];
+                    dateRange.Merge();
+                    dateRange.Value = "Ngày xuất báo cáo: " + DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+                    dateRange.Font.Size = 12;
+                    dateRange.Font.Italic = true;
+                    dateRange.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+
+                    // ===== Thêm tiêu đề cột =====
+                    for (int i = 1; i <= dataGridViewStatistics.Columns.Count; i++)
+                    {
+                        worksheet.Cells[4, i] = dataGridViewStatistics.Columns[i - 1].HeaderText;
+                    }
+
+                    // ===== Thêm dữ liệu =====
+                    for (int i = 0; i < dataGridViewStatistics.Rows.Count; i++)
+                    {
+                        for (int j = 0; j < dataGridViewStatistics.Columns.Count; j++)
+                        {
+                            var value = dataGridViewStatistics.Rows[i].Cells[j].Value;
+                            worksheet.Cells[i + 5, j + 1] = value != null ? value.ToString() : "";
+                        }
+                    }
+
+                    // ===== Định dạng bảng =====
+                    Microsoft.Office.Interop.Excel.Range dataRange = worksheet.Range["A4", worksheet.Cells[dataGridViewStatistics.Rows.Count + 4, totalColumns]];
+                    dataRange.Borders.LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous;
+                    dataRange.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+
+                    worksheet.Columns.AutoFit();
+
+                    workbook.SaveAs(filePath);
+                    workbook.Close();
+                    excelApp.Quit();
+
+                    MessageBox.Show("Xuất file Excel thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Đã xảy ra lỗi khi xuất Excel: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

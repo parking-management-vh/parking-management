@@ -247,6 +247,12 @@
     <Compile Include="GUI\Forms\statistics\frmStatistics.Designer.cs">
       <DependentUpon>frmStatistics.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Forms\statistics\StaticsStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Forms\statistics\StaticsStaff.Designer.cs">
+      <DependentUpon>StaticsStaff.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\parkingCardDetail.cs" />
     <Compile Include="Models\paymentModel.cs" />
     <Compile Include="Models\RecentActivityModel.cs" />
@@ -464,6 +470,9 @@
     <EmbeddedResource Include="GUI\Forms\statistics\frmStatistics.resx">
       <DependentUpon>frmStatistics.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Forms\statistics\StaticsStaff.resx">
+      <DependentUpon>StaticsStaff.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Forms\TestConnectDB.resx">
       <DependentUpon>TestConnectDB.cs</DependentUpon>
     </EmbeddedResource>
@@ -597,6 +606,7 @@
     <None Include="Resources\img\stande.png" />
     <None Include="Resources\img\Statistics24.png" />
     <None Include="Resources\img\stande pro.png" />
+    <None Include="Resources\img\staticsStaff.png" />
     <Content Include="Resources\img\XeMayInOut.jpg" />
     <None Include="Resources\red-circle-emoji-clipart-lg.png" />
     <Content Include="Resources\square.png" />
