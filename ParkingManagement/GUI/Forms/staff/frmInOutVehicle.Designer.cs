@@ -69,7 +69,6 @@ namespace ParkingManagement.GUI.Forms.staff
             this.kryptonPanel2 = new Krypton.Toolkit.KryptonPanel();
             this.kryptonGroupBox7 = new Krypton.Toolkit.KryptonGroupBox();
             this.kTLPdescription = new Krypton.Toolkit.KryptonTableLayoutPanel();
-            this.kTbBillPay = new Krypton.Toolkit.KryptonButton();
             this.comboBoxAreas = new System.Windows.Forms.ComboBox();
             this.kryptonLabel7 = new Krypton.Toolkit.KryptonLabel();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
@@ -560,18 +559,6 @@ namespace ParkingManagement.GUI.Forms.staff
             this.kTLPdescription.Size = new System.Drawing.Size(191, 255);
             this.kTLPdescription.TabIndex = 11;
             // 
-            // kTbBillPay
-            // 
-            this.kTbBillPay.Location = new System.Drawing.Point(215, 655);
-            this.kTbBillPay.Margin = new System.Windows.Forms.Padding(4);
-            this.kTbBillPay.Name = "kTbBillPay";
-            this.kTbBillPay.Size = new System.Drawing.Size(144, 31);
-            this.kTbBillPay.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kTbBillPay.TabIndex = 18;
-            this.kTbBillPay.Values.DropDownArrowColor = System.Drawing.Color.Empty;
-            this.kTbBillPay.Values.Text = "Phiếu thanh toán";
-            this.kTbBillPay.Click += new System.EventHandler(this.kTbBillPay_Click);
-            // 
             // comboBoxAreas
             // 
             this.comboBoxAreas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -591,7 +578,7 @@ namespace ParkingManagement.GUI.Forms.staff
             this.kryptonLabel7.Size = new System.Drawing.Size(56, 20);
             this.kryptonLabel7.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel7.TabIndex = 20;
-            this.kryptonLabel7.Values.Text = "Bãi xe:";
+            this.kryptonLabel7.Values.Text = "";
             // 
             // frmInOutVehicle
             // 
@@ -600,7 +587,6 @@ namespace ParkingManagement.GUI.Forms.staff
             this.ClientSize = new System.Drawing.Size(1375, 698);
             this.Controls.Add(this.kryptonLabel7);
             this.Controls.Add(this.comboBoxAreas);
-            this.Controls.Add(this.kTbBillPay);
             this.Controls.Add(this.kryptonGroupBox5);
             this.Controls.Add(this.kryptonGroupBox4);
             this.Controls.Add(this.kryptonGroupBox3);
@@ -696,7 +682,6 @@ namespace ParkingManagement.GUI.Forms.staff
         private Krypton.Toolkit.KryptonPanel kryptonPanel2;
         private Krypton.Toolkit.KryptonTableLayoutPanel kTLPdescription;
         private Krypton.Toolkit.KryptonGroupBox kryptonGroupBox7;
-        private Krypton.Toolkit.KryptonButton kTbBillPay;
         private System.Windows.Forms.ComboBox comboBoxAreas;
         private Krypton.Toolkit.KryptonLabel kryptonLabel7;
     }
