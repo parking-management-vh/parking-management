@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace ParkingManagement.GUI.Forms.staff
 {
-    public partial class frmInOutVehicle: Form
+    public partial class frmInOutVehicle : Form
     {
         private vehicleBLL vehicleBLL = new vehicleBLL();
         private ParkingCardBLL parkingCardBLL = new ParkingCardBLL();
@@ -22,7 +22,7 @@ namespace ParkingManagement.GUI.Forms.staff
         {
             InitializeComponent();
             LoadAllVehicleType();
-            timerClock.Interval = 1000; 
+            timerClock.Interval = 1000;
             timerClock.Tick += TimerClock_Tick;
             timerClock.Start();
             kryptonGroupBox4.BackgroundImageLayout = ImageLayout.Stretch;
@@ -275,17 +275,33 @@ namespace ParkingManagement.GUI.Forms.staff
                 MessageBox.Show("Biển số xe không được để trống!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            parkingCardBLL.GetParkingCardByLicensePlate(licensePlate);
+
+            // Kiểm tra xe có tồn tại hay không
+            var parkingCard = parkingCardBLL.GetParkingCardByLicensePlate(licensePlate);
+            if (parkingCard == null)
+            {
+                MessageBox.Show("Không tìm thấy xe có biển số này!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             if (parkingSlotBLL == null)
             {
                 MessageBox.Show("Lỗi: parkingSlotBLL chưa được khởi tạo!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
+            // Cập nhật trạng thái chỗ đỗ
             parkingSlotBLL.updateSlotStatusByVehicle(licensePlate);
+
+            // Load lại dữ liệu và form
             LoadParkingCardInfo(licensePlate);
             LoadParkingSlots(selectedAreaId.Value);
             RefreshForm();
+
+            // Mở form thanh toán
+            frmCreatePayment createPaymentForm = new frmCreatePayment(licensePlate);
+            createPaymentForm.StartPosition = FormStartPosition.CenterParent;
+            createPaymentForm.ShowDialog();
         }
 
         private void kTbOutBks_TextChanged(object sender, EventArgs e)
@@ -326,9 +342,9 @@ namespace ParkingManagement.GUI.Forms.staff
             kTLPslotArea.ColumnStyles.Clear();
             kTLPslotArea.RowStyles.Clear();
 
-            kTLPslotArea.ColumnCount = 5;  
-            kTLPslotArea.RowCount = 4;    
-            kTLPslotArea.Dock = DockStyle.Fill;  
+            kTLPslotArea.ColumnCount = 5;
+            kTLPslotArea.RowCount = 4;
+            kTLPslotArea.Dock = DockStyle.Fill;
 
             for (int i = 0; i < kTLPslotArea.ColumnCount; i++)
             {
@@ -345,9 +361,9 @@ namespace ParkingManagement.GUI.Forms.staff
                 Button btn = new Button();
                 btn.Text = $"Slot {slot.SlotNumber}";
                 btn.Tag = slot.Id;
-                btn.Dock = DockStyle.Fill;  
-                btn.Margin = new Padding(5);  
-                btn.Font = new Font("Arial", 10, FontStyle.Bold); 
+                btn.Dock = DockStyle.Fill;
+                btn.Margin = new Padding(5);
+                btn.Font = new Font("Arial", 10, FontStyle.Bold);
                 btn.Click += Btn_Click;
 
                 string status = slot.SlotStatus.Trim().ToLower();
@@ -385,8 +401,8 @@ namespace ParkingManagement.GUI.Forms.staff
         private void LoadSlotDescription()
         {
             kTLPdescription.Controls.Clear();
-            kTLPdescription.ColumnCount = 1; 
-            kTLPdescription.RowCount = 3;    
+            kTLPdescription.ColumnCount = 1;
+            kTLPdescription.RowCount = 3;
             kTLPdescription.Dock = DockStyle.Fill;
 
             var statuses = new (string Text, Color Color)[]
@@ -409,11 +425,11 @@ namespace ParkingManagement.GUI.Forms.staff
                 Button btn = new Button();
                 btn.Text = statuses[i].Text;
                 btn.BackColor = statuses[i].Color;
-                btn.Dock = DockStyle.Fill; 
-                btn.Margin = new Padding(5); 
-                btn.Enabled = false; 
+                btn.Dock = DockStyle.Fill;
+                btn.Margin = new Padding(5);
+                btn.Enabled = false;
 
-                kTLPdescription.Controls.Add(btn, 0, i); 
+                kTLPdescription.Controls.Add(btn, 0, i);
             }
         }
 
@@ -424,7 +440,7 @@ namespace ParkingManagement.GUI.Forms.staff
 
         private void kTbBillPay_Click(object sender, EventArgs e)
         {
-            string licensePlate = kTbInfoBs.Text.Trim(); 
+            string licensePlate = kTbInfoBs.Text.Trim();
 
             frmCreatePayment createPaymentForm = new frmCreatePayment(licensePlate);
             createPaymentForm.StartPosition = FormStartPosition.CenterParent;
