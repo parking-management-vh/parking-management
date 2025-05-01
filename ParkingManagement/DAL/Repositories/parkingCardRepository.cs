@@ -176,7 +176,7 @@ namespace ParkingManagement.DAL.Repositories
                 int rowsAffected = dbProvider.ExecuteNonQuery(query, parameters);
                 if (rowsAffected > 0)
                 {
-                    MessageBox.Show("Cập nhật end_date thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show("Cập nhật end_date thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
@@ -213,7 +213,7 @@ namespace ParkingManagement.DAL.Repositories
             object[] parameters = { vehicleId.Value.ToString() };
             DataTable cardData = dbProvider.ExecuteQuery(query, parameters);
 
-            MessageBox.Show($"Số dòng lấy được từ DB: {cardData.Rows.Count}", "Debug", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //MessageBox.Show($"Số dòng lấy được từ DB: {cardData.Rows.Count}", "Debug", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             if (cardData.Rows.Count == 0)
             {
