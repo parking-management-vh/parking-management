@@ -133,12 +133,12 @@ namespace ParkingManagement
         {
             OpenFormInTab<frmPaymentReceipt>("Payment Receipt");
         }
-        private void kryptonRibbonGroupButton1_Click(object sender, EventArgs e)
+        private void kryptonRibbonGroupButton1_Click_1(object sender, EventArgs e)
         {
             OpenFormInTab<frmVehicle>("Vehicle");
         }
 
-        private void kryptonRibbonGroupButton3_Click(object sender, EventArgs e)
+        private void kryptonRibbonGroupButton3_Click_1(object sender, EventArgs e)
         {
             OpenFormInTab<frmParkingArea>("Parking Area");
         }
