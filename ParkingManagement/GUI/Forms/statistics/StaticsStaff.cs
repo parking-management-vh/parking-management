@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Data;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
@@ -10,7 +11,8 @@ namespace ParkingManagement.GUI.Forms.statistics
     public partial class StaticsStaff : Form
     {
         // MySQL connection string (adjust accordingly)
-        private string connectionString = "server=localhost;port=3306;database=railway;uid=root;pwd=123456;SslMode=none;AllowPublicKeyRetrieval=True;";
+        //private string connectionString = "Server=localhost;Port=3306;Database=dumpdbparking;Uid=root;Pwd=duchai;";
+        private string connectionString = ConfigurationManager.ConnectionStrings["MySqlConnection"].ConnectionString;
 
         public StaticsStaff()
         {

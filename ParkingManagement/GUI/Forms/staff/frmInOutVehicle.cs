@@ -98,7 +98,7 @@ namespace ParkingManagement.GUI.Forms.staff
                     return;
                 }
 
-                MessageBox.Show($"Đang tìm thẻ xe cho biển số: {licensePlate}", "Debug", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show($"Đang tìm thẻ xe cho biển số: {licensePlate}", "Debug", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 parkingCardDetail cardDetail = parkingCardBLL.GetParkingCardByLicensePlate(licensePlate);
 
@@ -116,14 +116,14 @@ namespace ParkingManagement.GUI.Forms.staff
                 DateTime endDate = cardDetail.EndDate ?? DateTime.Now;
                 bool isMonth = cardDetail.IsMonth;
 
-                MessageBox.Show($@"
-                    Dữ liệu lấy được:
-                    Biển số: {license}
-                    User Code: {userCode}
-                    Giá: {price:N0} VNĐ
-                    Ngày bắt đầu: {startDate}
-                    Ngày kết thúc: {endDate}
-                ", "Debug", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show($@"
+                //    Dữ liệu lấy được:
+                //    Biển số: {license}
+                //    User Code: {userCode}
+                //    Giá: {price:N0} VNĐ
+                //    Ngày bắt đầu: {startDate}
+                //    Ngày kết thúc: {endDate}
+                //", "Debug", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 kTbInfoBs.Text = license;
                 kTbInfoUser.Text = userCode;
@@ -133,7 +133,7 @@ namespace ParkingManagement.GUI.Forms.staff
                 kRbtnInfoMonth.Checked = isMonth;
                 kRBtnInfoDay.Checked = !isMonth;
 
-                MessageBox.Show("Dữ liệu đã được hiển thị trên giao diện.", "Debug", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Dữ liệu đã được hiển thị trên giao diện.", "Debug", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
