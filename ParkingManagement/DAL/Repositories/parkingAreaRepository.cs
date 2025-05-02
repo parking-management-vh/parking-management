@@ -97,7 +97,6 @@ namespace ParkingManagement.DAL.Repositories
             try
             {
                 string query = "UPDATE parking_area SET status = @status, area_name = @area_name, description = @description WHERE id = @id";
-                MessageBox.Show(query, query);
                 object[] parameters =
             {
                 area.Id.ToString(),
