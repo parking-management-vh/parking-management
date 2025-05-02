@@ -56,6 +56,10 @@ namespace ParkingManagement
             this.kryptonRibbonGroupSeparator6 = new Krypton.Ribbon.KryptonRibbonGroupSeparator();
             this.kryptonRibbonGroupTriple8 = new Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.btnVehicleType = new Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.kryptonRibbonGroupTriple19 = new Krypton.Ribbon.KryptonRibbonGroupTriple();
+            this.kryptonRibbonGroupButton1 = new Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.kryptonRibbonGroupTriple20 = new Krypton.Ribbon.KryptonRibbonGroupTriple();
+            this.kryptonRibbonGroupButton3 = new Krypton.Ribbon.KryptonRibbonGroupButton();
             this.tabFinancialManagement = new Krypton.Ribbon.KryptonRibbonTab();
             this.kryptonRibbonGroup3 = new Krypton.Ribbon.KryptonRibbonGroup();
             this.kryptonRibbonGroupTriple9 = new Krypton.Ribbon.KryptonRibbonGroupTriple();
@@ -91,10 +95,6 @@ namespace ParkingManagement
             this.btnStaticStaff = new Krypton.Ribbon.KryptonRibbonGroupButton();
             this.kryptonNavigator1 = new Krypton.Navigator.KryptonNavigator();
             this.kryptonRibbonGroupButton2 = new Krypton.Ribbon.KryptonRibbonGroupButton();
-            this.kryptonRibbonGroupTriple19 = new Krypton.Ribbon.KryptonRibbonGroupTriple();
-            this.kryptonRibbonGroupButton1 = new Krypton.Ribbon.KryptonRibbonGroupButton();
-            this.kryptonRibbonGroupTriple20 = new Krypton.Ribbon.KryptonRibbonGroupTriple();
-            this.kryptonRibbonGroupButton3 = new Krypton.Ribbon.KryptonRibbonGroupButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonRibbon1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonNavigator1)).BeginInit();
             this.kryptonNavigator1.SuspendLayout();
@@ -237,6 +237,28 @@ namespace ParkingManagement
             this.btnVehicleType.ImageLarge = global::ParkingManagement.Properties.Resources.VehicleType;
             this.btnVehicleType.TextLine1 = "Vehicle Type";
             this.btnVehicleType.Click += new System.EventHandler(this.btnVehicleType_Click);
+            // 
+            // kryptonRibbonGroupTriple19
+            // 
+            this.kryptonRibbonGroupTriple19.Items.AddRange(new Krypton.Ribbon.KryptonRibbonGroupItem[] {
+            this.kryptonRibbonGroupButton1});
+            // 
+            // kryptonRibbonGroupButton1
+            // 
+            this.kryptonRibbonGroupButton1.ImageLarge = global::ParkingManagement.Properties.Resources._979713;
+            this.kryptonRibbonGroupButton1.TextLine1 = "Vehicle";
+            this.kryptonRibbonGroupButton1.Click += new System.EventHandler(this.kryptonRibbonGroupButton1_Click_1);
+            // 
+            // kryptonRibbonGroupTriple20
+            // 
+            this.kryptonRibbonGroupTriple20.Items.AddRange(new Krypton.Ribbon.KryptonRibbonGroupItem[] {
+            this.kryptonRibbonGroupButton3});
+            // 
+            // kryptonRibbonGroupButton3
+            // 
+            this.kryptonRibbonGroupButton3.ImageLarge = global::ParkingManagement.Properties.Resources._9835784;
+            this.kryptonRibbonGroupButton3.TextLine1 = "Parking area";
+            this.kryptonRibbonGroupButton3.Click += new System.EventHandler(this.kryptonRibbonGroupButton3_Click_1);
             // 
             // tabFinancialManagement
             // 
@@ -411,28 +433,6 @@ namespace ParkingManagement
             this.kryptonNavigator1.Size = new System.Drawing.Size(1173, 411);
             this.kryptonNavigator1.TabIndex = 1;
             this.kryptonNavigator1.Text = "kryptonNavigator1";
-            // 
-            // kryptonRibbonGroupTriple19
-            // 
-            this.kryptonRibbonGroupTriple19.Items.AddRange(new Krypton.Ribbon.KryptonRibbonGroupItem[] {
-            this.kryptonRibbonGroupButton1});
-            // 
-            // kryptonRibbonGroupButton1
-            // 
-            this.kryptonRibbonGroupButton1.ImageLarge = global::ParkingManagement.Properties.Resources._979713;
-            this.kryptonRibbonGroupButton1.TextLine1 = "Vehicle";
-            this.kryptonRibbonGroupButton1.Click += new System.EventHandler(this.kryptonRibbonGroupButton1_Click_1);
-            // 
-            // kryptonRibbonGroupTriple20
-            // 
-            this.kryptonRibbonGroupTriple20.Items.AddRange(new Krypton.Ribbon.KryptonRibbonGroupItem[] {
-            this.kryptonRibbonGroupButton3});
-            // 
-            // kryptonRibbonGroupButton3
-            // 
-            this.kryptonRibbonGroupButton3.ImageLarge = global::ParkingManagement.Properties.Resources._9835784;
-            this.kryptonRibbonGroupButton3.TextLine1 = "Parrking area";
-            this.kryptonRibbonGroupButton3.Click += new System.EventHandler(this.kryptonRibbonGroupButton3_Click_1);
             // 
             // frmMain
             // 

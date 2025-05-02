@@ -9,11 +9,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
+using System.Security.Cryptography;
 
 namespace ParkingManagement.GUI.Forms
 {
-    public partial class frmCreateUser: Form
+    public partial class frmCreateUser : Form
     {
         private readonly parkingAreaBLL areaBLL = new parkingAreaBLL();
         private roleBLL roleBLL = new roleBLL();
@@ -36,7 +36,7 @@ namespace ParkingManagement.GUI.Forms
                 {
                     MessageBox.Show("Không có khu vực nào trong cơ sở dữ liệu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                if (areas != null && areas.Count > 0)
+                else
                 {
                     kAreaCbb.DataSource = areas;
                     kAreaCbb.DisplayMember = "AreaName";
@@ -50,14 +50,12 @@ namespace ParkingManagement.GUI.Forms
             }
         }
 
-
         private void LoadRole()
         {
             try
             {
                 List<roleModel> roles = roleBLL.GetAllRoleAreas();
 
-            
                 if (roles != null && roles.Count > 0)
                 {
                     kTypeAccCbb.DataSource = roles;
@@ -76,17 +74,31 @@ namespace ParkingManagement.GUI.Forms
             }
         }
 
-
         private void ClearForm()
         {
             kFullNameTb.Clear();
             kPhoneTb.Clear();
             kEmailTb.Clear();
             kAddressTb.Clear();
+            kPasswordTb.Clear(); // clear password
             kSexCbb.SelectedIndex = -1;
-            kDtBirthday.Value = DateTime.Now; 
+            kDtBirthday.Value = DateTime.Now;
             kTypeAccCbb.SelectedIndex = -1;
             kAreaCbb.SelectedIndex = -1;
+        }
+
+        private string HashPassword(string password)
+        {
+            using (SHA256 sha256Hash = SHA256.Create())
+            {
+                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(password));
+                StringBuilder builder = new StringBuilder();
+                foreach (byte b in bytes)
+                {
+                    builder.Append(b.ToString("x2")); // Convert byte to hex string
+                }
+                return builder.ToString();
+            }
         }
 
         private void kSaveAddUser_Click(object sender, EventArgs e)
@@ -97,9 +109,28 @@ namespace ParkingManagement.GUI.Forms
                 string phoneNumber = kPhoneTb.Text.Trim();
                 string email = kEmailTb.Text.Trim();
                 string address = kAddressTb.Text.Trim();
+                string rawPassword = kPasswordTb.Text.Trim(); // new line
                 string gender = kSexCbb.SelectedItem?.ToString();
                 DateTime? dateOfBirth = kDtBirthday.Value;
                 bool status = true;
+
+                if (string.IsNullOrWhiteSpace(rawPassword))
+                {
+                    MessageBox.Show("Vui lòng nhập mật khẩu!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else if (rawPassword.Length < 6)
+                {
+                    MessageBox.Show("Mật khẩu phải có ít nhất 6 ký tự!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else if (!rawPassword.Any(char.IsDigit) || !rawPassword.Any(char.IsLetter))
+                {
+                    MessageBox.Show("Mật khẩu phải chứa cả chữ và số!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                string hashedPassword = HashPassword(rawPassword);
 
                 Guid? roleId = (kTypeAccCbb.SelectedValue is Guid guidRole) ? guidRole : (Guid?)null;
                 Guid? areaId = kAreaCbb.SelectedValue != null ? Guid.Parse(kAreaCbb.SelectedValue.ToString()) : (Guid?)null;
@@ -109,7 +140,7 @@ namespace ParkingManagement.GUI.Forms
                     MessageBox.Show("Vui lòng chọn vai trò!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                
+
                 if (areaId == null || areaId == Guid.Empty)
                 {
                     MessageBox.Show("Area ID không hợp lệ! Debug: " + kAreaCbb.SelectedValue, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -140,14 +171,14 @@ namespace ParkingManagement.GUI.Forms
                     AreaId = areaId,
                     Status = status,
                     CreatedAt = DateTime.Now,
-                    UpdatedAt = DateTime.Now
+                    UpdatedAt = DateTime.Now,
+                    Password = hashedPassword // add password
                 };
 
                 userBLL userService = new userBLL();
                 userService.AddUser(newUser);
 
                 MessageBox.Show("Thêm người dùng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                 ClearForm();
             }
             catch (Exception ex)
@@ -158,7 +189,6 @@ namespace ParkingManagement.GUI.Forms
 
         private void kryptonPanel1_Paint(object sender, PaintEventArgs e)
         {
-
         }
     }
 }

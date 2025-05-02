@@ -93,9 +93,9 @@ namespace ParkingManagement.DAL.Repositories
                 throw;
             }
         }
-        public void CreateParkingCard(string vehicleLicensePlate, string userCode, bool isMonth)
+        public void CreateParkingCard(string vehicleLicensePlate, string userCode, bool isMonth) //Tham số đầu vào: Biển số xe,..
         {
-            Guid? vehicleId = vehicleBLL.GetVehicleIdByLicensePlate(vehicleLicensePlate);
+            Guid? vehicleId = vehicleBLL.GetVehicleIdByLicensePlate(vehicleLicensePlate); //Sử dụng lớp vehicleBLL để tìm ID phương tiện dựa trên biển số
             //string status = vehicleBLL.GetVehicleStatusByLicensePlate(vehicleLicensePlate);
 
             if (vehicleId == null)
@@ -111,7 +111,7 @@ namespace ParkingManagement.DAL.Repositories
                 return;
             }
 
-            Guid? ticketPriceId = vehicleBLL.GetTicketPriceIdByVehicleType(vehicleTypeId.Value, isMonth);
+            Guid? ticketPriceId = vehicleBLL.GetTicketPriceIdByVehicleType(vehicleTypeId.Value, isMonth); //Tìm TicketPriceId dựa vào loại phương tiện và kiểu vé (tháng/hay lượt)
             if (ticketPriceId == null)
             {
                 MessageBox.Show("Không tìm thấy giá vé phù hợp.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -121,10 +121,10 @@ namespace ParkingManagement.DAL.Repositories
             Guid? userId = userBLL.GetUserIdByCode(userCode);
 
             ParkingCard newCard = new ParkingCard(
-                Guid.NewGuid(),
+                Guid.NewGuid(), // Tạo ID mới cho thẻ
                 DateTime.Now,
                 null,
-                "Hoạt động",
+                "Hoạt động",  // Trạng thái thẻ
                 isMonth,
                 vehicleId.Value,
                 userId ?? Guid.Empty,
@@ -143,7 +143,7 @@ namespace ParkingManagement.DAL.Repositories
                 newCard.Status,
                 newCard.IsMonth,
                 newCard.VehicleId.ToString(),
-                newCard.UserId == Guid.Empty ? (object)DBNull.Value : newCard.UserId.ToString(),
+                newCard.UserId == Guid.Empty ? (object)DBNull.Value : newCard.UserId.ToString(), //Nếu EndDate hoặc UserId không có, bạn dùng DBNull.Value
                 newCard.TickerPriceId.ToString()
             };
 
@@ -190,6 +190,7 @@ namespace ParkingManagement.DAL.Repositories
             }
         }
 
+        //Tìm thông tin chi tiết thẻ gửi xe (parking_card) theo biển số xe (licensePlate)
         public parkingCardDetail GetParkingCardByLicensePlate(string licensePlate)
         {
             Guid? vehicleId = vehicleBLL.GetVehicleIdByLicensePlate(licensePlate);
@@ -223,7 +224,9 @@ namespace ParkingManagement.DAL.Repositories
 
             DataRow row = cardData.Rows[0];
 
+            //Kiểm tra loại vé có phải vé tháng hay không
             bool isMonth = row["is_month"] != DBNull.Value && Convert.ToBoolean(row["is_month"]);
+            //Nếu KHÔNG PHẢI vé tháng thì cập nhật giờ ra bãi và ngày kết thúc thẻ
 
             if (!isMonth)
             {
