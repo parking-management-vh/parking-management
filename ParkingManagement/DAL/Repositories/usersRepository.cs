@@ -9,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,8 +21,23 @@ namespace ParkingManagement.DAL.Repositories
     {
         private readonly DatabaseProvider dbProvider = new DatabaseProvider();
 
+        private string HashPassword(string password)
+        {
+            using (SHA256 sha256Hash = SHA256.Create())
+            {
+                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(password));
+                StringBuilder builder = new StringBuilder();
+                foreach (byte b in bytes)
+                {
+                    builder.Append(b.ToString("x2")); // Convert byte to hex string
+                }
+                return builder.ToString();
+            }
+        }
+
         public createUser LoginUser(string code, string password)
         {
+            string hashedInputPassword = HashPassword(password);
             string query = @"
                 SELECT u.id, u.code, u.full_name, u.date_of_birth, u.gender, 
                        u.phone_number, u.email, u.address, u.password, 
@@ -36,9 +52,9 @@ namespace ParkingManagement.DAL.Repositories
             try
             {
                 object[] parameters = {
-            new MySqlParameter("@code", code),
-            new MySqlParameter("@password", password)
-        };
+                    new MySqlParameter("@code", code),
+                    new MySqlParameter("@password", hashedInputPassword)
+                };
 
                 DataTable data = dbProvider.ExecuteQuery(query, parameters);
 
@@ -179,8 +195,8 @@ namespace ParkingManagement.DAL.Repositories
         public void AddUser(createUser user)
         {
             string query = @"
-            INSERT INTO user (id, code, full_name, gender, date_of_birth, area_id, email, phone_number, address, role_id, status) 
-            VALUES (@id, @code, @full_name, @gender, @date_of_birth, @area_id, @email, @phone_number, @address, @role_id, @status)";
+                INSERT INTO user (id, code, full_name, gender, date_of_birth, area_id, email, phone_number, address, role_id, status, password) 
+                VALUES (@id, @code, @full_name, @gender, @date_of_birth, @area_id, @email, @phone_number, @address, @role_id, @status, @password)";
 
             user.Id = Guid.NewGuid();
 
@@ -196,7 +212,8 @@ namespace ParkingManagement.DAL.Repositories
                 user.PhoneNumber ?? (object)DBNull.Value,
                 user.Address ?? (object)DBNull.Value,
                 user.RoleId?.ToString() ?? (object)DBNull.Value,
-                user.Status ? 1 : 0
+                user.Status ? 1 : 0,
+                user.Password ?? (object)DBNull.Value
             };
 
             try
@@ -209,6 +226,7 @@ namespace ParkingManagement.DAL.Repositories
                 throw;
             }
         }
+
 
         public bool UpdateUser(createUser user)
         {

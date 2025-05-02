@@ -56,6 +56,11 @@ namespace ParkingManagement.GUI.Forms
         {
             string id = Guid.NewGuid().ToString();
             string areaName = kTbParkingArea.Text.Trim();
+            if (kCbbStatus.SelectedItem == null)
+            {
+                MessageBox.Show("Vui lòng chọn trạng thái!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             string status = kCbbStatus.SelectedItem.ToString();
             string description = kTbDescription.Text.Trim();
 
@@ -69,7 +74,7 @@ namespace ParkingManagement.GUI.Forms
             parkingAreaBLL parkingAreaService = new parkingAreaBLL();
             parkingAreaService.CreateParkingArea(newParkingArea);
 
-            MessageBox.Show("Thêm vai trò thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Thêm khu vực thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             LoadAllAreas();
         }
@@ -79,7 +84,7 @@ namespace ParkingManagement.GUI.Forms
         {
             if (selectedPAId == string.Empty)
             {
-                MessageBox.Show("Vui lòng chọn vai trò để sửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng chọn khu vực để sửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -125,11 +130,11 @@ namespace ParkingManagement.GUI.Forms
         {
             if (selectedPAId == string.Empty)
             {
-                MessageBox.Show("Vui lòng chọn vai trò để sửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng chọn khu vực để sửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xoá vai trò này?", "Xác nhận xoá",
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xoá khu vực này?", "Xác nhận xoá",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (result == DialogResult.Yes)
@@ -137,7 +142,7 @@ namespace ParkingManagement.GUI.Forms
                 parkingAreaBLL PAService = new parkingAreaBLL();
                 PAService.DeleteParkingArea(selectedPAId);
 
-                MessageBox.Show("Xoá vai trò thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Xoá khu vực thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 LoadAllAreas();
             }
